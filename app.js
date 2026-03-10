@@ -502,5 +502,18 @@ if (stopButton) {
 
 // ===== INIT =====
 
+function applyActiveCourseToPage() {
+  if (pageHeading) {
+    pageHeading.textContent = activeCourse.title;
+  }
+
+  document.title = `${activeCourse.title} | KennisSprint`;
+
+  if (pageIntro) {
+    pageIntro.textContent = `Oefen ${activeCourse.subject} voor ${activeCourse.level} ${activeCourse.grade} per hoofdstuk met multiple choice.`;
+  }
+}
+
+applyActiveCourseToPage();
 loadChapters();
 updateScoreDisplay();
