@@ -575,7 +575,49 @@ function initCourseSelectors() {
   );
 }
 
+function refreshLevelSelect() {
+  const selectedSubject = subjectSelect.value;
+  const coursesForSubject = getCoursesBySubject(selectedSubject);
+  const availableLevels = getUniqueValues("level", coursesForSubject);
+
+  populateSelect(levelSelect, availableLevels);
+  populateSelect(gradeSelect, []);
+}
+
+function refreshGradeSelect() {
+  const selectedSubject = subjectSelect.value;
+  const selectedLevel = levelSelect.value;
+
+  if (!selectedSubject || !selectedLevel) {
+    populateSelect(gradeSelect, []);
+    return;
+  }
+
+  const coursesForSubjectAndLevel = getCoursesBySubjectAndLevel(
+    selectedSubject,
+    selectedLevel
+  );
+  const availableGrades = getUniqueValues("grade", coursesForSubjectAndLevel);
+
+  populateSelect(gradeSelect, availableGrades);
+}
+
+function bindCourseSelectors() {
+  if (subjectSelect) {
+    subjectSelect.addEventListener("change", () => {
+      refreshLevelSelect();
+    });
+  }
+
+  if (levelSelect) {
+    levelSelect.addEventListener("change", () => {
+      refreshGradeSelect();
+    });
+  }
+}
+
 applyActiveCourseToPage();
 initCourseSelectors();
+bindCourseSelectors();
 loadChapters();
 updateScoreDisplay();
