@@ -1,5 +1,4 @@
-import { historyMavo4Course } from "./js/data/courses/geschiedenis-mavo-4.js";
-import { aardrijkskundeMavo4Course } from "./js/data/courses/aardrijkskunde-mavo-4.js";
+
   
 const subjects = [
   {
