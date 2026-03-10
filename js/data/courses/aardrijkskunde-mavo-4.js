@@ -15,7 +15,7 @@ export const aardrijkskundeMavo4Course = {
 
   datasets: {
     terms: [
-      {
+      
 {
   id: "ak-h1-001",
   chapterId: "ak-h1",
@@ -351,7 +351,7 @@ export const aardrijkskundeMavo4Course = {
   type: "begrip",
   prompt: "uv straling",
   answer: "ultraviolette straling van de zon die je niet kunt zien"
-}
+},
       {
   id: "ak-h2-001",
   chapterId: "ak-h2",
