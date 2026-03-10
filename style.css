@@ -210,9 +210,9 @@ button {
 }
 
 .quiz-session-title {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 .quiz-session-mode {
