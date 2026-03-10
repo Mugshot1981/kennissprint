@@ -1969,6 +1969,8 @@ const historyMavo4Course = {
     }
   ]
 };
+
+
 const historyHavo3Course = {
   id: "geschiedenis-havo-3",
   subject: "geschiedenis",
@@ -1989,103 +1991,110 @@ const historyHavo3Course = {
     }
   ],
 
-  items: [
-    {
-      id: "havo3-001",
-      subjectId: "geschiedenis",
-      chapterId: "havo3-h1",
-      type: "begrip",
-      prompt: "demobegrip 1",
-      answer: "Dit is een testbegrip voor Geschiedenis 3 havo."
-    },
-    {
-      id: "havo3-002",
-      subjectId: "geschiedenis",
-      chapterId: "havo3-h1",
-      type: "begrip",
-      prompt: "demobegrip 2",
-      answer: "Dit is een tweede testbegrip voor Geschiedenis 3 havo."
-    },
-    {
-      id: "havo3-003",
-      subjectId: "geschiedenis",
-      chapterId: "havo3-h1",
-      type: "begrip",
-      prompt: "demobegrip 3",
-      answer: "Nog een dummybegrip voor de oefentrainer."
-    },
-    {
-      id: "havo3-004",
-      subjectId: "geschiedenis",
-      chapterId: "havo3-h2",
-      type: "begrip",
-      prompt: "demobegrip 4",
-      answer: "Dit begrip hoort bij hoofdstuk 2."
-    },
-    {
-      id: "havo3-005",
-      subjectId: "geschiedenis",
-      chapterId: "havo3-h2",
-      type: "begrip",
-      prompt: "demobegrip 5",
-      answer: "Extra testbegrip om voldoende vragen te hebben."
-    },
-    {
-      id: "havo3-006",
-      subjectId: "geschiedenis",
-      chapterId: "havo3-h2",
-      type: "begrip",
-      prompt: "demobegrip 6",
-      answer: "Nog een voorbeeldbegrip voor de quiz."
-    }
-  ],
+  datasets: {
+    terms: [
+      {
+        id: "havo3-001",
+        subjectId: "geschiedenis",
+        chapterId: "havo3-h1",
+        type: "begrip",
+        prompt: "demobegrip 1",
+        answer: "Dit is een testbegrip voor Geschiedenis 3 havo."
+      },
+      {
+        id: "havo3-002",
+        subjectId: "geschiedenis",
+        chapterId: "havo3-h1",
+        type: "begrip",
+        prompt: "demobegrip 2",
+        answer: "Dit is een tweede testbegrip voor Geschiedenis 3 havo."
+      },
+      {
+        id: "havo3-003",
+        subjectId: "geschiedenis",
+        chapterId: "havo3-h1",
+        type: "begrip",
+        prompt: "demobegrip 3",
+        answer: "Nog een dummybegrip voor de oefentrainer."
+      },
+      {
+        id: "havo3-004",
+        subjectId: "geschiedenis",
+        chapterId: "havo3-h2",
+        type: "begrip",
+        prompt: "demobegrip 4",
+        answer: "Dit begrip hoort bij hoofdstuk 2."
+      },
+      {
+        id: "havo3-005",
+        subjectId: "geschiedenis",
+        chapterId: "havo3-h2",
+        type: "begrip",
+        prompt: "demobegrip 5",
+        answer: "Extra testbegrip om voldoende vragen te hebben."
+      },
+      {
+        id: "havo3-006",
+        subjectId: "geschiedenis",
+        chapterId: "havo3-h2",
+        type: "begrip",
+        prompt: "demobegrip 6",
+        answer: "Nog een voorbeeldbegrip voor de quiz."
+      }
+    ],
 
-  years: [
-    {
-      id: "havo3-y1",
-      chapterId: "havo3-h1",
-      year: "1789",
-      event: "Franse Revolutie begint (dummyvoorbeeld)"
-    },
-    {
-      id: "havo3-y2",
-      chapterId: "havo3-h1",
-      year: "1815",
-      event: "Slag bij Waterloo (dummyvoorbeeld)"
-    },
-    {
-      id: "havo3-y3",
-      chapterId: "havo3-h2",
-      year: "1848",
-      event: "Grondwet van Thorbecke (dummyvoorbeeld)"
-    },
-    {
-      id: "havo3-y4",
-      chapterId: "havo3-h2",
-      year: "1870",
-      event: "Duitsland wordt een eenheidsstaat (dummyvoorbeeld)"
-    }
-  ],
+    years: [
+      {
+        id: "havo3-y1",
+        chapterId: "havo3-h1",
+        year: "1789",
+        event: "Franse Revolutie begint (dummyvoorbeeld)"
+      },
+      {
+        id: "havo3-y2",
+        chapterId: "havo3-h1",
+        year: "1815",
+        event: "Slag bij Waterloo (dummyvoorbeeld)"
+      },
+      {
+        id: "havo3-y3",
+        chapterId: "havo3-h2",
+        year: "1848",
+        event: "Grondwet van Thorbecke (dummyvoorbeeld)"
+      },
+      {
+        id: "havo3-y4",
+        chapterId: "havo3-h2",
+        year: "1870",
+        event: "Duitsland wordt een eenheidsstaat (dummyvoorbeeld)"
+      }
+    ],
 
-persons: []
-  {}
-modes: [
-  {
-    id: "term-to-answer",
-    label: "Begrip → beschrijving",
-    dataset: "terms"
+    persons: []
   },
-  {
-    id: "answer-to-term",
-    label: "Beschrijving → begrip",
-    dataset: "terms"
-  },
-  {
-    id: "years",
-    label: "Jaartal → gebeurtenis",
-    dataset: "years"
-  }
-]
+
+  modes: [
+    {
+      id: "term-to-answer",
+      label: "Begrip → beschrijving",
+      dataset: "terms"
+    },
+    {
+      id: "answer-to-term",
+      label: "Beschrijving → begrip",
+      dataset: "terms"
+    },
+    {
+      id: "years",
+      label: "Jaartal → gebeurtenis",
+      dataset: "years"
+    },
+    {
+      id: "event-years",
+      label: "Gebeurtenis → jaartal",
+      dataset: "years"
+    }
+  ]
 };
 
 const courseCatalog = [
@@ -2107,10 +2116,17 @@ function getCourseIdFromUrl() {
 function hasMinimumQuizContent(course) {
   if (!course) return false;
 
-  const itemCount = Array.isArray(course.items) ? course.items.length : 0;
-  const yearCount = Array.isArray(course.years) ? course.years.length : 0;
+  const termCount =
+    Array.isArray(course.datasets?.terms) ? course.datasets.terms.length :
+    Array.isArray(course.items) ? course.items.length :
+    0;
 
-  return itemCount >= 4 || yearCount >= 4;
+  const yearCount =
+    Array.isArray(course.datasets?.years) ? course.datasets.years.length :
+    Array.isArray(course.years) ? course.years.length :
+    0;
+
+  return termCount >= 4 || yearCount >= 4;
 }
 
 function getInitialCourse() {
