@@ -249,8 +249,8 @@ button {
 
 .stars {
   position: relative;
-  font-size: 56px;
-  letter-spacing: 4px;
+  font-size: 44px;
+  letter-spacing: 3px;
   width: max-content;
   line-height: 1;
 }
