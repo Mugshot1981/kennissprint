@@ -33,9 +33,11 @@ export function getInitialCourse() {
   const courseIdFromUrl = getCourseIdFromUrl();
   const courseFromUrl = getCourseById(courseIdFromUrl);
 
-  if (courseFromUrl && hasMinimumQuizContent(courseFromUrl)) {
-    return courseFromUrl;
-  }
+if (courseFromUrl) {
+  return courseFromUrl;
+}
+
+return getCourseById(defaultCourseId);
 
   return getCourseById(defaultCourseId);
 }
