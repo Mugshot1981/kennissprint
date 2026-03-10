@@ -477,3 +477,12 @@ body.quiz-active .controls {
 .chapter-count-label{
   font-size:0.8rem;
 }
+.chapter-title{
+  font-weight:600;
+}
+
+.chapter-questions{
+  margin-top:6px;
+  font-size:0.85rem;
+  color:#777;
+}
