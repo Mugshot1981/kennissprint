@@ -1,3 +1,8 @@
+/*
+KennisSprint dataset
+© Joas de Wit
+2026
+*/
 const subjects = [
   {
     id: "geschiedenis",
