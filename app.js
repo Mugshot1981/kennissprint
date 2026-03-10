@@ -143,6 +143,14 @@ function getQuestionParts(correctItem, quizMode, currentChapterItems) {
     "event-years": {
       questionField: "answer",
       answerField: "prompt"
+    },
+    "person-to-description": {
+      questionField: "name",
+      answerField: "description"
+    },
+    "description-to-person": {
+      questionField: "description",
+      answerField: "name"
     }
   };
 
