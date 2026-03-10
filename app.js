@@ -127,52 +127,42 @@ function getModeConfig(modeId) {
 }
 
 function getQuestionParts(correctItem, quizMode, currentChapterItems) {
-  if (quizMode === "term-to-answer") {
-    return {
-      questionText: correctItem.prompt,
-      correctOptionText: correctItem.answer,
-      wrongOptionPool: currentChapterItems
-        .filter((item) => item.id !== correctItem.id)
-        .map((item) => item.answer)
-    };
-  }
+  const modeFieldMap = {
+    "term-to-answer": {
+      questionField: "prompt",
+      answerField: "answer"
+    },
+    "answer-to-term": {
+      questionField: "answer",
+      answerField: "prompt"
+    },
+    "years": {
+      questionField: "prompt",
+      answerField: "answer"
+    },
+    "event-years": {
+      questionField: "answer",
+      answerField: "prompt"
+    }
+  };
 
-  if (quizMode === "answer-to-term") {
-    return {
-      questionText: correctItem.answer,
-      correctOptionText: correctItem.prompt,
-      wrongOptionPool: currentChapterItems
-        .filter((item) => item.id !== correctItem.id)
-        .map((item) => item.prompt)
-    };
-  }
+  const config = modeFieldMap[quizMode] || {
+    questionField: "prompt",
+    answerField: "answer"
+  };
 
-  if (quizMode === "years") {
-    return {
-      questionText: correctItem.prompt,
-      correctOptionText: correctItem.answer,
-      wrongOptionPool: currentChapterItems
-        .filter((item) => item.id !== correctItem.id)
-        .map((item) => item.answer)
-    };
-  }
+  const questionText = correctItem[config.questionField];
+  const correctOptionText = correctItem[config.answerField];
 
-  if (quizMode === "event-years") {
-    return {
-      questionText: correctItem.answer,
-      correctOptionText: correctItem.prompt,
-      wrongOptionPool: [...new Set(
-        getCourseYears(activeCourse).map((item) => item.year)
-      )].filter((year) => year !== correctItem.prompt)
-    };
-  }
+  const wrongOptionPool = currentChapterItems
+    .filter((item) => item.id !== correctItem.id)
+    .map((item) => item[config.answerField])
+    .filter((value) => value !== undefined && value !== correctOptionText);
 
   return {
-    questionText: correctItem.prompt,
-    correctOptionText: correctItem.answer,
-    wrongOptionPool: currentChapterItems
-      .filter((item) => item.id !== correctItem.id)
-      .map((item) => item.answer)
+    questionText,
+    correctOptionText,
+    wrongOptionPool
   };
 }
 
