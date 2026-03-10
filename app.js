@@ -31,7 +31,7 @@ const progressFill = document.getElementById("progressFill");
 
 const pageHeading = document.getElementById("pageHeading");
 const pageIntro = document.getElementById("pageIntro");
-
+const courseSelect = document.getElementById("courseSelect");
 
 // ===== STATUS =====
 
