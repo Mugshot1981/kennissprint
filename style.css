@@ -452,3 +452,28 @@ body.quiz-active .controls {
   font-size:0.85rem;
   color:#777;
 }
+
+.chapter-tile{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.chapter-tile-title{
+  font-weight:600;
+  text-align:left;
+}
+
+.chapter-tile-count{
+  text-align:right;
+  color:#777;
+}
+
+.chapter-count-number{
+  font-size:1.1rem;
+  font-weight:600;
+}
+
+.chapter-count-label{
+  font-size:0.8rem;
+}
