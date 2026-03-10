@@ -1,3 +1,5 @@
+import { courseCatalog, activeCourse } from "./data.js";
+
 // ===== ELEMENTEN =====
 
 const chapterSelect = document.getElementById("chapterSelect");
