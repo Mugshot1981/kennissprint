@@ -6,11 +6,38 @@ export const aardrijkskundeMavo4Course = {
   title: "Aardrijkskunde 4 mavo",
 
   chapters: [
-    {
-      id: "ak-h1",
-      subjectId: "aardrijkskunde",
-      title: "Hoofdstuk 1 – Wereldhandel"
-    }
+  chapters: [
+  {
+    id: "ak-h1",
+    subjectId: "aardrijkskunde",
+    title: "Nederland en Spanje"
+  },
+  {
+    id: "ak-h2",
+    subjectId: "aardrijkskunde",
+    title: "Verenigde Staten"
+  },
+  {
+    id: "ak-h3",
+    subjectId: "aardrijkskunde",
+    title: "Nederland en Duitsland"
+  },
+  {
+    id: "ak-h4",
+    subjectId: "aardrijkskunde",
+    title: "China"
+  },
+  {
+    id: "ak-h5",
+    subjectId: "aardrijkskunde",
+    title: "Nederland"
+  },
+  {
+    id: "ak-h6",
+    subjectId: "aardrijkskunde",
+    title: "Midden-Oosten en China"
+  }
+],
   ],
 
   datasets: {
