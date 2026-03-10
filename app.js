@@ -202,16 +202,7 @@ tile.type = "button";
 tile.className = "chapter-tile";
 tile.dataset.chapterId = chapter.id;
 
-const shortTitle = getTileTitle(chapter.title);
-
-const questionCount = activeCourse.items.filter(
-  item => item.chapterId === chapter.id
-).length;
-
-tile.innerHTML = `
-  <div class="chapter-title">${shortTitle}</div>
-  <div class="chapter-questions">${questionCount} vragen</div>
-`;
+tile.textContent = getTileTitle(chapter.title);
 
     tile.addEventListener("click", () => {
       const optionToToggle = Array.from(chapterSelect.options).find(
