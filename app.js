@@ -90,6 +90,16 @@ function shuffleArray(array) {
   return copy;
 }
 
+function getCourseTerms(course) {
+  if (course?.datasets?.terms) return course.datasets.terms;
+  return course?.items || [];
+}
+
+function getCourseYears(course) {
+  if (course?.datasets?.years) return course.datasets.years;
+  return course?.years || [];
+}
+
 function getStarsText() {
   if (scoreTotal === 0) {
     return "☆☆☆☆☆";
