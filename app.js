@@ -164,8 +164,7 @@ function getItemsForChapters(chapterIds) {
 
   // JAARTALLEN QUIZES
   if (quizMode === "years" || quizMode === "event-years") {
-
-    return activeCourse.years
+return getCourseYears(activeCourse)
       .filter(item => chapterIds.includes(item.chapterId))
       .map(item => ({
         id: item.id,
