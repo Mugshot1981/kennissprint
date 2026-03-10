@@ -1943,30 +1943,30 @@ const historyMavo4Course = {
   datasets: {
     terms: items,
     years: historyYears,
-       persons: [
+        persons: [
       {
-        id: "havo3-p1",
-        chapterId: "havo3-h1",
-        name: "Napoleon",
-        description: "Franse leider die grote delen van Europa veroverde."
+        id: "his-p-001",
+        chapterId: "his-h2",
+        name: "Frans Ferdinand",
+        description: "Kroonprins van Oostenrijk-Hongarije. Hij werd in 1914 vermoord in Sarajevo door Gavrilo Princip."
       },
       {
-        id: "havo3-p2",
-        chapterId: "havo3-h1",
-        name: "Lodewijk XVI",
-        description: "Franse koning tijdens het begin van de Franse Revolutie."
+        id: "his-p-002",
+        chapterId: "his-h2",
+        name: "Vladimir Lenin",
+        description: "Leider van de Russische Revolutie in 1917 en de eerste leider van de communistische Sovjet-Unie."
       },
       {
-        id: "havo3-p3",
-        chapterId: "havo3-h2",
-        name: "Thorbecke",
-        description: "Nederlandse staatsman die een belangrijke rol speelde bij de grondwet van 1848."
+        id: "his-p-003",
+        chapterId: "his-h2",
+        name: "Gavrilo Princip",
+        description: "Servisch nationalist uit Bosnië die in 1914 een aanslag pleegde op Frans Ferdinand."
       },
       {
-        id: "havo3-p4",
-        chapterId: "havo3-h2",
-        name: "Bismarck",
-        description: "Pruisische politicus die belangrijk was voor de Duitse eenwording."
+        id: "his-p-004",
+        chapterId: "his-h2",
+        name: "Pieter Jelles Troelstra",
+        description: "Socialistisch politicus en een van de oprichters van de SDAP. In 1918 riep hij op tot een revolutie."
       }
     ]
   },
