@@ -519,7 +519,41 @@ function applyActiveCourseToPage() {
   }
 }
 
+function getUniqueValues(key) {
+  const values = courseCatalog.map((course) => course[key]);
+  return [...new Set(values)];
+}
+
+function populateSelect(selectElement, values, selectedValue = "") {
+  if (!selectElement) return;
+
+  const firstOption = selectElement.querySelector('option[value=""]');
+  selectElement.innerHTML = "";
+
+  if (firstOption) {
+    selectElement.appendChild(firstOption);
+  }
+
+  values.forEach((value) => {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = value;
+
+    if (value === selectedValue) {
+      option.selected = true;
+    }
+
+    selectElement.appendChild(option);
+  });
+}
+
+function initCourseSelectors() {
+  populateSelect(subjectSelect, getUniqueValues("subject"), activeCourse.subject);
+  populateSelect(levelSelect, getUniqueValues("level"), activeCourse.level);
+  populateSelect(gradeSelect, getUniqueValues("grade"), activeCourse.grade);
+}
 
 applyActiveCourseToPage();
+initCourseSelectors();
 loadChapters();
 updateScoreDisplay();
