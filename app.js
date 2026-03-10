@@ -407,9 +407,9 @@ startButton.addEventListener("click", () => {
   quizMode = modeSelect.value;
   currentChapterItems = getItemsForChapters(currentChapterIds);
 
-  const selectedChapters = chapters.filter((chapter) =>
-    currentChapterIds.includes(chapter.id)
-  );
+const selectedChapters = activeCourse.chapters.filter((chapter) =>
+  currentChapterIds.includes(chapter.id)
+);
 
   quizSessionTitle.textContent =
     selectedChapters.length === 1
