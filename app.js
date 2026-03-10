@@ -159,7 +159,7 @@ function getItemsForChapters(chapterIds) {
   }
 
   // NORMALE BEGRIPPEN QUIZ
-  return items.filter((item) => {
+return activeCourse.items.filter((item) => {
     return chapterIds.includes(item.chapterId) && item.type === "begrip";
   });
 
