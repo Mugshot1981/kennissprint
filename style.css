@@ -17,7 +17,31 @@ body {
   background:white;
   border-radius:12px;
 }
+.card h1{
+  margin-bottom:16px;
+}
 
+.card .intro{
+  margin-bottom:28px;
+}
+
+.card h2{
+  margin-top:40px;
+  margin-bottom:20px;
+}
+
+.chapter-tile-grid{
+  margin-bottom:30px;
+}
+
+.mode-picker{
+  margin-top:10px;
+  margin-bottom:20px;
+}
+
+.landing-actions{
+  margin-top:20px;
+}
 h1 {
   margin-top: 0;
 }
