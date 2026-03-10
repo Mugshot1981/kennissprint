@@ -1972,63 +1972,45 @@ const historyMavo4Course = {
   },
 
   modes: [
-    {
-      id: "term-to-answer",
-      label: "Begrip → beschrijving",
-      dataset: "terms"
-    },
-    {
-      id: "answer-to-term",
-      label: "Beschrijving → begrip",
-      dataset: "terms"
-    },
-    {
-      id: "years",
-      label: "Jaartal → gebeurtenis",
-      dataset: "years"
-    },
-         {
-      id: "event-years",
-      label: "Gebeurtenis → jaartal",
-      dataset: "years"
-    },
-    {
-      id: "person-to-description",
-      label: "Persoon → beschrijving",
-      dataset: "persons",
-      questionLabel: "Persoon",
-      sessionModeLabel: "Persoon → beschrijving",
-      questionField: "name",
-      answerField: "description"
-    },
-    {
-      id: "description-to-person",
-      label: "Beschrijving → persoon",
-      dataset: "persons",
-      questionLabel: "Beschrijving",
-      sessionModeLabel: "Beschrijving → persoon",
-      questionField: "description",
-      answerField: "name"
-    },
- {
-  id: "person-to-description",
-  label: "Persoon → beschrijving",
-  dataset: "persons",
-  questionLabel: "Persoon",
-  sessionModeLabel: "Persoon → beschrijving",
-  questionField: "name",
-  answerField: "description"
-},
-{
-  id: "description-to-person",
-  label: "Beschrijving → persoon",
-  dataset: "persons",
-  questionLabel: "Beschrijving",
-  sessionModeLabel: "Beschrijving → persoon",
-  questionField: "description",
-  answerField: "name"
-}
-  ]
+  {
+    id: "term-to-answer",
+    label: "Begrip → beschrijving",
+    dataset: "terms"
+  },
+  {
+    id: "answer-to-term",
+    label: "Beschrijving → begrip",
+    dataset: "terms"
+  },
+  {
+    id: "years",
+    label: "Jaartal → gebeurtenis",
+    dataset: "years"
+  },
+  {
+    id: "event-years",
+    label: "Gebeurtenis → jaartal",
+    dataset: "years"
+  },
+  {
+    id: "person-to-description",
+    label: "Persoon → beschrijving",
+    dataset: "persons",
+    questionLabel: "Persoon",
+    sessionModeLabel: "Persoon → beschrijving",
+    questionField: "name",
+    answerField: "description"
+  },
+  {
+    id: "description-to-person",
+    label: "Beschrijving → persoon",
+    dataset: "persons",
+    questionLabel: "Beschrijving",
+    sessionModeLabel: "Beschrijving → persoon",
+    questionField: "description",
+    answerField: "name"
+  }
+]
 };
 
 
