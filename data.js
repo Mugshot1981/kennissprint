@@ -1947,10 +1947,26 @@ const historyMavo4Course = {
   },
 
   modes: [
-    "term-to-answer",
-    "answer-to-term",
-    "years",
-    "event-years"
+    {
+      id: "term-to-answer",
+      label: "Begrip → beschrijving",
+      dataset: "terms"
+    },
+    {
+      id: "answer-to-term",
+      label: "Beschrijving → begrip",
+      dataset: "terms"
+    },
+    {
+      id: "years",
+      label: "Jaartal → gebeurtenis",
+      dataset: "years"
+    },
+    {
+      id: "event-years",
+      label: "Gebeurtenis → jaartal",
+      dataset: "years"
+    }
   ]
 };
 const historyHavo3Course = {
