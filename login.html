@@ -24,17 +24,29 @@
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
   );
 
-  async function login() {
+      async function login() {
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
+    const debugOutput = document.getElementById("debugOutput");
 
-    const { error } = await supabase.auth.signInWithOtp({
-      email: email
+    debugOutput.textContent = "Bezig met inloggen...";
+
+    const { data, error } = await supabase.auth.signInWithOtp({
+      email: email,
+      options: {
+        emailRedirectTo: "https://mugshot1981.github.io/kennissprint/course.html"
+      }
     });
 
-    if(error){
+    console.log("signInWithOtp result:", { data, error });
+
+    if (error) {
+      debugOutput.textContent = "FOUT: " + error.message;
       alert(error.message);
     } else {
+      debugOutput.textContent =
+        "OK: verzoek verstuurd. Controleer inbox én spam. Resultaat: " +
+        JSON.stringify(data, null, 2);
       alert("Check je mail voor de login link");
     }
 
