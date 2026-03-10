@@ -163,7 +163,7 @@ function getQuestionParts(correctItem, quizMode, currentChapterItems) {
       correctOptionText: correctItem.prompt,
       wrongOptionPool: [...new Set(
         getCourseYears(activeCourse).map((item) => item.year)
-      )].filter((year) => year !== correctOptionText)
+      )].filter((year) => year !== correctItem.prompt)
     };
   }
 
