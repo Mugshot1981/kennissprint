@@ -197,7 +197,7 @@ activeCourse.chapters.forEach((chapter) => {
     chapterSelect.appendChild(option);
 
     const tile = document.createElement("button");
-  const tile = document.createElement("button");
+
 tile.type = "button";
 tile.className = "chapter-tile";
 tile.dataset.chapterId = chapter.id;
