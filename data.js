@@ -2065,7 +2065,27 @@ const historyHavo3Course = {
       year: "1870",
       event: "Duitsland wordt een eenheidsstaat (dummyvoorbeeld)"
     }
-  ]
+  ],
+
+persons: []
+  {}
+modes: [
+  {
+    id: "term-to-answer",
+    label: "Begrip → beschrijving",
+    dataset: "terms"
+  },
+  {
+    id: "answer-to-term",
+    label: "Beschrijving → begrip",
+    dataset: "terms"
+  },
+  {
+    id: "years",
+    label: "Jaartal → gebeurtenis",
+    dataset: "years"
+  }
+]
 };
 
 const courseCatalog = [
