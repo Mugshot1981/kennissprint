@@ -685,18 +685,7 @@ if (gradeSelect) {
 }
 }
 
-function populateModeSelect() {
-  if (!modeSelect) return;
 
-  modeSelect.innerHTML = "";
-
-  activeCourse.modes.forEach((mode) => {
-    const option = document.createElement("option");
-    option.value = mode.id;
-    option.textContent = mode.label;
-    modeSelect.appendChild(option);
-  });
-}
 
 function populateModeSelect() {
   if (!modeSelect) return;
