@@ -2222,7 +2222,4 @@ function getInitialCourse() {
 
 const activeCourse = getInitialCourse();
 
-const courseCatalog = [
-  historyMavo4Course,
-  aardrijkskundeMavo4Course
-];
+
