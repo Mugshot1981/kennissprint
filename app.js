@@ -167,44 +167,17 @@ function getModeConfig(modeId) {
   };
 }
 function getQuestionParts(correctItem, quizMode, currentChapterItems) {
-  const modeFieldMap = {
-    "term-to-answer": {
-      questionField: "prompt",
-      answerField: "answer"
-    },
-    "answer-to-term": {
-      questionField: "answer",
-      answerField: "prompt"
-    },
-    "years": {
-      questionField: "prompt",
-      answerField: "answer"
-    },
-    "event-years": {
-      questionField: "answer",
-      answerField: "prompt"
-    },
-    "person-to-description": {
-      questionField: "name",
-      answerField: "description"
-    },
-    "description-to-person": {
-      questionField: "description",
-      answerField: "name"
-    }
-  };
+  const config = getModeConfig(quizMode);
 
-  const config = modeFieldMap[quizMode] || {
-    questionField: "prompt",
-    answerField: "answer"
-  };
+  const questionField = config.questionField || "prompt";
+  const answerField = config.answerField || "answer";
 
-  const questionText = correctItem[config.questionField];
-  const correctOptionText = correctItem[config.answerField];
+  const questionText = correctItem[questionField];
+  const correctOptionText = correctItem[answerField];
 
   const wrongOptionPool = currentChapterItems
     .filter((item) => item.id !== correctItem.id)
-    .map((item) => item[config.answerField])
+    .map((item) => item[answerField])
     .filter((value) => value !== undefined && value !== correctOptionText);
 
   return {
