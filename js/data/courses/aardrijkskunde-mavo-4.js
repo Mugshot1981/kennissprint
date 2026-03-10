@@ -1,3 +1,8 @@
+/*
+KennisSprint dataset
+© Joas de Wit
+2026
+*/
 export const aardrijkskundeMavo4Course = {
   id: "aardrijkskunde-mavo-4",
   subject: "aardrijkskunde",
