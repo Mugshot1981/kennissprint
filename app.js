@@ -7,6 +7,17 @@ import { courseCatalog, activeCourse } from "./data.js";
 
 const supabase = window.supabaseClient;
 
+async function requireAuth() {
+  const { data, error } = await supabase.auth.getUser();
+
+  if (error || !data?.user) {
+    window.location.href = "login.html";
+    return null;
+  }
+
+  return data.user;
+}
+
 // ===== ELEMENTEN =====
 
 const chapterSelect = document.getElementById("chapterSelect");
