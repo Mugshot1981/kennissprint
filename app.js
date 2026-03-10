@@ -1,3 +1,8 @@
+/*
+KennisSprint dataset
+© Joas de Wit
+2026
+*/
 import { courseCatalog, activeCourse } from "./data.js";
 
 // ===== ELEMENTEN =====
