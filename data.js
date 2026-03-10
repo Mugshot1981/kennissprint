@@ -1953,6 +1953,20 @@ function getCourseById(courseId) {
   return courseCatalog.find(course => course.id === courseId);
 }
 
-const activeCourse = getCourseById(defaultCourseId);
+function getCourseIdFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("course");
+}
 
+function getInitialCourse() {
+  const courseIdFromUrl = getCourseIdFromUrl();
+  const courseFromUrl = getCourseById(courseIdFromUrl);
 
+  if (courseFromUrl) {
+    return courseFromUrl;
+  }
+
+  return getCourseById(defaultCourseId);
+}
+
+const activeCourse = getInitialCourse();
