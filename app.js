@@ -29,9 +29,14 @@ const questionNumberEl = document.getElementById("questionNumber");
 const questionTotalEl = document.getElementById("questionTotal");
 const progressFill = document.getElementById("progressFill");
 
+
+
 const pageHeading = document.getElementById("pageHeading");
 const pageIntro = document.getElementById("pageIntro");
-const courseSelect = document.getElementById("courseSelect");
+
+const subjectSelect = document.getElementById("subjectSelect");
+const levelSelect = document.getElementById("levelSelect");
+const gradeSelect = document.getElementById("gradeSelect");
 
 // ===== STATUS =====
 
