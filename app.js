@@ -558,6 +558,15 @@ function getCoursesBySubjectAndLevel(subject, level) {
   );
 }
 
+function findCourse(subject, level, grade) {
+  return courseCatalog.find(
+    (course) =>
+      course.subject === subject &&
+      course.level === level &&
+      course.grade === grade
+  );
+}
+
 function initCourseSelectors() {
   populateSelect(subjectSelect, getUniqueValues("subject"), activeCourse.subject);
 
