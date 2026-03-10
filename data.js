@@ -2113,7 +2113,32 @@ const historyHavo3Course = {
       }
     ],
 
-    persons: []
+        persons: [
+      {
+        id: "his-p-001",
+        chapterId: "his-h2",
+        name: "Frans Ferdinand",
+        description: "Kroonprins van Oostenrijk-Hongarije. Hij werd in 1914 vermoord in Sarajevo door Gavrilo Princip."
+      },
+      {
+        id: "his-p-002",
+        chapterId: "his-h2",
+        name: "Vladimir Lenin",
+        description: "Leider van de Russische Revolutie in 1917 en de eerste leider van de communistische Sovjet-Unie."
+      },
+      {
+        id: "his-p-003",
+        chapterId: "his-h2",
+        name: "Gavrilo Princip",
+        description: "Servisch nationalist uit Bosnië die in 1914 een aanslag pleegde op Frans Ferdinand."
+      },
+      {
+        id: "his-p-004",
+        chapterId: "his-h2",
+        name: "Pieter Jelles Troelstra",
+        description: "Socialistisch politicus en een van de oprichters van de SDAP. In 1918 riep hij op tot een revolutie."
+      }
+    ]
   },
 
 modes: [
