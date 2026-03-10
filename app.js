@@ -514,6 +514,40 @@ function applyActiveCourseToPage() {
   }
 }
 
+function buildCourseLabel(course) {
+  return `${course.subject} - ${course.level} ${course.grade}`;
+}
+
+function loadCourseOptions() {
+  if (!courseSelect) return;
+
+  courseSelect.innerHTML = "";
+
+  courseCatalog.forEach((course) => {
+    const option = document.createElement("option");
+    option.value = course.id;
+    option.textContent = buildCourseLabel(course);
+
+    if (course.id === activeCourse.id) {
+      option.selected = true;
+    }
+
+    courseSelect.appendChild(option);
+  });
+}
+
+function bindCourseSelect() {
+  if (!courseSelect) return;
+
+  courseSelect.addEventListener("change", (event) => {
+    const selectedCourseId = event.target.value;
+    const newUrl = `${window.location.pathname}?course=${encodeURIComponent(selectedCourseId)}`;
+    window.location.href = newUrl;
+  });
+}
+
 applyActiveCourseToPage();
+loadCourseOptions();
+bindCourseSelect();
 loadChapters();
 updateScoreDisplay();
