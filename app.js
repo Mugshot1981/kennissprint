@@ -209,11 +209,8 @@ const questionCount = activeCourse.items.filter(
 ).length;
 
 tile.innerHTML = `
-  <div class="chapter-tile-title">${shortTitle}</div>
-  <div class="chapter-tile-count">
-    <div class="chapter-count-number">${questionCount}</div>
-    <div class="chapter-count-label">begrippen</div>
-  </div>
+  <div class="chapter-title">${shortTitle}</div>
+  <div class="chapter-questions">${questionCount} vragen</div>
 `;
 
     tile.addEventListener("click", () => {
