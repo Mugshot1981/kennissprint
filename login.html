@@ -1,0 +1,27 @@
+<input id="email" placeholder="email">
+<button onclick="login()">Login</button>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+
+const supabase = window.supabase.createClient(
+  "https://leceithebntgxauivrdf.supabase.co",
+  "PLAK_HIER_JE_ANON_KEY"
+);
+
+async function login() {
+
+  const email = document.getElementById("email").value;
+
+  const { error } = await supabase.auth.signInWithOtp({
+    email: email
+  });
+
+  if(error){
+    alert(error.message);
+  } else {
+    alert("Check je mail voor de login link");
+  }
+}
+
+</script>
