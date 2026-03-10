@@ -1947,4 +1947,12 @@ const courseCatalog = [
   historyMavo4Course
 ];
 
+const defaultCourseId = "geschiedenis-mavo-4";
+
+function getCourseById(courseId) {
+  return courseCatalog.find(course => course.id === courseId);
+}
+
+const activeCourse = getCourseById(defaultCourseId);
+
 
