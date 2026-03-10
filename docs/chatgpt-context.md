@@ -405,3 +405,43 @@ Belangrijkste regel:
 
 Nooit aannames doen over code.
 Vraag eerst het bestand.
+
+## Nieuwe status – 2026-03-10
+
+KennisSprint is niet langer alleen een statische quizsite zonder login.
+
+### Nieuwe technische status
+- GitHub Pages frontend blijft actief
+- Supabase project is aangemaakt
+- Supabase tabellen bestaan:
+  - classes
+  - profiles
+  - cards_progress
+- login.html is gekoppeld aan Supabase Auth
+- magic link login werkt
+- confirmatiemail van Supabase wordt ontvangen
+- course.html controleert nu auth voordat de trainer geladen wordt
+
+### Huidige architectuurrichting
+KennisSprint ontwikkelt van multiple-choice quiz naar mastery learning systeem.
+
+Doel:
+leerlingen moeten begrippen uiteindelijk actief uit het geheugen kunnen reproduceren.
+
+### Volgende stap
+De volgende implementatiestap is:
+1. profiel aanmaken bij eerste login
+2. classcode koppelen aan profiel
+3. cards_progress gebruiken voor voortgang per kaart
+4. daarna mastery engine bouwen met spaced repetition
+
+### Belangrijke ontwerpkeuze
+Login blijft via Supabase magic link email.
+Classcode wordt gebruikt om leerlingen aan een klas te koppelen.
+
+### Belangrijke projectrichting
+KennisSprint moet gebouwd worden als:
+- mastery trainer
+- retrieval-first leerapp
+- progressie per leerling
+- later competitie op basis van mastery, niet snelheid
