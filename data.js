@@ -1962,36 +1962,82 @@ const historyHavo3Course = {
       title: "Demo hoofdstuk 2"
     }
   ],
+
   items: [
     {
       id: "havo3-001",
       subjectId: "geschiedenis",
       chapterId: "havo3-h1",
       type: "begrip",
-      prompt: "demobegrip",
+      prompt: "demobegrip 1",
       answer: "Dit is een testbegrip voor Geschiedenis 3 havo."
     },
     {
       id: "havo3-002",
       subjectId: "geschiedenis",
+      chapterId: "havo3-h1",
+      type: "begrip",
+      prompt: "demobegrip 2",
+      answer: "Dit is een tweede testbegrip voor Geschiedenis 3 havo."
+    },
+    {
+      id: "havo3-003",
+      subjectId: "geschiedenis",
+      chapterId: "havo3-h1",
+      type: "begrip",
+      prompt: "demobegrip 3",
+      answer: "Nog een dummybegrip voor de oefentrainer."
+    },
+    {
+      id: "havo3-004",
+      subjectId: "geschiedenis",
       chapterId: "havo3-h2",
       type: "begrip",
-      prompt: "tweede demobegrip",
-      answer: "Dit is een tweede testbegrip voor Geschiedenis 3 havo."
+      prompt: "demobegrip 4",
+      answer: "Dit begrip hoort bij hoofdstuk 2."
+    },
+    {
+      id: "havo3-005",
+      subjectId: "geschiedenis",
+      chapterId: "havo3-h2",
+      type: "begrip",
+      prompt: "demobegrip 5",
+      answer: "Extra testbegrip om voldoende vragen te hebben."
+    },
+    {
+      id: "havo3-006",
+      subjectId: "geschiedenis",
+      chapterId: "havo3-h2",
+      type: "begrip",
+      prompt: "demobegrip 6",
+      answer: "Nog een voorbeeldbegrip voor de quiz."
     }
   ],
+
   years: [
     {
       id: "havo3-y1",
       chapterId: "havo3-h1",
       year: "1789",
-      event: "Demo jaartal voor Geschiedenis 3 havo"
+      event: "Franse Revolutie begint (dummyvoorbeeld)"
     },
     {
       id: "havo3-y2",
+      chapterId: "havo3-h1",
+      year: "1815",
+      event: "Slag bij Waterloo (dummyvoorbeeld)"
+    },
+    {
+      id: "havo3-y3",
       chapterId: "havo3-h2",
       year: "1848",
-      event: "Tweede demo jaartal voor Geschiedenis 3 havo"
+      event: "Grondwet van Thorbecke (dummyvoorbeeld)"
+    },
+    {
+      id: "havo3-y4",
+      chapterId: "havo3-h2",
+      year: "1870",
+      event: "Duitsland wordt een eenheidsstaat (dummyvoorbeeld)"
     }
   ]
 };
