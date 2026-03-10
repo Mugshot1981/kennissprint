@@ -291,7 +291,7 @@ else if (quizMode === "event-years") {
   correctOptionText = correctItem.prompt; // jaartal
 
   wrongOptionPool = [...new Set(
-activeCourse.years.map((item) => item.year)
+getCourseYears(activeCourse).map((item) => item.year)
   )].filter((year) => year !== correctOptionText);
 
 }
