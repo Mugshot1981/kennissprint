@@ -10,12 +10,12 @@ body {
   justify-content: center;
 }
 
-.card {
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  width: 700px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.card{
+  max-width:900px;
+  margin:40px auto;
+  padding:40px 50px;
+  background:white;
+  border-radius:12px;
 }
 
 h1 {
