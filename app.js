@@ -237,25 +237,33 @@ function showEndScreen() {
 }
 
 function getItemsForChapters(chapterIds) {
+  const activeMode = activeCourse.modes.find((mode) => mode.id === quizMode);
 
-  // JAARTALLEN QUIZES
-  if (quizMode === "years" || quizMode === "event-years") {
-return getCourseYears(activeCourse)
-      .filter(item => chapterIds.includes(item.chapterId))
-      .map(item => ({
+  if (!activeMode) {
+    return [];
+  }
+
+  const datasetName = activeMode.dataset;
+  const dataset = activeCourse.datasets?.[datasetName] || [];
+
+  if (datasetName === "years") {
+    return dataset
+      .filter((item) => chapterIds.includes(item.chapterId))
+      .map((item) => ({
         id: item.id,
         chapterId: item.chapterId,
         prompt: item.year,
         answer: item.event
       }));
-
   }
 
-  // NORMALE BEGRIPPEN QUIZ
-return getCourseTerms(activeCourse).filter((item) => {
-    return chapterIds.includes(item.chapterId) && item.type === "begrip";
-  });
+  if (datasetName === "terms") {
+    return dataset.filter((item) => {
+      return chapterIds.includes(item.chapterId) && item.type === "begrip";
+    });
+  }
 
+  return dataset.filter((item) => chapterIds.includes(item.chapterId));
 }
 
 
