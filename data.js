@@ -2012,11 +2012,20 @@ function getCourseIdFromUrl() {
   return params.get("course");
 }
 
+function hasMinimumQuizContent(course) {
+  if (!course) return false;
+
+  const itemCount = Array.isArray(course.items) ? course.items.length : 0;
+  const yearCount = Array.isArray(course.years) ? course.years.length : 0;
+
+  return itemCount >= 4 || yearCount >= 4;
+}
+
 function getInitialCourse() {
   const courseIdFromUrl = getCourseIdFromUrl();
   const courseFromUrl = getCourseById(courseIdFromUrl);
 
-  if (courseFromUrl) {
+  if (courseFromUrl && hasMinimumQuizContent(courseFromUrl)) {
     return courseFromUrl;
   }
 
