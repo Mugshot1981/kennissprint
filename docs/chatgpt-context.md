@@ -346,3 +346,5 @@ Cursus bepaalt datasets en modes.
 app.js blijft generiek.
 
 Nieuwe features worden eerst in data.js ontworpen.
+
+Rule: nooit aannames doen over code. Vraag eerst het bestand.
