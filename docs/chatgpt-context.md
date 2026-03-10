@@ -1,4 +1,7 @@
+
 KennisSprint – ChatGPT Context
+version: 0.1
+last updated: 2026
 
 Dit document beschrijft de huidige architectuur, datastructuur en ontwikkelstatus van het project KennisSprint zodat nieuwe ChatGPT-sessies direct verder kunnen werken zonder eerdere chatcontext.
 
