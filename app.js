@@ -114,9 +114,17 @@ function getModeConfig(modeId) {
       questionLabel: "Jaartal",
       sessionModeLabel: "Jaartal → gebeurtenis"
     },
-    "event-years": {
+       "event-years": {
       questionLabel: "Gebeurtenis",
       sessionModeLabel: "Gebeurtenis → jaartal"
+    },
+    "person-to-description": {
+      questionLabel: "Persoon",
+      sessionModeLabel: "Persoon → beschrijving"
+    },
+    "description-to-person": {
+      questionLabel: "Beschrijving",
+      sessionModeLabel: "Beschrijving → persoon"
     }
   };
 
