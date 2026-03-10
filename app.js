@@ -197,10 +197,21 @@ activeCourse.chapters.forEach((chapter) => {
     chapterSelect.appendChild(option);
 
     const tile = document.createElement("button");
-    tile.type = "button";
-    tile.className = "chapter-tile";
-    tile.dataset.chapterId = chapter.id;
-    tile.textContent = getTileTitle(chapter.title);
+  const tile = document.createElement("button");
+tile.type = "button";
+tile.className = "chapter-tile";
+tile.dataset.chapterId = chapter.id;
+
+const shortTitle = getTileTitle(chapter.title);
+
+const questionCount = activeCourse.items.filter(
+  item => item.chapterId === chapter.id
+).length;
+
+tile.innerHTML = `
+  <span class="chapter-title">${shortTitle}</span>
+  <span class="chapter-count">${questionCount} begrippen</span>
+`;
 
     tile.addEventListener("click", () => {
       const optionToToggle = Array.from(chapterSelect.options).find(
