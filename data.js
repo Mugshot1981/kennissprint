@@ -2108,28 +2108,38 @@ const historyHavo3Course = {
     persons: []
   },
 
-  modes: [
-    {
-      id: "term-to-answer",
-      label: "Begrip → beschrijving",
-      dataset: "terms"
-    },
-    {
-      id: "answer-to-term",
-      label: "Beschrijving → begrip",
-      dataset: "terms"
-    },
-    {
-      id: "years",
-      label: "Jaartal → gebeurtenis",
-      dataset: "years"
-    },
-    {
-      id: "event-years",
-      label: "Gebeurtenis → jaartal",
-      dataset: "years"
-    }
-  ]
+modes: [
+  {
+    id: "term-to-answer",
+    label: "Begrip → beschrijving",
+    dataset: "terms"
+  },
+  {
+    id: "answer-to-term",
+    label: "Beschrijving → begrip",
+    dataset: "terms"
+  },
+  {
+    id: "years",
+    label: "Jaartal → gebeurtenis",
+    dataset: "years"
+  },
+  {
+    id: "event-years",
+    label: "Gebeurtenis → jaartal",
+    dataset: "years"
+  },
+  {
+    id: "person-to-description",
+    label: "Persoon → beschrijving",
+    dataset: "persons"
+  },
+  {
+    id: "description-to-person",
+    label: "Beschrijving → persoon",
+    dataset: "persons"
+  }
+]
 };
 
 const courseCatalog = [
