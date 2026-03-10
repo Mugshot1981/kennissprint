@@ -176,7 +176,7 @@ return getCourseYears(activeCourse)
   }
 
   // NORMALE BEGRIPPEN QUIZ
-return activeCourse.items.filter((item) => {
+return getCourseTerms(activeCourse).filter((item) => {
     return chapterIds.includes(item.chapterId) && item.type === "begrip";
   });
 
