@@ -1,7 +1,7 @@
-
 KennisSprint – ChatGPT Context
-version: 0.1
-last updated: 2026
+
+version: 0.2
+last updated: 2026-03-10
 
 Dit document beschrijft de huidige architectuur, datastructuur en ontwikkelstatus van het project KennisSprint zodat nieuwe ChatGPT-sessies direct verder kunnen werken zonder eerdere chatcontext.
 
@@ -87,68 +87,78 @@ De repository bevat momenteel:
 index.html
 course.html
 app.js
-data.js
 style.css
 
-docs/
-chatgpt-context.md
-index.html
-
-Cursusselectie.
-
-course.html
-
-Quiztrainer.
-
-app.js
-
-Bevat de quiz engine en alle logica.
+Datafiles:
 
 data.js
+courseCatalog.js
+courses/
 
-Bevat alle cursussen en datasets.
+In /courses/ staat één bestand per cursus.
 
-style.css
+Voorbeelden:
 
-Bevat alle styling.
-
+courses/geschiedenis-mavo-4.js
+courses/geschiedenis-havo-3.js
+courses/aardrijkskunde-mavo-4.js
+courses/economie-mavo-4.js
 4. Dataflow
 
 De applicatie werkt als volgt:
 
 index.html
-↓
-gebruiker kiest cursus
-↓
-course.html?course=<courseId>
+↓ gebruiker kiest cursus
+course.html?course=
 ↓
 app.js leest courseId uit URL
 ↓
-activeCourse wordt geladen uit data.js
+activeCourse wordt geladen uit courseCatalog
 ↓
 quiz wordt gegenereerd
-5. Course model (data.js)
+
+Belangrijk:
+
+courseCatalog.js
+↓
+importeert alle cursussen
+↓
+dropdown vakken wordt hieruit opgebouwd
+
+Als een cursus niet in courseCatalog staat, verschijnt het vak niet in de UI.
+
+5. Course model
 
 Elke cursus volgt dit model:
 
 course = {
 
-  id
-  subject
-  level
-  grade
+id
+subject
+level
+grade
+title
 
-  title
+chapters
+datasets
+modes
 
-  chapters
-
-  datasets
-
-  modes
 }
+
+Voorbeeld:
+
+id: "geschiedenis-mavo-4"
+subject: "geschiedenis"
+level: "mavo"
+grade: "4"
+
+Deze velden zijn verplicht omdat de startpagina hieruit filters maakt.
+
 6. Chapters
 
 Hoofdstukken bepalen hoe vragen gegroepeerd worden.
+
+Structuur:
 
 {
  id
@@ -179,6 +189,7 @@ Begrippen.
 {
  id
  chapterId
+ type
  prompt
  answer
 }
@@ -188,6 +199,7 @@ Voorbeeld:
 {
  id: "his-001",
  chapterId: "his-h1",
+ type: "begrip",
  prompt: "Interbellum",
  answer: "De periode tussen de Eerste en Tweede Wereldoorlog"
 }
@@ -206,7 +218,6 @@ persons (toekomst)
 Voor vragen zoals:
 
 persoon → beschrijving
-
 beschrijving → persoon
 
 Structuur:
@@ -221,17 +232,11 @@ Structuur:
 
 Modes bepalen hoe datasets geoefend worden.
 
-Voorbeeld:
-
 modes: [
- {
-  id
-  label
-  dataset
- }
+ { id label dataset }
 ]
 
-Concrete voorbeelden:
+Voorbeelden:
 
 term-to-answer
 answer-to-term
@@ -286,35 +291,81 @@ vraag
 antwoorden
 ↓
 feedback
-11. Huidige status
+11. Huidige cursussen
 
-Momenteel werkt:
-
-cursusselectie
-
-hoofdstukselectie
-
-quiz engine
-
-meerdere oefenvormen
-
-datasets architectuur
-
-De cursus:
+Momenteel bestaan de volgende cursussen:
 
 geschiedenis-mavo-4
+geschiedenis-havo-3 (testdataset)
+aardrijkskunde-mavo-4
+economie-mavo-4
 
-gebruikt al het nieuwe datasetmodel.
+Status:
 
-De cursus:
+cursus	status
+geschiedenis-mavo-4	volledig werkend
+aardrijkskunde-mavo-4	volledig werkend
+economie-mavo-4	hoofdstukken toegevoegd, dataset in opbouw
+geschiedenis-havo-3	test
 
-geschiedenis-havo-3
+Datasets worden opgebouwd door begrippenpagina’s uit schoolboeken te fotograferen en om te zetten naar datasetitems.
 
-is een dummy dataset voor testen.
+12. Veelvoorkomende fouten
 
-12. Toekomstige uitbreidingen
+Tijdens ontwikkeling kwamen een paar typische bugs voor.
 
-Geplande features:
+1. Syntax errors blokkeren hele app
+
+Omdat modules worden geïmporteerd:
+
+courseCatalog
+↓
+course file
+
+zal één syntaxfout in een cursusbestand de hele app blokkeren.
+
+Bijvoorbeeld:
+
+chapters: [
+...
+],
+],
+
+Dit voorkomt dat courseCatalog laadt.
+
+2. Ontbrekende course velden
+
+Als een cursus deze velden mist:
+
+id
+subject
+level
+grade
+
+verschijnt het vak niet in de dropdown.
+
+3. Cursus niet in catalog
+
+Nieuwe cursus moet altijd toegevoegd worden aan:
+
+courseCatalog.js
+13. Ontwikkelworkflow
+
+Nieuwe cursus bouwen gebeurt zo:
+
+inhoudspagina boek lezen
+
+chapters array maken
+
+cursusbestand maken
+
+import in courseCatalog
+
+dataset vullen via begrippenpagina’s
+
+Datasets worden door ChatGPT gegenereerd uit foto’s.
+
+14. Toekomstige uitbreidingen
 
 Nieuwe datasets:
 
@@ -335,16 +386,22 @@ Mogelijk later:
 leerlingaccounts
 fouten-trainer
 voortgang
-13. Ontwikkelprincipes
+15. Ontwikkelprincipes
 
 Belangrijke regels voor ontwikkeling:
 
 Data model eerst, UI daarna.
 
-Cursus bepaalt datasets en modes.
+Cursus bepaalt:
+
+datasets
+modes
 
 app.js blijft generiek.
 
-Nieuwe features worden eerst in data.js ontworpen.
+Nieuwe features worden eerst in de data-structuur ontworpen.
 
-Rule: nooit aannames doen over code. Vraag eerst het bestand.
+Belangrijkste regel:
+
+Nooit aannames doen over code.
+Vraag eerst het bestand.
