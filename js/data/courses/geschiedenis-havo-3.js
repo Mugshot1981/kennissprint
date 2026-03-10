@@ -1,3 +1,8 @@
+/*
+KennisSprint dataset
+© Joas de Wit
+2026
+*/
 export const historyHavo3Course = {
   id: "geschiedenis-havo-3",
   subject: "geschiedenis",
