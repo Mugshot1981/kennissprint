@@ -38,7 +38,7 @@ export const aardrijkskundeMavo4Course = {
     title: "Midden-Oosten en China"
   }
 ],
-  ],
+
 
   datasets: {
     terms: [
