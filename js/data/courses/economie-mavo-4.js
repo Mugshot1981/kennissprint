@@ -1,3 +1,8 @@
+/*
+KennisSprint dataset
+© Joas de Wit
+2026
+*/
 export const economieMavo4Course = {
   id: "economie-mavo-4",
   subject: "economie",
