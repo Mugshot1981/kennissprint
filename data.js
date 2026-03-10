@@ -1939,10 +1939,20 @@ const historyMavo4Course = {
   title: "Geschiedenis 4 mavo",
 
   chapters: chapters,
-  items: items,
-  years: historyYears
-};
 
+  datasets: {
+    terms: items,
+    years: historyYears,
+    persons: []
+  },
+
+  modes: [
+    "term-to-answer",
+    "answer-to-term",
+    "years",
+    "event-years"
+  ]
+};
 const historyHavo3Course = {
   id: "geschiedenis-havo-3",
   subject: "geschiedenis",
