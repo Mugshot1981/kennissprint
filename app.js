@@ -452,15 +452,7 @@ const selectedChapters = activeCourse.chapters.filter((chapter) =>
       ? selectedChapters[0].title
       : `${selectedChapters.length} hoofdstukken geselecteerd`;
 
-if (quizMode === "term-to-answer") {
-  quizSessionMode.textContent = "Begrip → beschrijving";
-} else if (quizMode === "answer-to-term") {
-  quizSessionMode.textContent = "Beschrijving → begrip";
-} else if (quizMode === "years") {
-  quizSessionMode.textContent = "Jaartal → gebeurtenis";
-} else if (quizMode === "event-years") {
-  quizSessionMode.textContent = "Gebeurtenis → jaartal";
-}
+quizSessionMode.textContent = getModeConfig(quizMode).sessionModeLabel;
 
  if (!currentChapterItems || currentChapterItems.length < 4) {
   alert("De selectie moet minimaal 4 vragen bevatten.");
