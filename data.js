@@ -1,3 +1,5 @@
+import { historyMavo4Course } from "./js/data/courses/geschiedenis-mavo-4.js";
+  
 const subjects = [
   {
     id: "geschiedenis",
@@ -2219,3 +2221,7 @@ function getInitialCourse() {
 }
 
 const activeCourse = getInitialCourse();
+
+const courseCatalog = [
+  historyMavo4Course
+];
