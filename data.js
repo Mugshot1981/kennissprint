@@ -1943,8 +1943,62 @@ const historyMavo4Course = {
   years: historyYears
 };
 
+const historyHavo3Course = {
+  id: "geschiedenis-havo-3",
+  subject: "geschiedenis",
+  level: "havo",
+  grade: "3",
+  title: "Geschiedenis 3 havo",
+
+  chapters: [
+    {
+      id: "havo3-h1",
+      subjectId: "geschiedenis",
+      title: "Demo hoofdstuk 1"
+    },
+    {
+      id: "havo3-h2",
+      subjectId: "geschiedenis",
+      title: "Demo hoofdstuk 2"
+    }
+  ],
+  items: [
+    {
+      id: "havo3-001",
+      subjectId: "geschiedenis",
+      chapterId: "havo3-h1",
+      type: "begrip",
+      prompt: "demobegrip",
+      answer: "Dit is een testbegrip voor Geschiedenis 3 havo."
+    },
+    {
+      id: "havo3-002",
+      subjectId: "geschiedenis",
+      chapterId: "havo3-h2",
+      type: "begrip",
+      prompt: "tweede demobegrip",
+      answer: "Dit is een tweede testbegrip voor Geschiedenis 3 havo."
+    }
+  ],
+  years: [
+    {
+      id: "havo3-y1",
+      chapterId: "havo3-h1",
+      year: "1789",
+      event: "Demo jaartal voor Geschiedenis 3 havo"
+    },
+    {
+      id: "havo3-y2",
+      chapterId: "havo3-h2",
+      year: "1848",
+      event: "Tweede demo jaartal voor Geschiedenis 3 havo"
+    }
+  ]
+};
+
 const courseCatalog = [
-  historyMavo4Course
+  historyMavo4Course,
+  historyHavo3Course
 ];
 
 const defaultCourseId = "geschiedenis-mavo-4";
