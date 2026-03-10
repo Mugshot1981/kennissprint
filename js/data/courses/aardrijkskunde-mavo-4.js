@@ -539,7 +539,274 @@ export const aardrijkskundeMavo4Course = {
   type: "begrip",
   prompt: "risicoperceptie",
   answer: "de mate waarin mensen risico's inschatten om ergens veilig te wonen of werken"
+},
+      {
+  id: "ak-h3-001",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "bevolkingsdichtheid",
+  answer: "het gemiddeld aantal inwoners per vierkante kilometer"
+},
+{
+  id: "ak-h3-002",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "bevolkingsgrafiek",
+  answer: "een grafiek waarin je per leeftijdsgroep het aantal mannen en vrouwen kunt aflezen"
+},
+{
+  id: "ak-h3-003",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "bevolkingssamenstelling",
+  answer: "de manier waarop de bevolking is samengesteld naar leeftijd, geslacht en herkomst"
+},
+{
+  id: "ak-h3-004",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "bevolkingsspreiding",
+  answer: "de manier waarop de bevolking over een gebied verdeeld is"
+},
+{
+  id: "ak-h3-005",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "geboortecijfer",
+  answer: "het gemiddeld aantal geboorten per jaar per duizend inwoners"
+},
+{
+  id: "ak-h3-006",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "levensverwachting",
+  answer: "het gemiddeld aantal jaren dat een inwoner bij geboorte te leven heeft"
+},
+{
+  id: "ak-h3-007",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "sterftecijfer",
+  answer: "het gemiddeld aantal sterfgevallen per jaar per duizend inwoners"
+},
+{
+  id: "ak-h3-008",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "arbeidsmigratie",
+  answer: "verhuizen vanwege werk"
+},
+{
+  id: "ak-h3-009",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "binnenlandse migratie",
+  answer: "verhuizen naar een andere woonplaats binnen een land"
+},
+{
+  id: "ak-h3-010",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "buitenlandse migratie",
+  answer: "verhuizen naar een andere woonplaats in een ander land"
+},
+{
+  id: "ak-h3-011",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "urbanisatie",
+  answer: "de trek van mensen van het platteland naar de stad"
+},
+{
+  id: "ak-h3-012",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "suburbanisatie",
+  answer: "de trek van mensen van de stad naar plaatsen rond de stad"
+},
+{
+  id: "ak-h3-013",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "agglomeratie",
+  answer: "een grote stad met eraan vastgegroeide dorpen"
+},
+{
+  id: "ak-h3-014",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "congestie",
+  answer: "het verstopt raken van infrastructuur door bijvoorbeeld files"
+},
+{
+  id: "ak-h3-015",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "forensisme",
+  answer: "het op en neer reizen tussen woonplaats en werk"
+},
+{
+  id: "ak-h3-016",
+  chapterId: "ak-h3",
+  type: "begrip",
+  prompt: "verzorgingsgebied",
+  answer: "het gebied waaruit een stad klanten of gebruikers van voorzieningen aantrekt"
+},
+      {
+  id: "ak-h4-001",
+  chapterId: "ak-h4",
+  type: "begrip",
+  prompt: "bevolkingspolitiek",
+  answer: "maatregelen van de overheid om de omvang van de bevolking te beïnvloeden"
+},
+{
+  id: "ak-h4-002",
+  chapterId: "ak-h4",
+  type: "begrip",
+  prompt: "braindrain",
+  answer: "het vertrek van hoogopgeleide mensen uit een gebied waardoor kennis verdwijnt"
+},
+{
+  id: "ak-h4-003",
+  chapterId: "ak-h4",
+  type: "begrip",
+  prompt: "hukou",
+  answer: "persoonlijk registratiebewijs dat aangeeft of je op het platteland of in de stad geboren bent"
+},
+{
+  id: "ak-h4-004",
+  chapterId: "ak-h4",
+  type: "begrip",
+  prompt: "hutong",
+  answer: "traditionele woonwijk in Chinese steden die vaak plaatsmaakt voor moderne flats"
+},
+{
+  id: "ak-h4-005",
+  chapterId: "ak-h4",
+  type: "begrip",
+  prompt: "gated community",
+  answer: "beveiligde woonwijk voor rijkere bewoners"
+},
+{
+  id: "ak-h4-006",
+  chapterId: "ak-h4",
+  type: "begrip",
+  prompt: "megastad",
+  answer: "stad met meer dan 10 miljoen inwoners"
+},
+      {
+  id: "ak-h5-001",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "brakwater",
+  answer: "mengsel van zoutwater en zoetwater"
+},
+{
+  id: "ak-h5-002",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "irrigatie",
+  answer: "het bevloeien van landbouwgrond met water"
+},
+{
+  id: "ak-h5-003",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "korte waterkringloop",
+  answer: "water dat na verdamping uit zee via neerslag direct weer in zee terechtkomt"
+},
+{
+  id: "ak-h5-004",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "lange waterkringloop",
+  answer: "water dat na verdamping via wolken, neerslag, grondwater en rivieren weer in zee terechtkomt"
+},
+{
+  id: "ak-h5-005",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "waterbalans",
+  answer: "overzicht van de hoeveelheid water die een gebied binnenkomt en weer verlaat"
+},
+{
+  id: "ak-h5-006",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "waterschaars­te",
+  answer: "een tekort aan veilig drinkwater"
+},
+{
+  id: "ak-h5-007",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "delta",
+  answer: "gebied bij de monding van een rivier waar sediment wordt afgezet"
+},
+{
+  id: "ak-h5-008",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "debiet",
+  answer: "de hoeveelheid water die een rivier per seconde afvoert"
+},
+{
+  id: "ak-h5-009",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "duinwater",
+  answer: "drinkwater dat uit de duinen wordt gewonnen"
+},
+{
+  id: "ak-h5-010",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "grondwater",
+  answer: "water dat zich in de bodem bevindt"
+},
+{
+  id: "ak-h5-011",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "klimaatadaptatie",
+  answer: "aanpassen aan veranderende klimaatomstandigheden"
+},
+{
+  id: "ak-h5-012",
+  chapterId: "ak-h5",
+  type: "begrip",
+  prompt: "piekafvoer",
+  answer: "extreem hoge waterstand in een rivier"
+},
+      {
+  id: "ak-h6-001",
+  chapterId: "ak-h6",
+  type: "begrip",
+  prompt: "aquifer",
+  answer: "waterhoudende laag in de ondergrond"
+},
+{
+  id: "ak-h6-002",
+  chapterId: "ak-h6",
+  type: "begrip",
+  prompt: "fossiel water",
+  answer: "water in een aquifer dat nauwelijks wordt aangevuld"
+},
+{
+  id: "ak-h6-003",
+  chapterId: "ak-h6",
+  type: "begrip",
+  prompt: "verzilting",
+  answer: "toename van het zoutgehalte in bodem en water"
+},
+{
+  id: "ak-h6-004",
+  chapterId: "ak-h6",
+  type: "begrip",
+  prompt: "verdroging",
+  answer: "daling van de grondwaterspiegel"
 }
+      
     ],
     years: [],
     persons: []
