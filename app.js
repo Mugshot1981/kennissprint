@@ -322,52 +322,15 @@ function buildQuestion() {
 
   const correctItem = remainingQuestions.pop();
 
-  let questionText = "";
-  let correctOptionText = "";
-  let wrongOptionPool = [];
-if (questionLabel) {
-  questionLabel.textContent = getModeConfig(quizMode).questionLabel;
-}
- if (quizMode === "term-to-answer") {
+   if (questionLabel) {
+    questionLabel.textContent = getModeConfig(quizMode).questionLabel;
+  }
 
-  questionText = correctItem.prompt;
-  correctOptionText = correctItem.answer;
-
-  wrongOptionPool = currentChapterItems
-    .filter((item) => item.id !== correctItem.id)
-    .map((item) => item.answer);
-
-}
-else if (quizMode === "answer-to-term") {
-
-  questionText = correctItem.answer;
-  correctOptionText = correctItem.prompt;
-
-  wrongOptionPool = currentChapterItems
-    .filter((item) => item.id !== correctItem.id)
-    .map((item) => item.prompt);
-
-}
-else if (quizMode === "years") {
-
-  questionText = correctItem.prompt;     // jaartal
-  correctOptionText = correctItem.answer; // gebeurtenis
-
-  wrongOptionPool = currentChapterItems
-    .filter((item) => item.id !== correctItem.id)
-    .map((item) => item.answer);
-
-}
-else if (quizMode === "event-years") {
-
-  questionText = correctItem.answer;      // gebeurtenis
-  correctOptionText = correctItem.prompt; // jaartal
-
-  wrongOptionPool = [...new Set(
-getCourseYears(activeCourse).map((item) => item.year)
-  )].filter((year) => year !== correctOptionText);
-
-}
+  const {
+    questionText,
+    correctOptionText,
+    wrongOptionPool
+  } = getQuestionParts(correctItem, quizMode, currentChapterItems);
   const uniqueWrongOptions = [...new Set(wrongOptionPool)];
   const shuffledWrongOptions = shuffleArray(uniqueWrongOptions).slice(0, 3);
 
