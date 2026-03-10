@@ -278,10 +278,7 @@ function buildQuestion() {
   let correctOptionText = "";
   let wrongOptionPool = [];
 if (questionLabel) {
-  if (quizMode === "term-to-answer") questionLabel.textContent = "Begrip";
-  else if (quizMode === "answer-to-term") questionLabel.textContent = "Beschrijving";
-  else if (quizMode === "years") questionLabel.textContent = "Jaartal";
-  else if (quizMode === "event-years") questionLabel.textContent = "Gebeurtenis";
+  questionLabel.textContent = getModeConfig(quizMode).questionLabel;
 }
  if (quizMode === "term-to-answer") {
 
