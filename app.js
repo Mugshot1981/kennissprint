@@ -101,39 +101,71 @@ function getCourseYears(course) {
 }
 
 function getModeConfig(modeId) {
-  const configs = {
+  const courseMode = activeCourse?.modes?.find((mode) => mode.id === modeId);
+
+  if (courseMode) {
+    return {
+      questionLabel: courseMode.questionLabel || "Vraag",
+      sessionModeLabel: courseMode.sessionModeLabel || courseMode.label || modeId,
+      questionField: courseMode.questionField,
+      answerField: courseMode.answerField,
+      dataset: courseMode.dataset
+    };
+  }
+
+  const fallbackConfigs = {
     "term-to-answer": {
       questionLabel: "Begrip",
-      sessionModeLabel: "Begrip → beschrijving"
+      sessionModeLabel: "Begrip → beschrijving",
+      questionField: "prompt",
+      answerField: "answer",
+      dataset: "terms"
     },
     "answer-to-term": {
       questionLabel: "Beschrijving",
-      sessionModeLabel: "Beschrijving → begrip"
+      sessionModeLabel: "Beschrijving → begrip",
+      questionField: "answer",
+      answerField: "prompt",
+      dataset: "terms"
     },
     "years": {
       questionLabel: "Jaartal",
-      sessionModeLabel: "Jaartal → gebeurtenis"
+      sessionModeLabel: "Jaartal → gebeurtenis",
+      questionField: "prompt",
+      answerField: "answer",
+      dataset: "years"
     },
-       "event-years": {
+    "event-years": {
       questionLabel: "Gebeurtenis",
-      sessionModeLabel: "Gebeurtenis → jaartal"
+      sessionModeLabel: "Gebeurtenis → jaartal",
+      questionField: "answer",
+      answerField: "prompt",
+      dataset: "years"
     },
     "person-to-description": {
       questionLabel: "Persoon",
-      sessionModeLabel: "Persoon → beschrijving"
+      sessionModeLabel: "Persoon → beschrijving",
+      questionField: "name",
+      answerField: "description",
+      dataset: "persons"
     },
     "description-to-person": {
       questionLabel: "Beschrijving",
-      sessionModeLabel: "Beschrijving → persoon"
+      sessionModeLabel: "Beschrijving → persoon",
+      questionField: "description",
+      answerField: "name",
+      dataset: "persons"
     }
   };
 
-  return configs[modeId] || {
+  return fallbackConfigs[modeId] || {
     questionLabel: "Vraag",
-    sessionModeLabel: modeId
+    sessionModeLabel: modeId,
+    questionField: "prompt",
+    answerField: "answer",
+    dataset: "terms"
   };
 }
-
 function getQuestionParts(correctItem, quizMode, currentChapterItems) {
   const modeFieldMap = {
     "term-to-answer": {
