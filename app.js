@@ -100,6 +100,34 @@ function getCourseYears(course) {
   return course?.years || [];
 }
 
+function getModeConfig(modeId) {
+  const configs = {
+    "term-to-answer": {
+      questionLabel: "Begrip",
+      sessionModeLabel: "Begrip → beschrijving"
+    },
+    "answer-to-term": {
+      questionLabel: "Beschrijving",
+      sessionModeLabel: "Beschrijving → begrip"
+    },
+    "years": {
+      questionLabel: "Jaartal",
+      sessionModeLabel: "Jaartal → gebeurtenis"
+    },
+    "event-years": {
+      questionLabel: "Gebeurtenis",
+      sessionModeLabel: "Gebeurtenis → jaartal"
+    }
+  };
+
+  return configs[modeId] || {
+    questionLabel: "Vraag",
+    sessionModeLabel: modeId
+  };
+}
+
+function getStarsText() {
+
 function getStarsText() {
   if (scoreTotal === 0) {
     return "☆☆☆☆☆";
