@@ -310,16 +310,17 @@ tile.dataset.chapterId = chapter.id;
 
 tile.textContent = getTileTitle(chapter.title);
 
-    tile.addEventListener("click", () => {
-      const optionToToggle = Array.from(chapterSelect.options).find(
-        (option) => option.value === chapter.id
-      );
+tile.addEventListener("click", () => {
+  const optionToToggle = Array.from(chapterSelect.options).find(
+    (option) => option.value === chapter.id
+  );
 
-      if (!optionToToggle) return;
+  if (!optionToToggle) return;
 
-      optionToToggle.selected = !optionToToggle.selected;
-      syncChapterTilesFromSelect();
-    });
+  optionToToggle.selected = !optionToToggle.selected;
+  syncChapterTilesFromSelect();
+  chapterSelect.dispatchEvent(new Event("change"));
+});
 
     chapterTileGrid.appendChild(tile);
   });
