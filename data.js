@@ -1987,10 +1987,28 @@ const historyMavo4Course = {
       label: "Jaartal → gebeurtenis",
       dataset: "years"
     },
-       {
+         {
       id: "event-years",
       label: "Gebeurtenis → jaartal",
       dataset: "years"
+    },
+    {
+      id: "person-to-description",
+      label: "Persoon → beschrijving",
+      dataset: "persons",
+      questionLabel: "Persoon",
+      sessionModeLabel: "Persoon → beschrijving",
+      questionField: "name",
+      answerField: "description"
+    },
+    {
+      id: "description-to-person",
+      label: "Beschrijving → persoon",
+      dataset: "persons",
+      questionLabel: "Beschrijving",
+      sessionModeLabel: "Beschrijving → persoon",
+      questionField: "description",
+      answerField: "name"
     },
  {
   id: "person-to-description",
