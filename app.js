@@ -618,11 +618,32 @@ function bindCourseSelectors() {
     });
   }
 
-  if (levelSelect) {
-    levelSelect.addEventListener("change", () => {
-      refreshGradeSelect();
-    });
-  }
+if (levelSelect) {
+  levelSelect.addEventListener("change", () => {
+    refreshGradeSelect();
+  });
+}
+
+if (gradeSelect) {
+  gradeSelect.addEventListener("change", () => {
+    const subject = subjectSelect.value;
+    const level = levelSelect.value;
+    const grade = gradeSelect.value;
+
+    if (!subject || !level || !grade) return;
+
+    const course = findCourse(subject, level, grade);
+
+    if (!course) return;
+
+    const newUrl =
+      window.location.pathname +
+      "?course=" +
+      encodeURIComponent(course.id);
+
+    window.location.href = newUrl;
+  });
+}
 }
 
 applyActiveCourseToPage();
