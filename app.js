@@ -5,6 +5,8 @@ KennisSprint dataset
 */
 import { courseCatalog, activeCourse } from "./data.js";
 
+const supabase = window.supabaseClient;
+
 // ===== ELEMENTEN =====
 
 const chapterSelect = document.getElementById("chapterSelect");
