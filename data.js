@@ -1943,7 +1943,32 @@ const historyMavo4Course = {
   datasets: {
     terms: items,
     years: historyYears,
-    persons: []
+       persons: [
+      {
+        id: "havo3-p1",
+        chapterId: "havo3-h1",
+        name: "Napoleon",
+        description: "Franse leider die grote delen van Europa veroverde."
+      },
+      {
+        id: "havo3-p2",
+        chapterId: "havo3-h1",
+        name: "Lodewijk XVI",
+        description: "Franse koning tijdens het begin van de Franse Revolutie."
+      },
+      {
+        id: "havo3-p3",
+        chapterId: "havo3-h2",
+        name: "Thorbecke",
+        description: "Nederlandse staatsman die een belangrijke rol speelde bij de grondwet van 1848."
+      },
+      {
+        id: "havo3-p4",
+        chapterId: "havo3-h2",
+        name: "Bismarck",
+        description: "Pruisische politicus die belangrijk was voor de Duitse eenwording."
+      }
+    ]
   },
 
   modes: [
