@@ -126,7 +126,55 @@ function getModeConfig(modeId) {
   };
 }
 
+function getQuestionParts(correctItem, quizMode, currentChapterItems) {
+  if (quizMode === "term-to-answer") {
+    return {
+      questionText: correctItem.prompt,
+      correctOptionText: correctItem.answer,
+      wrongOptionPool: currentChapterItems
+        .filter((item) => item.id !== correctItem.id)
+        .map((item) => item.answer)
+    };
+  }
 
+  if (quizMode === "answer-to-term") {
+    return {
+      questionText: correctItem.answer,
+      correctOptionText: correctItem.prompt,
+      wrongOptionPool: currentChapterItems
+        .filter((item) => item.id !== correctItem.id)
+        .map((item) => item.prompt)
+    };
+  }
+
+  if (quizMode === "years") {
+    return {
+      questionText: correctItem.prompt,
+      correctOptionText: correctItem.answer,
+      wrongOptionPool: currentChapterItems
+        .filter((item) => item.id !== correctItem.id)
+        .map((item) => item.answer)
+    };
+  }
+
+  if (quizMode === "event-years") {
+    return {
+      questionText: correctItem.answer,
+      correctOptionText: correctItem.prompt,
+      wrongOptionPool: [...new Set(
+        getCourseYears(activeCourse).map((item) => item.year)
+      )].filter((year) => year !== correctOptionText)
+    };
+  }
+
+  return {
+    questionText: correctItem.prompt,
+    correctOptionText: correctItem.answer,
+    wrongOptionPool: currentChapterItems
+      .filter((item) => item.id !== correctItem.id)
+      .map((item) => item.answer)
+  };
+}
 
 function getStarsText() {
   if (scoreTotal === 0) {
