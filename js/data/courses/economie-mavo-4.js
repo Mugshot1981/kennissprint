@@ -1,3 +1,4 @@
+export const economieMavo4Course = {
 chapters: [
   {
     id: "eco-h1",
