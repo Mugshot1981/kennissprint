@@ -126,7 +126,7 @@ function getModeConfig(modeId) {
   };
 }
 
-function getStarsText() {
+
 
 function getStarsText() {
   if (scoreTotal === 0) {
