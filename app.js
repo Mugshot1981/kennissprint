@@ -182,7 +182,7 @@ function loadChapters() {
   chapterSelect.innerHTML = "";
   chapterTileGrid.innerHTML = "";
 
-  chapters.forEach((chapter) => {
+activeCourse.chapters.forEach((chapter) => {
     const option = document.createElement("option");
     option.value = chapter.id;
     option.textContent = chapter.title;
