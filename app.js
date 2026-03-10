@@ -519,20 +519,21 @@ function applyActiveCourseToPage() {
   }
 }
 
-function getUniqueValues(key) {
-  const values = courseCatalog.map((course) => course[key]);
+function getUniqueValues(key, courses = courseCatalog) {
+  const values = courses.map((course) => course[key]);
   return [...new Set(values)];
 }
 
 function populateSelect(selectElement, values, selectedValue = "") {
   if (!selectElement) return;
 
-  const firstOption = selectElement.querySelector('option[value=""]');
+  const placeholderText = selectElement.dataset.placeholder || "Kies";
   selectElement.innerHTML = "";
 
-  if (firstOption) {
-    selectElement.appendChild(firstOption);
-  }
+  const placeholderOption = document.createElement("option");
+  placeholderOption.value = "";
+  placeholderOption.textContent = placeholderText;
+  selectElement.appendChild(placeholderOption);
 
   values.forEach((value) => {
     const option = document.createElement("option");
@@ -547,10 +548,31 @@ function populateSelect(selectElement, values, selectedValue = "") {
   });
 }
 
+function getCoursesBySubject(subject) {
+  return courseCatalog.filter((course) => course.subject === subject);
+}
+
+function getCoursesBySubjectAndLevel(subject, level) {
+  return courseCatalog.filter(
+    (course) => course.subject === subject && course.level === level
+  );
+}
+
 function initCourseSelectors() {
   populateSelect(subjectSelect, getUniqueValues("subject"), activeCourse.subject);
-  populateSelect(levelSelect, getUniqueValues("level"), activeCourse.level);
-  populateSelect(gradeSelect, getUniqueValues("grade"), activeCourse.grade);
+
+  const coursesForSubject = getCoursesBySubject(activeCourse.subject);
+  populateSelect(levelSelect, getUniqueValues("level", coursesForSubject), activeCourse.level);
+
+  const coursesForSubjectAndLevel = getCoursesBySubjectAndLevel(
+    activeCourse.subject,
+    activeCourse.level
+  );
+  populateSelect(
+    gradeSelect,
+    getUniqueValues("grade", coursesForSubjectAndLevel),
+    activeCourse.grade
+  );
 }
 
 applyActiveCourseToPage();
