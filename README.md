@@ -1,2 +1,2 @@
-# kennissprint
-Train je kennis in minuten.
+# geschiedenis-begrippen
+Leer de geschiedenis begrippen
