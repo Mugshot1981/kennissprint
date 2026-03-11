@@ -39,44 +39,42 @@ async function ensureProfile() {
   return user;
 }
 
-async function ensureDisplayName(user) {
-  const { data: profile, error: profileError } = await supabase
+async function requireCompleteProfile() {
+  const user = await requireAuth();
+  if (!user) return null;
+
+  const { data: profile, error } = await supabase
     .from("profiles")
     .select("display_name")
     .eq("id", user.id)
-    .single();
+    .maybeSingle();
 
-  if (profileError) {
-    console.error("Profiel ophalen mislukt:", profileError);
-    alert("Profiel ophalen mislukt: " + profileError.message);
-    return;
+  if (error) {
+    console.error("Profielcontrole mislukt:", error);
+    alert("Profielcontrole mislukt: " + error.message);
+    return null;
   }
 
-  if (profile?.display_name && profile.display_name.trim() !== "") {
-    return;
+  const displayName = profile?.display_name?.trim();
+
+  if (!displayName) {
+    window.location.href = "profile.html";
+    return null;
   }
 
-  const displayName = window.prompt("Hoe wil je genoemd worden?");
-
-  if (!displayName || !displayName.trim()) {
-    return;
-  }
-
-  const { error: updateError } = await supabase
-    .from("profiles")
-    .update({
-      display_name: displayName.trim()
-    })
-    .eq("id", user.id);
-
-  if (updateError) {
-    console.error("Naam opslaan mislukt:", updateError);
-    alert("Naam opslaan mislukt: " + updateError.message);
-  }
+  return {
+    user,
+    profile
+  };
 }
 
-await ensureProfile();
+const authState = await requireCompleteProfile();
+if (!authState) {
+  throw new Error("Auth/profile gate blocked app startup.");
+}
 
+const currentUser = authState.user;
+const currentProfile = authState.profile;
 // ===== ELEMENTEN =====
 
 const chapterSelect = document.getElementById("chapterSelect");
