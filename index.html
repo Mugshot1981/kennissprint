@@ -279,9 +279,34 @@ function bindAccountMenu() {
   });
 }
 
+async function ensureProfileComplete(user) {
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("display_name")
+    .eq("id", user.id)
+    .single();
+
+  if (error) {
+    console.error("Profielcontrole mislukt:", error);
+    return false;
+  }
+
+  const displayName = data?.display_name?.trim();
+
+  if (!displayName) {
+    window.location.href = "profile.html";
+    return false;
+  }
+
+  return true;
+}
+
 async function bootIndex() {
   const user = await requireAuth();
   if (!user) return;
+
+  const profileComplete = await ensureProfileComplete(user);
+  if (!profileComplete) return;
 
   await showAccountButton(user);
   bindAccountMenu();
