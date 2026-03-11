@@ -897,6 +897,8 @@ async function bootApp() {
   const user = await ensureProfile();
   if (!user) return;
 
+  await ensureDisplayName(user);
+
   applyActiveCourseToPage();
   populateModeSelect();
   initCourseSelectors();
