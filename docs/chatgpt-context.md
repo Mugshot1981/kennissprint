@@ -445,3 +445,160 @@ KennisSprint moet gebouwd worden als:
 - retrieval-first leerapp
 - progressie per leerling
 - later competitie op basis van mastery, niet snelheid
+- 
+Nieuwe status – 2026-03-11
+Authenticatie-architectuur
+
+KennisSprint gebruikt nu Supabase Auth met email + wachtwoord.
+
+Frontend blijft volledig statisch op GitHub Pages.
+
+Auth wordt volledig client-side afgehandeld via:
+
+@supabase/supabase-js
+
+Login flow:
+
+login.html
+   ↓
+auth.signInWithPassword
+   ↓
+index.html
+
+Elke beschermde pagina controleert auth via:
+
+supabase.auth.getUser()
+
+Als er geen gebruiker bestaat wordt automatisch geredirect naar:
+
+login.html
+
+Dit gebeurt momenteel in:
+
+index.html
+course.html
+profile.html
+Profielsysteem
+
+Bij registratie wordt een profielrecord aangemaakt in:
+
+profiles
+
+Tabelstructuur:
+
+profiles
+- id (uuid, gelijk aan auth user id)
+- display_name (text)
+
+Registratieproces:
+
+login.html
+↓
+auth.signUp()
+↓
+profiles.upsert({
+  id: user.id,
+  display_name
+})
+
+De gebruikersnaam (display_name) is niet onderdeel van auth, maar van de profiles tabel.
+
+Profile completion flow
+
+De applicatie heeft nu een profiel-completeness check.
+
+Flow:
+
+login.html
+   ↓
+index.html
+   ↓
+check profiles.display_name
+   ↓
+display_name leeg → profile.html
+display_name gevuld → index.html
+
+Dit wordt uitgevoerd door:
+
+ensureProfileComplete()
+
+in index.html.
+
+Doel:
+
+nieuwe gebruikers moeten eerst een schermnaam kiezen
+
+daarna kunnen ze pas de app gebruiken
+
+Belangrijke pagina’s
+
+De app bevat nu deze kernpagina’s:
+
+login.html
+index.html
+profile.html
+course.html
+
+Functie per pagina:
+
+login.html
+
+Email + wachtwoord login en account registratie.
+
+profile.html
+
+Gebruiker kiest of wijzigt zijn schermnaam.
+
+index.html
+
+Cursusselectie.
+
+course.html
+
+Trainer / quiz interface.
+
+Supabase tabellen
+
+Momenteel bestaan:
+
+profiles
+classes
+cards_progress
+
+Alleen profiles wordt nu actief gebruikt.
+
+Huidige ontwikkelfase
+
+KennisSprint bevindt zich nu in de overgang van:
+
+quiz-app
+→ mastery learning platform
+
+De volgende implementatiestappen zijn:
+
+classcode systeem (profiles → classes koppelen)
+
+cards_progress gebruiken voor kaartvoortgang
+
+mastery engine (spaced repetition)
+
+fouten-trainer per gebruiker
+
+statistieken per leerling
+
+Architectuurprincipe
+
+Belangrijke regel:
+
+Frontend blijft statisch.
+
+Alle gebruikersdata wordt opgeslagen in Supabase.
+
+De app blijft:
+
+HTML
+CSS
+JavaScript
+Supabase
+
+Geen eigen backend.
