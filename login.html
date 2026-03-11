@@ -6,88 +6,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KennisSprint Login</title>
 </head>
-<body>
+ <body>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f5f7fb;
+      color: #0f172a;
+    }
 
-   <h1>KennisSprint</h1>
+    .login-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
 
-   <input id="email" type="email" placeholder="e-mail">
-  <input id="password" type="password" placeholder="wachtwoord">
- 
-  <button id="loginButton">Inloggen</button>
-  <button id="registerButton" type="button">Account aanmaken</button>
-  <pre id="debugOutput"></pre>
+    .login-card {
+      width: 100%;
+      max-width: 460px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      padding: 40px 32px;
+      box-sizing: border-box;
+    }
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="js/supabaseClient.js"></script>
-<script>
-  const supabaseClient = window.supabaseClient;
+    .login-title {
+      margin: 0 0 28px 0;
+      text-align: center;
+      font-size: 3rem;
+      line-height: 1.05;
+    }
 
-  const emailInput = document.getElementById("email");
-  const passwordInput = document.getElementById("password");
-  const debugOutput = document.getElementById("debugOutput");
-  const loginButton = document.getElementById("loginButton");
-  const registerButton = document.getElementById("registerButton");
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
 
-  async function redirectIfAlreadyLoggedIn() {
-    const { data, error } = await supabaseClient.auth.getUser();
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
-    console.log("login getUser:", data, error);
+    .form-group label {
+      font-weight: 700;
+      font-size: 1rem;
+    }
 
-    if (data?.user) {
+    .form-group input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font: inherit;
+      box-sizing: border-box;
+    }
+
+    .login-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .login-actions button {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    #loginButton {
+      background: #0f172a;
+      color: #ffffff;
+      border: none;
+    }
+
+    #registerButton {
+      background: transparent;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+    }
+
+    #debugOutput {
+      margin-top: 16px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 0.85rem;
+      color: #475569;
+    }
+  </style>
+
+  <main class="login-page">
+    <section class="login-card">
+      <h1 class="login-title">KennisSprint</h1>
+
+      <div class="login-form">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="jouw@email.nl">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Wachtwoord</label>
+          <input id="password" type="password" placeholder="Vul je wachtwoord in">
+        </div>
+
+        <div class="login-actions">
+          <button id="loginButton" type="button">Inloggen</button>
+          <button id="registerButton" type="button">Aanmelden</button>
+        </div>
+
+        <pre id="debugOutput"></pre>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script>
+    const supabaseClient = window.supabaseClient;
+
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const debugOutput = document.getElementById("debugOutput");
+    const loginButton = document.getElementById("loginButton");
+    const registerButton = document.getElementById("registerButton");
+
+    async function redirectIfAlreadyLoggedIn() {
+      const { data, error } = await supabaseClient.auth.getUser();
+
+      console.log("login getUser:", data, error);
+
+      if (data?.user) {
+        window.location.href = "profile.html";
+      }
+    }
+
+    async function login() {
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+
+      debugOutput.textContent = "Bezig met inloggen...";
+
+      const { data, error } = await supabaseClient.auth.signInWithPassword({
+        email,
+        password
+      });
+
+      console.log("signInWithPassword result:", { data, error });
+
+      if (error) {
+        debugOutput.textContent = "FOUT: " + error.message;
+        alert(error.message);
+        return;
+      }
+
+      debugOutput.textContent = "OK: ingelogd.";
       window.location.href = "profile.html";
     }
-  }
 
-  async function login() {
-    const email = emailInput.value.trim();
-    const password = passwordInput.value;
+    async function register() {
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
 
-    debugOutput.textContent = "Bezig met inloggen...";
+      debugOutput.textContent = "Bezig met account aanmaken...";
 
-    const { data, error } = await supabaseClient.auth.signInWithPassword({
-      email,
-      password
-    });
+      const { data, error } = await supabaseClient.auth.signUp({
+        email,
+        password
+      });
 
-    console.log("signInWithPassword result:", { data, error });
+      console.log("signUp result:", { data, error });
 
-    if (error) {
-      debugOutput.textContent = "FOUT: " + error.message;
-      alert(error.message);
-      return;
+      if (error) {
+        debugOutput.textContent = "FOUT: " + error.message;
+        alert(error.message);
+        return;
+      }
+
+      debugOutput.textContent = "OK: account aangemaakt. Log nu in.";
+      alert("Account aangemaakt. Log nu in met je e-mail en wachtwoord.");
     }
 
-    debugOutput.textContent = "OK: ingelogd.";
-    window.location.href = "profile.html";
-  }
+    loginButton.addEventListener("click", login);
+    registerButton.addEventListener("click", register);
 
-  async function register() {
-    const email = emailInput.value.trim();
-    const password = passwordInput.value;
-
-    debugOutput.textContent = "Bezig met account aanmaken...";
-
-    const { data, error } = await supabaseClient.auth.signUp({
-      email,
-      password
-    });
-
-    console.log("signUp result:", { data, error });
-
-    if (error) {
-      debugOutput.textContent = "FOUT: " + error.message;
-      alert(error.message);
-      return;
-    }
-
-    debugOutput.textContent = "OK: account aangemaakt. Log nu in.";
-    alert("Account aangemaakt. Log nu in met je e-mail en wachtwoord.");
-  }
-
-  loginButton.addEventListener("click", login);
-  registerButton.addEventListener("click", register);
-
-  redirectIfAlreadyLoggedIn();
-</script>
+    redirectIfAlreadyLoggedIn();
+  </script>
 </body>
+
+  
 </html>
