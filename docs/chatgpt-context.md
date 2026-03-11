@@ -404,7 +404,7 @@ Nieuwe features worden eerst in de data-structuur ontworpen.
 Belangrijkste regel:
 
 Nooit aannames doen over code.
-Vraag eerst het bestand.
+Vraag eerst het bestand. Alleen als je het niet meer weet.
 
 ## Nieuwe status – 2026-03-10
 
