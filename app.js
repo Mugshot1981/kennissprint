@@ -7,6 +7,34 @@ import { courseCatalog, activeCourse } from "./data.js";
 
 const supabase = window.supabaseClient;
 
+async function ensureProfile() {
+
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) {
+    window.location.href = "login.html";
+    return null;
+  }
+
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("id")
+    .eq("id", user.id)
+    .single();
+
+  if (!profile) {
+
+    await supabase.from("profiles").insert({
+      id: user.id,
+      email: user.email
+    });
+
+  }
+
+  return user;
+
+}
+
 async function requireAuth() {
   const { data, error } = await supabase.auth.getUser();
 
