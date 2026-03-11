@@ -885,6 +885,10 @@ function populateModeSelect() {
 const currentUser = await requireAuth();
 
 if (currentUser) {
+ async function bootApp() {
+  const user = await ensureProfile();
+  if (!user) return;
+
   applyActiveCourseToPage();
   populateModeSelect();
   initCourseSelectors();
@@ -896,3 +900,5 @@ if (currentUser) {
   chapterSelect.addEventListener("change", updateStartButtonState);
   modeSelect.addEventListener("change", updateStartButtonState);
 }
+
+bootApp();
