@@ -93,8 +93,9 @@ KennisSprint dataset
   const gradeSelect = document.getElementById("gradeSelect");
   const openCourseButton = document.getElementById("openCourseButton");
   const selectionMessage = document.getElementById("selectionMessage");
-  const accountButton = document.getElementById("accountButton");
-
+ const accountButton = document.getElementById("accountButton");
+const accountMenu = document.getElementById("accountMenu");
+const logoutButton = document.getElementById("logoutButton");
   function getUniqueValues(key, courses) {
     return [...new Set(courses.map(course => course[key]))];
   }
