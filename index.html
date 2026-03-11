@@ -211,7 +211,7 @@ KennisSprint dataset
       .select("display_name")
       .eq("id", user.id)
       .single();
-
+    
     if (error) {
       console.error("Accountnaam ophalen mislukt:", error);
       accountButton.textContent = "Account";
