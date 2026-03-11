@@ -215,31 +215,32 @@ const logoutButton = document.getElementById("logoutButton");
   });
 
   async function showAccountButton(user) {
-  if (!accountButton) return;
+    if (!accountButton) return;
 
-  const { data, error } = await supabase
-    .from("profiles")
-    .select("display_name")
-    .eq("id", user.id)
-    .single();
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("display_name")
+      .eq("id", user.id)
+      .maybeSingle();
 
-  if (error) {
-    console.error(error);
-    accountButton.textContent = user.email;
+    if (error) {
+      console.error("Accountnaam laden mislukt:", error);
+      accountButton.textContent = user.email || "Account";
+      accountButton.hidden = false;
+      return;
+    }
+
+    const name = data?.display_name?.trim();
+
+    if (name) {
+      accountButton.textContent = name;
+    } else {
+      accountButton.textContent = user.email || "Account";
+    }
+
     accountButton.hidden = false;
-    return;
   }
-
-  const name = data?.display_name;
-
-  if (name && name.trim() !== "") {
-    accountButton.textContent = name;
-  } else {
-    accountButton.textContent = user.email;
-  }
-
-  accountButton.hidden = false;
-}
+  
 async function logout() {
   const { error } = await supabase.auth.signOut();
 
