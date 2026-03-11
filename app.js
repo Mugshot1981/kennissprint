@@ -43,6 +43,42 @@ async function ensureProfile() {
   return user;
 }
 
+async function ensureDisplayName(user) {
+  const { data: profile, error: profileError } = await supabase
+    .from("profiles")
+    .select("display_name")
+    .eq("id", user.id)
+    .single();
+
+  if (profileError) {
+    console.error("Profiel ophalen mislukt:", profileError);
+    alert("Profiel ophalen mislukt: " + profileError.message);
+    return;
+  }
+
+  if (profile?.display_name && profile.display_name.trim() !== "") {
+    return;
+  }
+
+  const displayName = window.prompt("Hoe wil je genoemd worden?");
+
+  if (!displayName || !displayName.trim()) {
+    return;
+  }
+
+  const { error: updateError } = await supabase
+    .from("profiles")
+    .update({
+      display_name: displayName.trim()
+    })
+    .eq("id", user.id);
+
+  if (updateError) {
+    console.error("Naam opslaan mislukt:", updateError);
+    alert("Naam opslaan mislukt: " + updateError.message);
+  }
+}
+
 await ensureProfile();
 
 // ===== ELEMENTEN =====
