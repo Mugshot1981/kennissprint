@@ -587,6 +587,7 @@ function handleAnswer(clickedButton, selectedOption) {
     }, 700);
 
   } else {
+     saveCardProgress(currentQuestion.id, false);
     clickedButton.classList.add("wrong");
 
     allButtons.forEach((button, index) => {
