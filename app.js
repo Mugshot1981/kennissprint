@@ -42,18 +42,8 @@ async function ensureProfile() {
 
   return user;
 }
+
 await ensureProfile();
-
-async function requireAuth() {
-  const { data, error } = await supabase.auth.getUser();
-
-  if (error || !data?.user) {
-    window.location.href = "login.html";
-    return null;
-  }
-
-  return data.user;
-}
 
 // ===== ELEMENTEN =====
 
