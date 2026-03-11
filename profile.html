@@ -6,55 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KennisSprint Profiel</title>
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="page">
-    <section class="card profile-card">
-      <h1>KennisSprint</h1>
-      <p class="intro">Account</p>
-
-      <div class="account-block">
-        <div class="account-row">
-          <div class="account-label">Jouw naam</div>
-          <div class="account-value-row">
-            <span id="displayNameText">Nog niet ingesteld</span>
-            <button id="editNameButton" type="button" class="text-button">Wijzig</button>
-          </div>
-        </div>
-
-        <div id="editNamePanel" class="edit-panel" hidden>
-          <label for="displayNameInput"><strong>Nieuwe schermnaam</strong></label>
-          <input id="displayNameInput" type="text" placeholder="Bijvoorbeeld: Stijn">
-          <div class="edit-actions">
-            <button id="saveNameButton" type="button">Opslaan</button>
-            <button id="cancelEditButton" type="button" class="secondary-button">Annuleren</button>
-          </div>
-        </div>
-
-        <div class="account-row">
-          <div class="account-label">E-mailadres</div>
-          <div class="account-value-row">
-            <span id="emailText">Laden...</span>
-          </div>
-        </div>
-
-        <div class="account-row">
-          <div class="account-label">Wachtwoord</div>
-          <div class="account-value-row">
-            <button id="resetPasswordButton" type="button" class="text-button">Reset e-mail sturen</button>
-          </div>
-        </div>
-      </div>
-
-      <p id="profileMessage" class="intro profile-message"></p>
-
-      <div class="profile-actions">
-        <button id="startButton" type="button">Naar cursussen</button>
-        <button id="logoutButton" type="button" class="secondary-button">Uitloggen</button>
-      </div>
-    </section>
-  </main>
-
   <style>
     .profile-card {
       max-width: 760px;
@@ -136,147 +87,63 @@
       margin-top: 18px;
     }
   </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card profile-card">
+      <h1>KennisSprint</h1>
+      <p class="intro">Account</p>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-  const supabaseClient = window.supabase.createClient(
-    "https://leceithebntgxauivrdf.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
-  );
+      <div class="account-block">
+        <div class="account-row">
+          <div class="account-label">Jouw naam</div>
+          <div class="account-value-row">
+            <span id="displayNameText">Nog niet ingesteld</span>
+            <button id="editNameButton" type="button" class="text-button">Wijzig</button>
+          </div>
+        </div>
 
-  const displayNameText = document.getElementById("displayNameText");
-  const emailText = document.getElementById("emailText");
-  const editNameButton = document.getElementById("editNameButton");
-  const editNamePanel = document.getElementById("editNamePanel");
-  const displayNameInput = document.getElementById("displayNameInput");
-  const saveNameButton = document.getElementById("saveNameButton");
-  const cancelEditButton = document.getElementById("cancelEditButton");
-  const resetPasswordButton = document.getElementById("resetPasswordButton");
-  const logoutButton = document.getElementById("logoutButton");
-  const startButton = document.getElementById("startButton");
-  const profileMessage = document.getElementById("profileMessage");
+        <div id="editNamePanel" class="edit-panel" hidden>
+          <label for="displayNameInput"><strong>Nieuwe schermnaam</strong></label>
+          <input id="displayNameInput" type="text" placeholder="Bijvoorbeeld: Stijn">
+          <div class="edit-actions">
+            <button id="saveNameButton" type="button">Opslaan</button>
+            <button id="cancelEditButton" type="button" class="secondary-button">Annuleren</button>
+          </div>
+        </div>
 
-  let currentUser = null;
-  let currentDisplayName = "";
+        <div class="account-row">
+          <div class="account-label">E-mailadres</div>
+          <div class="account-value-row">
+            <span id="emailText">Laden...</span>
+          </div>
+        </div>
 
-  async function requireAuth() {
-    const { data, error } = await supabaseClient.auth.getUser();
+        <div class="account-row">
+          <div class="account-label">Wachtwoord</div>
+          <div class="account-value-row">
+            <button id="resetPasswordButton" type="button" class="text-button">Reset e-mail sturen</button>
+          </div>
+        </div>
+      </div>
 
-    if (error || !data?.user) {
-      window.location.href = "login.html";
-      return null;
-    }
+      <p id="profileMessage" class="intro profile-message"></p>
 
-    return data.user;
-  }
+      <div class="profile-actions">
+        <button id="startButton" type="button">Naar cursussen</button>
+        <button id="logoutButton" type="button" class="secondary-button">Uitloggen</button>
+      </div>
+    </section>
+  </main>
 
-  function openEditPanel() {
-    displayNameInput.value = currentDisplayName || "";
-    editNamePanel.hidden = false;
-    displayNameInput.focus();
-  }
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const supabaseClient = window.supabase.createClient(
+      "https://leceithebntgxauivrdf.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
+    );
 
-  function closeEditPanel() {
-    editNamePanel.hidden = true;
-    displayNameInput.value = "";
-  }
-
-  async function loadProfile() {
-    const user = await requireAuth();
-    if (!user) return;
-
-    currentUser = user;
-    emailText.textContent = user.email || "-";
-
-    const { data, error } = await supabaseClient
-      .from("profiles")
-      .select("display_name")
-      .eq("id", user.id)
-      .maybeSingle();
-
-    if (error) {
-      profileMessage.textContent = "Profiel laden mislukt: " + error.message;
-      return;
-    }
-
-    currentDisplayName = data?.display_name?.trim() || "";
-
-    if (currentDisplayName) {
-      displayNameText.textContent = currentDisplayName;
-    } else {
-      displayNameText.textContent = "Nog niet ingesteld";
-      openEditPanel();
-    }
-  }
-
-  async function saveName() {
-    if (!currentUser) return;
-
-    const newDisplayName = displayNameInput.value.trim();
-
-    if (!newDisplayName) {
-      profileMessage.textContent = "Vul een schermnaam in.";
-      return;
-    }
-
-    profileMessage.textContent = "Bezig met opslaan...";
-
-    const { error } = await supabaseClient
-      .from("profiles")
-      .upsert(
-        {
-          id: currentUser.id,
-          display_name: newDisplayName
-        },
-        {
-          onConflict: "id"
-        }
-      );
-
-    if (error) {
-      profileMessage.textContent = "Opslaan mislukt: " + error.message;
-      return;
-    }
-
-    currentDisplayName = newDisplayName;
-    displayNameText.textContent = newDisplayName;
-    profileMessage.textContent = "Schermnaam opgeslagen.";
-    closeEditPanel();
-  }
-
-  async function sendPasswordReset() {
-    if (!currentUser?.email) return;
-
-    profileMessage.textContent = "Bezig met reset e-mail versturen...";
-
-    const { error } = await supabaseClient.auth.resetPasswordForEmail(currentUser.email, {
-      redirectTo: window.location.origin + window.location.pathname.replace("profile.html", "login.html")
-    });
-
-    if (error) {
-      profileMessage.textContent = "Reset mislukt: " + error.message;
-      return;
-    }
-
-    profileMessage.textContent = "Reset e-mail verstuurd.";
-  }
-
-  async function logout() {
-    await supabaseClient.auth.signOut();
-    window.location.href = "login.html";
-  }
-
-  editNameButton.addEventListener("click", openEditPanel);
-  saveNameButton.addEventListener("click", saveName);
-  cancelEditButton.addEventListener("click", closeEditPanel);
-  resetPasswordButton.addEventListener("click", sendPasswordReset);
-  logoutButton.addEventListener("click", logout);
-  startButton.addEventListener("click", () => {
-    window.location.href = "index.html";
-  });
-
-  loadProfile();
-</script>
+    const displayNameText = document.getElementById("displayNameText");
     const emailText = document.getElementById("emailText");
     const editNameButton = document.getElementById("editNameButton");
     const editNamePanel = document.getElementById("editNamePanel");
