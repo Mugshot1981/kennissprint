@@ -45,6 +45,31 @@ async function requireAuth() {
   return data.user;
 }
 
+async function ensureProfile() {
+  const user = await requireAuth();
+
+  if (!user) return null;
+
+  const { error } = await supabase
+    .from("profiles")
+    .upsert(
+      {
+        id: user.id
+      },
+      {
+        onConflict: "id"
+      }
+    );
+
+  if (error) {
+    console.error("ensureProfile fout:", error);
+    alert("Profiel aanmaken mislukt: " + error.message);
+    return null;
+  }
+
+  return user;
+}
+
 // ===== ELEMENTEN =====
 
 const chapterSelect = document.getElementById("chapterSelect");
