@@ -42,7 +42,7 @@ if (courseFromUrl) {
   return courseFromUrl;
 }
 
-return getCourseById(defaultCourseId);
+
 
   return getCourseById(defaultCourseId);
 }
