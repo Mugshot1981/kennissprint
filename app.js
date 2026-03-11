@@ -75,6 +75,14 @@ if (!authState) {
 
 const currentUser = authState.user;
 const currentProfile = authState.profile;
+
+const greetingEl = document.getElementById("userGreeting");
+
+if (greetingEl && currentProfile?.display_name) {
+  greetingEl.textContent = "Hallo " + currentProfile.display_name;
+  greetingEl.hidden = false;
+}
+
 // ===== ELEMENTEN =====
 
 const chapterSelect = document.getElementById("chapterSelect");
