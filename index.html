@@ -282,7 +282,7 @@ async function ensureProfileComplete(user) {
     .from("profiles")
     .select("display_name")
     .eq("id", user.id)
-    .single();
+    .maybeSingle();
 
   if (error) {
     console.error("Profielcontrole mislukt:", error);
