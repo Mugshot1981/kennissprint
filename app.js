@@ -572,6 +572,8 @@ function handleAnswer(clickedButton, selectedOption) {
   });
 
    if (selectedOption.isCorrect) {
+
+  saveCardProgress(currentQuestion.id, true);
     clickedButton.classList.add("correct");
     scoreCorrect++;
     feedback.textContent = "GOED!";
