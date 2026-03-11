@@ -513,6 +513,29 @@ function loadChapters() {
 }
 // ===== VRAAG OPBOUWEN =====
 
+let progressMap = {};
+
+async function loadProgressMap() {
+  const { data: userData } = await supabase.auth.getUser();
+  const user = userData?.user;
+  if (!user) return;
+
+  const { data, error } = await supabase
+    .from("cards_progress")
+    .select("card_id, level")
+    .eq("user_id", user.id);
+
+  if (error) {
+    console.error("Progress ophalen mislukt:", error);
+    return;
+  }
+
+  progressMap = {};
+  data.forEach((row) => {
+    progressMap[row.card_id] = row.level || 0;
+  });
+}
+
 function buildQuestion() {
   feedback.textContent = "";
   feedback.className = "feedback";
