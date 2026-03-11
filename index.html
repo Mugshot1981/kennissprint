@@ -279,42 +279,6 @@ function bindAccountMenu() {
   });
 }
 
-  async function logout() {
-  const { error } = await supabase.auth.signOut();
-
-  if (error) {
-    console.error("Uitloggen mislukt:", error);
-    alert("Uitloggen mislukt: " + error.message);
-    return;
-  }
-
-  window.location.href = "login.html";
-}
-
-function bindAccountMenu() {
-  if (accountButton && accountMenu) {
-    accountButton.addEventListener("click", () => {
-      accountMenu.hidden = !accountMenu.hidden;
-    });
-  }
-
-  if (logoutButton) {
-    logoutButton.addEventListener("click", logout);
-  }
-
-  document.addEventListener("click", (event) => {
-    if (!accountButton || !accountMenu) return;
-    if (accountMenu.hidden) return;
-
-    const clickedInsideButton = accountButton.contains(event.target);
-    const clickedInsideMenu = accountMenu.contains(event.target);
-
-    if (!clickedInsideButton && !clickedInsideMenu) {
-      accountMenu.hidden = true;
-    }
-  });
-}
-
 async function bootIndex() {
   const user = await requireAuth();
   if (!user) return;
