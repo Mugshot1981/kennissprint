@@ -1,15 +1,13 @@
 
-import { courseCatalog } from "./data.js";
-const params = new URLSearchParams(window.location.search);
-const courseId = params.get("course");
+import { courseCatalog, getCourseIdFromUrl } from "./data.js";
 
-const activeCourse = courseCatalog.find(c => c.id === courseId);
+const courseId = getCourseIdFromUrl();
+const activeCourse = courseCatalog.find((course) => course.id === courseId);
 
 if (!activeCourse) {
   document.body.innerHTML = "Cursus niet gevonden.";
   throw new Error("Course not found: " + courseId);
 }
-
 const supabase = window.supabaseClient;
 
 async function requireAuth() {
