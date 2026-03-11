@@ -892,12 +892,33 @@ function populateModeSelect() {
     modeSelect.appendChild(option);
   });
 }
+async function showUserGreeting(user) {
+  const greetingEl = document.getElementById("userGreeting");
+  if (!greetingEl) return;
+
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("display_name")
+    .eq("id", user.id)
+    .single();
+
+  if (error) {
+    console.error("Naam ophalen mislukt:", error);
+    return;
+  }
+
+  if (data?.display_name && data.display_name.trim() !== "") {
+    greetingEl.textContent = "Welkom, " + data.display_name.trim();
+    greetingEl.hidden = false;
+  }
+}
 
 async function bootApp() {
   const user = await ensureProfile();
   if (!user) return;
 
   await ensureDisplayName(user);
+  await showUserGreeting(user);
 
   applyActiveCourseToPage();
   populateModeSelect();
