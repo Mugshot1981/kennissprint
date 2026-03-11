@@ -13,12 +13,25 @@ KennisSprint dataset
 </head>
 <body>
   <main class="page">
-    <section class="card">
-      <div style="display:flex; justify-content:flex-end; margin-bottom:24px;">
-        <div id="accountButton" class="account-button" hidden>Account</div>
-      </div>
+   <section class="card">
+  <div style="display:flex; justify-content:flex-end; margin-bottom:24px; position:relative;">
+    <button id="accountButton" type="button" class="account-button" hidden>Account</button>
+    <div
+      id="accountMenu"
+      hidden
+      style="position:absolute; top:100%; right:0; margin-top:8px; background:#fff; border:1px solid #d1d5db; border-radius:12px; padding:8px; min-width:180px; box-shadow:0 10px 30px rgba(0,0,0,0.08);"
+    >
+      <button
+        id="logoutButton"
+        type="button"
+        style="width:100%; text-align:left; background:none; border:none; padding:10px 12px; border-radius:8px; cursor:pointer;"
+      >
+        Uitloggen
+      </button>
+    </div>
+  </div>
 
-      <h1 id="pageHeading">KennisSprint</h1>
+  <h1 id="pageHeading">KennisSprint</h1>
       <p id="pageIntro" class="intro">
         Kies eerst een vak, niveau en jaar om naar de juiste cursus te gaan.
       </p>
