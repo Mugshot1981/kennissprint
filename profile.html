@@ -9,90 +9,212 @@
 </head>
 <body>
   <main class="page">
-    <section class="card" style="max-width: 640px; position: relative;">
+    <section class="card profile-card">
       <h1>KennisSprint</h1>
-      <p class="intro">Kies een schermnaam die in de app zichtbaar wordt.</p>
+      <p class="intro">Account</p>
 
-      <div class="course-picker">
-        <div class="picker-row">
-          <label for="displayName"><strong>Schermnaam:</strong></label>
-          <input id="displayName" type="text" placeholder="Bijvoorbeeld: Stijn">
+      <div class="account-block">
+        <div class="account-row">
+          <div class="account-label">Jouw naam</div>
+          <div class="account-value-row">
+            <span id="displayNameText">Nog niet ingesteld</span>
+            <button id="editNameButton" type="button" class="text-button">Wijzig</button>
+          </div>
+        </div>
+
+        <div id="editNamePanel" class="edit-panel" hidden>
+          <label for="displayNameInput"><strong>Nieuwe schermnaam</strong></label>
+          <input id="displayNameInput" type="text" placeholder="Bijvoorbeeld: Stijn">
+          <div class="edit-actions">
+            <button id="saveNameButton" type="button">Opslaan</button>
+            <button id="cancelEditButton" type="button" class="secondary-button">Annuleren</button>
+          </div>
+        </div>
+
+        <div class="account-row">
+          <div class="account-label">E-mailadres</div>
+          <div class="account-value-row">
+            <span id="emailText">Laden...</span>
+          </div>
+        </div>
+
+        <div class="account-row">
+          <div class="account-label">Wachtwoord</div>
+          <div class="account-value-row">
+            <button id="resetPasswordButton" type="button" class="text-button">Reset e-mail sturen</button>
+          </div>
         </div>
       </div>
 
-      <div class="landing-actions">
-        <button id="saveProfileButton" type="button">Opslaan</button>
-      </div>
+      <p id="profileMessage" class="intro profile-message"></p>
 
-      <p id="profileMessage" class="intro"></p>
+      <div class="profile-actions">
+        <button id="startButton" type="button">Naar cursussen</button>
+        <button id="logoutButton" type="button" class="secondary-button">Uitloggen</button>
+      </div>
     </section>
   </main>
 
+  <style>
+    .profile-card {
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .account-block {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .account-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .account-label {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0f172a;
+    }
+
+    .account-value-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: #475569;
+      font-size: 1rem;
+    }
+
+    .edit-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 18px;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      background: #f8fafc;
+    }
+
+    .edit-panel input {
+      width: 100%;
+      max-width: 420px;
+      padding: 12px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font: inherit;
+    }
+
+    .edit-actions,
+    .profile-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .text-button,
+    .secondary-button {
+      background: transparent;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .profile-message {
+      min-height: 24px;
+      margin-top: 18px;
+    }
+  </style>
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-   const supabaseClient = window.supabase.createClient(
-  "https://leceithebntgxauivrdf.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
-);
+    const supabaseClient = window.supabase.createClient(
+      "https://leceithebntgxauivrdf.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
+    );
 
-    const displayNameInput = document.getElementById("displayName");
-    const saveProfileButton = document.getElementById("saveProfileButton");
+    const displayNameText = document.getElementById("displayNameText");
+    const emailText = document.getElementById("emailText");
+    const editNameButton = document.getElementById("editNameButton");
+    const editNamePanel = document.getElementById("editNamePanel");
+    const displayNameInput = document.getElementById("displayNameInput");
+    const saveNameButton = document.getElementById("saveNameButton");
+    const cancelEditButton = document.getElementById("cancelEditButton");
+    const resetPasswordButton = document.getElementById("resetPasswordButton");
+    const logoutButton = document.getElementById("logoutButton");
+    const startButton = document.getElementById("startButton");
     const profileMessage = document.getElementById("profileMessage");
 
-async function requireAuth() {
-  const { data: sessionData, error: sessionError } = await supabaseClient.auth.getSession();
-  console.log("profile getSession:", sessionData, sessionError);
+    let currentUser = null;
+    let currentDisplayName = "";
 
-  const { data, error } = await supabaseClient.auth.getUser();
-  console.log("profile getUser:", data, error);
+    async function requireAuth() {
+      const { data, error } = await supabaseClient.auth.getUser();
 
-  if (error || !data?.user) {
-    document.body.innerHTML = `
-      <main class="page">
-        <section class="card" style="max-width:640px;">
-          <h1>KennisSprint</h1>
-          <p class="intro"><strong>Profile debug:</strong> geen ingelogde gebruiker gevonden.</p>
-          <p class="intro">Open nu de console en kijk naar:</p>
-          <p class="intro">profile getSession</p>
-          <p class="intro">profile getUser</p>
-        </section>
-      </main>
-    `;
-    return null;
-  }
+      if (error || !data?.user) {
+        window.location.href = "login.html";
+        return null;
+      }
 
-  return data.user;
-}
+      return data.user;
+    }
+
+    function openEditPanel() {
+      displayNameInput.value = currentDisplayName || "";
+      editNamePanel.hidden = false;
+      displayNameInput.focus();
+    }
+
+    function closeEditPanel() {
+      editNamePanel.hidden = true;
+      displayNameInput.value = "";
+    }
 
     async function loadProfile() {
       const user = await requireAuth();
-      if (!user) return null;
+      if (!user) return;
+
+      currentUser = user;
+      emailText.textContent = user.email || "-";
 
       const { data, error } = await supabaseClient
         .from("profiles")
         .select("display_name")
         .eq("id", user.id)
-        .single();
+        .maybeSingle();
 
       if (error) {
         profileMessage.textContent = "Profiel laden mislukt: " + error.message;
-        return user;
+        return;
       }
 
-      if (data?.display_name) {
-        displayNameInput.value = data.display_name;
-      }
+      currentDisplayName = data?.display_name?.trim() || "";
 
-      return user;
+      if (currentDisplayName) {
+        displayNameText.textContent = currentDisplayName;
+      } else {
+        displayNameText.textContent = "Nog niet ingesteld";
+        openEditPanel();
+      }
     }
 
-    async function saveProfile() {
-      const user = await requireAuth();
-      if (!user) return;
+    async function saveName() {
+      if (!currentUser) return;
 
-      const displayName = displayNameInput.value.trim();
+      const newDisplayName = displayNameInput.value.trim();
 
-      if (!displayName) {
+      if (!newDisplayName) {
         profileMessage.textContent = "Vul een schermnaam in.";
         return;
       }
@@ -103,8 +225,8 @@ async function requireAuth() {
         .from("profiles")
         .upsert(
           {
-            id: user.id,
-            display_name: displayName
+            id: currentUser.id,
+            display_name: newDisplayName
           },
           {
             onConflict: "id"
@@ -116,10 +238,42 @@ async function requireAuth() {
         return;
       }
 
-      window.location.href = "index.html";
+      currentDisplayName = newDisplayName;
+      displayNameText.textContent = newDisplayName;
+      profileMessage.textContent = "Schermnaam opgeslagen.";
+      closeEditPanel();
     }
 
-    saveProfileButton.addEventListener("click", saveProfile);
+    async function sendPasswordReset() {
+      if (!currentUser?.email) return;
+
+      profileMessage.textContent = "Bezig met reset e-mail versturen...";
+
+      const { error } = await supabaseClient.auth.resetPasswordForEmail(currentUser.email, {
+        redirectTo: window.location.origin + window.location.pathname.replace("profile.html", "login.html")
+      });
+
+      if (error) {
+        profileMessage.textContent = "Reset mislukt: " + error.message;
+        return;
+      }
+
+      profileMessage.textContent = "Reset e-mail verstuurd.";
+    }
+
+    async function logout() {
+      await supabaseClient.auth.signOut();
+      window.location.href = "login.html";
+    }
+
+    editNameButton.addEventListener("click", openEditPanel);
+    saveNameButton.addEventListener("click", saveName);
+    cancelEditButton.addEventListener("click", closeEditPanel);
+    resetPasswordButton.addEventListener("click", sendPasswordReset);
+    logoutButton.addEventListener("click", logout);
+    startButton.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
 
     loadProfile();
   </script>
