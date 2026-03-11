@@ -1,251 +1,307 @@
-learning-model.md
-# KennisSprint – Learning Model
+KennisSprint – Learning Model
 
-KennisSprint is ontworpen als een **mastery learning systeem**.  
-Het doel van het platform is dat leerlingen begrippen uiteindelijk **actief uit het geheugen kunnen reproduceren**.
-
-Het systeem combineert drie bewezen leerprincipes:
-
-- Retrieval practice
-- Spaced repetition
-- Mastery learning
-
-De applicatie is dus **geen quiz-app**, maar een trainer die leerlingen begeleidt tot volledige beheersing van de leerstof.
-
----
-
-# 1 Retrieval Practice
-
-Leerlingen moeten kennis **actief ophalen uit hun geheugen**.
-
-Het leerproces verloopt daarom in drie fasen.
-
-### Fase 1 – Herkenning
-
-De leerling ziet een begrip en kiest het juiste antwoord.
+version: 1.0
+last updated: 2026-03-11
 
 
-Vraag: Interbellum
+--------------------------------------------------
+DOEL VAN HET SYSTEEM
+--------------------------------------------------
 
-A periode tussen WO1 en WO2
-B periode na WO2
-C koude oorlog
+KennisSprint is een mastery-learning trainer voor examenleerlingen.
+
+Het doel van het systeem is dat leerlingen begrippen uiteindelijk
+zelfstandig uit het geheugen kunnen reproduceren.
+
+De app combineert drie leerprincipes:
+
+- retrieval practice
+- mastery learning
+- progress feedback
+
+Spaced repetition wordt later toegevoegd.
+
+
+--------------------------------------------------
+1 RETRIEVAL PRACTICE
+--------------------------------------------------
+
+Het centrale leerprincipe is retrieval practice:
+informatie actief ophalen uit het geheugen.
+
+Daarom bestaat oefenen uit drie cognitieve niveaus.
+
+
+Fase 1 — Herkenning
+
+De leerling herkent het juiste antwoord.
+
+Voorbeeld
+
+Vraag:
+Interbellum
+
+A periode tussen WO1 en WO2  
+B periode na WO2  
+C koude oorlog  
 D industrialisatie
 
+Dit is de lichtste vorm van leren.
 
-Dit is bedoeld om de leerling kennis te laten **herkennen**.
 
----
+Fase 2 — Actieve herinnering
 
-### Fase 2 – Retrieval
+De leerling ziet eerst alleen de vraag
+en probeert het antwoord zelf te herinneren.
 
-De leerling krijgt eerst alleen het begrip te zien en moet **nadenken voordat antwoorden verschijnen**.
-
+Voorbeeld
 
 Interbellum
 
-Denk eerst na…
-[ toon antwoorden ]
+"Denk eerst na"
+
+Daarna verschijnen de antwoordopties.
+
+Dit dwingt het brein om actief te zoeken naar kennis.
 
 
-Pas daarna verschijnen de antwoordopties.
+Fase 3 — Reproductie
 
-Dit dwingt het brein om informatie actief op te halen.
+De leerling typt het antwoord zelf.
 
----
+Voorbeeld
 
-### Fase 3 – Reproductie
-
-De leerling typt zelf het antwoord.
-
-
+Vraag:
 Wat betekent inflatie?
 
+Leerling typt:
 
-De leerling geeft een kort antwoord waarna het systeem feedback geeft.
+"prijzen stijgen"
+
+Het systeem controleert of het antwoord correct is.
 
 Dit is de sterkste vorm van retrieval practice.
 
----
 
-# 2 Mastery Learning
+--------------------------------------------------
+2 MASTERY MODEL
+--------------------------------------------------
 
-Elke kaart heeft een **voortgangsniveau**.
+Elke kaart heeft een mastery-status per leerling.
 
+Mastery wordt bepaald door herhaald correct beantwoorden.
 
-0 nieuw
-1 herkend
-2 geoefend
-3 bijna beheerst
-4 beheerst
 
+Mastery-regel (MVP)
 
-Een kaart bereikt **mastery bij niveau 4**.
+Een kaart is mastered wanneer:
 
-### Regels
+- minstens 3 correcte antwoorden zijn gegeven
+- minstens 1 keer het antwoord actief is getypt
 
 
-correct antwoord → niveau +1
-fout antwoord → niveau -1 (minimaal 0)
+Het typen van een antwoord is essentieel omdat
+dit aantoont dat de leerling het begrip echt kan reproduceren.
 
 
-Mastery vereist dus meerdere correcte antwoorden.
+--------------------------------------------------
+3 KLEURMODEL VOOR KAARTSTATUS
+--------------------------------------------------
 
----
+De voortgang van een kaart wordt weergegeven met kleuren.
 
-# 3 Spaced Repetition
+grijs
+nieuw
 
-Om langdurig leren te stimuleren worden kaarten herhaald met toenemende intervallen.
+groen
+in training
 
+blauw
+goed beheerst
 
-niveau 0 → direct
-niveau 1 → 10 minuten
-niveau 2 → 1 uur
-niveau 3 → 1 dag
-niveau 4 → 7 dagen
+paars
+mastery
 
+oranje
+perfect mastery (correct getypt)
 
-Dit voorkomt dat leerlingen alleen **kortetermijn geheugen** gebruiken.
 
-Alleen kaarten waarvan het herhaalinterval verlopen is verschijnen opnieuw.
+Betekenis:
 
----
+grijs
+kaart nog nooit geoefend
 
-# 4 Vraagselectie
+groen
+eerste correcte antwoorden
 
-Een trainingssessie bevat een mix van kaarten.
+blauw
+meerdere correcte antwoorden
 
+paars
+mastery bereikt
 
-60% kaarten die herhaald moeten worden
-30% nieuwe kaarten
-10% controlekaarten (beheerst)
+oranje
+mastery + actieve reproductie bevestigd
 
 
-Hierdoor blijft het systeem focussen op **wat de leerling nog niet beheerst**.
+--------------------------------------------------
+4 OEFENSESSIES
+--------------------------------------------------
 
----
+De standaard oefensessie bevat:
 
-# 5 Mastery per hoofdstuk
+10 kaarten
 
-Een hoofdstuk wordt als voltooid beschouwd wanneer alle kaarten mastery hebben bereikt.
 
+Deze kaarten worden gekozen uit:
 
-mastered_cards / total_cards = 100%
+kaarten die nog niet mastered zijn.
 
 
-Voorbeeld:
+Doel van een sessie:
 
+een kleine stap richting volledige mastery.
 
-Hoofdstuk 1 – Inkomen en welvaart
-18 / 24 kaarten beheerst
 
+Na een sessie kan de leerling:
 
-De interface toont voortgang visueel met een progressbalk.
+- nog 10 kaarten oefenen
+- hetzelfde hoofdstuk blijven trainen
+- een ander vak oefenen
 
----
 
-# 6 Progress opslag
+--------------------------------------------------
+5 PROGRESS PER HOOFDSTUK
+--------------------------------------------------
 
-Per leerling per kaart wordt opgeslagen:
+De voortgang van een hoofdstuk wordt bepaald door:
 
+mastered kaarten / totaal kaarten
 
-user_id
-card_id
-level
-last_seen
-next_review
 
+Voorbeeld
 
-Deze data bepaalt welke kaarten in een sessie verschijnen.
+Hoofdstuk 3
 
----
+24 kaarten totaal  
+15 mastered
 
-# 7 Kaart Moeilijkheidsalgoritme
+Progress
 
-KennisSprint berekent automatisch hoe moeilijk een kaart is.
+15 / 24
 
-Dit helpt om kaarten die veel leerlingen moeilijk vinden **vaker te trainen**.
 
-### Moeilijkheidsgraad
+Dit wordt weergegeven als een progressbar.
 
-Elke kaart krijgt een difficulty score:
 
+--------------------------------------------------
+6 PROGRESS PER VAK
+--------------------------------------------------
 
-difficulty = fouten / totaal pogingen
+Vakprogress is de som van alle hoofdstukken.
 
+Voorbeeld
 
-Voorbeeld:
+Economie
 
+120 kaarten totaal  
+72 mastered
 
-Inflatie
-pogingen: 120
-fouten: 60
+Progress
 
-difficulty = 0.50
+60% mastery
 
 
-Een hoge score betekent dat een kaart moeilijk is.
+Deze waarde wordt gebruikt op het dashboard.
 
----
 
-### Gebruik van difficulty
+--------------------------------------------------
+7 DASHBOARD
+--------------------------------------------------
 
-De moeilijkheidsgraad beïnvloedt:
+De homepagina van de leerling is een vakdashboard.
 
-- hoe vaak een kaart verschijnt
-- hoe snel een kaart mastery bereikt
+De leerling ziet:
 
-Voor moeilijke kaarten kan bijvoorbeeld gelden:
+- zijn vakken
+- mastery per vak
+- aanbevolen oefensessie
 
 
-3 correcte antwoorden nodig → mastery
+Voorbeeld
 
+Economie — 60% mastery  
+Aardrijkskunde — 35% mastery  
+Geschiedenis — 72% mastery
 
-in plaats van:
 
+De primaire actie is:
 
-2 correcte antwoorden → mastery
+"Oefen 10 kaarten"
 
 
----
+--------------------------------------------------
+8 AANBEVOLEN OEFENSESSIE
+--------------------------------------------------
 
-# 8 Adaptieve training
+Het systeem kiest kaarten uit:
 
-Omdat difficulty per kaart bekend is kan KennisSprint:
+kaarten zonder mastery
 
-- moeilijke begrippen vaker tonen
-- makkelijke begrippen sneller afronden
-- de leerervaring aanpassen aan de leerling
 
-Dit maakt het systeem **adaptief**.
+Prioriteit:
 
----
+1 kaarten die vaak fout gaan
+2 kaarten met lage mastery
+3 nieuwe kaarten
 
-# 9 Competitie (optioneel)
 
-Competitie wordt gebaseerd op **mastery**, niet op snelheid.
+Dit zorgt ervoor dat de leerling
+steeds traint op wat nog niet beheerst wordt.
 
-Leaderboard voorbeeld:
 
+--------------------------------------------------
+9 FOUTEN TRAINER
+--------------------------------------------------
 
-4HAVO Economie
+Tijdens een sessie worden fouten opgeslagen.
+
+Na de sessie kan de leerling kiezen:
+
+"Oefen fouten opnieuw"
+
+
+Dit helpt om moeilijke kaarten extra te trainen.
+
+
+--------------------------------------------------
+10 COMPETITIE (LATER)
+--------------------------------------------------
+
+Competitie wordt gebaseerd op mastery,
+niet op snelheid.
+
+Voorbeeld leaderboard
+
+4 HAVO Economie
 
 1 Lisa 92%
 2 Milan 88%
 3 Noor 85%
 
+Dit voorkomt gokken of snel klikken.
 
-Dit motiveert leerlingen zonder dat gokken of snelheid belangrijk wordt.
 
----
-
-# 10 Samenvatting
+--------------------------------------------------
+SAMENVATTING
+--------------------------------------------------
 
 KennisSprint combineert:
 
-- retrieval practice
-- spaced repetition
-- mastery learning
-- adaptieve moeilijkheid
+retrieval practice
+mastery learning
+progress feedback
 
-Het doel van het systeem is dat leerlingen begrippen uiteindelijk **zelfstandig uit het geheugen kunnen reproduceren**.
+Het systeem is ontworpen zodat leerlingen
+begrippen uiteindelijk zelfstandig uit het geheugen
+kunnen reproduceren.
