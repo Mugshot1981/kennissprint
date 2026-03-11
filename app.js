@@ -23,17 +23,16 @@ async function ensureProfile() {
     .single();
 
   if (!profile) {
-
     await supabase.from("profiles").insert({
       id: user.id,
       email: user.email
     });
-
   }
 
   return user;
-
 }
+
+await ensureProfile();
 
 async function requireAuth() {
   const { data, error } = await supabase.auth.getUser();
