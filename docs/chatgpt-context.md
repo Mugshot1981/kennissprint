@@ -1,135 +1,196 @@
 KennisSprint – ChatGPT Context
 
-version: 0.2
-last updated: 2026-03-10
+version: 0.3
+last updated: 2026-03-11
 
-Dit document beschrijft de huidige architectuur, datastructuur en ontwikkelstatus van het project KennisSprint zodat nieuwe ChatGPT-sessies direct verder kunnen werken zonder eerdere chatcontext.
+Dit document beschrijft de architectuur, datastructuur, leerlogica en ontwikkelstatus van het project KennisSprint.
 
-1. Projectdoel
+Het doel van dit document is dat nieuwe ChatGPT-sessies direct verder kunnen werken zonder eerdere chatcontext.
 
-KennisSprint is een webgebaseerde leerapp waarin leerlingen begrippen en kennis oefenen via multiple-choice quizzen.
 
-De app is ontworpen voor:
+--------------------------------------------------
+PROJECTDOEL
+--------------------------------------------------
 
-middelbare scholieren
+KennisSprint is een webgebaseerde mastery-learning app voor examenleerlingen.
 
-snelle oefensessies
+De app helpt leerlingen begrippen en kennis actief uit het geheugen te reproduceren via retrieval practice.
 
-mobiel en laptopgebruik
+De kern van het systeem is niet de quiz zelf, maar het opbouwen van **mastery per kaart per leerling**.
 
-eenvoudige uitbreiding naar meerdere vakken
+De quizinterface is alleen het oefenmechanisme waarmee mastery wordt opgebouwd.
 
-De app draait als statische website op GitHub Pages en gebruikt alleen:
+Belangrijke leerprincipes:
+
+- retrieval practice
+- spaced repetition (later)
+- mastery learning
+- progress tracking per leerling
+
+
+--------------------------------------------------
+TECHNISCHE ARCHITECTUUR
+--------------------------------------------------
+
+Frontend
+
+De applicatie draait als statische website op GitHub Pages.
+
+Technologie:
 
 HTML
-
 CSS
+JavaScript (ES modules)
 
-JavaScript
+Er is geen eigen backend.
 
-Er is geen backend en geen login.
+Alle gebruikersdata wordt opgeslagen in Supabase.
 
-2. Hoofdstructuur van de applicatie
 
-De app bestaat uit twee hoofdpagina’s.
+--------------------------------------------------
+SUPABASE ARCHITECTUUR
+--------------------------------------------------
+
+Supabase wordt gebruikt voor:
+
+Authenticatie
+Gebruikersprofielen
+Voortgang per kaart
+
+
+Tabellen:
+
+profiles
+classes
+cards_progress
+
+
+profiles
+
+id (uuid)
+display_name (text)
+
+Deze tabel bevat de schermnaam van de leerling.
+
+
+classes
+
+Wordt later gebruikt om leerlingen aan klassen te koppelen.
+
+
+cards_progress
+
+Slaat de voortgang per kaart op.
+
+velden:
+
+user_id
+card_id
+level
+correct_count
+wrong_count
+last_seen
+
+
+--------------------------------------------------
+AUTHENTICATIE
+--------------------------------------------------
+
+Login gebeurt via Supabase Auth.
+
+Type login:
+
+email + wachtwoord
+
+
+Flow
+
+login.html
+↓
+supabase.auth.signInWithPassword
+↓
+index.html
+
+
+Elke beschermde pagina controleert:
+
+supabase.auth.getUser()
+
+
+Als geen gebruiker bestaat:
+
+redirect naar login.html
+
+
+--------------------------------------------------
+PROFIEL FLOW
+--------------------------------------------------
+
+Nieuwe gebruikers moeten een schermnaam kiezen.
+
+Flow:
+
+login.html
+↓
+index.html
+↓
+profiles.display_name check
+↓
+profile.html indien leeg
+
+
+Pas daarna krijgt de gebruiker toegang tot de app.
+
+
+--------------------------------------------------
+BELANGRIJKE PAGINA'S
+--------------------------------------------------
+
+login.html
+
+Login en accountregistratie.
+
+
+profile.html
+
+Gebruiker kiest schermnaam.
+
 
 index.html
 
-Dit is het cursusselectiescherm.
+Vakdashboard.
 
-De gebruiker kiest:
 
-vak
-
-niveau
-
-leerjaar
-
-Bijvoorbeeld:
-
-geschiedenis
-mavo
-4
-
-Daarna opent de app automatisch:
-
-course.html?course=geschiedenis-mavo-4
 course.html
 
-Dit is de trainerpagina voor een specifieke cursus.
+Trainer voor een specifieke cursus.
 
-De pagina bevat:
 
-titel van de cursus
 
-hoofdstukselectie
+--------------------------------------------------
+APP NAVIGATIE
+--------------------------------------------------
 
-keuze van oefenvorm
-
-startknop
-
-quizinterface
-
-feedback popup
-
-eindscherm
-
-Wanneer een quiz start:
-
-verdwijnen selectievelden
-
-blijft alleen de quiz zichtbaar
-
-3. Projectbestanden
-
-De repository bevat momenteel:
-
+login.html
+↓
 index.html
-course.html
-app.js
-style.css
-
-Datafiles:
-
-data.js
-courseCatalog.js
-courses/
-
-In /courses/ staat één bestand per cursus.
-
-Voorbeelden:
-
-courses/geschiedenis-mavo-4.js
-courses/geschiedenis-havo-3.js
-courses/aardrijkskunde-mavo-4.js
-courses/economie-mavo-4.js
-4. Dataflow
-
-De applicatie werkt als volgt:
-
-index.html
-↓ gebruiker kiest cursus
-course.html?course=
 ↓
-app.js leest courseId uit URL
-↓
-activeCourse wordt geladen uit courseCatalog
-↓
-quiz wordt gegenereerd
+course.html?course=...
 
-Belangrijk:
+
+course.html leest de courseId uit de URL.
+
+
+--------------------------------------------------
+COURSE ARCHITECTUUR
+--------------------------------------------------
+
+Cursussen worden geladen uit:
 
 courseCatalog.js
-↓
-importeert alle cursussen
-↓
-dropdown vakken wordt hieruit opgebouwd
 
-Als een cursus niet in courseCatalog staat, verschijnt het vak niet in de UI.
 
-5. Course model
-
-Elke cursus volgt dit model:
+Elke cursus is een object:
 
 course = {
 
@@ -145,250 +206,258 @@ modes
 
 }
 
+
 Voorbeeld:
 
-id: "geschiedenis-mavo-4"
-subject: "geschiedenis"
-level: "mavo"
-grade: "4"
+id: geschiedenis-mavo-4
+subject: geschiedenis
+level: mavo
+grade: 4
 
-Deze velden zijn verplicht omdat de startpagina hieruit filters maakt.
 
-6. Chapters
+Deze velden zijn verplicht omdat de UI hierop filtert.
+
+
+--------------------------------------------------
+CHAPTER STRUCTUUR
+--------------------------------------------------
 
 Hoofdstukken bepalen hoe vragen gegroepeerd worden.
 
-Structuur:
+
+structuur
 
 {
- id
- subjectId
- title
+id
+subjectId
+title
 }
 
-Voorbeeld:
 
-{
- id: "his-h1",
- subjectId: "geschiedenis",
- title: "Staatsinrichting van Nederland"
-}
-7. Datasets
+
+--------------------------------------------------
+DATASETS
+--------------------------------------------------
 
 De inhoud van een cursus staat in datasets.
 
 datasets: {
- terms
- years
- persons
+
+terms
+years
+persons
+
 }
+
+
 terms
 
 Begrippen.
 
-{
- id
- chapterId
- type
- prompt
- answer
-}
 
-Voorbeeld:
+structuur
 
 {
- id: "his-001",
- chapterId: "his-h1",
- type: "begrip",
- prompt: "Interbellum",
- answer: "De periode tussen de Eerste en Tweede Wereldoorlog"
+id
+chapterId
+type
+prompt
+answer
 }
+
+
+voorbeeld
+
+prompt: Interbellum
+answer: De periode tussen de Eerste en Tweede Wereldoorlog
+
+
+
 years
 
 Jaartallen.
 
+structuur
+
 {
- id
- chapterId
- year
- event
+id
+chapterId
+year
+event
 }
+
+
+
 persons (toekomst)
 
-Voor vragen zoals:
-
-persoon → beschrijving
-beschrijving → persoon
-
-Structuur:
+structuur
 
 {
- id
- chapterId
- name
- description
+id
+chapterId
+name
+description
 }
-8. Modes
+
+
+
+--------------------------------------------------
+MODES
+--------------------------------------------------
 
 Modes bepalen hoe datasets geoefend worden.
 
-modes: [
- { id label dataset }
+modes:
+
+[
+{
+id
+label
+dataset
+}
 ]
 
-Voorbeelden:
+
+Voorbeelden
 
 term-to-answer
 answer-to-term
 years
 event-years
+person-to-description
+description-to-person
 
-Elke mode bepaalt:
 
-welke dataset gebruikt wordt
 
-hoe de vraag wordt opgebouwd
+--------------------------------------------------
+QUIZ ENGINE
+--------------------------------------------------
 
-9. Compatibiliteit
+De quiz werkt als volgt:
 
-De app ondersteunt tijdelijk oude en nieuwe datastructuren.
+1 vraag
+4 antwoordopties
 
-Oud model:
+Feedback verschijnt in een popup.
 
-items
-years
+Na een goed antwoord:
 
-Nieuw model:
+automatisch volgende vraag.
 
-datasets.terms
-datasets.years
+Na een fout antwoord:
 
-app.js gebruikt helperfuncties:
+correct antwoord wordt getoond.
 
-getCourseTerms()
-getCourseYears()
 
-Dit voorkomt dat bestaande cursussen breken tijdens migratie.
+--------------------------------------------------
+MASTERY MODEL (V1)
+--------------------------------------------------
 
-10. UX-principes
+Elke kaart heeft een mastery-status per leerling.
 
-Belangrijke regels voor de interface:
 
-één scherm tegelijk
+Een kaart wordt **mastered** wanneer:
 
-geen splitscreen layouts
+- minstens 3 correcte antwoorden zijn gegeven
+- minstens 1 keer actieve recall (typen)
 
-quiz start → selectie verdwijnt
 
-vraag staat los van antwoorden
+Kleurstatus per kaart:
 
-feedback verschijnt in popup
 
-Structuur van een vraag:
+grijs
+nieuw
 
-vraag
-↓
-antwoorden
-↓
-feedback
-11. Huidige cursussen
+groen
+in training
 
-Momenteel bestaan de volgende cursussen:
+blauw
+goed beheerst
+
+paars
+mastery
+
+oranje
+perfect mastery (inclusief typen)
+
+
+
+Deze kleuren worden later gebruikt in:
+
+kaartweergave
+hoofdstukprogress
+vakprogress
+dashboard
+
+
+
+--------------------------------------------------
+HUIDIGE CURSUSSEN
+--------------------------------------------------
+
+Momenteel bestaan:
 
 geschiedenis-mavo-4
-geschiedenis-havo-3 (testdataset)
 aardrijkskunde-mavo-4
 economie-mavo-4
+geschiedenis-havo-3 (test)
 
-Status:
 
-cursus	status
-geschiedenis-mavo-4	volledig werkend
-aardrijkskunde-mavo-4	volledig werkend
-economie-mavo-4	hoofdstukken toegevoegd, dataset in opbouw
-geschiedenis-havo-3	test
 
-Datasets worden opgebouwd door begrippenpagina’s uit schoolboeken te fotograferen en om te zetten naar datasetitems.
+--------------------------------------------------
+DATA WORKFLOW
+--------------------------------------------------
 
-12. Veelvoorkomende fouten
+Nieuwe cursus bouwen:
 
-Tijdens ontwikkeling kwamen een paar typische bugs voor.
+1 boekpagina analyseren
+2 hoofdstukken maken
+3 cursusbestand maken
+4 import in courseCatalog
+5 datasets vullen
 
-1. Syntax errors blokkeren hele app
 
-Omdat modules worden geïmporteerd:
+Datasets worden vaak gegenereerd uit foto’s van schoolboeken.
 
-courseCatalog
-↓
-course file
 
-zal één syntaxfout in een cursusbestand de hele app blokkeren.
 
-Bijvoorbeeld:
+--------------------------------------------------
+ONTWIKKELSTATUS
+--------------------------------------------------
 
-chapters: [
-...
-],
-],
+Huidige fase:
 
-Dit voorkomt dat courseCatalog laadt.
+overgang van quiz-app naar mastery trainer.
 
-2. Ontbrekende course velden
 
-Als een cursus deze velden mist:
 
-id
-subject
-level
-grade
+Wat al werkt
 
-verschijnt het vak niet in de dropdown.
+login systeem
+profielen
+quizengine
+dataset systeem
+chapter selectie
 
-3. Cursus niet in catalog
 
-Nieuwe cursus moet altijd toegevoegd worden aan:
 
-courseCatalog.js
-13. Ontwikkelworkflow
+Wat nog gebouwd moet worden
 
-Nieuwe cursus bouwen gebeurt zo:
+cards_progress integratie
+mastery engine
+dashboard per vak
+aanbevolen oefensessie
+progress visualisatie
+fouten-trainer per leerling
+classcode systeem
 
-inhoudspagina boek lezen
 
-chapters array maken
 
-cursusbestand maken
+--------------------------------------------------
+ONTWERPPRINCIPES
+--------------------------------------------------
 
-import in courseCatalog
-
-dataset vullen via begrippenpagina’s
-
-Datasets worden door ChatGPT gegenereerd uit foto’s.
-
-14. Toekomstige uitbreidingen
-
-Nieuwe datasets:
-
-persons
-images
-sources
-maps
-
-Nieuwe vraagtypes:
-
-persoon → beschrijving
-afbeelding → naam
-kaart herkennen
-tijdlijn ordenen
-
-Mogelijk later:
-
-leerlingaccounts
-fouten-trainer
-voortgang
-15. Ontwikkelprincipes
-
-Belangrijke regels voor ontwikkeling:
+Belangrijkste regels:
 
 Data model eerst, UI daarna.
 
@@ -397,208 +466,19 @@ Cursus bepaalt:
 datasets
 modes
 
+
 app.js blijft generiek.
 
-Nieuwe features worden eerst in de data-structuur ontworpen.
 
-Belangrijkste regel:
+Nieuwe features worden eerst ontworpen in de data-structuur.
+
+
+--------------------------------------------------
+BELANGRIJKE REGEL VOOR CHATGPT
+--------------------------------------------------
 
 Nooit aannames doen over code.
-Vraag eerst het bestand. Alleen als je het niet meer weet.
 
-## Nieuwe status – 2026-03-10
+Vraag eerst het bestand.
 
-KennisSprint is niet langer alleen een statische quizsite zonder login.
-
-### Nieuwe technische status
-- GitHub Pages frontend blijft actief
-- Supabase project is aangemaakt
-- Supabase tabellen bestaan:
-  - classes
-  - profiles
-  - cards_progress
-- login.html is gekoppeld aan Supabase Auth
-- magic link login werkt
-- confirmatiemail van Supabase wordt ontvangen
-- course.html controleert nu auth voordat de trainer geladen wordt
-
-### Huidige architectuurrichting
-KennisSprint ontwikkelt van multiple-choice quiz naar mastery learning systeem.
-
-Doel:
-leerlingen moeten begrippen uiteindelijk actief uit het geheugen kunnen reproduceren.
-
-### Volgende stap
-De volgende implementatiestap is:
-1. profiel aanmaken bij eerste login
-2. classcode koppelen aan profiel
-3. cards_progress gebruiken voor voortgang per kaart
-4. daarna mastery engine bouwen met spaced repetition
-
-### Belangrijke ontwerpkeuze
-Login blijft via Supabase magic link email.
-Classcode wordt gebruikt om leerlingen aan een klas te koppelen.
-
-### Belangrijke projectrichting
-KennisSprint moet gebouwd worden als:
-- mastery trainer
-- retrieval-first leerapp
-- progressie per leerling
-- later competitie op basis van mastery, niet snelheid
-- 
-Nieuwe status – 2026-03-11
-Authenticatie-architectuur
-
-KennisSprint gebruikt nu Supabase Auth met email + wachtwoord.
-
-Frontend blijft volledig statisch op GitHub Pages.
-
-Auth wordt volledig client-side afgehandeld via:
-
-@supabase/supabase-js
-
-Login flow:
-
-login.html
-   ↓
-auth.signInWithPassword
-   ↓
-index.html
-
-Elke beschermde pagina controleert auth via:
-
-supabase.auth.getUser()
-
-Als er geen gebruiker bestaat wordt automatisch geredirect naar:
-
-login.html
-
-Dit gebeurt momenteel in:
-
-index.html
-course.html
-profile.html
-Profielsysteem
-
-Bij registratie wordt een profielrecord aangemaakt in:
-
-profiles
-
-Tabelstructuur:
-
-profiles
-- id (uuid, gelijk aan auth user id)
-- display_name (text)
-
-Registratieproces:
-
-login.html
-↓
-auth.signUp()
-↓
-profiles.upsert({
-  id: user.id,
-  display_name
-})
-
-De gebruikersnaam (display_name) is niet onderdeel van auth, maar van de profiles tabel.
-
-Profile completion flow
-
-De applicatie heeft nu een profiel-completeness check.
-
-Flow:
-
-login.html
-   ↓
-index.html
-   ↓
-check profiles.display_name
-   ↓
-display_name leeg → profile.html
-display_name gevuld → index.html
-
-Dit wordt uitgevoerd door:
-
-ensureProfileComplete()
-
-in index.html.
-
-Doel:
-
-nieuwe gebruikers moeten eerst een schermnaam kiezen
-
-daarna kunnen ze pas de app gebruiken
-
-Belangrijke pagina’s
-
-De app bevat nu deze kernpagina’s:
-
-login.html
-index.html
-profile.html
-course.html
-
-Functie per pagina:
-
-login.html
-
-Email + wachtwoord login en account registratie.
-
-profile.html
-
-Gebruiker kiest of wijzigt zijn schermnaam.
-
-index.html
-
-Cursusselectie.
-
-course.html
-
-Trainer / quiz interface.
-
-Supabase tabellen
-
-Momenteel bestaan:
-
-profiles
-classes
-cards_progress
-
-Alleen profiles wordt nu actief gebruikt.
-
-Huidige ontwikkelfase
-
-KennisSprint bevindt zich nu in de overgang van:
-
-quiz-app
-→ mastery learning platform
-
-De volgende implementatiestappen zijn:
-
-classcode systeem (profiles → classes koppelen)
-
-cards_progress gebruiken voor kaartvoortgang
-
-mastery engine (spaced repetition)
-
-fouten-trainer per gebruiker
-
-statistieken per leerling
-
-Architectuurprincipe
-
-Belangrijke regel:
-
-Frontend blijft statisch.
-
-Alle gebruikersdata wordt opgeslagen in Supabase.
-
-De app blijft:
-
-HTML
-CSS
-JavaScript
-Supabase
-
-Geen eigen backend.
+Alleen als het bestand niet beschikbaar is mag een aannemingsvoorstel gedaan worden.
