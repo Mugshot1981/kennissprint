@@ -514,3 +514,44 @@ body.quiz-active .controls {
     padding: 22px;
   }
 }
+
+/* ===== ACCOUNT BUTTON ===== */
+
+.account-button {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.account-button:hover {
+  background: #f3f4f6;
+}
+
+/* ===== ACCOUNT MENU ===== */
+
+#accountMenu {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 6px;
+  min-width: 160px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+#accountMenu button {
+  width: 100%;
+  padding: 8px 10px;
+  text-align: left;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#accountMenu button:hover {
+  background: #f3f4f6;
+}
