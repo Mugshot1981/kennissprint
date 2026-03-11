@@ -131,38 +131,50 @@ const levelSelect = document.getElementById("levelSelect");
 const gradeSelect = document.getElementById("gradeSelect");
 
 
-async function saveCardProgress(itemId, isCorrect) {
-  const { data: userData } = await supabase.auth.getUser();
+async function saveCardProgress(cardId, isCorrect) {
+  const { data: userData, error: userError } = await supabase.auth.getUser();
   const user = userData?.user;
 
-  if (!user) return;
-
-  const { data: existing } = await supabase
-    .from("cards_progress")
-    .select("*")
-    .eq("user_id", user.id)
-    .eq("item_id", itemId)
-    .maybeSingle();
-
-  const update = {
-    user_id: user.id,
-    item_id: itemId,
-    updated_at: new Date().toISOString()
-  };
-
-  if (existing) {
-    update.correct_count = existing.correct_count + (isCorrect ? 1 : 0);
-    update.wrong_count = existing.wrong_count + (isCorrect ? 0 : 1);
-    update.last_result = isCorrect ? "correct" : "wrong";
-  } else {
-    update.correct_count = isCorrect ? 1 : 0;
-    update.wrong_count = isCorrect ? 0 : 1;
-    update.last_result = isCorrect ? "correct" : "wrong";
+  if (userError || !user) {
+    console.error("Geen gebruiker voor progress save:", userError);
+    return;
   }
 
-  await supabase
+  const { data: existing, error: readError } = await supabase
     .from("cards_progress")
-    .upsert(update, { onConflict: ["user_id", "item_id"] });
+    .select("user_id, card_id, level, correct_count, wrong_count, last_seen")
+    .eq("user_id", user.id)
+    .eq("card_id", String(cardId))
+    .maybeSingle();
+
+  if (readError) {
+    console.error("cards_progress read fout:", readError);
+    return;
+  }
+
+  const currentCorrect = Number(existing?.correct_count || 0);
+  const currentWrong = Number(existing?.wrong_count || 0);
+  const currentLevel = Number(existing?.level || 0);
+
+  const nextCorrect = currentCorrect + (isCorrect ? 1 : 0);
+  const nextWrong = currentWrong + (isCorrect ? 0 : 1);
+
+  const payload = {
+    user_id: user.id,
+    card_id: String(cardId),
+    level: isCorrect ? Math.max(currentLevel, Math.min(nextCorrect, 3)) : currentLevel,
+    correct_count: nextCorrect,
+    wrong_count: nextWrong,
+    last_seen: new Date().toISOString()
+  };
+
+  const { error: writeError } = await supabase
+    .from("cards_progress")
+    .upsert(payload, { onConflict: "user_id,card_id" });
+
+  if (writeError) {
+    console.error("cards_progress write fout:", writeError);
+  }
 }
 // ===== STATUS =====
 
