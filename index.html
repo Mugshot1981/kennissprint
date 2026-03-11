@@ -204,26 +204,31 @@ KennisSprint dataset
   });
 
   async function showAccountButton(user) {
-    if (!accountButton) return;
+  if (!accountButton) return;
 
-    const { data, error } = await supabase
-      .from("profiles")
-      .select("display_name")
-      .eq("id", user.id)
-      .single();
-    
-    if (error) {
-      console.error("Accountnaam ophalen mislukt:", error);
-      accountButton.textContent = "Account";
-      accountButton.hidden = false;
-      return;
-    }
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("display_name")
+    .eq("id", user.id)
+    .single();
 
-    const displayName = data?.display_name?.trim();
-    accountButton.textContent = displayName ? displayName : "Account";
+  if (error) {
+    console.error(error);
+    accountButton.textContent = user.email;
     accountButton.hidden = false;
+    return;
   }
 
+  const name = data?.display_name;
+
+  if (name && name.trim() !== "") {
+    accountButton.textContent = name;
+  } else {
+    accountButton.textContent = user.email;
+  }
+
+  accountButton.hidden = false;
+}
   async function bootIndex() {
     const user = await requireAuth();
     if (!user) return;
