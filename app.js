@@ -857,10 +857,7 @@ function populateModeSelect() {
   });
 }
 
-const currentUser = await requireAuth();
-
-if (currentUser) {
- async function bootApp() {
+async function bootApp() {
   const user = await ensureProfile();
   if (!user) return;
 
