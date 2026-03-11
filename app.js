@@ -306,44 +306,86 @@ function syncChapterTilesFromSelect() {
   );
 
   Array.from(chapterTileGrid.children).forEach((tile) => {
-    tile.classList.toggle("selected", selectedIds.includes(tile.dataset.chapterId));
+    const isSelected = selectedIds.includes(tile.dataset.chapterId);
+
+    tile.classList.toggle("selected", isSelected);
+    tile.setAttribute("aria-pressed", isSelected ? "true" : "false");
+
+    if (isSelected) {
+      tile.style.border = "2px solid #1d4ed8";
+      tile.style.backgroundColor = "#dbeafe";
+      tile.style.color = "#0f172a";
+      tile.style.fontWeight = "700";
+    } else {
+      tile.style.border = "";
+      tile.style.backgroundColor = "";
+      tile.style.color = "";
+      tile.style.fontWeight = "";
+    }
   });
+}
+
+function updateChapterSelectorView() {
+  const useListView = activeCourse.chapters.length > 10;
+
+  if (chapterTileGrid) {
+    chapterTileGrid.style.display = "grid";
+    chapterTileGrid.classList.toggle("chapter-list-mode", useListView);
+
+    chapterTileGrid.style.gridTemplateColumns = useListView
+      ? "1fr"
+      : "repeat(auto-fit, minmax(160px, 1fr))";
+
+    chapterTileGrid.style.maxHeight = useListView ? "320px" : "";
+    chapterTileGrid.style.overflowY = useListView ? "auto" : "";
+    chapterTileGrid.style.gap = useListView ? "10px" : "";
+  }
+
+  if (chapterSelect) {
+    chapterSelect.style.display = "none";
+    chapterSelect.multiple = true;
+    chapterSelect.size = 0;
+  }
 }
 
 function loadChapters() {
   chapterSelect.innerHTML = "";
   chapterTileGrid.innerHTML = "";
 
-activeCourse.chapters.forEach((chapter) => {
+  const useListView = activeCourse.chapters.length > 10;
+
+  activeCourse.chapters.forEach((chapter) => {
     const option = document.createElement("option");
     option.value = chapter.id;
     option.textContent = chapter.title;
     chapterSelect.appendChild(option);
 
     const tile = document.createElement("button");
+    tile.type = "button";
+    tile.className = useListView ? "chapter-list-item" : "chapter-tile";
+    tile.dataset.chapterId = chapter.id;
 
-tile.type = "button";
-tile.className = "chapter-tile";
-tile.dataset.chapterId = chapter.id;
+    tile.textContent = useListView
+      ? chapter.title
+      : getTileTitle(chapter.title);
 
-tile.textContent = getTileTitle(chapter.title);
+    tile.addEventListener("click", () => {
+      const optionToToggle = Array.from(chapterSelect.options).find(
+        (option) => option.value === chapter.id
+      );
 
-tile.addEventListener("click", () => {
-  const optionToToggle = Array.from(chapterSelect.options).find(
-    (option) => option.value === chapter.id
-  );
+      if (!optionToToggle) return;
 
-  if (!optionToToggle) return;
-
-  optionToToggle.selected = !optionToToggle.selected;
-  syncChapterTilesFromSelect();
-  chapterSelect.dispatchEvent(new Event("change"));
-});
+      optionToToggle.selected = !optionToToggle.selected;
+      syncChapterTilesFromSelect();
+      chapterSelect.dispatchEvent(new Event("change"));
+    });
 
     chapterTileGrid.appendChild(tile);
   });
 
   syncChapterTilesFromSelect();
+  updateChapterSelectorView();
 }
 // ===== VRAAG OPBOUWEN =====
 
