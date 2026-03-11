@@ -1,5 +1,14 @@
 
 import { courseCatalog } from "./data.js";
+const params = new URLSearchParams(window.location.search);
+const courseId = params.get("course");
+
+const activeCourse = courseCatalog.find(c => c.id === courseId);
+
+if (!activeCourse) {
+  document.body.innerHTML = "Cursus niet gevonden.";
+  throw new Error("Course not found: " + courseId);
+}
 
 const supabase = window.supabaseClient;
 
