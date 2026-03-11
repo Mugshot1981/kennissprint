@@ -40,15 +40,19 @@
     const profileMessage = document.getElementById("profileMessage");
 
     async function requireAuth() {
-      const { data, error } = await supabaseClient.auth.getUser();
+  const { data: sessionData, error: sessionError } = await supabaseClient.auth.getSession();
+  console.log("profile getSession:", sessionData, sessionError);
 
-      if (error || !data?.user) {
-        window.location.href = "login.html";
-        return null;
-      }
+  const { data, error } = await supabaseClient.auth.getUser();
+  console.log("profile getUser:", data, error);
 
-      return data.user;
-    }
+  if (error || !data?.user) {
+    profileMessage.textContent = "Niet ingelogd op profile.html";
+    return null;
+  }
+
+  return data.user;
+}
 
     async function loadProfile() {
       const user = await requireAuth();
