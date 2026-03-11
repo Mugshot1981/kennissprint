@@ -75,11 +75,12 @@ KennisSprint dataset
     return data.user;
   }
 
-  const subjectSelect = document.getElementById("subjectSelect");
+   const subjectSelect = document.getElementById("subjectSelect");
   const levelSelect = document.getElementById("levelSelect");
   const gradeSelect = document.getElementById("gradeSelect");
   const openCourseButton = document.getElementById("openCourseButton");
   const selectionMessage = document.getElementById("selectionMessage");
+  const accountButton = document.getElementById("accountButton");
 
   function getUniqueValues(key, courses) {
     return [...new Set(courses.map(course => course[key]))];
