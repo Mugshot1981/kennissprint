@@ -49,62 +49,28 @@
     }
 
     async function register() {
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value;
-      const displayName = document.getElementById("displayName").value.trim();
-      const debugOutput = document.getElementById("debugOutput");
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  const debugOutput = document.getElementById("debugOutput");
 
-      if (!displayName) {
-        debugOutput.textContent = "FOUT: vul een gebruikersnaam in.";
-        alert("Vul een gebruikersnaam in.");
-        return;
-      }
+  debugOutput.textContent = "Bezig met account aanmaken...";
 
-      debugOutput.textContent = "Bezig met account aanmaken...";
+  const { data, error } = await supabaseClient.auth.signUp({
+    email,
+    password
+  });
 
-      const { data, error } = await supabaseClient.auth.signUp({
-        email,
-        password
-      });
+  console.log("signUp result:", { data, error });
 
-      console.log("signUp result:", { data, error });
+  if (error) {
+    debugOutput.textContent = "FOUT: " + error.message;
+    alert(error.message);
+    return;
+  }
 
-      if (error) {
-        debugOutput.textContent = "FOUT: " + error.message;
-        alert(error.message);
-        return;
-      }
-
-      const userId = data?.user?.id;
-
-      if (!userId) {
-        debugOutput.textContent = "FOUT: account aangemaakt zonder user id.";
-        alert("Account aangemaakt zonder user id.");
-        return;
-      }
-
-      const { error: profileError } = await supabaseClient
-        .from("profiles")
-        .upsert(
-          {
-            id: userId,
-            display_name: displayName
-          },
-          {
-            onConflict: "id"
-          }
-        );
-
-      if (profileError) {
-        debugOutput.textContent = "FOUT profiel: " + profileError.message;
-        alert(profileError.message);
-        return;
-      }
-
-      debugOutput.textContent = "OK: account aangemaakt. Log nu in.";
-      alert("Account aangemaakt. Log nu in met je e-mail en wachtwoord.");
-    }
-
+  debugOutput.textContent = "OK: account aangemaakt. Log nu in.";
+  alert("Account aangemaakt. Log nu in met je e-mail en wachtwoord.");
+}
     document.getElementById("loginButton").addEventListener("click", login);
     document.getElementById("registerButton").addEventListener("click", register);
   </script>
