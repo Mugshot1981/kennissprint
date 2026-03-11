@@ -123,6 +123,40 @@ const subjectSelect = document.getElementById("subjectSelect");
 const levelSelect = document.getElementById("levelSelect");
 const gradeSelect = document.getElementById("gradeSelect");
 
+
+async function saveCardProgress(itemId, isCorrect) {
+  const { data: userData } = await supabase.auth.getUser();
+  const user = userData?.user;
+
+  if (!user) return;
+
+  const { data: existing } = await supabase
+    .from("cards_progress")
+    .select("*")
+    .eq("user_id", user.id)
+    .eq("item_id", itemId)
+    .maybeSingle();
+
+  const update = {
+    user_id: user.id,
+    item_id: itemId,
+    updated_at: new Date().toISOString()
+  };
+
+  if (existing) {
+    update.correct_count = existing.correct_count + (isCorrect ? 1 : 0);
+    update.wrong_count = existing.wrong_count + (isCorrect ? 0 : 1);
+    update.last_result = isCorrect ? "correct" : "wrong";
+  } else {
+    update.correct_count = isCorrect ? 1 : 0;
+    update.wrong_count = isCorrect ? 0 : 1;
+    update.last_result = isCorrect ? "correct" : "wrong";
+  }
+
+  await supabase
+    .from("cards_progress")
+    .upsert(update, { onConflict: ["user_id", "item_id"] });
+}
 // ===== STATUS =====
 
 let currentChapterIds = [];
