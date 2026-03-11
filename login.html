@@ -51,7 +51,14 @@
     async function register() {
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value;
+      const displayName = document.getElementById("displayName").value.trim();
       const debugOutput = document.getElementById("debugOutput");
+
+      if (!displayName) {
+        debugOutput.textContent = "FOUT: vul een gebruikersnaam in.";
+        alert("Vul een gebruikersnaam in.");
+        return;
+      }
 
       debugOutput.textContent = "Bezig met account aanmaken...";
 
@@ -65,6 +72,32 @@
       if (error) {
         debugOutput.textContent = "FOUT: " + error.message;
         alert(error.message);
+        return;
+      }
+
+      const userId = data?.user?.id;
+
+      if (!userId) {
+        debugOutput.textContent = "FOUT: account aangemaakt zonder user id.";
+        alert("Account aangemaakt zonder user id.");
+        return;
+      }
+
+      const { error: profileError } = await supabaseClient
+        .from("profiles")
+        .upsert(
+          {
+            id: userId,
+            display_name: displayName
+          },
+          {
+            onConflict: "id"
+          }
+        );
+
+      if (profileError) {
+        debugOutput.textContent = "FOUT profiel: " + profileError.message;
+        alert(profileError.message);
         return;
       }
 
