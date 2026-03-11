@@ -227,18 +227,6 @@ function getCourseYears(course) {
 }
 
 function getModeConfig(modeId) {
-  const courseMode = activeCourse?.modes?.find((mode) => mode.id === modeId);
-
-  if (courseMode) {
-    return {
-      questionLabel: courseMode.questionLabel || "Vraag",
-      sessionModeLabel: courseMode.sessionModeLabel || courseMode.label || modeId,
-      questionField: courseMode.questionField,
-      answerField: courseMode.answerField,
-      dataset: courseMode.dataset
-    };
-  }
-
   const fallbackConfigs = {
     "term-to-answer": {
       questionLabel: "Begrip",
@@ -284,14 +272,32 @@ function getModeConfig(modeId) {
     }
   };
 
-  return fallbackConfigs[modeId] || {
+  const fallback = fallbackConfigs[modeId] || {
     questionLabel: "Vraag",
     sessionModeLabel: modeId,
     questionField: "prompt",
     answerField: "answer",
     dataset: "terms"
   };
+
+  const courseMode = activeCourse?.modes?.find((mode) => mode.id === modeId);
+
+  if (!courseMode) {
+    return fallback;
+  }
+
+  return {
+    ...fallback,
+    ...courseMode,
+    questionLabel: courseMode.questionLabel || fallback.questionLabel,
+    sessionModeLabel:
+      courseMode.sessionModeLabel || courseMode.label || fallback.sessionModeLabel,
+    questionField: courseMode.questionField || fallback.questionField,
+    answerField: courseMode.answerField || fallback.answerField,
+    dataset: courseMode.dataset || fallback.dataset
+  };
 }
+
 function getQuestionParts(correctItem, quizMode, currentChapterItems) {
   const config = getModeConfig(quizMode);
 
