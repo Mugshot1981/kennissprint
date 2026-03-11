@@ -139,13 +139,144 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const supabaseClient = window.supabase.createClient(
-  "https://leceithebntgxauivrdf.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
-);
-</script>
+  const supabaseClient = window.supabase.createClient(
+    "https://leceithebntgxauivrdf.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
+  );
 
-    const displayNameText = document.getElementById("displayNameText");
+  const displayNameText = document.getElementById("displayNameText");
+  const emailText = document.getElementById("emailText");
+  const editNameButton = document.getElementById("editNameButton");
+  const editNamePanel = document.getElementById("editNamePanel");
+  const displayNameInput = document.getElementById("displayNameInput");
+  const saveNameButton = document.getElementById("saveNameButton");
+  const cancelEditButton = document.getElementById("cancelEditButton");
+  const resetPasswordButton = document.getElementById("resetPasswordButton");
+  const logoutButton = document.getElementById("logoutButton");
+  const startButton = document.getElementById("startButton");
+  const profileMessage = document.getElementById("profileMessage");
+
+  let currentUser = null;
+  let currentDisplayName = "";
+
+  async function requireAuth() {
+    const { data, error } = await supabaseClient.auth.getUser();
+
+    if (error || !data?.user) {
+      window.location.href = "login.html";
+      return null;
+    }
+
+    return data.user;
+  }
+
+  function openEditPanel() {
+    displayNameInput.value = currentDisplayName || "";
+    editNamePanel.hidden = false;
+    displayNameInput.focus();
+  }
+
+  function closeEditPanel() {
+    editNamePanel.hidden = true;
+    displayNameInput.value = "";
+  }
+
+  async function loadProfile() {
+    const user = await requireAuth();
+    if (!user) return;
+
+    currentUser = user;
+    emailText.textContent = user.email || "-";
+
+    const { data, error } = await supabaseClient
+      .from("profiles")
+      .select("display_name")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (error) {
+      profileMessage.textContent = "Profiel laden mislukt: " + error.message;
+      return;
+    }
+
+    currentDisplayName = data?.display_name?.trim() || "";
+
+    if (currentDisplayName) {
+      displayNameText.textContent = currentDisplayName;
+    } else {
+      displayNameText.textContent = "Nog niet ingesteld";
+      openEditPanel();
+    }
+  }
+
+  async function saveName() {
+    if (!currentUser) return;
+
+    const newDisplayName = displayNameInput.value.trim();
+
+    if (!newDisplayName) {
+      profileMessage.textContent = "Vul een schermnaam in.";
+      return;
+    }
+
+    profileMessage.textContent = "Bezig met opslaan...";
+
+    const { error } = await supabaseClient
+      .from("profiles")
+      .upsert(
+        {
+          id: currentUser.id,
+          display_name: newDisplayName
+        },
+        {
+          onConflict: "id"
+        }
+      );
+
+    if (error) {
+      profileMessage.textContent = "Opslaan mislukt: " + error.message;
+      return;
+    }
+
+    currentDisplayName = newDisplayName;
+    displayNameText.textContent = newDisplayName;
+    profileMessage.textContent = "Schermnaam opgeslagen.";
+    closeEditPanel();
+  }
+
+  async function sendPasswordReset() {
+    if (!currentUser?.email) return;
+
+    profileMessage.textContent = "Bezig met reset e-mail versturen...";
+
+    const { error } = await supabaseClient.auth.resetPasswordForEmail(currentUser.email, {
+      redirectTo: window.location.origin + window.location.pathname.replace("profile.html", "login.html")
+    });
+
+    if (error) {
+      profileMessage.textContent = "Reset mislukt: " + error.message;
+      return;
+    }
+
+    profileMessage.textContent = "Reset e-mail verstuurd.";
+  }
+
+  async function logout() {
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+  }
+
+  editNameButton.addEventListener("click", openEditPanel);
+  saveNameButton.addEventListener("click", saveName);
+  cancelEditButton.addEventListener("click", closeEditPanel);
+  resetPasswordButton.addEventListener("click", sendPasswordReset);
+  logoutButton.addEventListener("click", logout);
+  startButton.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+
+  loadProfile();
+</script>
     const emailText = document.getElementById("emailText");
     const editNameButton = document.getElementById("editNameButton");
     const editNamePanel = document.getElementById("editNamePanel");
