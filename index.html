@@ -203,10 +203,32 @@ KennisSprint dataset
       "course.html?course=" + encodeURIComponent(course.id);
   });
 
+  async function showAccountButton(user) {
+    if (!accountButton) return;
+
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("display_name")
+      .eq("id", user.id)
+      .single();
+
+    if (error) {
+      console.error("Accountnaam ophalen mislukt:", error);
+      accountButton.textContent = "Account";
+      accountButton.hidden = false;
+      return;
+    }
+
+    const displayName = data?.display_name?.trim();
+    accountButton.textContent = displayName ? displayName : "Account";
+    accountButton.hidden = false;
+  }
+
   async function bootIndex() {
     const user = await requireAuth();
     if (!user) return;
 
+    await showAccountButton(user);
     initSelectors();
   }
 
