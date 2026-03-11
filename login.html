@@ -17,63 +17,80 @@
   <button id="registerButton" type="button">Account aanmaken</button>
   <pre id="debugOutput"></pre>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
-    const supabaseClient = window.supabase.createClient(
-      "https://leceithebntgxauivrdf.supabase.co",
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
-    );
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const supabaseClient = window.supabase.createClient(
+    "https://leceithebntgxauivrdf.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
+  );
 
-    async function login() {
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value;
-      const debugOutput = document.getElementById("debugOutput");
-
-      debugOutput.textContent = "Bezig met inloggen...";
-
-      const { data, error } = await supabaseClient.auth.signInWithPassword({
-        email,
-        password
-      });
-
-      console.log("signInWithPassword result:", { data, error });
-
-      if (error) {
-        debugOutput.textContent = "FOUT: " + error.message;
-        alert(error.message);
-        return;
-      }
-
-      debugOutput.textContent = "OK: ingelogd.";
-      window.location.href = "index.html";
-    }
-
-    async function register() {
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
   const debugOutput = document.getElementById("debugOutput");
+  const loginButton = document.getElementById("loginButton");
+  const registerButton = document.getElementById("registerButton");
 
-  debugOutput.textContent = "Bezig met account aanmaken...";
+  async function redirectIfAlreadyLoggedIn() {
+    const { data, error } = await supabaseClient.auth.getUser();
 
-  const { data, error } = await supabaseClient.auth.signUp({
-    email,
-    password
-  });
+    console.log("login getUser:", data, error);
 
-  console.log("signUp result:", { data, error });
-
-  if (error) {
-    debugOutput.textContent = "FOUT: " + error.message;
-    alert(error.message);
-    return;
+    if (data?.user) {
+      window.location.href = "profile.html";
+    }
   }
 
-  debugOutput.textContent = "OK: account aangemaakt. Log nu in.";
-  alert("Account aangemaakt. Log nu in met je e-mail en wachtwoord.");
-}
-    document.getElementById("loginButton").addEventListener("click", login);
-    document.getElementById("registerButton").addEventListener("click", register);
-  </script>
+  async function login() {
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+
+    debugOutput.textContent = "Bezig met inloggen...";
+
+    const { data, error } = await supabaseClient.auth.signInWithPassword({
+      email,
+      password
+    });
+
+    console.log("signInWithPassword result:", { data, error });
+
+    if (error) {
+      debugOutput.textContent = "FOUT: " + error.message;
+      alert(error.message);
+      return;
+    }
+
+    debugOutput.textContent = "OK: ingelogd.";
+    window.location.href = "profile.html";
+  }
+
+  async function register() {
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+
+    debugOutput.textContent = "Bezig met account aanmaken...";
+
+    const { data, error } = await supabaseClient.auth.signUp({
+      email,
+      password
+    });
+
+    console.log("signUp result:", { data, error });
+
+    if (error) {
+      debugOutput.textContent = "FOUT: " + error.message;
+      alert(error.message);
+      return;
+    }
+
+    debugOutput.textContent = "OK: account aangemaakt. Log nu in.";
+    alert("Account aangemaakt. Log nu in met je e-mail en wachtwoord.");
+  }
+
+  loginButton.addEventListener("click", login);
+  registerButton.addEventListener("click", register);
+
+  redirectIfAlreadyLoggedIn();
+</script>
 
 </body>
 </html>
