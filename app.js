@@ -1,5 +1,5 @@
 
-import { courseCatalog, activeCourse } from "./data.js";
+import { courseCatalog } from "./data.js";
 
 const supabase = window.supabaseClient;
 
