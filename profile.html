@@ -39,7 +39,7 @@
     const saveProfileButton = document.getElementById("saveProfileButton");
     const profileMessage = document.getElementById("profileMessage");
 
-    async function requireAuth() {
+async function requireAuth() {
   const { data: sessionData, error: sessionError } = await supabaseClient.auth.getSession();
   console.log("profile getSession:", sessionData, sessionError);
 
@@ -47,7 +47,17 @@
   console.log("profile getUser:", data, error);
 
   if (error || !data?.user) {
-    profileMessage.textContent = "Niet ingelogd op profile.html";
+    document.body.innerHTML = `
+      <main class="page">
+        <section class="card" style="max-width:640px;">
+          <h1>KennisSprint</h1>
+          <p class="intro"><strong>Profile debug:</strong> geen ingelogde gebruiker gevonden.</p>
+          <p class="intro">Open nu de console en kijk naar:</p>
+          <p class="intro">profile getSession</p>
+          <p class="intro">profile getUser</p>
+        </section>
+      </main>
+    `;
     return null;
   }
 
