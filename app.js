@@ -281,6 +281,32 @@ function getChapterMasteryLevel(chapterId) {
   return 0;
 }
 
+function getRecommendedSessionItems(items, limit = 10) {
+  const weakItems = [];
+  const newItems = [];
+  const strongItems = [];
+
+  items.forEach((item) => {
+    const level = progressMap[getItemCardId(item)] || 0;
+
+    if (level === 0) {
+      newItems.push(item);
+    } else if (level <= 2) {
+      weakItems.push(item);
+    } else {
+      strongItems.push(item);
+    }
+  });
+
+  const orderedItems = [
+    ...shuffleArray(weakItems),
+    ...shuffleArray(newItems),
+    ...shuffleArray(strongItems)
+  ];
+
+  return orderedItems.slice(0, limit);
+}
+
 function getTileTitle(title) {
 
   let cleaned = title;
