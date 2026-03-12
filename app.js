@@ -421,9 +421,12 @@ function getRecommendedSessionItems(items, limit = 10) {
   const typedCandidates = shuffleArray(
     items.filter((item) => isTypedRecallCandidate(item))
   );
-
   if (typedCandidates.length > 0) {
-    const typedItem = typedCandidates[0];
+    const typedItem = {
+      ...typedCandidates[0],
+      questionMode: "typed"
+    };
+
     const typedCardId = getItemCardId(typedItem);
 
     const alreadyIncluded = selected.some(
@@ -449,6 +452,9 @@ function getRecommendedSessionItems(items, limit = 10) {
 
   return shuffleArray(selected).slice(0, limit);
 }
+
+
+  
 
   function getRecommendedSessionItemsSingleChapter(items, limit) {
   const newItems = [];
