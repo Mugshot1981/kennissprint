@@ -101,9 +101,15 @@ const termDisplay = document.getElementById("termDisplay");
 const questionLabel = document.getElementById("questionLabel");
 const answersContainer = document.getElementById("answers");
 const typedRecallArea = document.getElementById("typedRecallArea");
+const typedRecallIntro = document.getElementById("typedRecallIntro");
+const typedRecallAnswerPreview = document.getElementById("typedRecallAnswerPreview");
+const typedRecallForm = document.getElementById("typedRecallForm");
+const typedRecallInput = document.getElementById("typedRecallInput");
+const typedRecallSubmit = document.getElementById("typedRecallSubmit");
 const feedback = document.getElementById("feedback");
 const nextButton = document.getElementById("nextButton");
 const stopButton = document.getElementById("stopButton");
+
 const quizSessionTitle = document.getElementById("quizSessionTitle");
 const quizSessionMode = document.getElementById("quizSessionMode");
 
