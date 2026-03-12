@@ -784,6 +784,25 @@ function checkTypedAnswer(question, userInput, modeId) {
     question.item?.keywords || []
   );
 }
+function getTypedPhaseForQuestion(question) {
+  return progressDetailMap[question.cardId]?.typed_phase || 0;
+}
+
+function buildTypedHint(answerText) {
+  const normalized = String(answerText || "").trim();
+  if (!normalized) return "";
+
+  const words = normalized.split(/\s+/);
+
+  return words
+    .map((word) => {
+      const clean = word.replace(/[^A-Za-zÀ-ÿ0-9]/g, "");
+      if (clean.length <= 2) return clean;
+
+      return clean.slice(0, 2) + "_".repeat(Math.max(1, clean.length - 2));
+    })
+    .join(" ");
+}
 
 function getStarsText() {
   if (scoreTotal === 0) {
