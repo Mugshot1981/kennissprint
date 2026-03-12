@@ -161,7 +161,21 @@ mastery bereikt
 oranje
 mastery + actieve reproductie bevestigd
 
+De kleuren zijn gekoppeld aan het mastery-level.
 
+level 0 → grijs
+level 1 → groen
+level 2 → blauw
+level 3 → paars
+level 4 → oranje
+
+Deze kleuren worden onder andere gebruikt in:
+
+het sessie-eindscherm
+
+toekomstige dashboards
+
+hoofdstukprogressie
 --------------------------------------------------
 4 OEFENSESSIES
 --------------------------------------------------
@@ -173,7 +187,15 @@ De standaard oefensessie bevat:
 
 Deze kaarten worden gekozen uit:
 
-kaarten die nog niet mastered zijn.
+
+
+kaarten met lage mastery-levels
+
+Prioriteit:
+
+1 kaarten die recent fout zijn beantwoord
+2 kaarten met lage mastery-levels
+3 nieuwe kaarten
 
 
 Doel van een sessie:
