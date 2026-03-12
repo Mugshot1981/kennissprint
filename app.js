@@ -898,6 +898,7 @@ buildQuestion();
 if (retryWrongButton) {
   retryWrongButton.addEventListener("click", () => {
     currentChapterItems = [...wrongItems];
+    sessionItems = [...wrongItems];
     remainingQuestions = shuffleArray([...wrongItems]);
     scoreCorrect = 0;
     scoreTotal = 0;
