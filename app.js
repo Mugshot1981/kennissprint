@@ -688,56 +688,11 @@ async function loadProgressMap() {
 }
 
 function buildQuestion() {
-  feedback.textContent = "";
-  feedback.className = "feedback";
-  feedback.style.display = "none";
-  answersContainer.innerHTML = "";
-  nextButton.classList.add("hidden");
-  answered = false;
-
-  if (remainingQuestions.length === 0) {
-    showEndScreen();
-    return;
-  }
-
-  const correctItem = remainingQuestions.pop();
-
-   if (questionLabel) {
-    questionLabel.textContent = getModeConfig(quizMode).questionLabel;
-  }
-
-  const {
-    questionText,
-    correctOptionText,
-    wrongOptionPool
-  } = getQuestionParts(correctItem, quizMode, currentChapterItems);
-  const uniqueWrongOptions = [...new Set(wrongOptionPool)];
-  const shuffledWrongOptions = shuffleArray(uniqueWrongOptions).slice(0, 3);
-
-  const options = shuffleArray([
-    {
-      text: correctOptionText,
-      isCorrect: true
-    },
-    ...shuffledWrongOptions.map((optionText) => ({
-      text: optionText,
-      isCorrect: false
-    }))
-  ]);
-
-  currentQuestion = {
-    id: correctItem.id,
-    cardId: getItemCardId(correctItem),
-    item: correctItem,
-    prompt: questionText,
-    answer: correctItem.answer,
-    correctTerm: correctItem.prompt,
-    correctAnswer: correctItem.answer,
-    options: options
-  };
-
-  renderQuestion();
-}
+  console.log("buildQuestion start", {
+    remainingQuestions: remainingQuestions.length,
+    currentChapterItems: currentChapterItems.length,
+    sessionItems: sessionItems.length
+  });
 
 // ===== VRAAG TONEN =====
 
