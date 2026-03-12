@@ -796,7 +796,31 @@ function buildQuestion() {
 // ===== VRAAG TONEN =====
 
 function renderQuestion() {
-  termDisplay.textContent = currentQuestion.prompt;
+ termDisplay.textContent = currentQuestion.term;
+
+const promptBox = document.querySelector(".prompt-box");
+
+promptBox.classList.remove(
+  "mastery-gray",
+  "mastery-green",
+  "mastery-blue",
+  "mastery-purple"
+);
+
+const level = progressMap[currentQuestion.cardId] || 0;
+
+if(level === 0){
+  promptBox.classList.add("mastery-gray");
+}
+else if(level <= 2){
+  promptBox.classList.add("mastery-green");
+}
+else if(level === 3){
+  promptBox.classList.add("mastery-blue");
+}
+else{
+  promptBox.classList.add("mastery-purple");
+}
 
   currentQuestion.options.forEach((option) => {
     const button = document.createElement("button");
