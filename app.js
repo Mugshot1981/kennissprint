@@ -864,8 +864,14 @@ async function loadProgressMap() {
   }
 
   progressMap = {};
+  progressDetailMap = {};
+
   data.forEach((row) => {
     progressMap[row.card_id] = row.level || 0;
+    progressDetailMap[row.card_id] = {
+      level: row.level || 0,
+      correct_streak: row.correct_streak || 0
+    };
   });
 }
 
