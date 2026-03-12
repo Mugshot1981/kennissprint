@@ -95,10 +95,11 @@ h2 {
   gap: 16px;
 }
 
+
 .chapter-tiles-wrap {
   width: 100%;
   max-width: 920px;
-  max-height: 360px;
+  max-height: 180px;
   overflow-y: auto;
   position: relative;
 }
