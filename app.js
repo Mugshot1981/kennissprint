@@ -524,9 +524,9 @@ function showEndScreen() {
           <span class="session-result-delta">
             ${result.correct ? "▲ +1" : "▼ -1"}
           </span>
-         <strong class="session-result-term ${getMasteryClass(result.progress)}">
-  ${termText}
-</strong>
+            <strong class="session-result-term ${getMasteryClass(progressMap[result.cardId] || 0)}">
+            ${termText}
+          </strong>
         </div>
       `;
     }).join("");
