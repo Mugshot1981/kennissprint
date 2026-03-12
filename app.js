@@ -814,7 +814,7 @@ startButton.addEventListener("click", () => {
 
   currentChapterIds = selectedChapterIds;
   quizMode = modeSelect.value;
-  currentChapterItems = getItemsForChapters(currentChapterIds);
+currentChapterItems = getAvailableItems(quizMode);
 
 const selectedChapters = activeCourse.chapters.filter((chapter) =>
   currentChapterIds.includes(chapter.id)
