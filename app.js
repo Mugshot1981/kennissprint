@@ -502,6 +502,26 @@ function showEndScreen() {
     retryWrongButton.classList.add("hidden");
   }
 
+  if (sessionResultsList) {
+    sessionResultsList.innerHTML = sessionResults.map((result) => {
+      const termText =
+        result.item?.prompt ||
+        result.item?.term ||
+        result.item?.name ||
+        result.cardId ||
+        "Onbekend begrip";
+
+      return `
+        <div class="session-result-item ${result.correct ? "is-correct" : "is-wrong"}">
+          <span class="session-result-delta">
+            ${result.correct ? "▲ +1" : "▼ -1"}
+          </span>
+          <strong class="session-result-term">${termText}</strong>
+        </div>
+      `;
+    }).join("");
+  }
+
   endScreen.classList.remove("hidden");
 }
 
