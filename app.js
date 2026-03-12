@@ -200,9 +200,7 @@ let quizMode = "answer-to-term";
 // ===== HULPFUNCTIES =====
 
 function getSelectedChapterIds() {
-  return Array.from(chapterSelect.selectedOptions).map(
-    option => option.value
-  );
+getSelectedChapterIds()
 }
 function getTileTitle(title) {
 
