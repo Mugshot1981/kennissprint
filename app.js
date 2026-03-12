@@ -374,6 +374,7 @@ function getChapterMasteryBar(chapterId) {
     #8b5cf6 ${s3}% ${s4}%,
     #f59e0b ${s4}% ${s5}%)`;
 }
+
 function getRecommendedSessionItems(items, limit = 10) {
   // Groepeer items per hoofdstuk
   const chapterMap = new Map();
@@ -415,8 +416,40 @@ function getRecommendedSessionItems(items, limit = 10) {
     selected = selected.concat(extra);
   }
 
+  // Maximaal 1 typed-recall kandidaat in de sessie injecteren
+  const typedCandidates = shuffleArray(
+    items.filter((item) => isTypedRecallCandidate(item))
+  );
+
+  if (typedCandidates.length > 0) {
+    const typedItem = typedCandidates[0];
+    const typedCardId = getItemCardId(typedItem);
+
+    const alreadyIncluded = selected.some(
+      (item) => getItemCardId(item) === typedCardId
+    );
+
+    if (!alreadyIncluded) {
+      if (selected.length >= limit) {
+        const replaceIndex = selected.findIndex(
+          (item) => getLearningBucket(item) === "new"
+        );
+
+        if (replaceIndex >= 0) {
+          selected.splice(replaceIndex, 1, typedItem);
+        } else {
+          selected[selected.length - 1] = typedItem;
+        }
+      } else {
+        selected.push(typedItem);
+      }
+    }
+  }
+
   return shuffleArray(selected).slice(0, limit);
-}function getRecommendedSessionItemsSingleChapter(items, limit) {
+}
+
+  function getRecommendedSessionItemsSingleChapter(items, limit) {
   const newItems = [];
   const trainingItems = [];
   const almostMasteredItems = [];
