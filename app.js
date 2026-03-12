@@ -198,6 +198,24 @@ let wrongItems = [];
 let quizMode = "answer-to-term";
 
 // ===== HULPFUNCTIES =====
+function getItemCardId(item) {
+  if (item.id) return item.id;
+
+  const rawKey =
+    item.term ||
+    item.question ||
+    item.statement ||
+    item.event ||
+    item.name ||
+    "unknown-item";
+
+  return `${item.chapterId}__${rawKey}`
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 function getAvailableItems(modeId) {
 
