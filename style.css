@@ -701,24 +701,24 @@ body.quiz-active .controls {
 .prompt-box.mastery-blue,
 .prompt-box.mastery-purple{
   background: #ffffff;
-  border-width: 2px;
-  border-style: solid;
+  border: 1px solid #e5e7eb;
+  border-left-width: 10px;
 }
 
 .prompt-box.mastery-gray{
-  border-color: #d1d5db;
+  border-left-color: #9ca3af;
 }
 
 .prompt-box.mastery-green{
-  border-color: #86efac;
+  border-left-color: #22c55e;
 }
 
 .prompt-box.mastery-blue{
-  border-color: #93c5fd;
+  border-left-color: #3b82f6;
 }
 
 .prompt-box.mastery-purple{
-  border-color: #d8b4fe;
+  border-left-color: #a855f7;
 }
 
 #termDisplay{
