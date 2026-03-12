@@ -641,3 +641,37 @@ body.quiz-active .controls {
 .chapter-mastery-2::before { background: #3b82f6; }
 .chapter-mastery-3::before { background: #8b5cf6; }
 .chapter-mastery-4::before { background: #f59e0b; }
+
+.session-results-list {
+  margin: 24px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.session-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.session-result-delta {
+  min-width: 56px;
+  font-weight: 700;
+}
+
+.session-result-item.is-correct .session-result-delta {
+  color: #16a34a;
+}
+
+.session-result-item.is-wrong .session-result-delta {
+  color: #dc2626;
+}
+
+.session-result-term {
+  color: #0f172a;
+}
