@@ -1033,7 +1033,7 @@ tile.style.setProperty("--chapter-mastery-bar", masteryBar);
 
   syncChapterTilesFromSelect();
   updateChapterSelectorView();
-}
+} 
 // ===== VRAAG OPBOUWEN =====
 
 let progressMap = {};
