@@ -724,34 +724,23 @@ function updateStartButtonState() {
     (option) => option.value
   );
 
+  const currentModeId = modeSelect ? modeSelect.value : quizMode;
+  const questionCount = getQuestionCountForSelection(selectedChapterIds, currentModeId);
+
+  updateChapterSelectionSummary();
+
   if (selectedChapterIds.length === 0) {
     startButton.disabled = false;
     startButton.textContent = "Start oefenen";
     return;
   }
 
-  const currentModeId = modeSelect ? modeSelect.value : quizMode;
   const activeMode = activeCourse.modes.find((mode) => mode.id === currentModeId);
 
   if (!activeMode) {
     startButton.disabled = true;
     startButton.textContent = "Geen oefenvorm beschikbaar";
     return;
-  }
-
-  const datasetName = activeMode.dataset;
-  const dataset = activeCourse.datasets?.[datasetName] || [];
-
-  let questionCount = 0;
-
-  if (datasetName === "terms") {
-    questionCount = dataset.filter((item) => {
-      return selectedChapterIds.includes(item.chapterId) && item.type === "begrip";
-    }).length;
-  } else {
-    questionCount = dataset.filter((item) => {
-      return selectedChapterIds.includes(item.chapterId);
-    }).length;
   }
 
   if (questionCount < 4) {
@@ -763,7 +752,6 @@ function updateStartButtonState() {
   startButton.disabled = false;
   startButton.textContent = "Start oefenen";
 }
-
 // ===== QUIZ STARTEN =====
 startButton.addEventListener("click", () => {
   const selectedChapterIds = Array.from(chapterSelect.selectedOptions).map(
