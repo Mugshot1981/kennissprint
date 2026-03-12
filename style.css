@@ -608,3 +608,18 @@ body.quiz-active .controls {
 #accountMenu button:hover {
   background: #f3f4f6;
 }
+
+.chapter-tile {
+  position: relative;
+  overflow: hidden;
+}
+
+.chapter-tile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: #e5e7eb;
+}
