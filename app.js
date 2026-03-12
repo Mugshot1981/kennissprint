@@ -94,6 +94,7 @@ if (greetingEl && currentProfile?.display_name) {
 
 const chapterSelect = document.getElementById("chapterSelect");
 const chapterTileGrid = document.getElementById("chapterTileGrid");
+const chapterSelectionSummary = document.getElementById("chapterSelectionSummary");
 const startButton = document.getElementById("startButton");
 const quizArea = document.getElementById("quizArea");
 const termDisplay = document.getElementById("termDisplay");
