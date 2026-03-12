@@ -854,7 +854,7 @@ async function saveTypedProgress(cardId, isCorrect) {
   return { level: nextLevel, typed_phase: nextTypedPhase };
 }
 
-function buildTypedHint(answerText) {
+
 
 function buildTypedHint(answerText) {
   const normalized = String(answerText || "").trim();
