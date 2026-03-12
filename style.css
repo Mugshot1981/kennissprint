@@ -246,7 +246,11 @@ button {
 /* ===== QUIZ ===== */
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+#endScreen.hidden {
+  display: none !important;
 }
 
 #quizArea {
