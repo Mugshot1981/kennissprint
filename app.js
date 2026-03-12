@@ -788,6 +788,74 @@ function getTypedPhaseForQuestion(question) {
   return progressDetailMap[question.cardId]?.typed_phase || 0;
 }
 
+function getVisualMasteryStep(cardId) {
+  const level = progressMap[cardId] || 0;
+  const typedPhase = progressDetailMap[cardId]?.typed_phase || 0;
+
+  if (level >= 5) return 6;
+  if (level === 4 && typedPhase >= 1) return 5;
+  return Math.max(0, Math.min(level, 4));
+}
+
+async function saveTypedProgress(cardId, isCorrect) {
+  const currentLevel = progressMap[cardId] || 0;
+  const currentTypedPhase = progressDetailMap[cardId]?.typed_phase || 0;
+
+  let nextLevel = currentLevel;
+  let nextTypedPhase = currentTypedPhase;
+
+  if (isCorrect) {
+    if (currentLevel < 4) {
+      return { level: currentLevel, typed_phase: currentTypedPhase };
+    }
+
+    if (currentTypedPhase === 0) {
+      nextTypedPhase = 1;
+    } else if (currentTypedPhase === 1) {
+      nextTypedPhase = 2;
+    } else {
+      nextLevel = 5;
+      nextTypedPhase = 2;
+    }
+  } else {
+    nextTypedPhase = Math.max(0, currentTypedPhase - 1);
+  }
+
+  const { data: userData, error: userError } = await supabase.auth.getUser();
+  const user = userData?.user;
+
+  if (userError || !user) {
+    console.error("Geen gebruiker voor typed progress save:", userError);
+    return { level: currentLevel, typed_phase: currentTypedPhase };
+  }
+
+  const { error: writeError } = await supabase
+    .from("cards_progress")
+    .upsert({
+      user_id: user.id,
+      card_id: String(cardId),
+      level: nextLevel,
+      typed_phase: nextTypedPhase,
+      last_seen: new Date().toISOString()
+    }, { onConflict: "user_id,card_id" });
+
+  if (writeError) {
+    console.error("typed progress write fout:", writeError);
+    return { level: currentLevel, typed_phase: currentTypedPhase };
+  }
+
+  progressMap[String(cardId)] = nextLevel;
+  progressDetailMap[String(cardId)] = {
+    ...(progressDetailMap[String(cardId)] || {}),
+    level: nextLevel,
+    typed_phase: nextTypedPhase
+  };
+
+  return { level: nextLevel, typed_phase: nextTypedPhase };
+}
+
+function buildTypedHint(answerText) {
+
 function buildTypedHint(answerText) {
   const normalized = String(answerText || "").trim();
   if (!normalized) return "";
