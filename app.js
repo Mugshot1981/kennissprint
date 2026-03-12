@@ -438,7 +438,7 @@ function updateScoreDisplay() {
   if (scoreCorrectEl) scoreCorrectEl.textContent = scoreCorrect;
   if (scoreTotalEl) scoreTotalEl.textContent = scoreTotal;
 
-  const totalQuestions = currentChapterItems.length || 1;
+  const totalQuestions = sessionItems.length || currentChapterItems.length || 1;
 
   // sterren progress
   const starProgress = scoreCorrect / totalQuestions;
