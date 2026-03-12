@@ -183,9 +183,9 @@ async function saveCardProgress(cardId, isCorrect) {
     correct_count: nextCorrect,
     wrong_count: nextWrong,
     correct_streak: nextCorrectStreak,
+    typed_phase: currentTypedPhase,
     last_seen: new Date().toISOString()
   };
-
   const { error: writeError } = await supabase
     .from("cards_progress")
     .upsert(payload, { onConflict: "user_id,card_id" });
