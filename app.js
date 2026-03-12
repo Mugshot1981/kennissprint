@@ -289,7 +289,7 @@ function getLearningBucket(item) {
   if (level === 3) return "almost-mastered";
   return "typed-recall";
 }
-
+ 
 function getChapterMasteryLevel(chapterId) {
   const allDatasets = Object.values(activeCourse.datasets || {}).flat();
 
