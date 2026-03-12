@@ -166,6 +166,7 @@ async function saveCardProgress(cardId, isCorrect) {
   const currentWrong = Number(existing?.wrong_count || 0);
   const currentLevel = Number(existing?.level || 0);
   const currentCorrectStreak = Number(existing?.correct_streak || 0);
+  const currentTypedPhase = Number(existing?.typed_phase || 0);
 
   const nextCorrect = currentCorrect + (isCorrect ? 1 : 0);
   const nextWrong = currentWrong + (isCorrect ? 0 : 1);
