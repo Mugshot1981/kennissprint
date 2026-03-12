@@ -849,7 +849,7 @@ async function handleAnswer(clickedButton, selectedOption) {
     }, 700);
 
   } else {
-    saveCardProgress(currentQuestion.cardId, false);
+     await saveCardProgress(currentQuestion.cardId, false);
 
     sessionResults.push({
       cardId: currentQuestion.cardId,
