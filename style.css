@@ -880,7 +880,6 @@ body.quiz-active .controls {
 #termDisplay{
   color: #0f172a;
 }
-
 #masterySegments,
 .mastery-segments{
   display: flex;
@@ -896,7 +895,6 @@ body.quiz-active .controls {
   display: inline-block;
   flex: 0 0 auto;
 }
-
 
 .mastery-segment{
   width: 34px;
