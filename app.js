@@ -255,7 +255,30 @@ function getAvailableItems(modeId) {
     selectedChapterIds.includes(item.chapterId)
   );
 }
+function getItemLevel(item) {
+  const cardId = getItemCardId(item);
+  return progressMap[cardId] || 0;
+}
 
+function getChapterMasteryLevel(chapterId) {
+  const allDatasets = Object.values(activeCourse.datasets || {}).flat();
+
+  const chapterItems = allDatasets.filter((item) => item.chapterId === chapterId);
+
+  if (chapterItems.length === 0) {
+    return 0;
+  }
+
+  const levels = chapterItems.map((item) => getItemLevel(item));
+  const avgLevel =
+    levels.reduce((sum, level) => sum + level, 0) / levels.length;
+
+  if (avgLevel >= 3) return 4;
+  if (avgLevel >= 2.25) return 3;
+  if (avgLevel >= 1.5) return 2;
+  if (avgLevel >= 0.5) return 1;
+  return 0;
+}
 
 function getTileTitle(title) {
 
