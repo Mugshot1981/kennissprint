@@ -906,8 +906,9 @@ startButton.addEventListener("click", () => {
   sessionItems = getRecommendedSessionItems(currentChapterItems, 10);
   remainingQuestions = shuffleArray([...sessionItems]);
 
-  scoreCorrect = 0;
+   scoreCorrect = 0;
   scoreTotal = 0;
+  sessionResults = [];
   wrongItems = [];
   updateScoreDisplay();
 
