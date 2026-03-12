@@ -303,31 +303,33 @@ function getChapterMasteryLevel(chapterId) {
 }
 
 function getRecommendedSessionItems(items, limit = 10) {
-  const weakItems = [];
   const newItems = [];
-  const strongItems = [];
+  const trainingItems = [];
+  const almostMasteredItems = [];
+  const typedRecallItems = [];
 
-  items.forEach((item) => { 
-    const level = progressMap[getItemCardId(item)] || 0;
+  items.forEach((item) => {
+    const bucket = getLearningBucket(item);
 
-    if (level === 0) {
+    if (bucket === "new") {
       newItems.push(item);
-    } else if (level <= 2) {
-      weakItems.push(item);
+    } else if (bucket === "training") {
+      trainingItems.push(item);
+    } else if (bucket === "almost-mastered") {
+      almostMasteredItems.push(item);
     } else {
-      strongItems.push(item);
+      typedRecallItems.push(item);
     }
   });
 
   const orderedItems = [
-    ...shuffleArray(weakItems),
+    ...shuffleArray(trainingItems),
     ...shuffleArray(newItems),
-    ...shuffleArray(strongItems)
+    ...shuffleArray(almostMasteredItems)
   ];
 
   return orderedItems.slice(0, limit);
 }
-
 function getTileTitle(title) {
 
   let cleaned = title;
