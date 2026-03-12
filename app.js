@@ -303,6 +303,54 @@ function getChapterMasteryLevel(chapterId) {
   return 0;
 }
 
+function getChapterMasteryBar(chapterId) {
+  const allDatasets = Object.values(activeCourse.datasets || {}).flat();
+
+  const chapterItems = allDatasets.filter((item) => item.chapterId === chapterId);
+
+  if (chapterItems.length === 0) {
+    return "#e5e7eb";
+  }
+
+  const counts = {
+    gray: 0,
+    green: 0,
+    blue: 0,
+    purple: 0,
+    orange: 0
+  };
+
+  chapterItems.forEach((item) => {
+    const level = getItemLevel(item);
+
+    if (level === 0) counts.gray++;
+    else if (level <= 2) counts.green++;
+    else if (level === 3) counts.blue++;
+    else if (level === 4) counts.purple++;
+    else counts.orange++;
+  });
+
+  const total = chapterItems.length;
+
+  const grayPct = (counts.gray / total) * 100;
+  const greenPct = (counts.green / total) * 100;
+  const bluePct = (counts.blue / total) * 100;
+  const purplePct = (counts.purple / total) * 100;
+  const orangePct = (counts.orange / total) * 100;
+
+  const s1 = grayPct;
+  const s2 = s1 + greenPct;
+  const s3 = s2 + bluePct;
+  const s4 = s3 + purplePct;
+  const s5 = s4 + orangePct;
+
+  return `linear-gradient(to right,
+    #e5e7eb 0% ${s1}%,
+    #22c55e ${s1}% ${s2}%,
+    #3b82f6 ${s2}% ${s3}%,
+    #8b5cf6 ${s3}% ${s4}%,
+    #f59e0b ${s4}% ${s5}%)`;
+}
 function getRecommendedSessionItems(items, limit = 10) {
   // Groepeer items per hoofdstuk
   const chapterMap = new Map();
