@@ -112,6 +112,7 @@ const finalScoreText = document.getElementById("finalScoreText");
 const finalStars = document.getElementById("finalStars");
 const restartButton = document.getElementById("restartButton");
 const retryWrongButton = document.getElementById("retryWrongButton");
+const sessionResultsList = document.getElementById("sessionResultsList");
 const modeSelect = document.getElementById("modeSelect");
 
 const scoreCorrectEl = document.getElementById("scoreCorrect");
