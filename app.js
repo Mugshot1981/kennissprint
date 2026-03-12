@@ -864,7 +864,8 @@ quizSessionMode.textContent = getModeConfig(quizMode).sessionModeLabel;
     return levelA - levelB;
   });
 
-  remainingQuestions = shuffleArray(prioritizedItems.slice(0, 10));
+  sessionItems = prioritizedItems.slice(0, 10);
+  remainingQuestions = shuffleArray([...sessionItems]);
   scoreCorrect = 0;
   scoreTotal = 0;
   wrongItems = [];
