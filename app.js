@@ -235,6 +235,22 @@ function getAvailableItems(modeId) {
   const datasetName = mode.dataset;
   const dataset = activeCourse.datasets?.[datasetName] || [];
 
+  if (datasetName === "years") {
+    return dataset
+      .filter((item) => selectedChapterIds.includes(item.chapterId))
+      .map((item) => ({
+        ...item,
+        prompt: item.year,
+        answer: item.event
+      }));
+  }
+
+  if (datasetName === "terms") {
+    return dataset.filter((item) => {
+      return selectedChapterIds.includes(item.chapterId) && item.type === "begrip";
+    });
+  }
+
   return dataset.filter((item) =>
     selectedChapterIds.includes(item.chapterId)
   );
