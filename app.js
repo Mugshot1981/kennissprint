@@ -857,13 +857,13 @@ quizSessionMode.textContent = getModeConfig(quizMode).sessionModeLabel;
   alert("De selectie moet minimaal 4 vragen bevatten.");
   return;
 }
-  remainingQuestions = shuffleArray(
-  [...currentChapterItems].sort((a, b) => {
+  const prioritizedItems = [...currentChapterItems].sort((a, b) => {
     const levelA = progressMap[getItemCardId(a)] || 0;
     const levelB = progressMap[getItemCardId(b)] || 0;
     return levelA - levelB;
-  })
-);
+  });
+
+  remainingQuestions = shuffleArray(prioritizedItems.slice(0, 10));
   scoreCorrect = 0;
   scoreTotal = 0;
   wrongItems = [];
