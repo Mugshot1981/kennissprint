@@ -99,17 +99,18 @@ h2 {
 .chapter-tiles-wrap {
   width: 100%;
   max-width: 920px;
-  max-height: 180px;
+  max-height: 320px;
   overflow-y: auto;
   position: relative;
+  padding-bottom: 8px; /* ruimte voor fade */
 }
 .chapter-tiles-wrap::after {
   content: "";
-  position: sticky;
-  bottom: 0;
+  position: absolute;
   left: 0;
   right: 0;
-  height: 36px;
+  bottom: 0;
+  height: 40px;
   pointer-events: none;
   background: linear-gradient(
     to bottom,
