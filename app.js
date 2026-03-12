@@ -1244,19 +1244,20 @@ function renderQuestion() {
 
   const level = progressMap[currentQuestion.cardId] || 0;
 
- if (level === 0) {
-  promptBox.classList.add("mastery-gray");
-} else if (level <= 2) {
-  promptBox.classList.add("mastery-green");
-} else if (level === 3) {
-  promptBox.classList.add("mastery-blue");
-} else if (level === 4) {
-  promptBox.classList.add("mastery-purple");
-} else {
-  promptBox.classList.add("mastery-orange");
-}
+  if (level === 0) {
+    promptBox.classList.add("mastery-gray");
+  } else if (level <= 2) {
+    promptBox.classList.add("mastery-green");
+  } else if (level === 3) {
+    promptBox.classList.add("mastery-blue");
+  } else if (level === 4) {
+    promptBox.classList.add("mastery-purple");
+  } else {
+    promptBox.classList.add("mastery-orange");
+  }
+
   const masterySegments = document.querySelectorAll("#masterySegments .mastery-segment");
-const filledCount = Math.max(0, Math.min(level, 6));
+  const filledCount = getVisualMasteryStep(currentQuestion.cardId);
 
   masterySegments.forEach((segment, index) => {
     segment.classList.toggle("is-filled", index < filledCount);
