@@ -605,11 +605,14 @@ function loadChapters() {
     option.textContent = chapter.title;
     chapterSelect.appendChild(option);
 
-    const tile = document.createElement("button");
-    tile.type = "button";
-    tile.className = "chapter-tile";
-    tile.dataset.chapterId = chapter.id;
-    tile.textContent = getTileTitle(chapter.title);
+ const tile = document.createElement("button");
+tile.type = "button";
+
+const masteryLevel = getChapterMasteryLevel(chapter.id);
+
+tile.className = `chapter-tile chapter-mastery-${masteryLevel}`;
+tile.dataset.chapterId = chapter.id;
+tile.textContent = getTileTitle(chapter.title);
 
     tile.addEventListener("click", () => {
       const optionToToggle = Array.from(chapterSelect.options).find(
