@@ -484,6 +484,17 @@ function updateScoreDisplay() {
 
 }
 
+function getMasteryClass(progress) {
+  if (!progress) return "term-mastery-new";
+
+  if (progress.perfect) return "term-mastery-perfect";
+  if (progress.mastered) return "term-mastery-mastered";
+  if (progress.correct >= 3) return "term-mastery-good";
+  if (progress.correct >= 1) return "term-mastery-training";
+
+  return "term-mastery-new";
+}
+
 function showEndScreen() {
   answersContainer.innerHTML = "";
   feedback.textContent = "";
