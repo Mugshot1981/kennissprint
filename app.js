@@ -727,6 +727,8 @@ function buildQuestion() {
 
   currentQuestion = {
     id: correctItem.id,
+    cardId: getItemCardId(correctItem),
+    item: correctItem,
     prompt: questionText,
     answer: correctItem.answer,
     correctTerm: correctItem.prompt,
