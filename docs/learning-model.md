@@ -87,7 +87,25 @@ Dit is de sterkste vorm van retrieval practice.
 2 MASTERY MODEL
 --------------------------------------------------
 
-Elke kaart heeft een mastery-status per leerling.
+Elke kaart heeft een mastery-level per leerling.
+
+Dit level wordt opgeslagen als een numerieke waarde.
+
+0 nieuw
+1 in training
+2 goed beheerst
+3 mastered
+4 perfect mastered
+
+Het mastery-level stijgt wanneer een leerling een kaart correct beantwoordt.
+
+Het level bepaalt:
+
+de kleur van het begrip in de interface
+
+de selectie van kaarten voor nieuwe oefensessies
+
+de voortgang van hoofdstukken en vakken
 
 Mastery wordt bepaald door herhaald correct beantwoorden.
 
