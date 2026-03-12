@@ -124,6 +124,15 @@ h2 {
   transition: all 0.12s ease;
 }
 
+.chapter-tile-grid.compact .chapter-tile,
+.chapter-tile-grid.compact .chapter-list-item {
+  min-height: 56px;
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.2;
+  border-radius: 8px;
+}
+
 .chapter-tile:hover,
 .chapter-list-item:hover {
   background: #f4f6fb;
