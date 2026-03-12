@@ -9,7 +9,7 @@ if (!activeCourse) {
   throw new Error("Course not found: " + courseId);
 }
 const supabase = window.supabaseClient;
-
+ 
 async function requireAuth() {
   const { data, error } = await supabase.auth.getUser();
 
