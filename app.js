@@ -1119,7 +1119,7 @@ async function bootApp() {
   const user = await ensureProfile();
   if (!user) return;
 
-
+  await loadProgressMap();
   await showUserGreeting(user);
 
   applyActiveCourseToPage();
