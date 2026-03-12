@@ -695,3 +695,35 @@ body.quiz-active .controls {
 .term-mastery-perfect {
   color: #ea580c;
 }
+
+.prompt-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mastery-indicator{
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  flex: 0 0 14px;
+  background: #9ca3af;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.65);
+}
+
+.mastery-gray{
+  background: #9ca3af;
+}
+
+.mastery-green{
+  background: #22c55e;
+}
+
+.mastery-blue{
+  background: #3b82f6;
+}
+
+.mastery-purple{
+  background: #a855f7;
+}
