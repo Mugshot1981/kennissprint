@@ -322,13 +322,39 @@ function getRecommendedSessionItems(items, limit = 10) {
     }
   });
 
-  const orderedItems = [
-    ...shuffleArray(trainingItems),
-    ...shuffleArray(newItems),
-    ...shuffleArray(almostMasteredItems)
+  const shuffledNew = shuffleArray(newItems);
+  const shuffledTraining = shuffleArray(trainingItems);
+  const shuffledAlmost = shuffleArray(almostMasteredItems);
+
+  const targetTraining = Math.min(Math.round(limit * 0.4), shuffledTraining.length);
+  const targetNew = Math.min(Math.round(limit * 0.4), shuffledNew.length);
+  const targetAlmost = Math.min(limit - targetTraining - targetNew, shuffledAlmost.length);
+
+  const selected = [
+    ...shuffledTraining.slice(0, targetTraining),
+    ...shuffledNew.slice(0, targetNew),
+    ...shuffledAlmost.slice(0, targetAlmost)
   ];
 
-  return orderedItems.slice(0, limit);
+  const usedIds = new Set(selected.map((item) => getItemCardId(item)));
+
+  const fallbackPool = shuffleArray([
+    ...shuffledTraining.slice(targetTraining),
+    ...shuffledNew.slice(targetNew),
+    ...shuffledAlmost.slice(targetAlmost)
+  ]);
+
+  for (const item of fallbackPool) {
+    if (selected.length >= limit) break;
+
+    const cardId = getItemCardId(item);
+    if (!usedIds.has(cardId)) {
+      selected.push(item);
+      usedIds.add(cardId);
+    }
+  }
+
+  return shuffleArray(selected).slice(0, limit);
 }
 function getTileTitle(title) {
 
