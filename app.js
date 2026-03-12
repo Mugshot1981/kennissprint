@@ -303,10 +303,51 @@ function getChapterMasteryLevel(chapterId) {
 }
 
 function getRecommendedSessionItems(items, limit = 10) {
+  // Groepeer items per hoofdstuk
+  const chapterMap = new Map();
+
+  items.forEach((item) => {
+    const chapterId = item.chapterId || item.chapter || "default";
+    if (!chapterMap.has(chapterId)) {
+      chapterMap.set(chapterId, []);
+    }
+    chapterMap.get(chapterId).push(item);
+  });
+
+  const chapterIds = Array.from(chapterMap.keys());
+  const chapterCount = chapterIds.length;
+
+  // Hoeveel vragen per hoofdstuk
+  const perChapter = Math.max(1, Math.floor(limit / chapterCount));
+
+  let selected = [];
+
+  chapterIds.forEach((chapterId) => {
+    const chapterItems = chapterMap.get(chapterId);
+
+    const chapterSelection = getRecommendedSessionItemsSingleChapter(
+      chapterItems,
+      perChapter
+    );
+
+    selected = selected.concat(chapterSelection);
+  });
+
+  // Als we nog plekken over hebben → aanvullen uit alles
+  if (selected.length < limit) {
+    const remaining = items.filter(
+      (item) => !selected.includes(item)
+    );
+
+    const extra = shuffleArray(remaining).slice(0, limit - selected.length);
+    selected = selected.concat(extra);
+  }
+
+  return shuffleArray(selected).slice(0, limit);
+}function getRecommendedSessionItemsSingleChapter(items, limit) {
   const newItems = [];
   const trainingItems = [];
   const almostMasteredItems = [];
-  const typedRecallItems = [];
 
   items.forEach((item) => {
     const bucket = getLearningBucket(item);
@@ -317,8 +358,6 @@ function getRecommendedSessionItems(items, limit = 10) {
       trainingItems.push(item);
     } else if (bucket === "almost-mastered") {
       almostMasteredItems.push(item);
-    } else {
-      typedRecallItems.push(item);
     }
   });
 
@@ -336,8 +375,6 @@ function getRecommendedSessionItems(items, limit = 10) {
     ...shuffledAlmost.slice(0, targetAlmost)
   ];
 
-  const usedIds = new Set(selected.map((item) => getItemCardId(item)));
-
   const fallbackPool = shuffleArray([
     ...shuffledTraining.slice(targetTraining),
     ...shuffledNew.slice(targetNew),
@@ -346,16 +383,14 @@ function getRecommendedSessionItems(items, limit = 10) {
 
   for (const item of fallbackPool) {
     if (selected.length >= limit) break;
-
-    const cardId = getItemCardId(item);
-    if (!usedIds.has(cardId)) {
-      selected.push(item);
-      usedIds.add(cardId);
-    }
+    selected.push(item);
   }
 
-  return shuffleArray(selected).slice(0, limit);
+  return selected.slice(0, limit);
 }
+
+
+
 function getTileTitle(title) {
 
   let cleaned = title;
