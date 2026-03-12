@@ -190,8 +190,7 @@ let answered = false;
 let scoreCorrect = 0;
 let scoreTotal = 0;
 
-// Resultaten van huidige sessie
-let sessionResults = [];
+
 
 // Fouten-trainer (alleen huidige sessie, geen opslag)
 let wrongItems = [];
