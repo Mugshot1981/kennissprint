@@ -740,7 +740,22 @@ body.quiz-active .controls {
 }
 
 .mastery-segment.is-filled{
-  transform: scaleY(1.05);
+  background: currentColor;
+  animation: masteryGrow 0.2s ease-out;
+}
+
+@keyframes masteryGrow{
+  0%{
+    transform: scale(0.6);
+    opacity:0.4;
+  }
+  60%{
+    transform: scale(1.15);
+  }
+  100%{
+    transform: scale(1);
+    opacity:1;
+  }
 }
 
 .prompt-box.mastery-gray .mastery-segment.is-filled{
