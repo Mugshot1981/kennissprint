@@ -839,25 +839,26 @@ startButton.addEventListener("click", () => {
     return;
   }
 
-  currentChapterIds = selectedChapterIds;
+   currentChapterIds = selectedChapterIds;
   quizMode = modeSelect.value;
-currentChapterItems = getAvailableItems(quizMode);
+  currentChapterItems = getAvailableItems(quizMode);
 
-const selectedChapters = activeCourse.chapters.filter((chapter) =>
-  currentChapterIds.includes(chapter.id)
-);
+  const selectedChapters = activeCourse.chapters.filter((chapter) =>
+    currentChapterIds.includes(chapter.id)
+  );
 
   quizSessionTitle.textContent =
     selectedChapters.length === 1
       ? selectedChapters[0].title
       : `${selectedChapters.length} hoofdstukken geselecteerd`;
 
-quizSessionMode.textContent = getModeConfig(quizMode).sessionModeLabel;
+  quizSessionMode.textContent = getModeConfig(quizMode).sessionModeLabel;
 
- if (!currentChapterItems || currentChapterItems.length < 4) {
-  alert("De selectie moet minimaal 4 vragen bevatten.");
-  return;
-}
+  if (!currentChapterItems || currentChapterItems.length < 4) {
+    alert("De selectie moet minimaal 4 vragen bevatten.");
+    return;
+  }
+
   const prioritizedItems = [...currentChapterItems].sort((a, b) => {
     const levelA = progressMap[getItemCardId(a)] || 0;
     const levelB = progressMap[getItemCardId(b)] || 0;
@@ -866,6 +867,7 @@ quizSessionMode.textContent = getModeConfig(quizMode).sessionModeLabel;
 
   sessionItems = prioritizedItems.slice(0, 10);
   remainingQuestions = shuffleArray([...sessionItems]);
+
   scoreCorrect = 0;
   scoreTotal = 0;
   wrongItems = [];
