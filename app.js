@@ -100,6 +100,7 @@ const quizArea = document.getElementById("quizArea");
 const termDisplay = document.getElementById("termDisplay");
 const questionLabel = document.getElementById("questionLabel");
 const answersContainer = document.getElementById("answers");
+const typedRecallArea = document.getElementById("typedRecallArea");
 const feedback = document.getElementById("feedback");
 const nextButton = document.getElementById("nextButton");
 const stopButton = document.getElementById("stopButton");
