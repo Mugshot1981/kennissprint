@@ -417,36 +417,64 @@ function getRecommendedSessionItems(items, limit = 10) {
     selected = selected.concat(extra);
   }
 
-  // Maximaal 1 typed-recall kandidaat in de sessie injecteren
+   // Dynamische typed-recall quota op basis van aandeel paarse kaarten
   const typedCandidates = shuffleArray(
     items.filter((item) => isTypedRecallCandidate(item))
   );
-  if (typedCandidates.length > 0) {
+
+  const typedRatio = items.length > 0 ? typedCandidates.length / items.length : 0;
+  let typedQuota = Math.round(typedRatio * limit);
+
+  if (typedCandidates.length > 0 && typedQuota < 1) {
+    typedQuota = 1;
+  }
+
+  typedQuota = Math.min(typedQuota, typedCandidates.length, Math.max(0, limit - 1));
+
+  const selectedIds = new Set(selected.map((item) => getItemCardId(item)));
+
+  for (const candidate of typedCandidates) {
+    if (typedQuota <= 0) break;
+
     const typedItem = {
-      ...typedCandidates[0],
+      ...candidate,
       questionMode: "typed"
     };
 
     const typedCardId = getItemCardId(typedItem);
 
-    const alreadyIncluded = selected.some(
-      (item) => getItemCardId(item) === typedCardId
+    if (selectedIds.has(typedCardId)) {
+      continue;
+    }
+
+    if (selected.length < limit) {
+      selected.push(typedItem);
+      selectedIds.add(typedCardId);
+      typedQuota--;
+      continue;
+    }
+
+    const replaceIndex = selected.findIndex(
+      (item) => item.questionMode !== "typed" && getLearningBucket(item) === "new"
     );
 
-    if (!alreadyIncluded) {
-      if (selected.length >= limit) {
-        const replaceIndex = selected.findIndex(
-          (item) => getLearningBucket(item) === "new"
-        );
+    if (replaceIndex >= 0) {
+      selectedIds.delete(getItemCardId(selected[replaceIndex]));
+      selected[replaceIndex] = typedItem;
+      selectedIds.add(typedCardId);
+      typedQuota--;
+      continue;
+    }
 
-        if (replaceIndex >= 0) {
-          selected.splice(replaceIndex, 1, typedItem);
-        } else {
-          selected[selected.length - 1] = typedItem;
-        }
-      } else {
-        selected.push(typedItem);
-      }
+    const fallbackReplaceIndex = selected.findIndex(
+      (item) => item.questionMode !== "typed"
+    );
+
+    if (fallbackReplaceIndex >= 0) {
+      selectedIds.delete(getItemCardId(selected[fallbackReplaceIndex]));
+      selected[fallbackReplaceIndex] = typedItem;
+      selectedIds.add(typedCardId);
+      typedQuota--;
     }
   }
 
