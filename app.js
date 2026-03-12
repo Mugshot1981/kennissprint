@@ -614,9 +614,9 @@ function updateScoreDisplay() {
 }
 
 function getMasteryClass(level) {
-  if (level >= 4) return "term-mastery-perfect";
-  if (level >= 3) return "term-mastery-mastered";
-  if (level >= 2) return "term-mastery-good";
+  if (level >= 5) return "term-mastery-perfect";
+  if (level >= 4) return "term-mastery-mastered";
+  if (level >= 3) return "term-mastery-good";
   if (level >= 1) return "term-mastery-training";
   return "term-mastery-new";
 }
