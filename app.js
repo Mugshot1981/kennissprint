@@ -298,7 +298,7 @@ function getRecommendedSessionItems(items, limit = 10) {
   const newItems = [];
   const strongItems = [];
 
-  items.forEach((item) => {
+  items.forEach((item) => { 
     const level = progressMap[getItemCardId(item)] || 0;
 
     if (level === 0) {
