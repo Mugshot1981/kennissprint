@@ -937,13 +937,7 @@ if (restartButton) {
   restartButton.addEventListener("click", () => {
       currentChapterItems = getAvailableItems(quizMode);
 
-    const prioritizedItems = [...currentChapterItems].sort((a, b) => {
-      const levelA = progressMap[getItemCardId(a)] || 0;
-      const levelB = progressMap[getItemCardId(b)] || 0;
-      return levelA - levelB;
-    });
-
-    sessionItems = prioritizedItems.slice(0, 10);
+      sessionItems = getRecommendedSessionItems(currentChapterItems, 10);
     remainingQuestions = shuffleArray([...sessionItems]);
     scoreCorrect = 0;
     scoreTotal = 0;
