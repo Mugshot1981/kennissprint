@@ -724,3 +724,37 @@ body.quiz-active .controls {
 #termDisplay{
   color: #0f172a;
 }
+
+.mastery-segments{
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 16px;
+}
+
+.mastery-segment{
+  width: 34px;
+  height: 8px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.mastery-segment.is-filled{
+  transform: scaleY(1.05);
+}
+
+.prompt-box.mastery-gray .mastery-segment.is-filled{
+  background: #9ca3af;
+}
+
+.prompt-box.mastery-green .mastery-segment.is-filled{
+  background: #22c55e;
+}
+
+.prompt-box.mastery-blue .mastery-segment.is-filled{
+  background: #3b82f6;
+}
+
+.prompt-box.mastery-purple .mastery-segment.is-filled{
+  background: #a855f7;
+}
