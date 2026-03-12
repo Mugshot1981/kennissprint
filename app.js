@@ -846,6 +846,7 @@ tile.style.setProperty("--chapter-mastery-bar", masteryBar);
 // ===== VRAAG OPBOUWEN =====
 
 let progressMap = {};
+let progressDetailMap = {};
 
 async function loadProgressMap() {
   const { data: userData } = await supabase.auth.getUser();
