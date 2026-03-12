@@ -414,7 +414,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "nationalisme",
-  answer: "Een gevoel van trots voor je eigen land, volk en cultuur."
+  answer: "Een gevoel van trots voor je eigen land, volk en cultuur.",
+  keywords: ["trots", "eigen land", "volk", "cultuur"]
 },
 {
   id: "his-h2-002",
@@ -422,7 +423,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "modern imperialisme",
-  answer: "Het idee bij Europese landen in de 19e eeuw dat zij land moesten veroveren in Azië en Afrika om zo een groot rijk op te bouwen."
+  answer: "Het idee bij Europese landen in de 19e eeuw dat zij land moesten veroveren in Azië en Afrika om zo een groot rijk op te bouwen.",
+  keywords: ["land veroveren", "azie", "afrika", "groot rijk"]
 },
 {
   id: "his-h2-003",
@@ -430,7 +432,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "militarisme",
-  answer: "Het idee dat oorlog iets moois is en dat een land zo kan laten zien hoe sterk het is."
+  answer: "Het idee dat oorlog iets moois is en dat een land zo kan laten zien hoe sterk het is.",
+  keywords: ["oorlog mooi", "sterk land"]
 },
 {
   id: "his-h2-004",
@@ -438,7 +441,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "wapenwedloop",
-  answer: "Een soort wedstrijd waarbij landen proberen om de meeste en beste wapens te bezitten."
+  answer: "Een soort wedstrijd waarbij landen proberen om de meeste en beste wapens te bezitten.",
+  keywords: ["wedstrijd", "meeste wapens", "beste wapens"]
 },
 {
   id: "his-h2-005",
@@ -446,7 +450,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "bondgenootschap",
-  answer: "Een afspraak tussen twee of meer landen om elkaar te helpen bij een oorlog."
+  answer: "Een afspraak tussen twee of meer landen om elkaar te helpen bij een oorlog.",
+  keywords: ["afspraak", "landen helpen", "oorlog"]
 },
 {
   id: "his-h2-006",
@@ -454,7 +459,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "centralen",
-  answer: "Het bondgenootschap tussen Duitsland, Oostenrijk-Hongarije en het Turkse Rijk."
+  answer: "Het bondgenootschap tussen Duitsland, Oostenrijk-Hongarije en het Turkse Rijk.",
+  keywords: ["duitsland", "oostenrijk hongarije", "turkse rijk"]
 },
 {
   id: "his-h2-007",
@@ -462,7 +468,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "geallieerden (tijdens de Eerste Wereldoorlog)",
-  answer: "Het bondgenootschap tussen Rusland, Frankrijk en Groot-Brittannië."
+  answer: "Het bondgenootschap tussen Rusland, Frankrijk en Groot-Brittannië.",
+  keywords: ["rusland", "frankrijk", "groot brittannie"]
 },
 {
   id: "his-h2-008",
@@ -470,7 +477,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "tweefrontenoorlog",
-  answer: "Een oorlog waarbij een land op twee fronten tegelijkertijd moet vechten."
+  answer: "Een oorlog waarbij een land op twee fronten tegelijkertijd moet vechten.",
+  keywords: ["twee fronten", "tegelijk vechten"]
 },
 {
   id: "his-h2-009",
@@ -478,7 +486,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "Von Schlieffenplan",
-  answer: "Een plan van de Duitse generaal Von Schlieffen dat een tweefrontenoorlog voor Duitsland moest voorkomen."
+  answer: "Een plan van de Duitse generaal Von Schlieffen dat een tweefrontenoorlog voor Duitsland moest voorkomen.",
+  keywords: ["plan", "duitsland", "tweefrontenoorlog voorkomen"]
 },
 {
   id: "his-h2-010",
@@ -486,7 +495,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "loopgraven",
-  answer: "Diepe greppels die beschutting geven tegen beschietingen."
+  answer: "Diepe greppels die beschutting geven tegen beschietingen.",
+  keywords: ["diepe greppels", "beschutting", "beschietingen"]
 },
 {
   id: "his-h2-011",
@@ -494,7 +504,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "totale oorlog",
-  answer: "Een oorlog waarbij de hele samenleving wordt ingezet om de oorlog te kunnen winnen."
+  answer: "Een oorlog waarbij de hele samenleving wordt ingezet om de oorlog te kunnen winnen.",
+  keywords: ["hele samenleving", "oorlog winnen"]
 },
 {
   id: "his-h2-012",
@@ -502,7 +513,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "propaganda",
-  answer: "Reclame voor politieke ideeën, met als doel zoveel mogelijk mensen te overtuigen."
+  answer: "Reclame voor politieke ideeën, met als doel zoveel mogelijk mensen te overtuigen.",
+  keywords: ["politieke ideeen", "overtuigen", "reclame"]
 },
 {
   id: "his-h2-013",
@@ -510,7 +522,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "vijandbeeld",
-  answer: "Het negatief afbeelden en beschrijven van de vijand."
+  answer: "Het negatief afbeelden en beschrijven van de vijand.",
+  keywords: ["negatief", "vijand"]
 },
 {
   id: "his-h2-014",
@@ -518,7 +531,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "censuur",
-  answer: "De regering controleert de pers en houdt dus toezicht op alle berichten die via massamedia naar buiten worden gebracht."
+  answer: "De regering controleert de pers en houdt dus toezicht op alle berichten die via massamedia naar buiten worden gebracht.",
+  keywords: ["regering controle", "pers", "berichten"]
 },
 {
   id: "his-h2-015",
@@ -526,7 +540,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "neutraal",
-  answer: "Als een land zich in geval van oorlog niet aansluit bij een van de strijdende partijen."
+  answer: "Als een land zich in geval van oorlog niet aansluit bij een van de strijdende partijen.",
+  keywords: ["niet aansluiten", "oorlog", "strijdende partijen"]
 },
 {
   id: "his-h2-016",
@@ -534,7 +549,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "handelsbelemmeringen",
-  answer: "Alle problemen die handeldrijven moeilijk maken."
+  answer: "Alle problemen die handeldrijven moeilijk maken.",
+  keywords: ["problemen", "handel moeilijk"]
 },
 {
   id: "his-h2-017",
@@ -542,7 +558,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "distributiestelsel",
-  answer: "Een stelsel waarin je alleen producten kunt kopen met bonkaarten."
+  answer: "Een stelsel waarin je alleen producten kunt kopen met bonkaarten.",
+  keywords: ["stelsel", "bonkaarten", "producten kopen"]
 },
 {
   id: "his-h2-018",
@@ -550,7 +567,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "Dodendraad",
-  answer: "Een hek met prikkeldraad dat onder hoge elektrische spanning stond, door Duitsland gebouwd op de grens tussen Nederland en België."
+  answer: "Een hek met prikkeldraad dat onder hoge elektrische spanning stond, door Duitsland gebouwd op de grens tussen Nederland en België.",
+  keywords: ["hek", "prikkeldraad", "elektrische spanning", "nederland belgie"]
 },
 {
   id: "his-h2-019",
@@ -558,7 +576,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "communisme",
-  answer: "Een politieke stroming. Communisten streven naar een samenleving waarin iedereen gelijk is."
+  answer: "Een politieke stroming. Communisten streven naar een samenleving waarin iedereen gelijk is.",
+  keywords: ["politieke stroming", "iedereen gelijk"]
 },
 {
   id: "his-h2-020",
@@ -566,7 +585,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "Russische Revolutie",
-  answer: "De periode die begon met de opstand in februari 1917 en eindigde toen de communisten in oktober van dat jaar de macht grepen."
+  answer: "De periode die begon met de opstand in februari 1917 en eindigde toen de communisten in oktober van dat jaar de macht grepen.",
+  keywords: ["1917", "opstand", "communisten", "macht grepen"]
 },
 {
   id: "his-h2-021",
@@ -574,7 +594,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "onbeperkte duikbootoorlog",
-  answer: "Een manier van vechten waarbij Duitsland vanaf zijn onderzeeërs vijandelijke én neutrale schepen beschiet."
+  answer: "Een manier van vechten waarbij Duitsland vanaf zijn onderzeeërs vijandelijke én neutrale schepen beschiet.",
+  keywords: ["onderzeeboten", "duitsland", "schepen beschieten", "neutrale schepen"]
 },
 {
   id: "his-h2-022",
@@ -582,7 +603,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "wapenstilstand",
-  answer: "Een afspraak tussen de oorlogvoerende partijen om op te houden met vechten."
+  answer: "Een afspraak tussen de oorlogvoerende partijen om op te houden met vechten.",
+  keywords: ["afspraak", "stoppen met vechten"]
 },
 {
   id: "his-h2-023",
@@ -590,7 +612,8 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "Verdrag van Versailles",
-  answer: "Het vredesverdrag tussen Duitsland en de geallieerden na afloop van de Eerste Wereldoorlog."
+  answer: "Het vredesverdrag tussen Duitsland en de geallieerden na afloop van de Eerste Wereldoorlog.",
+  keywords: ["vredesverdrag", "duitsland", "geallieerden", "eerste wereldoorlog"]
 },
 {
   id: "his-h2-024",
@@ -598,9 +621,9 @@ const items = [
   chapterId: "his-h2",
   type: "begrip",
   prompt: "Volkenbond",
-  answer: "Een internationale organisatie die een nieuwe oorlog moest voorkomen."
+  answer: "Een internationale organisatie die een nieuwe oorlog moest voorkomen.",
+  keywords: ["internationale organisatie", "oorlog voorkomen"]
 },
-  
   {
   id: "his-h3-001",
   subjectId: "geschiedenis",
