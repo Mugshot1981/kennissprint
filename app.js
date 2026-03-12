@@ -1403,6 +1403,13 @@ function handleTypedSubmit() {
   const isCorrect = checkTypedAnswer(currentQuestion, userInput, quizMode);
 
   if (isCorrect) {
+    // typed succes = kaart mastered
+const cardId = currentQuestion.cardId;
+const currentLevel = progressMap[cardId] || 0;
+
+progressMap[cardId] = 5;
+
+saveCardProgress(cardId, 5);
     sessionResults.push({
       cardId: currentQuestion.cardId,
       item: currentQuestion.item,
