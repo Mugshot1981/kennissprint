@@ -139,7 +139,7 @@ async function saveCardProgress(cardId, isCorrect) {
 
   if (userError || !user) {
     console.error("Geen gebruiker voor progress save:", userError);
-    return;
+    return null;
   }
 
   const { data: existing, error: readError } = await supabase
@@ -151,7 +151,7 @@ async function saveCardProgress(cardId, isCorrect) {
 
   if (readError) {
     console.error("cards_progress read fout:", readError);
-    return;
+    return null;
   }
 
   const currentCorrect = Number(existing?.correct_count || 0);
@@ -161,10 +161,14 @@ async function saveCardProgress(cardId, isCorrect) {
   const nextCorrect = currentCorrect + (isCorrect ? 1 : 0);
   const nextWrong = currentWrong + (isCorrect ? 0 : 1);
 
+  const nextLevel = isCorrect
+    ? Math.max(currentLevel, Math.min(nextCorrect, 3))
+    : currentLevel;
+
   const payload = {
     user_id: user.id,
     card_id: String(cardId),
-    level: isCorrect ? Math.max(currentLevel, Math.min(nextCorrect, 3)) : currentLevel,
+    level: nextLevel,
     correct_count: nextCorrect,
     wrong_count: nextWrong,
     last_seen: new Date().toISOString()
@@ -176,7 +180,11 @@ async function saveCardProgress(cardId, isCorrect) {
 
   if (writeError) {
     console.error("cards_progress write fout:", writeError);
+    return null;
   }
+
+  progressMap[String(cardId)] = nextLevel;
+  return nextLevel;
 }
 // ===== STATUS =====
 
