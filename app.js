@@ -906,6 +906,8 @@ startButton.addEventListener("click", () => {
 
   sessionItems = getRecommendedSessionItems(currentChapterItems, 10);
   remainingQuestions = shuffleArray([...sessionItems]);
+  console.log("sessionItems", sessionItems.length, sessionItems);
+  console.log("remainingQuestions", remainingQuestions.length, remainingQuestions);
 
    scoreCorrect = 0;
   scoreTotal = 0;
