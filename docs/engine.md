@@ -264,3 +264,17 @@ progress update
 nieuwe vraag
 
 Door deze cyclus herhaald uit te voeren ontstaat een mastery learning systeem waarin leerlingen stap voor stap kennis opbouwen.
+
+KennisSprint gebruikt drie oefenmodi die oplopen in moeilijkheid:
+
+Mode 1 — voorzeggen  
+Het juiste antwoord wordt 3 seconden getoond voordat de leerling antwoordopties ziet.  
+Doel: kennismaken met nieuwe begrippen.
+
+Mode 2 — hint  
+De leerling krijgt een hint (gedeeltelijke letterstructuur van het antwoord).  
+Doel: geheugen activeren met ondersteuning.
+
+Mode 3 — volledige recall  
+De leerling moet het antwoord zelf typen.  
+Doel: actieve reproductie van kennis.
