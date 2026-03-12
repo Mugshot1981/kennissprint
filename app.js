@@ -152,7 +152,7 @@ async function saveCardProgress(cardId, isCorrect) {
 
   const { data: existing, error: readError } = await supabase
     .from("cards_progress")
-    .select("user_id, card_id, level, correct_count, wrong_count, correct_streak, last_seen")
+    .select("user_id, card_id, level, correct_count, wrong_count, correct_streak, typed_phase, last_seen")
     .eq("user_id", user.id)
     .eq("card_id", String(cardId))
     .maybeSingle();
