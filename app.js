@@ -198,6 +198,12 @@ let wrongItems = [];
 let quizMode = "answer-to-term";
 
 // ===== HULPFUNCTIES =====
+
+function getSelectedChapterIds() {
+  return Array.from(chapterSelect.selectedOptions).map(
+    option => option.value
+  );
+}
 function getTileTitle(title) {
 
   let cleaned = title;
