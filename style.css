@@ -692,15 +692,8 @@ body.quiz-active .controls {
   left: 0;
   height: 6px;
   width: 100%;
-  background: #e5e7eb;
+  background: var(--chapter-mastery-bar, #e5e7eb);
 }
-
-/* mastery kleuren */
-.chapter-mastery-0::before { background: #e5e7eb; }
-.chapter-mastery-1::before { background: #22c55e; }
-.chapter-mastery-2::before { background: #3b82f6; }
-.chapter-mastery-3::before { background: #8b5cf6; }
-.chapter-mastery-4::before { background: #f59e0b; }
 
 .session-results-list {
   margin: 24px 0 28px;
