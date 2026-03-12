@@ -199,6 +199,25 @@ let quizMode = "answer-to-term";
 
 // ===== HULPFUNCTIES =====
 
+function getAvailableItems(modeId) {
+
+  const selectedChapterIds = getSelectedChapterIds();
+
+  const mode = activeCourse.modes.find(
+    m => m.id === modeId
+  );
+
+  if (!mode) return [];
+
+  const datasetName = mode.dataset;
+
+  const dataset = activeCourse.datasets?.[datasetName] || [];
+
+  return dataset.filter(item =>
+    selectedChapterIds.includes(item.chapterId)
+  );
+}
+
 function getSelectedChapterIds() {
 getSelectedChapterIds()
 }
