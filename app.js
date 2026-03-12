@@ -979,7 +979,8 @@ function buildQuestion() {
     answer: correctItem.answer,
     correctTerm: correctItem.prompt,
     correctAnswer: correctItem.answer,
-    options: options
+    options: options,
+    questionMode: correctItem.questionMode || "mc"
   };
 
   renderQuestion();
