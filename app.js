@@ -873,6 +873,7 @@ function updateStartButtonState() {
 }
 // ===== QUIZ STARTEN =====
 startButton.addEventListener("click", () => {
+  console.log("START CLICK");
   const selectedChapterIds = Array.from(chapterSelect.selectedOptions).map(
     (option) => option.value
   );
