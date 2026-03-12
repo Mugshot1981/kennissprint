@@ -119,6 +119,17 @@ h2 {
     rgba(255,255,255,1)
   );
 }
+.chapter-tiles-wrap::before {
+  content: "↓";
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #6b7280;
+  pointer-events: none;
+  opacity: 0.8;
+}
 .chapter-tile-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
