@@ -1391,15 +1391,102 @@ startButton.addEventListener("click", () => {
 
 // ===== VERDER-KNOP IN FOUTPOPUP =====
 
+function handleTypedSubmit() {
+  if (!currentQuestion || currentQuestion.questionMode !== "typed" || answered) {
+    return;
+  }
+
+  answered = true;
+  scoreTotal++;
+
+  const userInput = typedRecallInput.value.trim();
+  const isCorrect = checkTypedAnswer(currentQuestion, userInput, quizMode);
+
+  if (isCorrect) {
+    sessionResults.push({
+      cardId: currentQuestion.cardId,
+      item: currentQuestion.item,
+      correct: true
+    });
+
+    scoreCorrect++;
+    typedRecallInput.disabled = true;
+    typedRecallSubmit.disabled = true;
+
+    feedback.textContent = "GOED!";
+    feedback.className = "feedback show good";
+    feedback.style.display = "block";
+
+    updateScoreDisplay();
+
+    setTimeout(() => {
+      typedRecallInput.disabled = false;
+      typedRecallSubmit.disabled = false;
+      buildQuestion();
+    }, 900);
+
+    return;
+  }
+
+  sessionResults.push({
+    cardId: currentQuestion.cardId,
+    item: currentQuestion.item,
+    correct: false
+  });
+
+  typedRecallInput.disabled = true;
+  typedRecallSubmit.disabled = true;
+
+  feedback.innerHTML = `
+    <div class="feedback-title">FOUT</div>
+    <div class="feedback-term">${currentQuestion.prompt}</div>
+    <div class="feedback-answer-box">${currentQuestion.answer}</div>
+    <button id="feedbackContinueButton" class="feedback-continue-button">Verder</button>
+  `;
+  feedback.className = "feedback show bad";
+  feedback.style.display = "block";
+
+  const backdrop = document.createElement("div");
+  backdrop.className = "modal-backdrop";
+  backdrop.id = "feedbackBackdrop";
+  document.body.appendChild(backdrop);
+
+  const wrongItem = currentChapterItems.find((item) => item.id === currentQuestion.id);
+
+  if (wrongItem && !wrongItems.some((item) => item.id === wrongItem.id)) {
+    wrongItems.push(wrongItem);
+  }
+
+  updateScoreDisplay();
+}
+
+if (typedRecallSubmit) {
+  typedRecallSubmit.addEventListener("click", () => {
+    handleTypedSubmit();
+  });
+}
+
+if (typedRecallInput) {
+  typedRecallInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleTypedSubmit();
+    }
+  });
+}
+
 feedback.addEventListener("click", (event) => {
   if (event.target && event.target.id === "feedbackContinueButton") {
-  document.body.classList.remove("blur-background");
-  // backdrop verwijderen
-const backdrop = document.getElementById("feedbackBackdrop");
-if (backdrop) backdrop.remove();
+    document.body.classList.remove("blur-background");
 
-buildQuestion();
-}
+    const backdrop = document.getElementById("feedbackBackdrop");
+    if (backdrop) backdrop.remove();
+
+    typedRecallInput.disabled = false;
+    typedRecallSubmit.disabled = false;
+
+    buildQuestion();
+  }
 });
 
 
