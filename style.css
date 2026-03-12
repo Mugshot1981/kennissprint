@@ -881,6 +881,7 @@ body.quiz-active .controls {
   color: #0f172a;
 }
 
+#masterySegments,
 .mastery-segments{
   display: flex;
   flex-direction: row;
@@ -890,8 +891,11 @@ body.quiz-active .controls {
   flex-wrap: nowrap;
 }
 
+#masterySegments .mastery-segment,
 .mastery-segments .mastery-segment{
   display: inline-block;
+  flex: 0 0 auto;
+}
 }
 
 .mastery-segment{
