@@ -671,6 +671,118 @@ function getQuestionParts(correctItem, quizMode, currentChapterItems) {
   };
 }
 
+
+
+function normalizeTypedText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getTypedAnswerKind(modeId) {
+  if (modeId === "term-to-answer") return "keywords";
+  if (modeId === "answer-to-term") return "term";
+  if (modeId === "years") return "keywords";
+  if (modeId === "event-years") return "year";
+  if (modeId === "person-to-description") return "keywords";
+  if (modeId === "description-to-person") return "name";
+  return "term";
+}
+
+function getCoreKeywords(text) {
+  const stopwords = new Set([
+    "de", "het", "een", "en", "van", "voor", "met", "dat", "die", "dit", "in",
+    "op", "aan", "als", "om", "te", "tot", "na", "bij", "door", "uit", "werd",
+    "wordt", "zijn", "is", "was", "waren", "had", "hebben", "heeft", "zich",
+    "meer", "minder", "ook", "nog", "dan", "der", "ten"
+  ]);
+
+  return normalizeTypedText(text)
+    .split(" ")
+    .map((word) => word.trim())
+    .filter((word) => word.length >= 4 && !stopwords.has(word));
+}
+
+function isLooseTermMatch(input, expected) {
+  const a = normalizeTypedText(input);
+  const b = normalizeTypedText(expected);
+
+  if (!a || !b) return false;
+  if (a === b) return true;
+  if (a.includes(b) || b.includes(a)) return true;
+
+  const aCompact = a.replace(/\s+/g, "");
+  const bCompact = b.replace(/\s+/g, "");
+
+  return aCompact === bCompact;
+}
+
+function isYearMatch(input, expected) {
+  const a = normalizeTypedText(input).replace(/[^\d]/g, "");
+  const b = normalizeTypedText(expected).replace(/[^\d]/g, "");
+  return a !== "" && a === b;
+}
+
+function isKeywordMatch(input, expectedText, keywordList = []) {
+  const normalizedInput = normalizeTypedText(input);
+  if (!normalizedInput) {
+    return false;
+  }
+
+  const normalizedKeywords = Array.isArray(keywordList)
+    ? keywordList
+        .map((keyword) => normalizeTypedText(keyword))
+        .filter(Boolean)
+    : [];
+
+  if (normalizedKeywords.length > 0) {
+    const matchedKeywords = normalizedKeywords.filter((keyword) => {
+      return normalizedInput.includes(keyword);
+    });
+
+    const requiredMatches = Math.max(
+      1,
+      Math.min(2, Math.ceil(normalizedKeywords.length * 0.4))
+    );
+
+    return matchedKeywords.length >= requiredMatches;
+  }
+
+  const inputWords = new Set(getCoreKeywords(input));
+  const expectedWords = getCoreKeywords(expectedText);
+
+  if (inputWords.size === 0 || expectedWords.length === 0) {
+    return false;
+  }
+
+  const matchedCount = expectedWords.filter((word) => inputWords.has(word)).length;
+  const requiredMatches = Math.max(1, Math.min(3, Math.ceil(expectedWords.length * 0.4)));
+
+  return matchedCount >= requiredMatches;
+}
+
+function checkTypedAnswer(question, userInput, modeId) {
+  const answerKind = getTypedAnswerKind(modeId);
+
+  if (answerKind === "year") {
+    return isYearMatch(userInput, question.answer);
+  }
+
+  if (answerKind === "term" || answerKind === "name") {
+    return isLooseTermMatch(userInput, question.answer);
+  }
+
+  return isKeywordMatch(
+    userInput,
+    question.answer,
+    question.item?.keywords || []
+  );
+}
+
 function getStarsText() {
   if (scoreTotal === 0) {
     return "☆☆☆☆☆";
