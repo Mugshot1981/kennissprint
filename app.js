@@ -1070,7 +1070,7 @@ function renderQuestion() {
       typedRecallIntro.classList.add("hidden");
       typedRecallForm.classList.remove("hidden");
       typedRecallInput.focus();
-    }, 500);
+    }, 3000);
 
     return;
   }
