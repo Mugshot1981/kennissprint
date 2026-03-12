@@ -102,10 +102,9 @@ h2 {
   gap: 14px;
 }
 
-.chapter-tile-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+.chapter-tile-grid.compact {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 .chapter-tile,
