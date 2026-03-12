@@ -162,7 +162,7 @@ async function saveCardProgress(cardId, isCorrect) {
   const nextWrong = currentWrong + (isCorrect ? 0 : 1);
 
   const nextLevel = isCorrect
-    ? Math.max(currentLevel, Math.min(nextCorrect, 3))
+    ? Math.max(currentLevel, Math.min(nextCorrect, 4))
     : currentLevel;
 
   const payload = {
