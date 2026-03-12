@@ -1268,6 +1268,13 @@ async function handleAnswer(clickedButton, selectedOption) {
       item: currentQuestion.item,
       correct: false
     });
+    // typed fout = kaart terug naar training
+const cardId = currentQuestion.cardId;
+const newLevel = Math.max(2, (progressMap[cardId] || 3) - 1);
+
+progressMap[cardId] = newLevel;
+
+saveCardProgress(cardId, newLevel);
 
     clickedButton.classList.add("wrong");
     allButtons.forEach((button, index) => {
