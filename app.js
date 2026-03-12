@@ -1166,7 +1166,7 @@ function renderQuestion() {
   promptBox.classList.add("mastery-orange");
 }
   const masterySegments = document.querySelectorAll("#masterySegments .mastery-segment");
-const filledCount = Math.max(0, Math.min(level, 5));
+const filledCount = Math.max(0, Math.min(level, 6));
 
   masterySegments.forEach((segment, index) => {
     segment.classList.toggle("is-filled", index < filledCount);
