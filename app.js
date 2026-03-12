@@ -284,13 +284,22 @@ function getItemLevel(item) {
   return progressMap[cardId] || 0;
 }
 
+function isTypedRecallCandidate(item) {
+  const cardId = getItemCardId(item);
+  const level = progressMap[cardId] || 0;
+  const streak = progressDetailMap[cardId]?.correct_streak || 0;
+
+  return level >= 4 && streak >= 3;
+}
+
 function getLearningBucket(item) {
   const level = getItemLevel(item);
 
   if (level === 0) return "new";
   if (level <= 2) return "training";
   if (level === 3) return "almost-mastered";
-  return "typed-recall";
+  if (isTypedRecallCandidate(item)) return "typed-recall";
+  return "mastered";
 }
  
 function getChapterMasteryLevel(chapterId) {
