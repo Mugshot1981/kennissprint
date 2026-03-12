@@ -1047,6 +1047,7 @@ async function bootApp() {
   bindCourseSelectors();
   loadChapters();
   updateScoreDisplay();
+  updateChapterSelectionSummary();
   updateStartButtonState();
 
   chapterSelect.addEventListener("change", updateStartButtonState);
