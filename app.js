@@ -158,9 +158,11 @@ async function saveCardProgress(cardId, isCorrect) {
   const currentCorrect = Number(existing?.correct_count || 0);
   const currentWrong = Number(existing?.wrong_count || 0);
   const currentLevel = Number(existing?.level || 0);
+  const currentCorrectStreak = Number(existing?.correct_streak || 0);
 
   const nextCorrect = currentCorrect + (isCorrect ? 1 : 0);
   const nextWrong = currentWrong + (isCorrect ? 0 : 1);
+  const nextCorrectStreak = isCorrect ? currentCorrectStreak + 1 : 0;
 
   const nextLevel = isCorrect
     ? Math.max(currentLevel, Math.min(nextCorrect, 4))
