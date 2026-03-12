@@ -1027,6 +1027,9 @@ function renderQuestion() {
   termDisplay.textContent = currentQuestion.prompt || "";
   answersContainer.innerHTML = "";
   typedRecallArea.classList.add("hidden");
+  typedRecallIntro.classList.add("hidden");
+  typedRecallForm.classList.add("hidden");
+  typedRecallInput.value = "";
 
   const promptBox = document.querySelector(".prompt-box");
 
