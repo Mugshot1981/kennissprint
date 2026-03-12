@@ -293,9 +293,8 @@ function getItemLevel(item) {
 function isTypedRecallCandidate(item) {
   const cardId = getItemCardId(item);
   const level = progressMap[cardId] || 0;
-  const streak = progressDetailMap[cardId]?.correct_streak || 0;
 
-  return level >= 4 && streak >= 3;
+  return level >= 4;
 }
 
 function getLearningBucket(item) {
