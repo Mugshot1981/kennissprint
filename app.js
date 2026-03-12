@@ -1196,17 +1196,33 @@ const filledCount = Math.max(0, Math.min(level, 6));
 
   if (currentQuestion.questionMode === "typed") {
     typedRecallArea.classList.remove("hidden");
-    typedRecallIntro.classList.remove("hidden");
-    typedRecallAnswerPreview.textContent = currentQuestion.answer || "";
 
-    setTimeout(() => {
-      if (!currentQuestion || currentQuestion.questionMode !== "typed") return;
+    const typedPhase = getTypedPhaseForQuestion(currentQuestion);
 
+    if (typedPhase === 0) {
+      typedRecallIntro.classList.remove("hidden");
+      typedRecallAnswerPreview.textContent = currentQuestion.answer || "";
+
+      setTimeout(() => {
+        if (!currentQuestion || currentQuestion.questionMode !== "typed") return;
+
+        typedRecallIntro.classList.add("hidden");
+        typedRecallForm.classList.remove("hidden");
+        typedRecallInput.focus();
+      }, 3000);
+
+      return;
+    }
+
+    if (typedPhase === 1) {
+      typedRecallIntro.classList.remove("hidden");
+      typedRecallAnswerPreview.textContent = buildTypedHint(currentQuestion.answer || "");
+    } else {
       typedRecallIntro.classList.add("hidden");
-      typedRecallForm.classList.remove("hidden");
-      typedRecallInput.focus();
-    }, 3000);
+    }
 
+    typedRecallForm.classList.remove("hidden");
+    typedRecallInput.focus();
     return;
   }
   currentQuestion.options.forEach((option) => {
