@@ -273,6 +273,15 @@ function getItemLevel(item) {
   return progressMap[cardId] || 0;
 }
 
+function getLearningBucket(item) {
+  const level = getItemLevel(item);
+
+  if (level === 0) return "new";
+  if (level <= 2) return "training";
+  if (level === 3) return "almost-mastered";
+  return "typed-recall";
+}
+
 function getChapterMasteryLevel(chapterId) {
   const allDatasets = Object.values(activeCourse.datasets || {}).flat();
 
