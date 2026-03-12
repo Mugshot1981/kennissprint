@@ -174,6 +174,7 @@ async function saveCardProgress(cardId, isCorrect) {
     level: nextLevel,
     correct_count: nextCorrect,
     wrong_count: nextWrong,
+    correct_streak: nextCorrectStreak,
     last_seen: new Date().toISOString()
   };
 
