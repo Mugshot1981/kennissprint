@@ -482,3 +482,22 @@ Nooit aannames doen over code.
 Vraag eerst het bestand.
 
 Alleen als het bestand niet beschikbaar is mag een aannemingsvoorstel gedaan worden.
+
+Mastery Engine
+
+KennisSprint gebruikt een 3-fase leeropbouw:
+
+fase 1 — herkenning  
+multiple choice vragen
+
+fase 2 — ondersteunde recall  
+hint of voorzeg-modus
+
+fase 3 — actieve recall  
+leerling typt het antwoord zelf
+
+Pas na succesvolle typed recall bereikt een kaart mastery.
+
+Typed antwoorden gebruiken:
+- tekst normalisatie
+- fuzzy matching (Levenshtein ≤ 1)
