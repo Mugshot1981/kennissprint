@@ -772,9 +772,16 @@ function handleAnswer(clickedButton, selectedOption) {
     button.disabled = true;
   });
 
-   if (selectedOption.isCorrect) {
+     if (selectedOption.isCorrect) {
 
-  saveCardProgress(currentQuestion.id, true);
+    saveCardProgress(currentQuestion.cardId, true);
+
+    sessionResults.push({
+      cardId: currentQuestion.cardId,
+      item: currentQuestion.item,
+      correct: true
+    });
+
     clickedButton.classList.add("correct");
     scoreCorrect++;
     feedback.textContent = "GOED!";
@@ -788,9 +795,15 @@ function handleAnswer(clickedButton, selectedOption) {
     }, 700);
 
   } else {
-     saveCardProgress(currentQuestion.id, false);
-    clickedButton.classList.add("wrong");
+    saveCardProgress(currentQuestion.cardId, false);
 
+    sessionResults.push({
+      cardId: currentQuestion.cardId,
+      item: currentQuestion.item,
+      correct: false
+    });
+
+    clickedButton.classList.add("wrong");
     allButtons.forEach((button, index) => {
       const option = currentQuestion.options[index];
       if (option.isCorrect) {
