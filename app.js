@@ -1046,7 +1046,7 @@ async function loadProgressMap() {
 
   const { data, error } = await supabase
     .from("cards_progress")
-    .select("card_id, level, correct_streak")
+    .select("card_id, level, correct_streak, typed_phase")
     .eq("user_id", user.id);
 
   if (error) {
