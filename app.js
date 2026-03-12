@@ -868,9 +868,8 @@ function updateStartButtonState() {
     startButton.textContent = "Nog geen vragen beschikbaar";
     return;
   }
-
   startButton.disabled = false;
-  startButton.textContent = "Start oefenen";
+  startButton.textContent = "Start aanbevolen sessie";
 }
 // ===== QUIZ STARTEN =====
 startButton.addEventListener("click", () => {
