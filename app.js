@@ -943,6 +943,7 @@ if (retryWrongButton) {
     remainingQuestions = shuffleArray([...wrongItems]);
     scoreCorrect = 0;
     scoreTotal = 0;
+    sessionResults = [];
     wrongItems = [];
     updateScoreDisplay();
 
