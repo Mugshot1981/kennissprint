@@ -883,8 +883,15 @@ body.quiz-active .controls {
 
 .mastery-segments{
   display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 8px;
   margin: 10px 0 16px;
+  flex-wrap: nowrap;
+}
+
+.mastery-segments .mastery-segment{
+  display: inline-block;
 }
 
 .mastery-segment{
