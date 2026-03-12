@@ -213,9 +213,7 @@ function getAvailableItems(modeId) {
 
   const dataset = activeCourse.datasets?.[datasetName] || [];
 
-  return dataset.filter(item =>
-    selectedChapterIds.includes(item.chapterId)
-  );
+return getAvailableItems(modeId);
 }
 
 function getSelectedChapterIds() {
