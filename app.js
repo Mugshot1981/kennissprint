@@ -198,7 +198,8 @@ async function saveCardProgress(cardId, isCorrect) {
   progressMap[String(cardId)] = nextLevel;
   progressDetailMap[String(cardId)] = {
     level: nextLevel,
-    correct_streak: nextCorrectStreak
+    correct_streak: nextCorrectStreak,
+    typed_phase: currentTypedPhase
   };
 
   return nextLevel;
