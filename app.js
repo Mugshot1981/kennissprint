@@ -425,6 +425,50 @@ function getItemsForChapters(chapterIds) {
 
 // ===== HOOFDSTUKKEN LADEN =====
 
+function getQuestionCountForSelection(selectedChapterIds, modeId) {
+  const activeMode = activeCourse.modes.find((mode) => mode.id === modeId);
+
+  if (!activeMode) {
+    return 0;
+  }
+
+  const datasetName = activeMode.dataset;
+  const dataset = activeCourse.datasets?.[datasetName] || [];
+
+  if (datasetName === "terms") {
+    return dataset.filter((item) => {
+      return selectedChapterIds.includes(item.chapterId) && item.type === "begrip";
+    }).length;
+  }
+
+  return dataset.filter((item) => {
+    return selectedChapterIds.includes(item.chapterId);
+  }).length;
+}
+
+function updateChapterSelectionSummary() {
+  if (!chapterSelectionSummary) return;
+
+  const selectedChapterIds = Array.from(chapterSelect.selectedOptions).map(
+    (option) => option.value
+  );
+
+  const selectedCount = selectedChapterIds.length;
+  const currentModeId = modeSelect ? modeSelect.value : quizMode;
+  const questionCount = getQuestionCountForSelection(selectedChapterIds, currentModeId);
+
+  if (selectedCount === 0) {
+    chapterSelectionSummary.textContent = "Nog geen hoofdstukken geselecteerd.";
+    return;
+  }
+
+  const chapterLabel = selectedCount === 1 ? "hoofdstuk" : "hoofdstukken";
+  const questionLabel = questionCount === 1 ? "vraag" : "vragen";
+
+  chapterSelectionSummary.textContent =
+    `${selectedCount} ${chapterLabel} geselecteerd · ${questionCount} ${questionLabel} beschikbaar`;
+}
+
 function syncChapterTilesFromSelect() {
   const selectedIds = Array.from(chapterSelect.selectedOptions).map(
     (option) => option.value
@@ -448,8 +492,9 @@ function syncChapterTilesFromSelect() {
       tile.style.fontWeight = "";
     }
   });
-}
 
+  updateChapterSelectionSummary();
+}
 function updateChapterSelectorView() {
   const useListView = activeCourse.chapters.length > 10;
 
