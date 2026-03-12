@@ -675,3 +675,23 @@ body.quiz-active .controls {
 .session-result-term {
   color: #0f172a;
 }
+
+.term-mastery-new {
+  color: #6b7280;
+}
+
+.term-mastery-training {
+  color: #16a34a;
+}
+
+.term-mastery-good {
+  color: #2563eb;
+}
+
+.term-mastery-mastered {
+  color: #7c3aed;
+}
+
+.term-mastery-perfect {
+  color: #ea580c;
+}
