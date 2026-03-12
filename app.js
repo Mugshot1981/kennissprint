@@ -853,9 +853,9 @@ async function handleAnswer(clickedButton, selectedOption) {
     button.disabled = true;
   });
 
-     if (selectedOption.isCorrect) {
+  if (selectedOption.isCorrect) {
 
-    await saveCardProgress(currentQuestion.cardId, true);
+    const nextLevel = await saveCardProgress(currentQuestion.cardId, true);
 
     sessionResults.push({
       cardId: currentQuestion.cardId,
@@ -871,9 +871,34 @@ async function handleAnswer(clickedButton, selectedOption) {
 
     updateScoreDisplay();
 
+    const promptBox = document.querySelector(".prompt-box");
+    const masterySegments = document.querySelectorAll("#masterySegments .mastery-segment");
+    const level = Math.max(0, Math.min(nextLevel ?? 0, 4));
+
+    promptBox.classList.remove(
+      "mastery-gray",
+      "mastery-green",
+      "mastery-blue",
+      "mastery-purple"
+    );
+
+    if (level === 0) {
+      promptBox.classList.add("mastery-gray");
+    } else if (level <= 2) {
+      promptBox.classList.add("mastery-green");
+    } else if (level === 3) {
+      promptBox.classList.add("mastery-blue");
+    } else {
+      promptBox.classList.add("mastery-purple");
+    }
+
+    masterySegments.forEach((segment, index) => {
+      segment.classList.toggle("is-filled", index < level);
+    });
+
     setTimeout(() => {
       buildQuestion();
-    }, 700);
+    }, 900);
 
   } else {
      await saveCardProgress(currentQuestion.cardId, false);
