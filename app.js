@@ -812,7 +812,7 @@ function renderQuestion() {
 
 // ===== ANTWOORD AFHANDELEN =====
 
-function handleAnswer(clickedButton, selectedOption) {
+async function handleAnswer(clickedButton, selectedOption) {
   if (answered) {
     return;
   }
