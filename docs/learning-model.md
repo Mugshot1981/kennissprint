@@ -345,3 +345,32 @@ progress feedback
 Het systeem is ontworpen zodat leerlingen
 begrippen uiteindelijk zelfstandig uit het geheugen
 kunnen reproduceren.
+
+Progressiemodel
+
+Elke kaart heeft een progressieniveau van 0–5.
+
+0 — nieuw  
+kaart nog nooit correct beantwoord
+
+1 — trainen  
+eerste correcte herkenning
+
+2 — bijna beheerst  
+meerdere correcte herkenningen
+
+3 — beheerst (overgang naar recall)
+
+4 — recall training (paars)  
+leerling moet antwoord typen
+
+5 — mastery (oranje)  
+antwoord succesvol gereproduceerd
+
+Visueel:
+
+grijs → nieuw  
+groen → trainen  
+blauw → bijna beheerst  
+paars → recall fase  
+oranje → mastery
