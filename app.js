@@ -217,26 +217,30 @@ function getItemCardId(item) {
     .replace(/^-+|-+$/g, "");
 }
 
-function getAvailableItems(modeId) {
+function getSelectedChapterIds() {
+  return Array.from(chapterSelect.selectedOptions).map(
+    (option) => option.value
+  );
+}
 
+function getAvailableItems(modeId) {
   const selectedChapterIds = getSelectedChapterIds();
 
   const mode = activeCourse.modes.find(
-    m => m.id === modeId
+    (m) => m.id === modeId
   );
 
   if (!mode) return [];
 
   const datasetName = mode.dataset;
-
   const dataset = activeCourse.datasets?.[datasetName] || [];
 
-return getAvailableItems(modeId);
+  return dataset.filter((item) =>
+    selectedChapterIds.includes(item.chapterId)
+  );
 }
 
-function getSelectedChapterIds() {
-getSelectedChapterIds()
-}
+
 function getTileTitle(title) {
 
   let cleaned = title;
