@@ -479,22 +479,11 @@ function syncChapterTilesFromSelect() {
 
     tile.classList.toggle("selected", isSelected);
     tile.setAttribute("aria-pressed", isSelected ? "true" : "false");
-
-    if (isSelected) {
-      tile.style.border = "2px solid #1d4ed8";
-      tile.style.backgroundColor = "#dbeafe";
-      tile.style.color = "#0f172a";
-      tile.style.fontWeight = "700";
-    } else {
-      tile.style.border = "";
-      tile.style.backgroundColor = "";
-      tile.style.color = "";
-      tile.style.fontWeight = "";
-    }
   });
 
   updateChapterSelectionSummary();
 }
+
 function updateChapterSelectorView() {
   const useListView = activeCourse.chapters.length > 10;
 
