@@ -511,7 +511,11 @@ function loadChapters() {
   chapterSelect.innerHTML = "";
   chapterTileGrid.innerHTML = "";
 
-  const useListView = activeCourse.chapters.length > 10;
+  if (activeCourse.chapters.length > 8) {
+    chapterTileGrid.classList.add("compact");
+  } else {
+    chapterTileGrid.classList.remove("compact");
+  }
 
   activeCourse.chapters.forEach((chapter) => {
     const option = document.createElement("option");
@@ -521,12 +525,9 @@ function loadChapters() {
 
     const tile = document.createElement("button");
     tile.type = "button";
-    tile.className = useListView ? "chapter-list-item" : "chapter-tile";
+    tile.className = "chapter-tile";
     tile.dataset.chapterId = chapter.id;
-
-    tile.textContent = useListView
-      ? chapter.title
-      : getTileTitle(chapter.title);
+    tile.textContent = getTileTitle(chapter.title);
 
     tile.addEventListener("click", () => {
       const optionToToggle = Array.from(chapterSelect.options).find(
