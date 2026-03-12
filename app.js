@@ -831,7 +831,13 @@ quizSessionMode.textContent = getModeConfig(quizMode).sessionModeLabel;
   alert("De selectie moet minimaal 4 vragen bevatten.");
   return;
 }
-  remainingQuestions = shuffleArray([...currentChapterItems]);
+  remainingQuestions = shuffleArray(
+  [...currentChapterItems].sort((a, b) => {
+    const levelA = progressMap[getItemCardId(a)] || 0;
+    const levelB = progressMap[getItemCardId(b)] || 0;
+    return levelA - levelB;
+  })
+);
   scoreCorrect = 0;
   scoreTotal = 0;
   wrongItems = [];
