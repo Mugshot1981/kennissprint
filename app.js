@@ -188,8 +188,12 @@ async function saveCardProgress(cardId, isCorrect) {
   }
 
   progressMap[String(cardId)] = nextLevel;
+  progressDetailMap[String(cardId)] = {
+    level: nextLevel,
+    correct_streak: nextCorrectStreak
+  };
+
   return nextLevel;
-}
 // ===== STATUS =====
 
 let currentChapterIds = [];
