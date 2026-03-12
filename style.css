@@ -727,3 +727,19 @@ body.quiz-active .controls {
 .mastery-purple{
   background: #a855f7;
 }
+
+.prompt-box.mastery-gray{
+  background: #f1f5f9;
+}
+
+.prompt-box.mastery-green{
+  background: #dcfce7;
+}
+
+.prompt-box.mastery-blue{
+  background: #dbeafe;
+}
+
+.prompt-box.mastery-purple{
+  background: #f3e8ff;
+}
