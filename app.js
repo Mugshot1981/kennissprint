@@ -753,9 +753,6 @@ function buildQuestion() {
   renderQuestion();
 }
 
-// ===== VRAAG TONEN =====
-
-function renderQuestion() {
 
 // ===== VRAAG TONEN =====
 
