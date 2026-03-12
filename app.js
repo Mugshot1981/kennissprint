@@ -799,10 +799,12 @@ function loadChapters() {
 tile.type = "button";
 
 const masteryLevel = getChapterMasteryLevel(chapter.id);
+const masteryBar = getChapterMasteryBar(chapter.id);
 
 tile.className = `chapter-tile chapter-mastery-${masteryLevel}`;
 tile.dataset.chapterId = chapter.id;
 tile.textContent = getTileTitle(chapter.title);
+tile.style.setProperty("--chapter-mastery-bar", masteryBar);
 
     tile.addEventListener("click", () => {
       const optionToToggle = Array.from(chapterSelect.options).find(
