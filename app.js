@@ -194,6 +194,7 @@ async function saveCardProgress(cardId, isCorrect) {
   };
 
   return nextLevel;
+}
 // ===== STATUS =====
 
 let currentChapterIds = [];
