@@ -833,7 +833,7 @@ function updateStartButtonState() {
 
   if (selectedChapterIds.length === 0) {
     startButton.disabled = false;
-    startButton.textContent = "Start oefenen";
+    startButton.textContent = "Start aanbevolen sessie";
     return;
   }
 
