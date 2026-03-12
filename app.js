@@ -1506,7 +1506,7 @@ startButton.addEventListener("click", () => {
 
 // ===== VERDER-KNOP IN FOUTPOPUP =====
 
-function handleTypedSubmit() {
+async function handleTypedSubmit() {
   if (!currentQuestion || currentQuestion.questionMode !== "typed" || answered) {
     return;
   }
@@ -1517,7 +1517,7 @@ function handleTypedSubmit() {
   const userInput = typedRecallInput.value.trim();
   const isCorrect = checkTypedAnswer(currentQuestion, userInput, quizMode);
 
-    if (isCorrect) {
+  if (isCorrect) {
     await saveTypedProgress(currentQuestion.cardId, true);
 
     sessionResults.push({
@@ -1544,6 +1544,8 @@ function handleTypedSubmit() {
 
     return;
   }
+
+  await saveTypedProgress(currentQuestion.cardId, false);
 
   sessionResults.push({
     cardId: currentQuestion.cardId,
