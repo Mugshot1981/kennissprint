@@ -212,6 +212,13 @@ let wrongItems = [];
 let quizMode = "answer-to-term";
 
 // ===== HULPFUNCTIES =====
+function isTypeCandidate(itemProgress) {
+  return (
+    itemProgress.level >= 4 &&
+    itemProgress.correctStreak >= 3
+  );
+}
+
 function getItemCardId(item) {
   if (item.id) return item.id;
 
