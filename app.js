@@ -807,7 +807,7 @@ function renderQuestion() {
     "mastery-purple"
   );
 
-  const level = progressMap[currentQuestion.cardId] || 0;
+   const level = progressMap[currentQuestion.cardId] || 0;
 
   if (level === 0) {
     promptBox.classList.add("mastery-gray");
@@ -818,6 +818,13 @@ function renderQuestion() {
   } else {
     promptBox.classList.add("mastery-purple");
   }
+
+  const masterySegments = document.querySelectorAll("#masterySegments .mastery-segment");
+  const filledCount = Math.max(0, Math.min(level, 4));
+
+  masterySegments.forEach((segment, index) => {
+    segment.classList.toggle("is-filled", index < filledCount);
+  });
 
   currentQuestion.options.forEach((option) => {
     const button = document.createElement("button");
