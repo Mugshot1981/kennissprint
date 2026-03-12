@@ -828,7 +828,7 @@ async function handleAnswer(clickedButton, selectedOption) {
 
      if (selectedOption.isCorrect) {
 
-    saveCardProgress(currentQuestion.cardId, true);
+    await saveCardProgress(currentQuestion.cardId, true);
 
     sessionResults.push({
       cardId: currentQuestion.cardId,
