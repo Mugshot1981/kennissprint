@@ -1165,7 +1165,7 @@ function renderQuestion() {
   }
 
   const masterySegments = document.querySelectorAll("#masterySegments .mastery-segment");
-  const filledCount = Math.max(0, Math.min(level, 4));
+const filledCount = Math.max(0, Math.min(level, 5));
 
   masterySegments.forEach((segment, index) => {
     segment.classList.toggle("is-filled", index < filledCount);
