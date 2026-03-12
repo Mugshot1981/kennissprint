@@ -1061,9 +1061,19 @@ function renderQuestion() {
 
   if (currentQuestion.questionMode === "typed") {
     typedRecallArea.classList.remove("hidden");
+    typedRecallIntro.classList.remove("hidden");
+    typedRecallAnswerPreview.textContent = currentQuestion.answer || "";
+
+    setTimeout(() => {
+      if (!currentQuestion || currentQuestion.questionMode !== "typed") return;
+
+      typedRecallIntro.classList.add("hidden");
+      typedRecallForm.classList.remove("hidden");
+      typedRecallInput.focus();
+    }, 500);
+
     return;
   }
-
   currentQuestion.options.forEach((option) => {
     const button = document.createElement("button");
     button.className = "answer";
