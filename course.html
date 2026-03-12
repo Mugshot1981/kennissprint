@@ -128,7 +128,15 @@
 
   <div id="typedRecallArea" class="typed-recall-area hidden">
     <div class="typed-recall-label">Typvraag</div>
-    <div class="typed-recall-placeholder">Typvraag komt hier</div>
+    <div id="typedRecallIntro" class="typed-recall-intro hidden">
+      <div class="typed-recall-intro-label">Bekijk kort het antwoord</div>
+      <div id="typedRecallAnswerPreview" class="typed-recall-answer-preview"></div>
+    </div>
+    <div id="typedRecallForm" class="typed-recall-form hidden">
+      <label for="typedRecallInput" class="typed-recall-input-label">Typ je antwoord</label>
+      <input id="typedRecallInput" class="typed-recall-input" type="text" autocomplete="off" />
+      <button id="typedRecallSubmit" type="button" class="typed-recall-submit">Controleer</button>
+    </div>
   </div>
 
   <div id="feedback" class="feedback"></div>
