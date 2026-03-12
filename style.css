@@ -429,6 +429,29 @@ button {
   background: #dde5ff;
 }
 
+.typed-recall-area {
+  margin-bottom: 18px;
+  padding: 16px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.typed-recall-label {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.typed-recall-placeholder {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
 .correct {
   background: #2ecc71;
   color: white;
