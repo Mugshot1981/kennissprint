@@ -851,7 +851,8 @@ body.quiz-active .controls {
 .prompt-box.mastery-gray,
 .prompt-box.mastery-green,
 .prompt-box.mastery-blue,
-.prompt-box.mastery-purple{
+.prompt-box.mastery-purple,
+.prompt-box.mastery-orange{
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-left-width: 10px;
@@ -873,6 +874,9 @@ body.quiz-active .controls {
   border-left-color: #a855f7;
 }
 
+.prompt-box.mastery-orange{
+  border-left-color: #f59e0b;
+}
 #termDisplay{
   color: #0f172a;
 }
