@@ -181,6 +181,7 @@ async function saveCardProgress(cardId, isCorrect) {
 
 let currentChapterIds = [];
 let currentChapterItems = [];
+let sessionItems = [];
 let remainingQuestions = [];
 let currentQuestion = null;
 let answered = false;
