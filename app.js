@@ -1207,7 +1207,7 @@ async function handleAnswer(clickedButton, selectedOption) {
   answered = true;
   scoreTotal++;
 
-  const allButtons = document.querySelectorAll(".answer");
+  const allButtons = document.querySelectorAll(".answer"); 
 
   allButtons.forEach((button) => {
     button.disabled = true;
