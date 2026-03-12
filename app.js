@@ -992,6 +992,8 @@ function buildQuestion() {
 
 function renderQuestion() {
   termDisplay.textContent = currentQuestion.prompt || "";
+  answersContainer.innerHTML = "";
+  typedRecallArea.classList.add("hidden");
 
   const promptBox = document.querySelector(".prompt-box");
 
@@ -1002,7 +1004,7 @@ function renderQuestion() {
     "mastery-purple"
   );
 
-   const level = progressMap[currentQuestion.cardId] || 0;
+  const level = progressMap[currentQuestion.cardId] || 0;
 
   if (level === 0) {
     promptBox.classList.add("mastery-gray");
@@ -1020,6 +1022,11 @@ function renderQuestion() {
   masterySegments.forEach((segment, index) => {
     segment.classList.toggle("is-filled", index < filledCount);
   });
+
+  if (currentQuestion.questionMode === "typed") {
+    typedRecallArea.classList.remove("hidden");
+    return;
+  }
 
   currentQuestion.options.forEach((option) => {
     const button = document.createElement("button");
