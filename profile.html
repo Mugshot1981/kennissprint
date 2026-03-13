@@ -244,6 +244,27 @@
     displayNameInput.value = "";
   }
 
+  function openLevelPanel() {
+    levelSelect.value = currentLevel || "";
+    editLevelPanel.hidden = false;
+    levelSelect.focus();
+  }
+
+  function closeLevelPanel() {
+    editLevelPanel.hidden = true;
+    levelSelect.value = "";
+  }
+
+  function openGradePanel() {
+    gradeSelect.value = currentGrade || "";
+    editGradePanel.hidden = false;
+    gradeSelect.focus();
+  }
+
+  function closeGradePanel() {
+    editGradePanel.hidden = true;
+    gradeSelect.value = "";
+  }
   async function loadProfile() {
     const user = await requireAuth();
     if (!user) return;
