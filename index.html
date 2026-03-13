@@ -310,6 +310,292 @@ async function ensureProfileComplete(user) {
   return true;
 }
 
+  <script type="module">
+  import { courseCatalog } from "./data.js";
+
+  const supabase = window.supabaseClient;
+
+  async function requireAuth() {
+    const { data, error } = await supabase.auth.getUser();
+
+    if (error || !data?.user) {
+      window.location.href = "login.html";
+      return null;
+    }
+
+    return data.user;
+  }
+
+  const subjectSelect = document.getElementById("subjectSelect");
+  const levelSelect = document.getElementById("levelSelect");
+  const gradeSelect = document.getElementById("gradeSelect");
+  const openCourseButton = document.getElementById("openCourseButton");
+  const selectionMessage = document.getElementById("selectionMessage");
+  const accountButton = document.getElementById("accountButton");
+  const accountMenu = document.getElementById("accountMenu");
+  const logoutButton = document.getElementById("logoutButton");
+  const profileButton = document.getElementById("profileButton");
+
+  function getUniqueValues(key, courses) {
+    return [...new Set(courses.map(course => course[key]))];
+  }
+
+  function populateSelect(selectElement, values, placeholder, selectedValue = "") {
+    selectElement.innerHTML = "";
+
+    const placeholderOption = document.createElement("option");
+    placeholderOption.value = "";
+    placeholderOption.textContent = placeholder;
+    selectElement.appendChild(placeholderOption);
+
+    values.forEach((value) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = value;
+
+      if (value === selectedValue) {
+        option.selected = true;
+      }
+
+      selectElement.appendChild(option);
+    });
+  }
+
+  function getCoursesBySubject(subject) {
+    return courseCatalog.filter(course => course.subject === subject);
+  }
+
+  function getCoursesBySubjectAndLevel(subject, level) {
+    return courseCatalog.filter(
+      course => course.subject === subject && course.level === level
+    );
+  }
+
+  function findCourse(subject, level, grade) {
+    return courseCatalog.find(
+      course =>
+        course.subject === subject &&
+        course.level === level &&
+        course.grade === grade
+    );
+  }
+
+  function refreshLevelSelect() {
+    const selectedSubject = subjectSelect.value;
+
+    if (!selectedSubject) {
+      populateSelect(levelSelect, [], "Kies niveau");
+      populateSelect(gradeSelect, [], "Kies jaar");
+      return;
+    }
+
+    const coursesForSubject = getCoursesBySubject(selectedSubject);
+    const availableLevels = getUniqueValues("level", coursesForSubject);
+
+    populateSelect(levelSelect, availableLevels, "Kies niveau");
+    populateSelect(gradeSelect, [], "Kies jaar");
+  }
+
+  function refreshGradeSelect() {
+    const selectedSubject = subjectSelect.value;
+    const selectedLevel = levelSelect.value;
+
+    if (!selectedSubject || !selectedLevel) {
+      populateSelect(gradeSelect, [], "Kies jaar");
+      return;
+    }
+
+    const coursesForSubjectAndLevel = getCoursesBySubjectAndLevel(
+      selectedSubject,
+      selectedLevel
+    );
+
+    const availableGrades = getUniqueValues("grade", coursesForSubjectAndLevel);
+
+    populateSelect(gradeSelect, availableGrades, "Kies jaar");
+  }
+
+  function initSelectors() {
+    const subjects = getUniqueValues("subject", courseCatalog);
+    populateSelect(subjectSelect, subjects, "Kies vak");
+    populateSelect(levelSelect, [], "Kies niveau");
+    populateSelect(gradeSelect, [], "Kies jaar");
+  }
+
+  subjectSelect.addEventListener("change", () => {
+    refreshLevelSelect();
+    selectionMessage.textContent = "";
+  });
+
+  levelSelect.addEventListener("change", () => {
+    refreshGradeSelect();
+    selectionMessage.textContent = "";
+  });
+
+  gradeSelect.addEventListener("change", () => {
+    selectionMessage.textContent = "";
+  });
+
+  openCourseButton.addEventListener("click", () => {
+    const subject = subjectSelect.value;
+    const level = levelSelect.value;
+    const grade = gradeSelect.value;
+
+    if (!subject || !level || !grade) {
+      selectionMessage.textContent = "Kies eerst vak, niveau en jaar.";
+      return;
+    }
+
+    const course = findCourse(subject, level, grade);
+
+    if (!course) {
+      selectionMessage.textContent = "Voor deze combinatie bestaat nog geen cursus.";
+      return;
+    }
+
+    window.location.href =
+      "course.html?course=" + encodeURIComponent(course.id);
+  });
+
+  async function showAccountButton(user) {
+    if (!accountButton) return;
+
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("display_name")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (error) {
+      console.error("Accountnaam laden mislukt:", error);
+      accountButton.textContent = user.email || "Account";
+      accountButton.hidden = false;
+      return;
+    }
+
+    const name = data?.display_name?.trim();
+
+    if (name) {
+      accountButton.textContent = name;
+    } else {
+      accountButton.textContent = user.email || "Account";
+    }
+
+    accountButton.hidden = false;
+  }
+
+  async function logout() {
+    const { error } = await supabase.auth.signOut();
+
+    if (error) {
+      console.error("Uitloggen mislukt:", error);
+      alert("Uitloggen mislukt: " + error.message);
+      return;
+    }
+
+    window.location.href = "login.html";
+  }
+
+  function bindAccountMenu() {
+    if (accountButton && accountMenu) {
+      accountButton.addEventListener("click", () => {
+        accountMenu.hidden = !accountMenu.hidden;
+      });
+    }
+
+    if (profileButton) {
+      profileButton.addEventListener("click", () => {
+        window.location.href = "profile.html";
+      });
+    }
+
+    if (logoutButton) {
+      logoutButton.addEventListener("click", logout);
+    }
+
+    document.addEventListener("click", (event) => {
+      if (!accountButton || !accountMenu) return;
+      if (accountMenu.hidden) return;
+
+      const clickedInsideButton = accountButton.contains(event.target);
+      const clickedInsideMenu = accountMenu.contains(event.target);
+
+      if (!clickedInsideButton && !clickedInsideMenu) {
+        accountMenu.hidden = true;
+      }
+    });
+  }
+
+  async function ensureProfileComplete(user) {
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("display_name")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (error) {
+      console.error("Profielcontrole mislukt:", error);
+      return false;
+    }
+
+    const displayName = data?.display_name?.trim();
+
+    if (!displayName) {
+      window.location.href = "profile.html";
+      return false;
+    }
+
+    return true;
+  }
+
+  async function fetchUserProgress(userId) {
+    const { data, error } = await supabase
+      .from("cards_progress")
+      .select("card_id, level")
+      .eq("user_id", userId);
+
+    if (error) {
+      console.error("Voortgang laden mislukt:", error);
+      return [];
+    }
+
+    return data || [];
+  }
+
+  function buildSubjectMasteryStats(progressRows) {
+    const progressMap = new Map(
+      progressRows.map((row) => [row.card_id, row.level ?? 0])
+    );
+
+    const subjectStats = {};
+
+    for (const course of courseCatalog) {
+      const subject = course.subject;
+      const terms = course.datasets?.terms || [];
+      const years = course.datasets?.years || [];
+
+      if (!subjectStats[subject]) {
+        subjectStats[subject] = {
+          subject,
+          total: 0,
+          levels: [0, 0, 0, 0, 0, 0]
+        };
+      }
+
+      const allCards = [...terms, ...years];
+
+      for (const card of allCards) {
+        const cardId = card.cardId || card.id;
+        const rawLevel = progressMap.has(cardId) ? progressMap.get(cardId) : 0;
+        const level = Math.max(0, Math.min(5, Number(rawLevel) || 0));
+
+        subjectStats[subject].total += 1;
+        subjectStats[subject].levels[level] += 1;
+      }
+    }
+
+    return Object.values(subjectStats);
+  }
 async function bootIndex() {
   const user = await requireAuth();
   if (!user) return;
