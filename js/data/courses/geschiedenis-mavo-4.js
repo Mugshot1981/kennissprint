@@ -11,6 +11,33 @@ const subjects = [
 ];
 
 const chapters = [
+  {
+    id: "his-h1",
+    subjectId: "geschiedenis",
+    title: "Staatsinrichting van Nederland"
+  },
+  {
+    id: "his-h2",
+    subjectId: "geschiedenis",
+    title: "De Eerste Wereldoorlog"
+  },
+  {
+    id: "his-h3",
+    subjectId: "geschiedenis",
+    title: "Het Interbellum"
+  },
+  {
+    id: "his-h4",
+    subjectId: "geschiedenis",
+    title: "De Tweede Wereldoorlog"
+  },
+  {
+    id: "his-h5",
+    subjectId: "geschiedenis",
+    title: "De wereld na 1945"
+  }
+];
+const items = [
  {
   id: "his-h1-001",
   subjectId: "geschiedenis",
