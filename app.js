@@ -1077,21 +1077,14 @@ function syncChapterTilesFromSelect() {
 }
 
 function updateChapterSelectorView() {
-  const useListView = activeCourse.chapters.length > 10;
-
-  if (chapterTileGrid) {
-    chapterTileGrid.style.display = "grid";
-    chapterTileGrid.classList.toggle("chapter-list-mode", useListView);
-
-    chapterTileGrid.style.gridTemplateColumns = useListView
-      ? "1fr"
-      : "repeat(auto-fit, minmax(160px, 1fr))";
-
-    chapterTileGrid.style.maxHeight = useListView ? "320px" : "";
-    chapterTileGrid.style.overflowY = useListView ? "auto" : "";
-    chapterTileGrid.style.gap = useListView ? "10px" : "";
-  }
-
+ if (chapterTileGrid) {
+  chapterTileGrid.style.display = "grid";
+  chapterTileGrid.classList.remove("chapter-list-mode");
+  chapterTileGrid.style.gridTemplateColumns = "repeat(3, minmax(0, 1fr))";
+  chapterTileGrid.style.maxHeight = "";
+  chapterTileGrid.style.overflowY = "";
+  chapterTileGrid.style.gap = "";
+}
   if (chapterSelect) {
     chapterSelect.style.display = "none";
     chapterSelect.multiple = true;
