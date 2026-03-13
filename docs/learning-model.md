@@ -374,3 +374,8 @@ groen → trainen
 blauw → bijna beheerst  
 paars → recall fase  
 oranje → mastery
+
+vraagtypes
+
+multiple choice
+typed recall
