@@ -94,40 +94,87 @@
       <h1>KennisSprint</h1>
       <p class="intro">Account</p>
 
-      <div class="account-block">
-        <div class="account-row">
-          <div class="account-label">Jouw naam</div>
-          <div class="account-value-row">
-            <span id="displayNameText">Nog niet ingesteld</span>
-            <button id="editNameButton" type="button" class="text-button">Wijzig</button>
-          </div>
-        </div>
+     <div class="account-block">
+  <div class="account-row">
+    <div class="account-label">Jouw naam</div>
+    <div class="account-value-row">
+      <span id="displayNameText">Nog niet ingesteld</span>
+      <button id="editNameButton" type="button" class="text-button">Wijzig</button>
+    </div>
+  </div>
 
-        <div id="editNamePanel" class="edit-panel" hidden>
-          <label for="displayNameInput"><strong>Nieuwe schermnaam</strong></label>
-          <input id="displayNameInput" type="text" placeholder="Bijvoorbeeld: Stijn">
-          <div class="edit-actions">
-            <button id="saveNameButton" type="button">Opslaan</button>
-            <button id="cancelEditButton" type="button" class="secondary-button">Annuleren</button>
-          </div>
-        </div> 
+  <div id="editNamePanel" class="edit-panel" hidden>
+    <label for="displayNameInput"><strong>Nieuwe schermnaam</strong></label>
+    <input id="displayNameInput" type="text" placeholder="Bijvoorbeeld: Stijn">
+    <div class="edit-actions">
+      <button id="saveNameButton" type="button">Opslaan</button>
+      <button id="cancelEditButton" type="button" class="secondary-button">Annuleren</button>
+    </div>
+  </div>
 
-        <div class="account-row">
-          <div class="account-label">E-mailadres</div>
-          <div class="account-value-row">
-            <span id="emailText">Laden...</span>
-          </div>
-        </div>
+  <div class="account-row">
+    <div class="account-label">Niveau</div>
+    <div class="account-value-row">
+      <span id="levelText">Nog niet ingesteld</span>
+      <button id="editLevelButton" type="button" class="text-button">Wijzig</button>
+    </div>
+  </div>
 
-        <div class="account-row">
-          <div class="account-label">Wachtwoord</div>
-          <div class="account-value-row">
-            <button id="resetPasswordButton" type="button" class="text-button">Reset e-mail sturen</button>
-          </div>
-        </div>
-      </div>
+  <div id="editLevelPanel" class="edit-panel" hidden>
+    <label for="levelSelect"><strong>Kies niveau</strong></label>
+    <select id="levelSelect">
+      <option value="">Kies niveau</option>
+      <option value="mavo">mavo</option>
+      <option value="havo">havo</option>
+      <option value="vwo">vwo</option>
+    </select>
+    <div class="edit-actions">
+      <button id="saveLevelButton" type="button">Opslaan</button>
+      <button id="cancelLevelButton" type="button" class="secondary-button">Annuleren</button>
+    </div>
+  </div>
 
-      <p id="profileMessage" class="intro profile-message"></p>
+  <div class="account-row">
+    <div class="account-label">Jaar</div>
+    <div class="account-value-row">
+      <span id="gradeText">Nog niet ingesteld</span>
+      <button id="editGradeButton" type="button" class="text-button">Wijzig</button>
+    </div>
+  </div>
+
+  <div id="editGradePanel" class="edit-panel" hidden>
+    <label for="gradeSelect"><strong>Kies jaar</strong></label>
+    <select id="gradeSelect">
+      <option value="">Kies jaar</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <div class="edit-actions">
+      <button id="saveGradeButton" type="button">Opslaan</button>
+      <button id="cancelGradeButton" type="button" class="secondary-button">Annuleren</button>
+    </div>
+  </div>
+
+  <div class="account-row">
+    <div class="account-label">E-mailadres</div>
+    <div class="account-value-row">
+      <span id="emailText">Laden...</span>
+    </div>
+  </div>
+
+  <div class="account-row">
+    <div class="account-label">Wachtwoord</div>
+    <div class="account-value-row">
+      <button id="resetPasswordButton" type="button" class="text-button">Reset e-mail sturen</button>
+    </div>
+  </div>
+</div>
+
+<p id="profileMessage" class="intro profile-message"></p>
 
       <div class="profile-actions">
         <button id="startButton" type="button">Naar cursussen</button>
