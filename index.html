@@ -194,10 +194,12 @@
     }
 
     function initSelectors() {
-      const subjects = getUniqueValues("subject", courseCatalog);
+      const filteredCourses = getFilteredCourses();
+      const subjects = getUniqueValues("subject", filteredCourses);
+
       populateSelect(subjectSelect, subjects, "Kies vak");
-      populateSelect(levelSelect, [], "Kies niveau");
-      populateSelect(gradeSelect, [], "Kies jaar");
+      populateSelect(levelSelect, [currentProfile.level], "Kies niveau", currentProfile.level);
+      populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
     }
 
     async function showAccountButton(user) {
