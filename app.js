@@ -1234,7 +1234,7 @@ function buildQuestion() {
     cardId: getItemCardId(correctItem),
     item: correctItem,
     prompt: questionText,
-    answer: correctItem.answer,
+    answer: correctOptionText,
     correctTerm: correctItem.prompt,
     correctAnswer: correctItem.answer,
     options: options,
