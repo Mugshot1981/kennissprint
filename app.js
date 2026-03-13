@@ -1229,17 +1229,17 @@ function buildQuestion() {
     }))
   ]);
 
-  currentQuestion = {
-    id: correctItem.id,
-    cardId: getItemCardId(correctItem),
-    item: correctItem,
-    prompt: questionText,
-    answer: correctOptionText,
-    correctTerm: correctItem.prompt,
-    correctAnswer: correctItem.answer,
-    options: options,
-    questionMode: correctItem.questionMode || "mc"
-  };
+currentQuestion = {
+  id: correctItem.id,
+  cardId: getItemCardId(correctItem),
+  item: correctItem,
+  prompt: questionText,
+  answer: correctOptionText,
+  correctTerm: correctItem.prompt,
+  correctAnswer: correctItem.answer,
+  options: options,
+  questionMode: correctItem.questionMode || "mc"
+};
 
   renderQuestion();
 }
