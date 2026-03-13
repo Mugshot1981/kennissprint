@@ -232,10 +232,10 @@ button {
 }
 
 #startButton {
-  width: 160px;
-  height: 42px;
+  height: 48px;
+  width: auto;
+  min-width: 220px;
   white-space: nowrap;
-  justify-self: start;
 }
 
 /* ===== LANDING PAGE (index.html) ===== */
