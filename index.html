@@ -596,6 +596,56 @@ async function ensureProfileComplete(user) {
 
     return Object.values(subjectStats);
   }
+
+  async function fetchUserProgress(userId) {
+  const { data, error } = await supabase
+    .from("cards_progress")
+    .select("card_id, level")
+    .eq("user_id", userId);
+
+  if (error) {
+    console.error("Voortgang laden mislukt:", error);
+    return [];
+  }
+
+  return data || [];
+}
+
+function buildSubjectMasteryStats(progressRows) {
+  const progressMap = new Map(
+    progressRows.map((row) => [row.card_id, row.level ?? 0])
+  );
+
+  const subjectStats = {};
+
+  for (const course of courseCatalog) {
+    const subject = course.subject;
+    const terms = course.datasets?.terms || [];
+    const years = course.datasets?.years || [];
+
+    if (!subjectStats[subject]) {
+      subjectStats[subject] = {
+        subject,
+        total: 0,
+        levels: [0, 0, 0, 0, 0, 0]
+      };
+    }
+
+    const allCards = [...terms, ...years];
+
+    for (const card of allCards) {
+      const cardId = card.cardId || card.id;
+      const rawLevel = progressMap.has(cardId) ? progressMap.get(cardId) : 0;
+      const level = Math.max(0, Math.min(5, Number(rawLevel) || 0));
+
+      subjectStats[subject].total += 1;
+      subjectStats[subject].levels[level] += 1;
+    }
+  }
+
+  return Object.values(subjectStats);
+}
+
 async function bootIndex() {
   const user = await requireAuth();
   if (!user) return;
@@ -606,6 +656,12 @@ async function bootIndex() {
   await showAccountButton(user);
   bindAccountMenu();
   initSelectors();
+
+  const progressRows = await fetchUserProgress(user.id);
+  const subjectStats = buildSubjectMasteryStats(progressRows);
+
+  console.log("cards_progress rows:", progressRows);
+  console.log("subject mastery stats:", subjectStats);
 }
 
 bootIndex();
