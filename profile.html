@@ -13,20 +13,20 @@
       margin: 0 auto;
     }
 
-   .account-block {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
-}
+    .account-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 16px;
+    }
 
-.account-row {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
-}
+    .account-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
 
     .account-label {
       font-weight: 700;
@@ -44,33 +44,9 @@
       font-size: 1rem;
     }
 
-    .edit-panel {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding: 14px;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      background: #f8fafc;
-    }
-
-.edit-panel input,
-.edit-panel select {
-  width: 100%;
-  max-width: 420px;
-  padding: 12px 14px;
-  border: 1px solid #cbd5e1;
-  border-radius: 10px;
-  font: inherit;
-  background: #fff;
-}
-
-    .edit-actions,
-    .profile-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 10px;
+    .account-value {
+      font-size: 1rem;
+      color: #475569;
     }
 
     .text-button,
@@ -84,9 +60,85 @@
       cursor: pointer;
     }
 
+    .profile-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
     .profile-message {
       min-height: 24px;
       margin-top: 18px;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.38);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 9999;
+    }
+
+    .modal-overlay.is-open {
+      display: flex;
+    }
+
+    .modal-card {
+      width: 100%;
+      max-width: 520px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.18);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .modal-title {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .modal-field {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .modal-field label {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .modal-field input,
+    .modal-field select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font: inherit;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .modal-message {
+      min-height: 24px;
+      color: #475569;
+      margin: 0;
     }
   </style>
 </head>
@@ -96,87 +148,47 @@
       <h1>KennisSprint</h1>
       <p class="intro">Account</p>
 
-     <div class="account-block">
-  <div class="account-row">
-    <div class="account-label">Jouw naam</div>
-    <div class="account-value-row">
-      <span id="displayNameText">Nog niet ingesteld</span>
-      <button id="editNameButton" type="button" class="text-button">Wijzig</button>
-    </div>
-  </div>
+      <div class="account-block">
+        <div class="account-row">
+          <div class="account-label">Jouw naam</div>
+          <div class="account-value-row">
+            <span id="displayNameText" class="account-value">Nog niet ingesteld</span>
+            <button id="editNameButton" type="button" class="text-button">Wijzig</button>
+          </div>
+        </div>
 
-<div id="editNamePanel" class="edit-panel" style="display:none;">
-    <label for="displayNameInput"><strong>Nieuwe schermnaam</strong></label>
-    <input id="displayNameInput" type="text" placeholder="Bijvoorbeeld: Stijn">
-    <div class="edit-actions">
-      <button id="saveNameButton" type="button">Opslaan</button>
-      <button id="cancelEditButton" type="button" class="secondary-button">Annuleren</button>
-    </div>
-  </div>
+        <div class="account-row">
+          <div class="account-label">Niveau</div>
+          <div class="account-value-row">
+            <span id="levelText" class="account-value">Nog niet ingesteld</span>
+            <button id="editLevelButton" type="button" class="text-button">Wijzig</button>
+          </div>
+        </div>
 
-  <div class="account-row">
-    <div class="account-label">Niveau</div>
-    <div class="account-value-row">
-      <span id="levelText">Nog niet ingesteld</span>
-      <button id="editLevelButton" type="button" class="text-button">Wijzig</button>
-    </div>
-  </div>
+        <div class="account-row">
+          <div class="account-label">Jaar</div>
+          <div class="account-value-row">
+            <span id="gradeText" class="account-value">Nog niet ingesteld</span>
+            <button id="editGradeButton" type="button" class="text-button">Wijzig</button>
+          </div>
+        </div>
 
-  <div id="editLevelPanel" class="edit-panel" hidden>
-    <label for="levelSelect"><strong>Kies niveau</strong></label>
-    <select id="levelSelect">
-      <option value="">Kies niveau</option>
-      <option value="mavo">mavo</option>
-      <option value="havo">havo</option>
-      <option value="vwo">vwo</option>
-    </select>
-    <div class="edit-actions">
-      <button id="saveLevelButton" type="button">Opslaan</button>
-      <button id="cancelLevelButton" type="button" class="secondary-button">Annuleren</button>
-    </div>
-  </div>
+        <div class="account-row">
+          <div class="account-label">E-mailadres</div>
+          <div class="account-value-row">
+            <span id="emailText" class="account-value">Laden...</span>
+          </div>
+        </div>
 
-  <div class="account-row">
-    <div class="account-label">Jaar</div>
-    <div class="account-value-row">
-      <span id="gradeText">Nog niet ingesteld</span>
-      <button id="editGradeButton" type="button" class="text-button">Wijzig</button>
-    </div>
-  </div>
+        <div class="account-row">
+          <div class="account-label">Wachtwoord</div>
+          <div class="account-value-row">
+            <button id="resetPasswordButton" type="button" class="text-button">Reset e-mail sturen</button>
+          </div>
+        </div>
+      </div>
 
-  <div id="editGradePanel" class="edit-panel" hidden>
-    <label for="gradeSelect"><strong>Kies jaar</strong></label>
-    <select id="gradeSelect">
-      <option value="">Kies jaar</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-    </select>
-    <div class="edit-actions">
-      <button id="saveGradeButton" type="button">Opslaan</button>
-      <button id="cancelGradeButton" type="button" class="secondary-button">Annuleren</button>
-    </div>
-  </div>
-
-  <div class="account-row">
-    <div class="account-label">E-mailadres</div>
-    <div class="account-value-row">
-      <span id="emailText">Laden...</span>
-    </div>
-  </div>
-
-  <div class="account-row">
-    <div class="account-label">Wachtwoord</div>
-    <div class="account-value-row">
-      <button id="resetPasswordButton" type="button" class="text-button">Reset e-mail sturen</button>
-    </div>
-  </div>
-</div>
-
-<p id="profileMessage" class="intro profile-message"></p>
+      <p id="profileMessage" class="intro profile-message"></p>
 
       <div class="profile-actions">
         <button id="startButton" type="button">Naar cursussen</button>
@@ -185,280 +197,316 @@
     </section>
   </main>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="js/supabaseClient.js"></script>
-<script>
-  const supabaseClient = window.supabaseClient;
+  <div id="editModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-card">
+      <h2 id="modalTitle" class="modal-title">Wijzigen</h2>
 
-  const displayNameText = document.getElementById("displayNameText");
-  const levelText = document.getElementById("levelText");
-  const gradeText = document.getElementById("gradeText");
-  const emailText = document.getElementById("emailText");
+      <div class="modal-field">
+        <label id="modalLabel" for="modalInput">Waarde</label>
+        <input id="modalInput" type="text" hidden>
+        <select id="modalSelect" hidden></select>
+      </div>
 
-  const editNameButton = document.getElementById("editNameButton");
-  const editNamePanel = document.getElementById("editNamePanel");
-  const displayNameInput = document.getElementById("displayNameInput");
-  const saveNameButton = document.getElementById("saveNameButton");
-  const cancelEditButton = document.getElementById("cancelEditButton");
+      <div class="modal-actions">
+        <button id="modalSaveButton" type="button">Opslaan</button>
+        <button id="modalCancelButton" type="button" class="secondary-button">Annuleren</button>
+      </div>
 
-  const editLevelButton = document.getElementById("editLevelButton");
-  const editLevelPanel = document.getElementById("editLevelPanel");
-  const levelSelect = document.getElementById("levelSelect");
-  const saveLevelButton = document.getElementById("saveLevelButton");
-  const cancelLevelButton = document.getElementById("cancelLevelButton");
+      <p id="modalMessage" class="modal-message"></p>
+    </div>
+  </div>
 
-  const editGradeButton = document.getElementById("editGradeButton");
-  const editGradePanel = document.getElementById("editGradePanel");
-  const gradeSelect = document.getElementById("gradeSelect");
-  const saveGradeButton = document.getElementById("saveGradeButton");
-  const cancelGradeButton = document.getElementById("cancelGradeButton");
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script>
+    const supabaseClient = window.supabaseClient;
 
-  const resetPasswordButton = document.getElementById("resetPasswordButton");
-  const logoutButton = document.getElementById("logoutButton");
-  const startButton = document.getElementById("startButton");
-  const profileMessage = document.getElementById("profileMessage");
+    const displayNameText = document.getElementById("displayNameText");
+    const levelText = document.getElementById("levelText");
+    const gradeText = document.getElementById("gradeText");
+    const emailText = document.getElementById("emailText");
 
-  let currentUser = null;
-  let currentDisplayName = "";
-  let currentLevel = "";
-  let currentGrade = "";
+    const editNameButton = document.getElementById("editNameButton");
+    const editLevelButton = document.getElementById("editLevelButton");
+    const editGradeButton = document.getElementById("editGradeButton");
 
-  
- async function requireAuth() {
-  const { data, error } = await supabaseClient.auth.getUser();
-  const user = data?.user;
+    const resetPasswordButton = document.getElementById("resetPasswordButton");
+    const logoutButton = document.getElementById("logoutButton");
+    const startButton = document.getElementById("startButton");
+    const profileMessage = document.getElementById("profileMessage");
 
-  if (error || !user) {
-    window.location.href = "login.html";
-    return null;
-  }
+    const editModal = document.getElementById("editModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalLabel = document.getElementById("modalLabel");
+    const modalInput = document.getElementById("modalInput");
+    const modalSelect = document.getElementById("modalSelect");
+    const modalSaveButton = document.getElementById("modalSaveButton");
+    const modalCancelButton = document.getElementById("modalCancelButton");
+    const modalMessage = document.getElementById("modalMessage");
 
-  if (!user.email_confirmed_at) {
-    await supabaseClient.auth.signOut();
-    window.location.href = "login.html";
-    return null;
-  }
+    let currentUser = null;
+    let currentDisplayName = "";
+    let currentLevel = "";
+    let currentGrade = "";
+    let activeEditType = null;
 
-  return user;
-}
+    async function requireAuth() {
+      const { data, error } = await supabaseClient.auth.getUser();
+      const user = data?.user;
 
-function openEditPanel() {
-  displayNameInput.value = currentDisplayName || "";
-  editNamePanel.style.display = "flex";
-  displayNameInput.focus();
-}
+      if (error || !user) {
+        window.location.href = "login.html";
+        return null;
+      }
 
-function closeEditPanel() {
-  editNamePanel.style.display = "none";
-  displayNameInput.value = "";
-}
+      if (!user.email_confirmed_at) {
+        await supabaseClient.auth.signOut();
+        window.location.href = "login.html";
+        return null;
+      }
 
-  function openLevelPanel() {
-    levelSelect.value = currentLevel || "";
-    editLevelPanel.hidden = false;
-    levelSelect.focus();
-  }
-
-  function closeLevelPanel() {
-    editLevelPanel.hidden = true;
-    levelSelect.value = "";
-  }
-
-  function openGradePanel() {
-    gradeSelect.value = currentGrade || "";
-    editGradePanel.hidden = false;
-    gradeSelect.focus();
-  }
-
-  function closeGradePanel() {
-    editGradePanel.hidden = true;
-    gradeSelect.value = "";
-  }
-  async function loadProfile() {
-    const user = await requireAuth();
-    if (!user) return;
-
-    currentUser = user;
-    emailText.textContent = user.email || "-";
-
-const { data, error } = await supabaseClient
-  .from("profiles")
-  .select("display_name, level, grade")
-  .eq("id", user.id)
-  .maybeSingle();
-
-    if (error) {
-      profileMessage.textContent = "Profiel laden mislukt: " + error.message;
-      return;
+      return user;
     }
 
-    currentDisplayName = data?.display_name?.trim() || "";
-currentLevel = data?.level?.trim() || "";
-currentGrade = data?.grade?.trim() || ""; 
-
-displayNameText.textContent = currentDisplayName || "Nog niet ingesteld";
-levelText.textContent = currentLevel || "Nog niet ingesteld";
-gradeText.textContent = currentGrade || "Nog niet ingesteld";
-
-closeEditPanel();
-closeLevelPanel();
-closeGradePanel();
-
-
-}
-
-    async function saveName() {
-    if (!currentUser) return;
-
-    const newDisplayName = displayNameInput.value.trim();
-
-    if (!newDisplayName) {
-      profileMessage.textContent = "Vul een schermnaam in.";
-      return;
+    function closeModal() {
+      editModal.classList.remove("is-open");
+      editModal.setAttribute("aria-hidden", "true");
+      modalMessage.textContent = "";
+      activeEditType = null;
+      modalInput.value = "";
+      modalSelect.innerHTML = "";
+      modalInput.hidden = true;
+      modalSelect.hidden = true;
     }
 
-    profileMessage.textContent = "Bezig met opslaan...";
+    function openNameModal() {
+      activeEditType = "name";
+      modalTitle.textContent = "Naam wijzigen";
+      modalLabel.textContent = "Nieuwe schermnaam";
+      modalInput.type = "text";
+      modalInput.placeholder = "Bijvoorbeeld: Stijn";
+      modalInput.value = currentDisplayName || "";
+      modalInput.hidden = false;
+      modalSelect.hidden = true;
+      modalMessage.textContent = "";
+      editModal.classList.add("is-open");
+      editModal.setAttribute("aria-hidden", "false");
+      modalInput.focus();
+    }
 
-    const { error } = await supabaseClient
-      .from("profiles")
-      .upsert(
-        {
-          id: currentUser.id,
+    function openLevelModal() {
+      activeEditType = "level";
+      modalTitle.textContent = "Niveau wijzigen";
+      modalLabel.textContent = "Kies niveau";
+      modalInput.hidden = true;
+      modalSelect.hidden = false;
+      modalSelect.innerHTML = `
+        <option value="">Kies niveau</option>
+        <option value="mavo">mavo</option>
+        <option value="havo">havo</option>
+        <option value="vwo">vwo</option>
+      `;
+      modalSelect.value = currentLevel || "";
+      modalMessage.textContent = "";
+      editModal.classList.add("is-open");
+      editModal.setAttribute("aria-hidden", "false");
+      modalSelect.focus();
+    }
+
+    function openGradeModal() {
+      activeEditType = "grade";
+      modalTitle.textContent = "Jaar wijzigen";
+      modalLabel.textContent = "Kies jaar";
+      modalInput.hidden = true;
+      modalSelect.hidden = false;
+      modalSelect.innerHTML = `
+        <option value="">Kies jaar</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      `;
+      modalSelect.value = currentGrade || "";
+      modalMessage.textContent = "";
+      editModal.classList.add("is-open");
+      editModal.setAttribute("aria-hidden", "false");
+      modalSelect.focus();
+    }
+
+    async function loadProfile() {
+      const user = await requireAuth();
+      if (!user) return;
+
+      currentUser = user;
+      emailText.textContent = user.email || "-";
+
+      const { data, error } = await supabaseClient
+        .from("profiles")
+        .select("display_name, level, grade")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      if (error) {
+        profileMessage.textContent = "Profiel laden mislukt: " + error.message;
+        return;
+      }
+
+      currentDisplayName = data?.display_name?.trim() || "";
+      currentLevel = data?.level?.trim() || "";
+      currentGrade = data?.grade?.trim() || "";
+
+      displayNameText.textContent = currentDisplayName || "Nog niet ingesteld";
+      levelText.textContent = currentLevel || "Nog niet ingesteld";
+      gradeText.textContent = currentGrade || "Nog niet ingesteld";
+
+      closeModal();
+    }
+
+    async function saveProfileField(payload) {
+      const { error } = await supabaseClient
+        .from("profiles")
+        .upsert(
+          {
+            id: currentUser.id,
+            display_name: payload.display_name,
+            level: payload.level,
+            grade: payload.grade
+          },
+          {
+            onConflict: "id"
+          }
+        );
+
+      return error;
+    }
+
+    async function saveActiveField() {
+      if (!currentUser || !activeEditType) return;
+
+      modalMessage.textContent = "Bezig met opslaan...";
+
+      if (activeEditType === "name") {
+        const newDisplayName = modalInput.value.trim();
+
+        if (!newDisplayName) {
+          modalMessage.textContent = "Vul een schermnaam in.";
+          return;
+        }
+
+        const error = await saveProfileField({
           display_name: newDisplayName,
           level: currentLevel || null,
           grade: currentGrade || null
-        },
-        {
-          onConflict: "id"
+        });
+
+        if (error) {
+          modalMessage.textContent = "Opslaan mislukt: " + error.message;
+          return;
         }
-      );
 
-    if (error) {
-      profileMessage.textContent = "Opslaan mislukt: " + error.message;
-      return;
-    }
+        currentDisplayName = newDisplayName;
+        displayNameText.textContent = newDisplayName;
+        profileMessage.textContent = "Schermnaam opgeslagen.";
+        closeModal();
+        return;
+      }
 
-    currentDisplayName = newDisplayName;
-    displayNameText.textContent = newDisplayName;
-    profileMessage.textContent = "Schermnaam opgeslagen.";
-    closeEditPanel();
-  }
+      if (activeEditType === "level") {
+        const newLevel = modalSelect.value.trim();
 
-  async function saveLevel() {
-    if (!currentUser) return;
+        if (!newLevel) {
+          modalMessage.textContent = "Kies een niveau.";
+          return;
+        }
 
-    const newLevel = levelSelect.value.trim();
-
-    if (!newLevel) {
-      profileMessage.textContent = "Kies een niveau.";
-      return;
-    }
-
-    profileMessage.textContent = "Bezig met opslaan...";
-
-    const { error } = await supabaseClient
-      .from("profiles")
-      .upsert(
-        {
-          id: currentUser.id,
+        const error = await saveProfileField({
           display_name: currentDisplayName || null,
           level: newLevel,
           grade: currentGrade || null
-        },
-        {
-          onConflict: "id"
+        });
+
+        if (error) {
+          modalMessage.textContent = "Opslaan mislukt: " + error.message;
+          return;
         }
-      );
 
-    if (error) {
-      profileMessage.textContent = "Opslaan mislukt: " + error.message;
-      return;
-    }
+        currentLevel = newLevel;
+        levelText.textContent = newLevel;
+        profileMessage.textContent = "Niveau opgeslagen.";
+        closeModal();
+        return;
+      }
 
-    currentLevel = newLevel;
-    levelText.textContent = newLevel;
-    profileMessage.textContent = "Niveau opgeslagen.";
-    closeLevelPanel();
-  }
+      if (activeEditType === "grade") {
+        const newGrade = modalSelect.value.trim();
 
-  async function saveGrade() {
-    if (!currentUser) return;
+        if (!newGrade) {
+          modalMessage.textContent = "Kies een jaar.";
+          return;
+        }
 
-    const newGrade = gradeSelect.value.trim();
-
-    if (!newGrade) {
-      profileMessage.textContent = "Kies een jaar.";
-      return;
-    }
-
-    profileMessage.textContent = "Bezig met opslaan...";
-
-    const { error } = await supabaseClient
-      .from("profiles")
-      .upsert(
-        {
-          id: currentUser.id,
+        const error = await saveProfileField({
           display_name: currentDisplayName || null,
           level: currentLevel || null,
           grade: newGrade
-        },
-        {
-          onConflict: "id"
-        }
-      );
+        });
 
-    if (error) {
-      profileMessage.textContent = "Opslaan mislukt: " + error.message;
-      return;
+        if (error) {
+          modalMessage.textContent = "Opslaan mislukt: " + error.message;
+          return;
+        }
+
+        currentGrade = newGrade;
+        gradeText.textContent = newGrade;
+        profileMessage.textContent = "Jaar opgeslagen.";
+        closeModal();
+      }
     }
 
-    currentGrade = newGrade;
-    gradeText.textContent = newGrade;
-    profileMessage.textContent = "Jaar opgeslagen.";
-    closeGradePanel();
-  }
+    async function sendPasswordReset() {
+      if (!currentUser?.email) return;
 
-  async function sendPasswordReset() {
-    if (!currentUser?.email) return;
+      profileMessage.textContent = "Bezig met reset e-mail versturen...";
 
-    profileMessage.textContent = "Bezig met reset e-mail versturen...";
+      const { error } = await supabaseClient.auth.resetPasswordForEmail(currentUser.email, {
+        redirectTo: window.location.origin + window.location.pathname.replace("profile.html", "login.html")
+      });
 
-    const { error } = await supabaseClient.auth.resetPasswordForEmail(currentUser.email, {
-      redirectTo: window.location.origin + window.location.pathname.replace("profile.html", "login.html")
+      if (error) {
+        profileMessage.textContent = "Reset mislukt: " + error.message;
+        return;
+      }
+
+      profileMessage.textContent = "Reset e-mail verstuurd.";
+    }
+
+    async function logout() {
+      await supabaseClient.auth.signOut();
+      window.location.href = "login.html";
+    }
+
+    editNameButton.addEventListener("click", openNameModal);
+    editLevelButton.addEventListener("click", openLevelModal);
+    editGradeButton.addEventListener("click", openGradeModal);
+
+    modalSaveButton.addEventListener("click", saveActiveField);
+    modalCancelButton.addEventListener("click", closeModal);
+
+    editModal.addEventListener("click", (event) => {
+      if (event.target === editModal) {
+        closeModal();
+      }
     });
 
-    if (error) {
-      profileMessage.textContent = "Reset mislukt: " + error.message;
-      return;
-    }
+    resetPasswordButton.addEventListener("click", sendPasswordReset);
+    logoutButton.addEventListener("click", logout);
+    startButton.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
 
-    profileMessage.textContent = "Reset e-mail verstuurd.";
-  }
-
-  async function logout() {
-    await supabaseClient.auth.signOut();
-    window.location.href = "login.html";
-  }
-
-  editNameButton.addEventListener("click", openEditPanel);
-  saveNameButton.addEventListener("click", saveName);
-  cancelEditButton.addEventListener("click", closeEditPanel);
-
-  editLevelButton.addEventListener("click", openLevelPanel);
-  saveLevelButton.addEventListener("click", saveLevel);
-  cancelLevelButton.addEventListener("click", closeLevelPanel);
-
-  editGradeButton.addEventListener("click", openGradePanel);
-  saveGradeButton.addEventListener("click", saveGrade);
-  cancelGradeButton.addEventListener("click", closeGradePanel);
-
-  resetPasswordButton.addEventListener("click", sendPasswordReset);
-  logoutButton.addEventListener("click", logout);
-  startButton.addEventListener("click", () => {
-    window.location.href = "index.html";
-  });
-
-  loadProfile();
-</script>
+    loadProfile();
+  </script>
 </body>
 </html>
