@@ -296,7 +296,7 @@
     }
   }
 
-  async function saveName() {
+    async function saveName() {
     if (!currentUser) return;
 
     const newDisplayName = displayNameInput.value.trim();
@@ -313,7 +313,9 @@
       .upsert(
         {
           id: currentUser.id,
-          display_name: newDisplayName
+          display_name: newDisplayName,
+          level: currentLevel || null,
+          grade: currentGrade || null
         },
         {
           onConflict: "id"
@@ -329,6 +331,80 @@
     displayNameText.textContent = newDisplayName;
     profileMessage.textContent = "Schermnaam opgeslagen.";
     closeEditPanel();
+  }
+
+  async function saveLevel() {
+    if (!currentUser) return;
+
+    const newLevel = levelSelect.value.trim();
+
+    if (!newLevel) {
+      profileMessage.textContent = "Kies een niveau.";
+      return;
+    }
+
+    profileMessage.textContent = "Bezig met opslaan...";
+
+    const { error } = await supabaseClient
+      .from("profiles")
+      .upsert(
+        {
+          id: currentUser.id,
+          display_name: currentDisplayName || null,
+          level: newLevel,
+          grade: currentGrade || null
+        },
+        {
+          onConflict: "id"
+        }
+      );
+
+    if (error) {
+      profileMessage.textContent = "Opslaan mislukt: " + error.message;
+      return;
+    }
+
+    currentLevel = newLevel;
+    levelText.textContent = newLevel;
+    profileMessage.textContent = "Niveau opgeslagen.";
+    closeLevelPanel();
+  }
+
+  async function saveGrade() {
+    if (!currentUser) return;
+
+    const newGrade = gradeSelect.value.trim();
+
+    if (!newGrade) {
+      profileMessage.textContent = "Kies een jaar.";
+      return;
+    }
+
+    profileMessage.textContent = "Bezig met opslaan...";
+
+    const { error } = await supabaseClient
+      .from("profiles")
+      .upsert(
+        {
+          id: currentUser.id,
+          display_name: currentDisplayName || null,
+          level: currentLevel || null,
+          grade: newGrade
+        },
+        {
+          onConflict: "id"
+        }
+      );
+
+    if (error) {
+      profileMessage.textContent = "Opslaan mislukt: " + error.message;
+      return;
+    }
+
+    currentGrade = newGrade;
+    gradeText.textContent = newGrade;
+    profileMessage.textContent = "Jaar opgeslagen.";
+    closeGradePanel();
   }
 
   async function sendPasswordReset() {
