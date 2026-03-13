@@ -199,7 +199,8 @@
       }
 
       const name = data?.display_name?.trim();
-      accountButton.textContent = name || user.email || "Account";
+     const nameEl = document.getElementById("accountName");
+nameEl.textContent = name || user.email || "Account";
       accountButton.hidden = false;
     }
 
