@@ -278,3 +278,12 @@ Doel: geheugen activeren met ondersteuning.
 Mode 3 — volledige recall  
 De leerling moet het antwoord zelf typen.  
 Doel: actieve reproductie van kennis.
+
+Recommended session selectie
+
+per vak:
+masteryRatio = masteredCards / totalCards
+
+laagste ratio = aanbevolen vak
+
+Dit zit nu in renderRecommendedSession().
