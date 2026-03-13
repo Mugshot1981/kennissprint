@@ -376,6 +376,384 @@
       window.location.href =
         "course.html?course=" + encodeURIComponent(course.id);
     });
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KennisSprint</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card" style="max-width: 1400px; width: min(1400px, calc(100vw - 64px)); margin: 0 auto;">
+      <div style="display:flex; justify-content:flex-end; margin-bottom:24px; position:relative;">
+        <button id="accountButton" type="button" class="account-button" hidden>Account</button>
+
+        <div
+          id="accountMenu"
+          hidden
+          style="position:absolute; top:100%; right:0; margin-top:8px; background:#fff; border:1px solid #d1d5db; border-radius:12px; padding:8px; min-width:180px; box-shadow:0 10px 30px rgba(0,0,0,0.08);"
+        >
+          <button
+            id="profileButton"
+            type="button"
+            style="width:100%; text-align:left; background:none; border:none; padding:10px 12px; border-radius:8px; cursor:pointer;"
+          >
+            Ga naar profiel
+          </button>
+
+          <button
+            id="logoutButton"
+            type="button"
+            style="width:100%; text-align:left; background:none; border:none; padding:10px 12px; border-radius:8px; cursor:pointer;"
+          >
+            Uitloggen
+          </button>
+        </div>
+      </div>
+
+      <h1 id="pageHeading">KennisSprint</h1>
+        <div id="subjectDashboard" style="margin: 0 0 24px 0;"></div>
+      <div id="recommendedSession" style="margin: 0 0 32px 0;"></div>
+
+      <p id="pageIntro" class="intro">
+        Kies eerst een vak, niveau en jaar om naar de juiste cursus te gaan.
+      </p>
+
+      <div class="course-picker">
+        <div class="picker-row">
+          <label for="subjectSelect"><strong>Vak:</strong></label>
+          <select id="subjectSelect">
+            <option value="">Kies vak</option>
+          </select>
+        </div>
+
+        <div class="picker-row">
+          <label for="levelSelect"><strong>Niveau:</strong></label>
+          <select id="levelSelect">
+            <option value="">Kies niveau</option>
+          </select>
+        </div>
+
+        <div class="picker-row">
+          <label for="gradeSelect"><strong>Jaar:</strong></label>
+          <select id="gradeSelect">
+            <option value="">Kies jaar</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="landing-actions">
+        <button id="openCourseButton" type="button">Open cursus</button>
+      </div>
+
+      <p id="selectionMessage" class="intro"></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+
+  <script type="module">
+    import { courseCatalog } from "./data.js";
+
+    const supabase = window.supabaseClient;
+
+    const subjectSelect = document.getElementById("subjectSelect");
+    const levelSelect = document.getElementById("levelSelect");
+    const gradeSelect = document.getElementById("gradeSelect");
+    const openCourseButton = document.getElementById("openCourseButton");
+    const selectionMessage = document.getElementById("selectionMessage");
+    const accountButton = document.getElementById("accountButton");
+    const accountMenu = document.getElementById("accountMenu");
+    const logoutButton = document.getElementById("logoutButton");
+       const profileButton = document.getElementById("profileButton");
+
+    let currentProfile = {
+      displayName: "",
+      level: "",
+      grade: ""
+    };
+    async function requireAuth() {
+      const { data, error } = await supabase.auth.getUser();
+
+      if (error || !data?.user) {
+        window.location.href = "login.html";
+        return null;
+      }
+
+      return data.user;
+    }
+
+    function getUniqueValues(key, courses) {
+      return [...new Set(courses.map((course) => course[key]))];
+    }
+
+    function populateSelect(selectElement, values, placeholder, selectedValue = "") {
+      selectElement.innerHTML = "";
+
+      const placeholderOption = document.createElement("option");
+      placeholderOption.value = "";
+      placeholderOption.textContent = placeholder;
+      selectElement.appendChild(placeholderOption);
+
+      values.forEach((value) => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = value;
+
+        if (value === selectedValue) {
+          option.selected = true;
+        }
+
+        selectElement.appendChild(option);
+      });
+    }
+
+       function getFilteredCourses() {
+      return courseCatalog.filter(
+        (course) =>
+          course.level === currentProfile.level &&
+          course.grade === currentProfile.grade
+      );
+    }
+
+    function getCoursesBySubject(subject) {
+      return getFilteredCourses().filter((course) => course.subject === subject);
+    }
+
+      function getCoursesBySubjectAndLevel(subject, level) {
+      return getFilteredCourses().filter(
+        (course) => course.subject === subject && course.level === level
+      );
+    }
+    
+      function findCourse(subject, level, grade) {
+      return getFilteredCourses().find(
+        (course) =>
+          course.subject === subject &&
+          course.level === level &&
+          course.grade === grade
+      );
+    }
+
+    function refreshLevelSelect() {
+      const selectedSubject = subjectSelect.value;
+
+      if (!selectedSubject) {
+        populateSelect(levelSelect, [currentProfile.level], "Kies niveau", currentProfile.level);
+        populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
+        return;
+      }
+
+      populateSelect(levelSelect, [currentProfile.level], "Kies niveau", currentProfile.level);
+      populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
+    }
+
+       function refreshGradeSelect() {
+      const selectedSubject = subjectSelect.value;
+      const selectedLevel = levelSelect.value;
+
+      if (!selectedSubject || !selectedLevel) {
+        populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
+        return;
+      }
+
+      populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
+    }
+
+    function initSelectors() {
+      const filteredCourses = getFilteredCourses();
+      const subjects = getUniqueValues("subject", filteredCourses);
+
+      populateSelect(subjectSelect, subjects, "Kies vak");
+      populateSelect(levelSelect, [currentProfile.level], "Kies niveau", currentProfile.level);
+      populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
+    }
+
+    async function showAccountButton(user) {
+      if (!accountButton) return;
+
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("display_name")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      if (error) {
+        console.error("Accountnaam laden mislukt:", error);
+        accountButton.textContent = user.email || "Account";
+        accountButton.hidden = false;
+        return;
+      }
+
+      const name = data?.display_name?.trim();
+
+      if (name) {
+        accountButton.textContent = name;
+      } else {
+        accountButton.textContent = user.email || "Account";
+      }
+
+      accountButton.hidden = false;
+    }
+
+    async function logout() {
+      const { error } = await supabase.auth.signOut();
+
+      if (error) {
+        console.error("Uitloggen mislukt:", error);
+        alert("Uitloggen mislukt: " + error.message);
+        return;
+      }
+
+      window.location.href = "login.html";
+    }
+
+    function bindAccountMenu() {
+      if (accountButton && accountMenu) {
+        accountButton.addEventListener("click", () => {
+          accountMenu.hidden = !accountMenu.hidden;
+        });
+      }
+
+      if (profileButton) {
+        profileButton.addEventListener("click", () => {
+          window.location.href = "profile.html";
+        });
+      }
+
+      if (logoutButton) {
+        logoutButton.addEventListener("click", logout);
+      }
+
+      document.addEventListener("click", (event) => {
+        if (!accountButton || !accountMenu) return;
+        if (accountMenu.hidden) return;
+
+        const clickedInsideButton = accountButton.contains(event.target);
+        const clickedInsideMenu = accountMenu.contains(event.target);
+
+        if (!clickedInsideButton && !clickedInsideMenu) {
+          accountMenu.hidden = true;
+        }
+      });
+    }
+
+       async function ensureProfileComplete(user) {
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("display_name, level, grade")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      if (error) {
+        console.error("Profielcontrole mislukt:", error);
+        return false;
+      }
+
+      const displayName = data?.display_name?.trim() || "";
+      const level = data?.level?.trim() || "";
+      const grade = data?.grade?.trim() || "";
+
+      currentProfile = {
+        displayName,
+        level,
+        grade
+      };
+
+      if (!displayName || !level || !grade) {
+        window.location.href = "profile.html";
+        return false;
+      }
+
+      return true;
+    }
+
+    async function fetchUserProgress(userId) {
+      const { data, error } = await supabase
+        .from("cards_progress")
+        .select("card_id, level")
+        .eq("user_id", userId);
+
+      if (error) {
+        console.error("Voortgang laden mislukt:", error);
+        return [];
+      }
+
+      return data || [];
+    }
+
+    function buildSubjectMasteryStats(progressRows) {
+      const progressMap = new Map(
+        progressRows.map((row) => [row.card_id, row.level ?? 0])
+      );
+
+      const subjectStats = {};
+
+           for (const course of getFilteredCourses()) {
+        const subject = course.subject;
+        const terms = course.datasets?.terms || [];
+        const years = course.datasets?.years || [];
+
+        if (!subjectStats[subject]) {
+          subjectStats[subject] = {
+            subject,
+            total: 0,
+            levels: [0, 0, 0, 0, 0, 0]
+          };
+        }
+
+        const allCards = [...terms, ...years];
+
+        for (const card of allCards) {
+          const cardId = card.cardId || card.id;
+          const rawLevel = progressMap.has(cardId) ? progressMap.get(cardId) : 0;
+          const level = Math.max(0, Math.min(5, Number(rawLevel) || 0));
+
+          subjectStats[subject].total += 1;
+          subjectStats[subject].levels[level] += 1;
+        }
+      }
+
+      return Object.values(subjectStats);
+    }
+
+    subjectSelect.addEventListener("change", () => {
+      refreshLevelSelect();
+      selectionMessage.textContent = "";
+    });
+
+    levelSelect.addEventListener("change", () => {
+      refreshGradeSelect();
+      selectionMessage.textContent = "";
+    });
+
+    gradeSelect.addEventListener("change", () => {
+      selectionMessage.textContent = "";
+    });
+
+    openCourseButton.addEventListener("click", () => {
+      const subject = subjectSelect.value;
+      const level = levelSelect.value;
+      const grade = gradeSelect.value;
+
+      if (!subject || !level || !grade) {
+        selectionMessage.textContent = "Kies eerst vak, niveau en jaar.";
+        return;
+      }
+
+      const course = findCourse(subject, level, grade);
+
+      if (!course) {
+        selectionMessage.textContent = "Voor deze combinatie bestaat nog geen cursus.";
+        return;
+      }
+
+      window.location.href =
+        "course.html?course=" + encodeURIComponent(course.id);
+    });
 function renderSubjectDashboard(subjectStats) {
   const dashboard = document.getElementById("subjectDashboard");
   if (!dashboard) return;
@@ -455,6 +833,112 @@ cards.forEach(card => {
     </div>
   `;
 }
+
+  function renderRecommendedSession(subjectStats) {
+  const container = document.getElementById("recommendedSession");
+  if (!container) return;
+
+  if (!subjectStats.length) {
+    container.innerHTML = "";
+    return;
+  }
+
+  const ranked = [...subjectStats]
+    .map((stat) => {
+      const mastered = (stat.levels[4] || 0) + (stat.levels[5] || 0);
+      const masteryRatio = stat.total > 0 ? mastered / stat.total : 0;
+
+      return {
+        ...stat,
+        mastered,
+        masteryRatio
+      };
+    })
+    .sort((a, b) => a.masteryRatio - b.masteryRatio);
+
+  const bestTarget = ranked[0];
+  const percent = Math.round(bestTarget.masteryRatio * 100);
+
+  container.innerHTML = `
+    <div
+      style="
+        border:1px solid #d1d5db;
+        border-radius:20px;
+        background:#fff;
+        padding:24px 28px;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+      "
+    >
+      <div style="font-size:18px; font-weight:700; color:#0f172a; margin-bottom:8px;">
+        Aanbevolen oefensessie
+      </div>
+
+      <div style="font-size:22px; font-weight:700; color:#0f172a; text-transform:capitalize; margin-bottom:6px;">
+        ${bestTarget.subject}
+      </div>
+
+      <div style="font-size:15px; color:#475569; margin-bottom:16px;">
+        ${bestTarget.mastered} van de ${bestTarget.total} kaarten beheerst (${percent}%).
+      </div>
+
+      <button
+        id="startRecommendedButton"
+        type="button"
+        style="
+          border:none;
+          background:#0f172a;
+          color:#fff;
+          border-radius:12px;
+          padding:12px 16px;
+          font:inherit;
+          font-weight:600;
+          cursor:pointer;
+        "
+      >
+        Start ${bestTarget.subject}
+      </button>
+    </div>
+  `;
+
+  const button = document.getElementById("startRecommendedButton");
+  if (!button) return;
+
+  button.addEventListener("click", () => {
+    const course = getFilteredCourses().find(
+      (c) => c.subject === bestTarget.subject
+    );
+
+    if (!course) return;
+
+    window.location.href =
+      "course.html?course=" + encodeURIComponent(course.id);
+  });
+}
+    async function bootIndex() {
+      const user = await requireAuth();
+      if (!user) return;
+
+      const profileComplete = await ensureProfileComplete(user);
+      if (!profileComplete) return;
+
+      await showAccountButton(user);
+      bindAccountMenu();
+      initSelectors();
+
+          const progressRows = await fetchUserProgress(user.id);
+      const subjectStats = buildSubjectMasteryStats(progressRows);
+
+      console.log("cards_progress rows:", progressRows);
+      console.log("subject mastery stats:", subjectStats);
+
+           renderSubjectDashboard(subjectStats);
+      renderRecommendedSession(subjectStats);
+    }
+
+    bootIndex();
+  </script>
+</body>
+</html>
 
   function renderSubjectDashboard(subjectStats) {
   const dashboard = document.getElementById("subjectDashboard");
