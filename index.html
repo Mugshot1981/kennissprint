@@ -10,7 +10,12 @@
   <main class="page">
     <section class="card" style="max-width: 1400px; width: min(1400px, calc(100vw - 64px)); margin: 0 auto;">
       <div style="display:flex; justify-content:flex-end; margin-bottom:24px; position:relative;">
-        <button id="accountButton" type="button" class="account-button" hidden>Account</button>
+<button id="accountButton" type="button" class="account-button" hidden aria-label="Account">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 21a8 8 0 0 0-16 0"></path>
+    <circle cx="12" cy="7" r="4"></circle>
+  </svg>
+</button>
 
         <div
           id="accountMenu"
