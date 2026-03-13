@@ -445,3 +445,12 @@ uitbreidbaar
 onderhoudbaar
 geschikt voor meerdere vakken
 geschikt voor meerdere leerlingen
+
+Nieuwe flow toevoegen:
+
+login
+→ profile check
+→ index dashboard
+→ course
+→ quiz engine
+→ progress update
