@@ -242,16 +242,16 @@
   return user;
 }
 
-  function openEditPanel() {
-    displayNameInput.value = currentDisplayName || "";
-    editNamePanel.hidden = false;
-    displayNameInput.focus();
-  }
+function openEditPanel() {
+  displayNameInput.value = currentDisplayName || "";
+  editNamePanel.style.display = "flex";
+  displayNameInput.focus();
+}
 
-  function closeEditPanel() {
-    editNamePanel.hidden = true;
-    displayNameInput.value = "";
-  }
+function closeEditPanel() {
+  editNamePanel.style.display = "none";
+  displayNameInput.value = "";
+}
 
   function openLevelPanel() {
     levelSelect.value = currentLevel || "";
