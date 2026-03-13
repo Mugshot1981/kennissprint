@@ -14,4 +14,5 @@ export const courseCatalog = [
   historyHavo3Course,
   aardrijkskundeMavo4Course,
   economieMavo4Course
+  duitsMavo4Course
 ];
