@@ -162,16 +162,13 @@
       const selectedSubject = subjectSelect.value;
 
       if (!selectedSubject) {
-        populateSelect(levelSelect, [], "Kies niveau");
-        populateSelect(gradeSelect, [], "Kies jaar");
+        populateSelect(levelSelect, [currentProfile.level], "Kies niveau", currentProfile.level);
+        populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
         return;
       }
 
-      const coursesForSubject = getCoursesBySubject(selectedSubject);
-      const availableLevels = getUniqueValues("level", coursesForSubject);
-
-      populateSelect(levelSelect, availableLevels, "Kies niveau");
-      populateSelect(gradeSelect, [], "Kies jaar");
+      populateSelect(levelSelect, [currentProfile.level], "Kies niveau", currentProfile.level);
+      populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
     }
 
     function refreshGradeSelect() {
