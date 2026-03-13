@@ -456,84 +456,84 @@ cards.forEach(card => {
   `;
 }
 
-  function renderRecommendedSession(subjectStats) {
-  const container = document.getElementById("recommendedSession");
-  if (!container) return;
+  function renderSubjectDashboard(subjectStats) {
+  const dashboard = document.getElementById("subjectDashboard");
+  if (!dashboard) return;
 
   if (!subjectStats.length) {
-    container.innerHTML = "";
+    dashboard.innerHTML = "";
     return;
   }
 
-  const ranked = [...subjectStats]
-    .map((stat) => {
-      const mastered = (stat.levels[4] || 0) + (stat.levels[5] || 0);
-      const masteryRatio = stat.total > 0 ? mastered / stat.total : 0;
+  const cardsHtml = subjectStats.map((stat) => {
+    const total = stat.total || 1;
+    const segments = stat.levels
+      .map((count, index) => {
+        const width = (count / total) * 100;
+        const colors = [
+          "#d1d5db", // nieuw
+          "#22c55e", // trainen
+          "#3b82f6", // bijna beheerst
+          "#8b5cf6", // beheerst 1
+          "#8b5cf6", // beheerst 2
+          "#f59e0b"  // perfect
+        ];
 
-      return {
-        ...stat,
-        mastered,
-        masteryRatio
-      };
-    })
-    .sort((a, b) => a.masteryRatio - b.masteryRatio);
+        return `<div style="height:10px; width:${width}%; background:${colors[index]};"></div>`;
+      })
+      .join("");
 
-  const bestTarget = ranked[0];
-  const percent = Math.round(bestTarget.masteryRatio * 100);
-
-  container.innerHTML = `
-    <div
-      style="
-        border:1px solid #d1d5db;
-        border-radius:20px;
-        background:#fff;
-        padding:24px 28px;
-        box-shadow: 0 1px 0 rgba(0,0,0,0.02);
-      "
-    >
-      <div style="font-size:18px; font-weight:700; color:#0f172a; margin-bottom:8px;">
-        Aanbevolen oefensessie
-      </div>
-
-      <div style="font-size:22px; font-weight:700; color:#0f172a; text-transform:capitalize; margin-bottom:6px;">
-        ${bestTarget.subject}
-      </div>
-
-      <div style="font-size:15px; color:#475569; margin-bottom:16px;">
-        ${bestTarget.mastered} van de ${bestTarget.total} kaarten beheerst (${percent}%).
-      </div>
-
-      <button
-        id="startRecommendedButton"
-        type="button"
+    return `
+      <div
+        data-subject="${stat.subject}"
+        class="subject-card"
         style="
-          border:none;
-          background:#0f172a;
-          color:#fff;
-          border-radius:12px;
-          padding:12px 16px;
-          font:inherit;
-          font-weight:600;
+          border:1px solid #d1d5db;
+          border-radius:20px;
+          overflow:hidden;
+          background:#fff;
+          box-shadow: 0 1px 0 rgba(0,0,0,0.02);
           cursor:pointer;
+          transition: transform 0.12s ease, box-shadow 0.12s ease;
         "
       >
-        Start ${bestTarget.subject}
-      </button>
+        <div style="display:flex; width:100%; height:10px;">${segments}</div>
+        <div style="padding:24px 28px;">
+          <div style="font-size:20px; font-weight:700; color:#0f172a; margin-bottom:8px; text-transform:capitalize;">
+            ${stat.subject}
+          </div>
+          <div style="font-size:15px; color:#6b7280;">
+            ${stat.total} kaarten
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  dashboard.innerHTML = `
+    <div style="margin-bottom:16px; font-size:18px; font-weight:700; color:#0f172a;">
+      Jouw vakken
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:20px;">
+      ${cardsHtml}
     </div>
   `;
 
-  const button = document.getElementById("startRecommendedButton");
-  if (!button) return;
+  const cards = dashboard.querySelectorAll(".subject-card");
 
-  button.addEventListener("click", () => {
-    const course = getFilteredCourses().find(
-      (c) => c.subject === bestTarget.subject
-    );
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const subject = card.dataset.subject;
 
-    if (!course) return;
+      const course = getFilteredCourses().find(
+        (c) => c.subject === subject
+      );
 
-    window.location.href =
-      "course.html?course=" + encodeURIComponent(course.id);
+      if (!course) return;
+
+      window.location.href =
+        "course.html?course=" + encodeURIComponent(course.id);
+    });
   });
 }
     async function bootIndex() {
