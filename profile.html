@@ -191,12 +191,28 @@
   const supabaseClient = window.supabaseClient;
 
   const displayNameText = document.getElementById("displayNameText");
+  const levelText = document.getElementById("levelText");
+  const gradeText = document.getElementById("gradeText");
   const emailText = document.getElementById("emailText");
+
   const editNameButton = document.getElementById("editNameButton");
   const editNamePanel = document.getElementById("editNamePanel");
   const displayNameInput = document.getElementById("displayNameInput");
   const saveNameButton = document.getElementById("saveNameButton");
   const cancelEditButton = document.getElementById("cancelEditButton");
+
+  const editLevelButton = document.getElementById("editLevelButton");
+  const editLevelPanel = document.getElementById("editLevelPanel");
+  const levelSelect = document.getElementById("levelSelect");
+  const saveLevelButton = document.getElementById("saveLevelButton");
+  const cancelLevelButton = document.getElementById("cancelLevelButton");
+
+  const editGradeButton = document.getElementById("editGradeButton");
+  const editGradePanel = document.getElementById("editGradePanel");
+  const gradeSelect = document.getElementById("gradeSelect");
+  const saveGradeButton = document.getElementById("saveGradeButton");
+  const cancelGradeButton = document.getElementById("cancelGradeButton");
+
   const resetPasswordButton = document.getElementById("resetPasswordButton");
   const logoutButton = document.getElementById("logoutButton");
   const startButton = document.getElementById("startButton");
@@ -204,7 +220,8 @@
 
   let currentUser = null;
   let currentDisplayName = "";
-
+  let currentLevel = "";
+  let currentGrade = "";
   async function requireAuth() {
     const { data, error } = await supabaseClient.auth.getUser();
 
