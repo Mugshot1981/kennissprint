@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KennisSprint Aanmelden</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f5f7fb;
+      color: #0f172a;
+    }
+
+    .register-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    .register-card {
+      width: 100%;
+      max-width: 520px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      padding: 40px 32px;
+      box-sizing: border-box;
+    }
+
+    .register-title {
+      margin: 0 0 12px 0;
+      text-align: center;
+      font-size: 2.5rem;
+      line-height: 1.05;
+    }
+
+    .register-intro {
+      margin: 0 0 28px 0;
+      text-align: center;
+      color: #475569;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .register-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font: inherit;
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    .register-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .register-actions button,
+    .mail-actions a {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font: inherit;
+      cursor: pointer;
+      box-sizing: border-box;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    #createAccountButton {
+      background: #0f172a;
+      color: #ffffff;
+      border: none;
+    }
+
+    #backToLoginButton,
+    #backToLoginLink {
+      background: transparent;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+    }
+
+    .message {
+      margin-top: 16px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 0.95rem;
+      color: #475569;
+      min-height: 24px;
+    }
+
+    .success-panel {
+      margin-top: 20px;
+      padding: 18px;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      background: #f8fafc;
+    }
+
+    .success-panel h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .success-panel p {
+      margin: 0 0 14px 0;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .mail-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    #openMailLink {
+      background: #0f172a;
+      color: #ffffff;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="register-page">
+    <section class="register-card">
+      <h1 class="register-title">Account aanmaken</h1>
+      <p class="register-intro">
+        Maak een account aan. Daarna bevestig je eerst je e-mailadres via de mail.
+      </p>
+
+      <div class="register-form" id="registerForm">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="jouw@email.nl" autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Wachtwoord</label>
+          <input id="password" type="password" placeholder="Kies een wachtwoord" autocomplete="new-password">
+        </div>
+
+        <div class="form-group">
+          <label for="level">Niveau</label>
+          <select id="level">
+            <option value="">Kies niveau</option>
+            <option value="mavo">mavo</option>
+            <option value="havo">havo</option>
+            <option value="vwo">vwo</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="grade">Jaar</label>
+          <select id="grade">
+            <option value="">Kies jaar</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="register-actions">
+          <button id="createAccountButton" type="button">Account aanmaken</button>
+          <button id="backToLoginButton" type="button">Terug naar login</button>
+        </div>
+
+        <div id="message" class="message"></div>
+      </div>
+
+      <div id="successPanel" class="success-panel" hidden>
+        <h2>Bijna klaar</h2>
+        <p>
+          Je account is aangemaakt. Open nu je e-mail, klik op de bevestigingslink en log daarna in.
+        </p>
+
+        <div class="mail-actions">
+          <a id="openMailLink" href="#" target="_blank" rel="noopener noreferrer">Open je mail</a>
+          <a id="backToLoginLink" href="login.html">Terug naar login</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script>
+    const supabaseClient = window.supabaseClient;
+
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const levelSelect = document.getElementById("level");
+    const gradeSelect = document.getElementById("grade");
+    const createAccountButton = document.getElementById("createAccountButton");
+    const backToLoginButton = document.getElementById("backToLoginButton");
+    const messageEl = document.getElementById("message");
+    const successPanel = document.getElementById("successPanel");
+    const registerForm = document.getElementById("registerForm");
+    const openMailLink = document.getElementById("openMailLink");
+
+    function getMailInboxUrl(email) {
+      const domain = email.split("@")[1]?.toLowerCase() || "";
+
+      if (domain.includes("gmail.com")) return "https://mail.google.com/";
+      if (domain.includes("outlook.com") || domain.includes("hotmail.com") || domain.includes("live.com")) {
+        return "https://outlook.live.com/mail/";
+      }
+      if (domain.includes("icloud.com") || domain.includes("me.com") || domain.includes("mac.com")) {
+        return "https://www.icloud.com/mail/";
+      }
+      if (domain.includes("yahoo.com")) return "https://mail.yahoo.com/";
+      if (domain.includes("ziggo.nl")) return "https://www.ziggo.nl/klantenservice/televisie-radio/e-mail";
+      if (domain.includes("kpnmail.nl") || domain.includes("planet.nl") || domain.includes("hetnet.nl")) {
+        return "https://mail.kpnmail.nl/";
+      }
+
+      return "https://mail.google.com/";
+    }
+
+    async function createAccount() {
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+      const level = levelSelect.value.trim();
+      const grade = gradeSelect.value.trim();
+
+      if (!email) {
+        messageEl.textContent = "Vul een e-mailadres in.";
+        return;
+      }
+
+      if (!password || password.length < 6) {
+        messageEl.textContent = "Kies een wachtwoord van minimaal 6 tekens.";
+        return;
+      }
+
+      if (!level) {
+        messageEl.textContent = "Kies een niveau.";
+        return;
+      }
+
+      if (!grade) {
+        messageEl.textContent = "Kies een jaar.";
+        return;
+      }
+
+      messageEl.textContent = "Bezig met account aanmaken...";
+
+      const redirectTo = window.location.origin + window.location.pathname.replace("register.html", "login.html");
+
+      const { data, error } = await supabaseClient.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: redirectTo
+        }
+      });
+
+      if (error) {
+        messageEl.textContent = "FOUT: " + error.message;
+        alert(error.message);
+        return;
+      }
+
+      const userId = data?.user?.id;
+
+      if (userId) {
+        const { error: profileError } = await supabaseClient
+          .from("profiles")
+          .upsert(
+            {
+              id: userId,
+              display_name: null,
+              level: level,
+              grade: grade
+            },
+            {
+              onConflict: "id"
+            }
+          );
+
+        if (profileError) {
+          messageEl.textContent = "Account gemaakt, maar profiel opslaan mislukte: " + profileError.message;
+          return;
+        }
+      }
+
+      openMailLink.href = getMailInboxUrl(email);
+      registerForm.hidden = true;
+      successPanel.hidden = false;
+      messageEl.textContent = "";
+    }
+
+    createAccountButton.addEventListener("click", createAccount);
+
+    backToLoginButton.addEventListener("click", () => {
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
