@@ -139,38 +139,60 @@
     const loginButton = document.getElementById("loginButton");
     const registerButton = document.getElementById("registerButton");
 
-    async function redirectIfAlreadyLoggedIn() {
-      const { data, error } = await supabaseClient.auth.getUser();
+   async function redirectIfAlreadyLoggedIn() {
+  const { data, error } = await supabaseClient.auth.getUser();
 
-      console.log("login getUser:", data, error);
+  console.log("login getUser:", data, error);
 
-      if (data?.user) {
-        window.location.href = "index.html";
-      }
-    }
+  const user = data?.user;
 
-    async function login() {
-      const email = emailInput.value.trim();
-      const password = passwordInput.value;
+  if (!user) return;
 
-      debugOutput.textContent = "Bezig met inloggen...";
+  if (!user.email_confirmed_at) {
+    await supabaseClient.auth.signOut();
+    debugOutput.textContent = "Bevestig eerst je e-mailadres voordat je kunt inloggen.";
+    return;
+  }
 
-      const { data, error } = await supabaseClient.auth.signInWithPassword({
-        email,
-        password
-      });
+  window.location.href = "index.html";
+}
 
-      console.log("signInWithPassword result:", { data, error });
+async function login() {
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
 
-      if (error) {
-        debugOutput.textContent = "FOUT: " + error.message;
-        alert(error.message);
-        return;
-      }
+  if (!email || !password) {
+    debugOutput.textContent = "Vul e-mail en wachtwoord in.";
+    return;
+  }
 
-      debugOutput.textContent = "OK: ingelogd.";
-      window.location.href = "profile.html";
-    }
+  debugOutput.textContent = "Bezig met inloggen...";
+
+  const { data, error } = await supabaseClient.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  console.log("signInWithPassword result:", { data, error });
+
+  if (error) {
+    debugOutput.textContent = "FOUT: " + error.message;
+    alert(error.message);
+    return;
+  }
+
+  const user = data?.user;
+
+  if (!user || !user.email_confirmed_at) {
+    await supabaseClient.auth.signOut();
+    debugOutput.textContent = "Bevestig eerst je e-mailadres via de link in je mail.";
+    alert("Bevestig eerst je e-mailadres via de link in je mail.");
+    return;
+  }
+
+  debugOutput.textContent = "OK: ingelogd.";
+  window.location.href = "index.html";
+}
 
     async function register() {
       const email = emailInput.value.trim();
