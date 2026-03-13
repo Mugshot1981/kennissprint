@@ -316,3 +316,13 @@ progress feedback
 
 Het doel is dat leerlingen niet alleen antwoorden herkennen,
 maar begrippen daadwerkelijk begrijpen en kunnen uitleggen.
+
+Toevoegen:
+
+Core features:
+
+subject dashboard
+mastery progress bars
+recommended session
+chapter selection
+adaptive practice
