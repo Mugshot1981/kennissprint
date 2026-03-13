@@ -1,6 +1,5 @@
 
 export const duitsMavo4Course = {
-
   id: "duits-mavo-4",
   subject: "duits",
   level: "mavo",
@@ -8,7 +7,6 @@ export const duitsMavo4Course = {
   title: "Duits 4 mavo",
 
   chapters: [
-
     { id: "du-h1", title: "Essen und Trinken" },
     { id: "du-h2", title: "Körper" },
     { id: "du-h3", title: "Freizeit" },
@@ -29,11 +27,9 @@ export const duitsMavo4Course = {
     { id: "du-h18", title: "Signalwörter" },
     { id: "du-h19", title: "Prüfungssprache" },
     { id: "du-h20", title: "Redemittel" }
-
   ],
 
   datasets: {
     terms: []
   }
-
 };
