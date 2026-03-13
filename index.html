@@ -361,7 +361,65 @@
       window.location.href =
         "course.html?course=" + encodeURIComponent(course.id);
     });
+function renderSubjectDashboard(subjectStats) {
+  const dashboard = document.getElementById("subjectDashboard");
+  if (!dashboard) return;
 
+  if (!subjectStats.length) {
+    dashboard.innerHTML = "";
+    return;
+  }
+
+  const cardsHtml = subjectStats.map((stat) => {
+    const total = stat.total || 1;
+    const segments = stat.levels
+      .map((count, index) => {
+        const width = (count / total) * 100;
+        const colors = [
+          "#d1d5db", // nieuw
+          "#22c55e", // trainen
+          "#3b82f6", // bijna beheerst
+          "#8b5cf6", // beheerst 1
+          "#8b5cf6", // beheerst 2
+          "#f59e0b"  // perfect
+        ];
+
+        return `<div style="height:10px; width:${width}%; background:${colors[index]};"></div>`;
+      })
+      .join("");
+
+    return `
+      <div
+        style="
+          border:1px solid #d1d5db;
+          border-radius:20px;
+          overflow:hidden;
+          background:#fff;
+          box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+        "
+      >
+        <div style="display:flex; width:100%; height:10px;">${segments}</div>
+        <div style="padding:24px 28px;">
+          <div style="font-size:20px; font-weight:700; color:#0f172a; margin-bottom:8px; text-transform:capitalize;">
+            ${stat.subject}
+          </div>
+          <div style="font-size:15px; color:#6b7280;">
+            ${stat.total} kaarten
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  dashboard.innerHTML = `
+    <div style="margin-bottom:16px; font-size:18px; font-weight:700; color:#0f172a;">
+      Jouw vakken
+    </div>
+    <div style="display:grid; gap:16px;">
+      ${cardsHtml}
+    </div>
+  `;
+}
     async function bootIndex() {
       const user = await requireAuth();
       if (!user) return;
