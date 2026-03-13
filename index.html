@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -9,33 +8,34 @@
 </head>
 <body>
   <main class="page">
-   <section class="card">
-  <div style="display:flex; justify-content:flex-end; margin-bottom:24px; position:relative;">
-    <button id="accountButton" type="button" class="account-button" hidden>Account</button>
-<div
-  id="accountMenu"
-  hidden
-  style="position:absolute; top:100%; right:0; margin-top:8px; background:#fff; border:1px solid #d1d5db; border-radius:12px; padding:8px; min-width:180px; box-shadow:0 10px 30px rgba(0,0,0,0.08);"
->
-  <button
-    id="profileButton"
-    type="button"
-    style="width:100%; text-align:left; background:none; border:none; padding:10px 12px; border-radius:8px; cursor:pointer;"
-  >
-    Ga naar profiel
-  </button>
+    <section class="card">
+      <div style="display:flex; justify-content:flex-end; margin-bottom:24px; position:relative;">
+        <button id="accountButton" type="button" class="account-button" hidden>Account</button>
 
-  <button
-    id="logoutButton"
-    type="button"
-    style="width:100%; text-align:left; background:none; border:none; padding:10px 12px; border-radius:8px; cursor:pointer;"
-  >
-    Uitloggen
-  </button>
-</div>
-  </div>
+        <div
+          id="accountMenu"
+          hidden
+          style="position:absolute; top:100%; right:0; margin-top:8px; background:#fff; border:1px solid #d1d5db; border-radius:12px; padding:8px; min-width:180px; box-shadow:0 10px 30px rgba(0,0,0,0.08);"
+        >
+          <button
+            id="profileButton"
+            type="button"
+            style="width:100%; text-align:left; background:none; border:none; padding:10px 12px; border-radius:8px; cursor:pointer;"
+          >
+            Ga naar profiel
+          </button>
 
-  <h1 id="pageHeading">KennisSprint</h1>
+          <button
+            id="logoutButton"
+            type="button"
+            style="width:100%; text-align:left; background:none; border:none; padding:10px 12px; border-radius:8px; cursor:pointer;"
+          >
+            Uitloggen
+          </button>
+        </div>
+      </div>
+
+      <h1 id="pageHeading">KennisSprint</h1>
       <p id="pageIntro" class="intro">
         Kies eerst een vak, niveau en jaar om naar de juiste cursus te gaan.
       </p>
@@ -71,601 +71,315 @@
     </section>
   </main>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="js/supabaseClient.js"></script>
-
-<script type="module">
-  import { courseCatalog } from "./data.js";
-
-  const supabase = window.supabaseClient;
-  async function requireAuth() {
-    const { data, error } = await supabase.auth.getUser();
-
-    if (error || !data?.user) {
-      window.location.href = "login.html";
-      return null;
-    }
-
-    return data.user;
-  }
-
-   const subjectSelect = document.getElementById("subjectSelect");
-  const levelSelect = document.getElementById("levelSelect");
-  const gradeSelect = document.getElementById("gradeSelect");
-  const openCourseButton = document.getElementById("openCourseButton");
-  const selectionMessage = document.getElementById("selectionMessage");
- const accountButton = document.getElementById("accountButton");
-const accountMenu = document.getElementById("accountMenu");
-const logoutButton = document.getElementById("logoutButton");
-const profileButton = document.getElementById("profileButton");
-  function getUniqueValues(key, courses) {
-    return [...new Set(courses.map(course => course[key]))];
-  }
-
-  function populateSelect(selectElement, values, placeholder, selectedValue = "") {
-    selectElement.innerHTML = "";
-
-    const placeholderOption = document.createElement("option");
-    placeholderOption.value = "";
-    placeholderOption.textContent = placeholder;
-    selectElement.appendChild(placeholderOption);
-
-    values.forEach((value) => {
-      const option = document.createElement("option");
-      option.value = value;
-      option.textContent = value;
-
-      if (value === selectedValue) {
-        option.selected = true;
-      }
-
-      selectElement.appendChild(option);
-    });
-  }
-
-  function getCoursesBySubject(subject) {
-    return courseCatalog.filter(course => course.subject === subject);
-  }
-
-  function getCoursesBySubjectAndLevel(subject, level) {
-    return courseCatalog.filter(
-      course => course.subject === subject && course.level === level
-    );
-  }
-
-  function findCourse(subject, level, grade) {
-    return courseCatalog.find(
-      course =>
-        course.subject === subject &&
-        course.level === level &&
-        course.grade === grade
-    );
-  }
-
-  function refreshLevelSelect() {
-    const selectedSubject = subjectSelect.value;
-
-    if (!selectedSubject) {
-      populateSelect(levelSelect, [], "Kies niveau");
-      populateSelect(gradeSelect, [], "Kies jaar");
-      return;
-    }
-
-    const coursesForSubject = getCoursesBySubject(selectedSubject);
-    const availableLevels = getUniqueValues("level", coursesForSubject);
-
-    populateSelect(levelSelect, availableLevels, "Kies niveau");
-    populateSelect(gradeSelect, [], "Kies jaar");
-  }
-
-  function refreshGradeSelect() {
-    const selectedSubject = subjectSelect.value;
-    const selectedLevel = levelSelect.value;
-
-    if (!selectedSubject || !selectedLevel) {
-      populateSelect(gradeSelect, [], "Kies jaar");
-      return;
-    }
-
-    const coursesForSubjectAndLevel = getCoursesBySubjectAndLevel(
-      selectedSubject,
-      selectedLevel
-    );
-
-    const availableGrades = getUniqueValues("grade", coursesForSubjectAndLevel);
-
-    populateSelect(gradeSelect, availableGrades, "Kies jaar");
-  }
-
-  function initSelectors() {
-    const subjects = getUniqueValues("subject", courseCatalog);
-    populateSelect(subjectSelect, subjects, "Kies vak");
-    populateSelect(levelSelect, [], "Kies niveau");
-    populateSelect(gradeSelect, [], "Kies jaar");
-  }
-
-  subjectSelect.addEventListener("change", () => {
-    refreshLevelSelect();
-    selectionMessage.textContent = "";
-  });
-
-  levelSelect.addEventListener("change", () => {
-    refreshGradeSelect();
-    selectionMessage.textContent = "";
-  });
-
-  gradeSelect.addEventListener("change", () => {
-    selectionMessage.textContent = "";
-  });
-
-  openCourseButton.addEventListener("click", () => {
-    const subject = subjectSelect.value;
-    const level = levelSelect.value;
-    const grade = gradeSelect.value;
-
-    if (!subject || !level || !grade) {
-      selectionMessage.textContent = "Kies eerst vak, niveau en jaar.";
-      return;
-    }
-
-    const course = findCourse(subject, level, grade);
-
-    if (!course) {
-      selectionMessage.textContent = "Voor deze combinatie bestaat nog geen cursus.";
-      return;
-    }
-
-    window.location.href =
-      "course.html?course=" + encodeURIComponent(course.id);
-  });
-
-  async function showAccountButton(user) {
-    if (!accountButton) return;
-
-    const { data, error } = await supabase
-      .from("profiles")
-      .select("display_name")
-      .eq("id", user.id)
-      .maybeSingle();
-
-    if (error) {
-      console.error("Accountnaam laden mislukt:", error);
-      accountButton.textContent = user.email || "Account";
-      accountButton.hidden = false;
-      return;
-    }
-
-    const name = data?.display_name?.trim();
-
-    if (name) {
-      accountButton.textContent = name;
-    } else {
-      accountButton.textContent = user.email || "Account";
-    }
-
-    accountButton.hidden = false;
-  }
-  
-async function logout() {
-  const { error } = await supabase.auth.signOut();
-
-  if (error) {
-    console.error("Uitloggen mislukt:", error);
-    alert("Uitloggen mislukt: " + error.message);
-    return;
-  }
-
-  window.location.href = "login.html";
-}
-
-function bindAccountMenu() {
-  if (accountButton && accountMenu) {
-    accountButton.addEventListener("click", () => {
-      accountMenu.hidden = !accountMenu.hidden;
-    });
-  }
-
-   if (profileButton) {
-    profileButton.addEventListener("click", () => {
-      window.location.href = "profile.html";
-    });
-  }
-
-  if (logoutButton) {
-    logoutButton.addEventListener("click", logout);
-  }
-
-  document.addEventListener("click", (event) => {
-    if (!accountButton || !accountMenu) return;
-    if (accountMenu.hidden) return;
-
-    const clickedInsideButton = accountButton.contains(event.target);
-    const clickedInsideMenu = accountMenu.contains(event.target);
-
-    if (!clickedInsideButton && !clickedInsideMenu) {
-      accountMenu.hidden = true;
-    }
-  });
-}
-
-async function ensureProfileComplete(user) {
-  const { data, error } = await supabase
-    .from("profiles")
-    .select("display_name")
-    .eq("id", user.id)
-    .maybeSingle();
-
-  if (error) {
-    console.error("Profielcontrole mislukt:", error);
-    return false;
-  }
-
-  const displayName = data?.display_name?.trim();
-
-  if (!displayName) {
-    window.location.href = "profile.html";
-    return false;
-  }
-
-  return true;
-}
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
 
   <script type="module">
-  import { courseCatalog } from "./data.js";
+    import { courseCatalog } from "./data.js";
 
-  const supabase = window.supabaseClient;
+    const supabase = window.supabaseClient;
 
-  async function requireAuth() {
-    const { data, error } = await supabase.auth.getUser();
+    const subjectSelect = document.getElementById("subjectSelect");
+    const levelSelect = document.getElementById("levelSelect");
+    const gradeSelect = document.getElementById("gradeSelect");
+    const openCourseButton = document.getElementById("openCourseButton");
+    const selectionMessage = document.getElementById("selectionMessage");
+    const accountButton = document.getElementById("accountButton");
+    const accountMenu = document.getElementById("accountMenu");
+    const logoutButton = document.getElementById("logoutButton");
+    const profileButton = document.getElementById("profileButton");
 
-    if (error || !data?.user) {
-      window.location.href = "login.html";
-      return null;
-    }
+    async function requireAuth() {
+      const { data, error } = await supabase.auth.getUser();
 
-    return data.user;
-  }
-
-  const subjectSelect = document.getElementById("subjectSelect");
-  const levelSelect = document.getElementById("levelSelect");
-  const gradeSelect = document.getElementById("gradeSelect");
-  const openCourseButton = document.getElementById("openCourseButton");
-  const selectionMessage = document.getElementById("selectionMessage");
-  const accountButton = document.getElementById("accountButton");
-  const accountMenu = document.getElementById("accountMenu");
-  const logoutButton = document.getElementById("logoutButton");
-  const profileButton = document.getElementById("profileButton");
-
-  function getUniqueValues(key, courses) {
-    return [...new Set(courses.map(course => course[key]))];
-  }
-
-  function populateSelect(selectElement, values, placeholder, selectedValue = "") {
-    selectElement.innerHTML = "";
-
-    const placeholderOption = document.createElement("option");
-    placeholderOption.value = "";
-    placeholderOption.textContent = placeholder;
-    selectElement.appendChild(placeholderOption);
-
-    values.forEach((value) => {
-      const option = document.createElement("option");
-      option.value = value;
-      option.textContent = value;
-
-      if (value === selectedValue) {
-        option.selected = true;
+      if (error || !data?.user) {
+        window.location.href = "login.html";
+        return null;
       }
 
-      selectElement.appendChild(option);
-    });
-  }
+      return data.user;
+    }
 
-  function getCoursesBySubject(subject) {
-    return courseCatalog.filter(course => course.subject === subject);
-  }
+    function getUniqueValues(key, courses) {
+      return [...new Set(courses.map((course) => course[key]))];
+    }
 
-  function getCoursesBySubjectAndLevel(subject, level) {
-    return courseCatalog.filter(
-      course => course.subject === subject && course.level === level
-    );
-  }
+    function populateSelect(selectElement, values, placeholder, selectedValue = "") {
+      selectElement.innerHTML = "";
 
-  function findCourse(subject, level, grade) {
-    return courseCatalog.find(
-      course =>
-        course.subject === subject &&
-        course.level === level &&
-        course.grade === grade
-    );
-  }
+      const placeholderOption = document.createElement("option");
+      placeholderOption.value = "";
+      placeholderOption.textContent = placeholder;
+      selectElement.appendChild(placeholderOption);
 
-  function refreshLevelSelect() {
-    const selectedSubject = subjectSelect.value;
+      values.forEach((value) => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = value;
 
-    if (!selectedSubject) {
+        if (value === selectedValue) {
+          option.selected = true;
+        }
+
+        selectElement.appendChild(option);
+      });
+    }
+
+    function getCoursesBySubject(subject) {
+      return courseCatalog.filter((course) => course.subject === subject);
+    }
+
+    function getCoursesBySubjectAndLevel(subject, level) {
+      return courseCatalog.filter(
+        (course) => course.subject === subject && course.level === level
+      );
+    }
+
+    function findCourse(subject, level, grade) {
+      return courseCatalog.find(
+        (course) =>
+          course.subject === subject &&
+          course.level === level &&
+          course.grade === grade
+      );
+    }
+
+    function refreshLevelSelect() {
+      const selectedSubject = subjectSelect.value;
+
+      if (!selectedSubject) {
+        populateSelect(levelSelect, [], "Kies niveau");
+        populateSelect(gradeSelect, [], "Kies jaar");
+        return;
+      }
+
+      const coursesForSubject = getCoursesBySubject(selectedSubject);
+      const availableLevels = getUniqueValues("level", coursesForSubject);
+
+      populateSelect(levelSelect, availableLevels, "Kies niveau");
+      populateSelect(gradeSelect, [], "Kies jaar");
+    }
+
+    function refreshGradeSelect() {
+      const selectedSubject = subjectSelect.value;
+      const selectedLevel = levelSelect.value;
+
+      if (!selectedSubject || !selectedLevel) {
+        populateSelect(gradeSelect, [], "Kies jaar");
+        return;
+      }
+
+      const coursesForSubjectAndLevel = getCoursesBySubjectAndLevel(
+        selectedSubject,
+        selectedLevel
+      );
+
+      const availableGrades = getUniqueValues("grade", coursesForSubjectAndLevel);
+
+      populateSelect(gradeSelect, availableGrades, "Kies jaar");
+    }
+
+    function initSelectors() {
+      const subjects = getUniqueValues("subject", courseCatalog);
+      populateSelect(subjectSelect, subjects, "Kies vak");
       populateSelect(levelSelect, [], "Kies niveau");
       populateSelect(gradeSelect, [], "Kies jaar");
-      return;
     }
 
-    const coursesForSubject = getCoursesBySubject(selectedSubject);
-    const availableLevels = getUniqueValues("level", coursesForSubject);
+    async function showAccountButton(user) {
+      if (!accountButton) return;
 
-    populateSelect(levelSelect, availableLevels, "Kies niveau");
-    populateSelect(gradeSelect, [], "Kies jaar");
-  }
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("display_name")
+        .eq("id", user.id)
+        .maybeSingle();
 
-  function refreshGradeSelect() {
-    const selectedSubject = subjectSelect.value;
-    const selectedLevel = levelSelect.value;
+      if (error) {
+        console.error("Accountnaam laden mislukt:", error);
+        accountButton.textContent = user.email || "Account";
+        accountButton.hidden = false;
+        return;
+      }
 
-    if (!selectedSubject || !selectedLevel) {
-      populateSelect(gradeSelect, [], "Kies jaar");
-      return;
-    }
+      const name = data?.display_name?.trim();
 
-    const coursesForSubjectAndLevel = getCoursesBySubjectAndLevel(
-      selectedSubject,
-      selectedLevel
-    );
+      if (name) {
+        accountButton.textContent = name;
+      } else {
+        accountButton.textContent = user.email || "Account";
+      }
 
-    const availableGrades = getUniqueValues("grade", coursesForSubjectAndLevel);
-
-    populateSelect(gradeSelect, availableGrades, "Kies jaar");
-  }
-
-  function initSelectors() {
-    const subjects = getUniqueValues("subject", courseCatalog);
-    populateSelect(subjectSelect, subjects, "Kies vak");
-    populateSelect(levelSelect, [], "Kies niveau");
-    populateSelect(gradeSelect, [], "Kies jaar");
-  }
-
-  subjectSelect.addEventListener("change", () => {
-    refreshLevelSelect();
-    selectionMessage.textContent = "";
-  });
-
-  levelSelect.addEventListener("change", () => {
-    refreshGradeSelect();
-    selectionMessage.textContent = "";
-  });
-
-  gradeSelect.addEventListener("change", () => {
-    selectionMessage.textContent = "";
-  });
-
-  openCourseButton.addEventListener("click", () => {
-    const subject = subjectSelect.value;
-    const level = levelSelect.value;
-    const grade = gradeSelect.value;
-
-    if (!subject || !level || !grade) {
-      selectionMessage.textContent = "Kies eerst vak, niveau en jaar.";
-      return;
-    }
-
-    const course = findCourse(subject, level, grade);
-
-    if (!course) {
-      selectionMessage.textContent = "Voor deze combinatie bestaat nog geen cursus.";
-      return;
-    }
-
-    window.location.href =
-      "course.html?course=" + encodeURIComponent(course.id);
-  });
-
-  async function showAccountButton(user) {
-    if (!accountButton) return;
-
-    const { data, error } = await supabase
-      .from("profiles")
-      .select("display_name")
-      .eq("id", user.id)
-      .maybeSingle();
-
-    if (error) {
-      console.error("Accountnaam laden mislukt:", error);
-      accountButton.textContent = user.email || "Account";
       accountButton.hidden = false;
-      return;
     }
 
-    const name = data?.display_name?.trim();
+    async function logout() {
+      const { error } = await supabase.auth.signOut();
 
-    if (name) {
-      accountButton.textContent = name;
-    } else {
-      accountButton.textContent = user.email || "Account";
+      if (error) {
+        console.error("Uitloggen mislukt:", error);
+        alert("Uitloggen mislukt: " + error.message);
+        return;
+      }
+
+      window.location.href = "login.html";
     }
 
-    accountButton.hidden = false;
-  }
+    function bindAccountMenu() {
+      if (accountButton && accountMenu) {
+        accountButton.addEventListener("click", () => {
+          accountMenu.hidden = !accountMenu.hidden;
+        });
+      }
 
-  async function logout() {
-    const { error } = await supabase.auth.signOut();
+      if (profileButton) {
+        profileButton.addEventListener("click", () => {
+          window.location.href = "profile.html";
+        });
+      }
 
-    if (error) {
-      console.error("Uitloggen mislukt:", error);
-      alert("Uitloggen mislukt: " + error.message);
-      return;
-    }
+      if (logoutButton) {
+        logoutButton.addEventListener("click", logout);
+      }
 
-    window.location.href = "login.html";
-  }
+      document.addEventListener("click", (event) => {
+        if (!accountButton || !accountMenu) return;
+        if (accountMenu.hidden) return;
 
-  function bindAccountMenu() {
-    if (accountButton && accountMenu) {
-      accountButton.addEventListener("click", () => {
-        accountMenu.hidden = !accountMenu.hidden;
+        const clickedInsideButton = accountButton.contains(event.target);
+        const clickedInsideMenu = accountMenu.contains(event.target);
+
+        if (!clickedInsideButton && !clickedInsideMenu) {
+          accountMenu.hidden = true;
+        }
       });
     }
 
-    if (profileButton) {
-      profileButton.addEventListener("click", () => {
+    async function ensureProfileComplete(user) {
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("display_name")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      if (error) {
+        console.error("Profielcontrole mislukt:", error);
+        return false;
+      }
+
+      const displayName = data?.display_name?.trim();
+
+      if (!displayName) {
         window.location.href = "profile.html";
-      });
-    }
-
-    if (logoutButton) {
-      logoutButton.addEventListener("click", logout);
-    }
-
-    document.addEventListener("click", (event) => {
-      if (!accountButton || !accountMenu) return;
-      if (accountMenu.hidden) return;
-
-      const clickedInsideButton = accountButton.contains(event.target);
-      const clickedInsideMenu = accountMenu.contains(event.target);
-
-      if (!clickedInsideButton && !clickedInsideMenu) {
-        accountMenu.hidden = true;
+        return false;
       }
+
+      return true;
+    }
+
+    async function fetchUserProgress(userId) {
+      const { data, error } = await supabase
+        .from("cards_progress")
+        .select("card_id, level")
+        .eq("user_id", userId);
+
+      if (error) {
+        console.error("Voortgang laden mislukt:", error);
+        return [];
+      }
+
+      return data || [];
+    }
+
+    function buildSubjectMasteryStats(progressRows) {
+      const progressMap = new Map(
+        progressRows.map((row) => [row.card_id, row.level ?? 0])
+      );
+
+      const subjectStats = {};
+
+      for (const course of courseCatalog) {
+        const subject = course.subject;
+        const terms = course.datasets?.terms || [];
+        const years = course.datasets?.years || [];
+
+        if (!subjectStats[subject]) {
+          subjectStats[subject] = {
+            subject,
+            total: 0,
+            levels: [0, 0, 0, 0, 0, 0]
+          };
+        }
+
+        const allCards = [...terms, ...years];
+
+        for (const card of allCards) {
+          const cardId = card.cardId || card.id;
+          const rawLevel = progressMap.has(cardId) ? progressMap.get(cardId) : 0;
+          const level = Math.max(0, Math.min(5, Number(rawLevel) || 0));
+
+          subjectStats[subject].total += 1;
+          subjectStats[subject].levels[level] += 1;
+        }
+      }
+
+      return Object.values(subjectStats);
+    }
+
+    subjectSelect.addEventListener("change", () => {
+      refreshLevelSelect();
+      selectionMessage.textContent = "";
     });
-  }
 
-  async function ensureProfileComplete(user) {
-    const { data, error } = await supabase
-      .from("profiles")
-      .select("display_name")
-      .eq("id", user.id)
-      .maybeSingle();
+    levelSelect.addEventListener("change", () => {
+      refreshGradeSelect();
+      selectionMessage.textContent = "";
+    });
 
-    if (error) {
-      console.error("Profielcontrole mislukt:", error);
-      return false;
-    }
+    gradeSelect.addEventListener("change", () => {
+      selectionMessage.textContent = "";
+    });
 
-    const displayName = data?.display_name?.trim();
+    openCourseButton.addEventListener("click", () => {
+      const subject = subjectSelect.value;
+      const level = levelSelect.value;
+      const grade = gradeSelect.value;
 
-    if (!displayName) {
-      window.location.href = "profile.html";
-      return false;
-    }
-
-    return true;
-  }
-
-  async function fetchUserProgress(userId) {
-    const { data, error } = await supabase
-      .from("cards_progress")
-      .select("card_id, level")
-      .eq("user_id", userId);
-
-    if (error) {
-      console.error("Voortgang laden mislukt:", error);
-      return [];
-    }
-
-    return data || [];
-  }
-
-  function buildSubjectMasteryStats(progressRows) {
-    const progressMap = new Map(
-      progressRows.map((row) => [row.card_id, row.level ?? 0])
-    );
-
-    const subjectStats = {};
-
-    for (const course of courseCatalog) {
-      const subject = course.subject;
-      const terms = course.datasets?.terms || [];
-      const years = course.datasets?.years || [];
-
-      if (!subjectStats[subject]) {
-        subjectStats[subject] = {
-          subject,
-          total: 0,
-          levels: [0, 0, 0, 0, 0, 0]
-        };
+      if (!subject || !level || !grade) {
+        selectionMessage.textContent = "Kies eerst vak, niveau en jaar.";
+        return;
       }
 
-      const allCards = [...terms, ...years];
+      const course = findCourse(subject, level, grade);
 
-      for (const card of allCards) {
-        const cardId = card.cardId || card.id;
-        const rawLevel = progressMap.has(cardId) ? progressMap.get(cardId) : 0;
-        const level = Math.max(0, Math.min(5, Number(rawLevel) || 0));
-
-        subjectStats[subject].total += 1;
-        subjectStats[subject].levels[level] += 1;
+      if (!course) {
+        selectionMessage.textContent = "Voor deze combinatie bestaat nog geen cursus.";
+        return;
       }
+
+      window.location.href =
+        "course.html?course=" + encodeURIComponent(course.id);
+    });
+
+    async function bootIndex() {
+      const user = await requireAuth();
+      if (!user) return;
+
+      const profileComplete = await ensureProfileComplete(user);
+      if (!profileComplete) return;
+
+      await showAccountButton(user);
+      bindAccountMenu();
+      initSelectors();
+
+      const progressRows = await fetchUserProgress(user.id);
+      const subjectStats = buildSubjectMasteryStats(progressRows);
+
+      console.log("cards_progress rows:", progressRows);
+      console.log("subject mastery stats:", subjectStats);
     }
 
-    return Object.values(subjectStats);
-  }
-
-  async function fetchUserProgress(userId) {
-  const { data, error } = await supabase
-    .from("cards_progress")
-    .select("card_id, level")
-    .eq("user_id", userId);
-
-  if (error) {
-    console.error("Voortgang laden mislukt:", error);
-    return [];
-  }
-
-  return data || [];
-}
-
-function buildSubjectMasteryStats(progressRows) {
-  const progressMap = new Map(
-    progressRows.map((row) => [row.card_id, row.level ?? 0])
-  );
-
-  const subjectStats = {};
-
-  for (const course of courseCatalog) {
-    const subject = course.subject;
-    const terms = course.datasets?.terms || [];
-    const years = course.datasets?.years || [];
-
-    if (!subjectStats[subject]) {
-      subjectStats[subject] = {
-        subject,
-        total: 0,
-        levels: [0, 0, 0, 0, 0, 0]
-      };
-    }
-
-    const allCards = [...terms, ...years];
-
-    for (const card of allCards) {
-      const cardId = card.cardId || card.id;
-      const rawLevel = progressMap.has(cardId) ? progressMap.get(cardId) : 0;
-      const level = Math.max(0, Math.min(5, Number(rawLevel) || 0));
-
-      subjectStats[subject].total += 1;
-      subjectStats[subject].levels[level] += 1;
-    }
-  }
-
-  return Object.values(subjectStats);
-}
-
-async function bootIndex() {
-  const user = await requireAuth();
-  if (!user) return;
-
-  const profileComplete = await ensureProfileComplete(user);
-  if (!profileComplete) return;
-
-  await showAccountButton(user);
-  bindAccountMenu();
-  initSelectors();
-
-  const progressRows = await fetchUserProgress(user.id);
-  const subjectStats = buildSubjectMasteryStats(progressRows);
-
-  console.log("cards_progress rows:", progressRows);
-  console.log("subject mastery stats:", subjectStats);
-}
-
-bootIndex();
-
-</script>
+    bootIndex();
+  </script>
 </body>
 </html>
