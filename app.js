@@ -1103,12 +1103,8 @@ function loadChapters() {
   chapterSelect.innerHTML = "";
   chapterTileGrid.innerHTML = "";
 
-  if (activeCourse.chapters.length > 8) {
-    chapterTileGrid.classList.add("compact");
-  } else {
-    chapterTileGrid.classList.remove("compact");
-  }
-
+// layout altijd gelijk houden
+chapterTileGrid.classList.remove("compact");
   activeCourse.chapters.forEach((chapter) => {
     const option = document.createElement("option");
     option.value = chapter.id;
