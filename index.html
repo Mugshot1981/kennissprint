@@ -88,8 +88,13 @@
     const accountButton = document.getElementById("accountButton");
     const accountMenu = document.getElementById("accountMenu");
     const logoutButton = document.getElementById("logoutButton");
-    const profileButton = document.getElementById("profileButton");
+       const profileButton = document.getElementById("profileButton");
 
+    let currentProfile = {
+      displayName: "",
+      level: "",
+      grade: ""
+    };
     async function requireAuth() {
       const { data, error } = await supabase.auth.getUser();
 
