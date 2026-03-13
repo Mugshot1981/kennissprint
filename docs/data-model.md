@@ -431,3 +431,18 @@ hoofdstukprogress
 aanbevolen oefensessies
 
 toekomstige leaderboards
+
+Tabellen
+profiles
+profiles
+id (uuid, pk, auth.users)
+display_name (text)
+level (text)      // mavo / havo / vwo
+grade (text)      // leerjaar
+created_at
+cards_progress
+cards_progress
+user_id (uuid)
+card_id (text)
+level (int)       // 0–5 mastery level
+updated_at
