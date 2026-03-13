@@ -261,10 +261,10 @@
       });
     }
 
-    async function ensureProfileComplete(user) {
+       async function ensureProfileComplete(user) {
       const { data, error } = await supabase
         .from("profiles")
-        .select("display_name")
+        .select("display_name, level, grade")
         .eq("id", user.id)
         .maybeSingle();
 
@@ -273,9 +273,17 @@
         return false;
       }
 
-      const displayName = data?.display_name?.trim();
+      const displayName = data?.display_name?.trim() || "";
+      const level = data?.level?.trim() || "";
+      const grade = data?.grade?.trim() || "";
 
-      if (!displayName) {
+      currentProfile = {
+        displayName,
+        level,
+        grade
+      };
+
+      if (!displayName || !level || !grade) {
         window.location.href = "profile.html";
         return false;
       }
