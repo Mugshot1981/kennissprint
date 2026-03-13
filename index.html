@@ -148,8 +148,9 @@
         (course) => course.subject === subject && course.level === level
       );
     }
-    function findCourse(subject, level, grade) {
-      return courseCatalog.find(
+    
+      function findCourse(subject, level, grade) {
+      return getFilteredCourses().find(
         (course) =>
           course.subject === subject &&
           course.level === level &&
