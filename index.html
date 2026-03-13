@@ -431,11 +431,13 @@ function renderSubjectDashboard(subjectStats) {
       bindAccountMenu();
       initSelectors();
 
-      const progressRows = await fetchUserProgress(user.id);
+          const progressRows = await fetchUserProgress(user.id);
       const subjectStats = buildSubjectMasteryStats(progressRows);
 
       console.log("cards_progress rows:", progressRows);
       console.log("subject mastery stats:", subjectStats);
+
+      renderSubjectDashboard(subjectStats);
     }
 
     bootIndex();
