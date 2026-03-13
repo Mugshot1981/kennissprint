@@ -232,6 +232,20 @@ mastery learning
 adaptieve training
 docentinzichten
 
+Phase 1
+✓ auth
+✓ profiles
+✓ course selection
+✓ quiz engine
+✓ mastery tracking
+✓ dashboard
+
+Phase 2
+- spaced repetition scheduling
+- teacher dashboard
+- analytics
+- class groups
+
 
 Het uiteindelijke doel:
 
