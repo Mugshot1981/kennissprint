@@ -272,11 +272,11 @@
     currentUser = user;
     emailText.textContent = user.email || "-";
 
-    const { data, error } = await supabaseClient
-      .from("profiles")
-      .select("display_name")
-      .eq("id", user.id)
-      .maybeSingle();
+const { data, error } = await supabaseClient
+  .from("profiles")
+  .select("display_name, level, grade")
+  .eq("id", user.id)
+  .maybeSingle();
 
     if (error) {
       profileMessage.textContent = "Profiel laden mislukt: " + error.message;
