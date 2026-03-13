@@ -284,16 +284,16 @@ const { data, error } = await supabaseClient
     }
 
     currentDisplayName = data?.display_name?.trim() || "";
-    currentLevel = data?.level?.trim() || "";
-    currentGrade = data?.grade?.trim() || "";
+currentLevel = data?.level?.trim() || "";
+currentGrade = data?.grade?.trim() || "";
 
-    displayNameText.textContent = currentDisplayName || "Nog niet ingesteld";
-    levelText.textContent = currentLevel || "Nog niet ingesteld";
-    gradeText.textContent = currentGrade || "Nog niet ingesteld";
+displayNameText.textContent = currentDisplayName || "Nog niet ingesteld";
+levelText.textContent = currentLevel || "Nog niet ingesteld";
+gradeText.textContent = currentGrade || "Nog niet ingesteld";
 
-    if (!currentDisplayName) {
-      openEditPanel();
-    }
+if (!currentDisplayName) {
+  openEditPanel();
+}
   }
 
     async function saveName() {
