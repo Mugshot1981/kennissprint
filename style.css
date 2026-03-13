@@ -231,12 +231,6 @@ button {
   height: 42px;
 }
 
-#startButton {
-  height: 48px;
-  width: auto;
-  min-width: 220px;
-  white-space: nowrap;
-}
 
 /* ===== LANDING PAGE (index.html) ===== */
 
