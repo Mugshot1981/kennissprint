@@ -9,6 +9,6 @@ export const courseCatalog = [
   historyMavo4Course,
   historyHavo3Course,
   aardrijkskundeMavo4Course,
-  economieMavo4Course
+  economieMavo4Course,
   duitsMavo4Course
 ];
