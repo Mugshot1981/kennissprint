@@ -312,7 +312,7 @@
 
       const subjectStats = {};
 
-      for (const course of courseCatalog) {
+           for (const course of getFilteredCourses()) {
         const subject = course.subject;
         const terms = course.datasets?.terms || [];
         const years = course.datasets?.years || [];
