@@ -131,8 +131,16 @@
       });
     }
 
+       function getFilteredCourses() {
+      return courseCatalog.filter(
+        (course) =>
+          course.level === currentProfile.level &&
+          course.grade === currentProfile.grade
+      );
+    }
+
     function getCoursesBySubject(subject) {
-      return courseCatalog.filter((course) => course.subject === subject);
+      return getFilteredCourses().filter((course) => course.subject === subject);
     }
 
     function getCoursesBySubjectAndLevel(subject, level) {
