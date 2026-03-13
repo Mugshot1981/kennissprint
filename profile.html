@@ -300,10 +300,22 @@ displayNameText.textContent = currentDisplayName || "Nog niet ingesteld";
 levelText.textContent = currentLevel || "Nog niet ingesteld";
 gradeText.textContent = currentGrade || "Nog niet ingesteld";
 
+closeEditPanel();
+closeLevelPanel();
+closeGradePanel();
+
 if (!currentDisplayName) {
   openEditPanel();
 }
-  }
+
+if (!currentLevel) {
+  openLevelPanel();
+}
+
+if (!currentGrade) {
+  openGradePanel();
+}
+}
 
     async function saveName() {
     if (!currentUser) return;
