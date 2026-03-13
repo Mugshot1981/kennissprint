@@ -486,10 +486,19 @@
       });
     }
 
-    subjectSelect.addEventListener("change", () => {
-      refreshLevelSelect();
-      selectionMessage.textContent = "";
-    });
+subjectSelect.addEventListener("change", () => {
+  const subject = subjectSelect.value;
+
+  const courses = getCoursesBySubject(subject);
+
+  const levels = getUniqueValues("level", courses);
+  const grades = getUniqueValues("grade", courses);
+
+  populateSelect(levelSelect, levels, "Kies niveau");
+  populateSelect(gradeSelect, grades, "Kies jaar");
+
+  selectionMessage.textContent = "";
+});
 
     levelSelect.addEventListener("change", () => {
       refreshGradeSelect();
