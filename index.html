@@ -143,12 +143,11 @@
       return getFilteredCourses().filter((course) => course.subject === subject);
     }
 
-    function getCoursesBySubjectAndLevel(subject, level) {
-      return courseCatalog.filter(
+      function getCoursesBySubjectAndLevel(subject, level) {
+      return getFilteredCourses().filter(
         (course) => course.subject === subject && course.level === level
       );
     }
-
     function findCourse(subject, level, grade) {
       return courseCatalog.find(
         (course) =>
