@@ -222,16 +222,25 @@
   let currentDisplayName = "";
   let currentLevel = "";
   let currentGrade = "";
-  async function requireAuth() {
-    const { data, error } = await supabaseClient.auth.getUser();
 
-    if (error || !data?.user) {
-      window.location.href = "login.html";
-      return null;
-    }
+  
+ async function requireAuth() {
+  const { data, error } = await supabaseClient.auth.getUser();
+  const user = data?.user;
 
-    return data.user;
+  if (error || !user) {
+    window.location.href = "login.html";
+    return null;
   }
+
+  if (!user.email_confirmed_at) {
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+    return null;
+  }
+
+  return user;
+}
 
   function openEditPanel() {
     displayNameInput.value = currentDisplayName || "";
