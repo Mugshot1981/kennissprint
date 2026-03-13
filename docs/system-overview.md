@@ -417,3 +417,19 @@ progressMap vertaalt databaseprogress naar UI en selectie.
 De app werkt als mastery trainer:
 niet alles oefenen,
 maar steeds de juiste volgende 10 kaarten.
+
+Frontend
+  HTML + CSS + Vanilla JS
+
+Supabase
+  auth
+  profiles
+  cards_progress
+
+Dataset
+  static data.js
+
+Belangrijk detail:
+
+course content = static
+user progress = Supabase
