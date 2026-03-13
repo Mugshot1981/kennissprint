@@ -429,6 +429,22 @@ function renderSubjectDashboard(subjectStats) {
   }).join("");
   
   dashboard.innerHTML = `
+  const cards = dashboard.querySelectorAll(".subject-card");
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    const subject = card.dataset.subject;
+
+    const course = getFilteredCourses().find(
+      c => c.subject === subject
+    );
+
+    if (!course) return;
+
+    window.location.href =
+      "course.html?course=" + encodeURIComponent(course.id);
+  });
+});
     <div style="margin-bottom:16px; font-size:18px; font-weight:700; color:#0f172a;">
       Jouw vakken
     </div>
