@@ -434,49 +434,6 @@ nameEl.textContent = name || user.email || "Account";
       });
     }
 
-subjectSelect.addEventListener("change", () => {
-  const subject = subjectSelect.value;
-
-  const courses = getCoursesBySubject(subject);
-
-  const levels = getUniqueValues("level", courses);
-  const grades = getUniqueValues("grade", courses);
-
-  populateSelect(levelSelect, levels, "Kies niveau");
-  populateSelect(gradeSelect, grades, "Kies jaar");
-
-  selectionMessage.textContent = "";
-});
-
-    levelSelect.addEventListener("change", () => {
-      refreshGradeSelect();
-      selectionMessage.textContent = "";
-    });
-
-    gradeSelect.addEventListener("change", () => {
-      selectionMessage.textContent = "";
-    });
-
-    openCourseButton.addEventListener("click", () => {
-      const subject = subjectSelect.value;
-      const level = levelSelect.value;
-      const grade = gradeSelect.value;
-
-      if (!subject || !level || !grade) {
-        selectionMessage.textContent = "Kies eerst vak, niveau en jaar.";
-        return;
-      }
-
-      const course = findCourse(subject, level, grade);
-
-      if (!course) {
-        selectionMessage.textContent = "Voor deze combinatie bestaat nog geen cursus.";
-        return;
-      }
-
-      window.location.href =
-        "course.html?course=" + encodeURIComponent(course.id);
-    });
 
     async function bootIndex() {
       const user = await requireAuth();
@@ -487,7 +444,7 @@ subjectSelect.addEventListener("change", () => {
 
       await showAccountButton(user);
       bindAccountMenu();
-      initSelectors();
+      
 
       const progressRows = await fetchUserProgress(user.id);
       const subjectStats = buildSubjectMasteryStats(progressRows);
