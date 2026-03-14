@@ -281,8 +281,7 @@ async function saveNewPassword() {
     debugOutput.textContent = "De wachtwoorden zijn niet gelijk.";
     return;
   }
-
-  debugOutput.textContent = "Nieuw wachtwoord opslaan...";
+recoveryDebugOutput.textContent = "Nieuw wachtwoord opslaan...";";
 
   const { error } = await supabaseClient.auth.updateUser({
     password: newPassword
