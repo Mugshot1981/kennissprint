@@ -278,7 +278,7 @@ async function saveNewPassword() {
   }
 
   if (newPassword !== confirmPassword) {
-    debugOutput.textContent = "De wachtwoorden zijn niet gelijk.";
+ recoveryDebugOutput.textContent = "De wachtwoorden zijn niet gelijk.";
     return;
   }
 recoveryDebugOutput.textContent = "Nieuw wachtwoord opslaan...";";
@@ -288,7 +288,7 @@ recoveryDebugOutput.textContent = "Nieuw wachtwoord opslaan...";";
   });
 
   if (error) {
-    debugOutput.textContent = "FOUT: " + error.message;
+    recoveryDebugOutput.textContent = "FOUT: " + error.message;
     alert(error.message);
     return;
   }
