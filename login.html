@@ -161,7 +161,19 @@ const newPasswordInput = document.getElementById("newPassword");
 const confirmPasswordInput = document.getElementById("confirmPassword");
 const saveNewPasswordButton = document.getElementById("saveNewPasswordButton");
 
-   async function redirectIfAlreadyLoggedIn() {
+  async function redirectIfAlreadyLoggedIn() {
+  const hash = window.location.hash || "";
+  const isRecoveryLink =
+    hash.includes("type=recovery") ||
+    hash.includes("access_token=") ||
+    hash.includes("refresh_token=");
+
+  if (isRecoveryLink) {
+    recoveryBox.hidden = false;
+    debugOutput.textContent = "Stel hieronder je nieuwe wachtwoord in.";
+    return;
+  }
+
   const { data, error } = await supabaseClient.auth.getUser();
 
   console.log("login getUser:", data, error);
