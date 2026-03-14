@@ -270,15 +270,7 @@ Daarna kun je inloggen.
         return;
       }
 
-      if (!level) {
-        messageEl.textContent = "Kies een niveau.";
-        return;
-      }
-
-      if (!grade) {
-        messageEl.textContent = "Kies een jaar.";
-        return;
-      }
+   
 
       messageEl.textContent = "Bezig met account aanmaken...";
 
@@ -307,8 +299,8 @@ Daarna kun je inloggen.
             {
               id: userId,
               display_name: null,
-              level: level,
-              grade: grade
+              level: null,
+              grade: null
             },
             {
               onConflict: "id"
@@ -324,7 +316,6 @@ Daarna kun je inloggen.
       registerForm.hidden = true;
       successPanel.hidden = false;
       messageEl.textContent = "";
-    }
 
     createAccountButton.addEventListener("click", createAccount);
 
