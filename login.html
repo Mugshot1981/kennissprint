@@ -158,180 +158,164 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/supabaseClient.js"></script>
-  <script>
-    const supabaseClient = window.supabaseClient;
+<script>
+  const supabaseClient = window.supabaseClient;
 
-const loginCard = document.getElementById("loginCard");
-const recoveryCard = document.getElementById("recoveryCard");
+  const loginCard = document.getElementById("loginCard");
+  const recoveryCard = document.getElementById("recoveryCard");
 
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const debugOutput = document.getElementById("debugOutput");
-const recoveryDebugOutput = document.getElementById("recoveryDebugOutput");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
 
-const loginButton = document.getElementById("loginButton");
-const registerButton = document.getElementById("registerButton");
-const forgotPasswordButton = document.getElementById("forgotPasswordButton");
+  const debugOutput = document.getElementById("debugOutput");
+  const recoveryDebugOutput = document.getElementById("recoveryDebugOutput");
 
-const newPasswordInput = document.getElementById("newPassword");
-const confirmPasswordInput = document.getElementById("confirmPassword");
-const saveNewPasswordButton = document.getElementById("saveNewPasswordButton");
+  const loginButton = document.getElementById("loginButton");
+  const registerButton = document.getElementById("registerButton");
+  const forgotPasswordButton = document.getElementById("forgotPasswordButton");
+
+  const newPasswordInput = document.getElementById("newPassword");
+  const confirmPasswordInput = document.getElementById("confirmPassword");
+  const saveNewPasswordButton = document.getElementById("saveNewPasswordButton");
 
   async function redirectIfAlreadyLoggedIn() {
-  const hash = window.location.hash || "";
-  const isRecoveryLink =
-    hash.includes("type=recovery") ||
-    hash.includes("access_token=") ||
-    hash.includes("refresh_token=");
+    const hash = window.location.hash || "";
+    const isRecoveryLink =
+      hash.includes("type=recovery") ||
+      hash.includes("access_token=") ||
+      hash.includes("refresh_token=");
 
- if (isRecoveryLink) {
-  loginCard.style.display = "none";
-  recoveryCard.style.display = "block";
-  recoveryDebugOutput.textContent = "Stel hieronder je nieuwe wachtwoord in.";
-  return;
-}
-
-  const { data, error } = await supabaseClient.auth.getUser();
-
-  console.log("login getUser:", data, error);
-
-  const user = data?.user;
-
-  if (!user) return;
-
-  if (!user.email_confirmed_at) {
-    await supabaseClient.auth.signOut();
-    debugOutput.textContent = "Bevestig eerst je e-mailadres voordat je kunt inloggen.";
-    return;
-  }
-
-  window.location.href = "index.html";
-}
-
-async function login() {
-  const email = emailInput.value.trim();
-  const password = passwordInput.value;
-
-  if (!email || !password) {
-    debugOutput.textContent = "Vul e-mail en wachtwoord in.";
-    return;
-  }
-
-  debugOutput.textContent = "Bezig met inloggen...";
-
-  const { data, error } = await supabaseClient.auth.signInWithPassword({
-    email,
-    password
-  });
-
-  console.log("signInWithPassword result:", { data, error });
-
-  if (error) {
-    debugOutput.textContent = "FOUT: " + error.message;
-    alert(error.message);
-    return;
-  }
-
-  const user = data?.user;
-
-  if (!user || !user.email_confirmed_at) {
-    await supabaseClient.auth.signOut();
-    debugOutput.textContent = "Bevestig eerst je e-mailadres via de link in je mail.";
-    alert("Bevestig eerst je e-mailadres via de link in je mail.");
-    return;
-  }
-
-  debugOutput.textContent = "OK: ingelogd.";
-  window.location.href = "index.html";
-}
-
-async function sendPasswordReset() {
-  const email = emailInput.value.trim();
-
-  if (!email) {
-    debugOutput.textContent = "Vul eerst je e-mailadres in.";
-    return;
-  }
-
-  debugOutput.textContent = "Bezig met reset e-mail versturen...";
-
-  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-    redirectTo: window.location.origin + window.location.pathname
-  });
-
-  if (error) {
-    debugOutput.textContent = "FOUT: " + error.message;
-    alert(error.message);
-    return;
-  }
-
-  debugOutput.textContent = "Reset e-mail verstuurd. Controleer je mailbox.";
-}
-
-async function saveNewPassword() {
-  const newPassword = newPasswordInput.value;
-  const confirmPassword = confirmPasswordInput.value;
-
-  if (!newPassword || newPassword.length < 6) {
-    recoveryDebugOutput.textContent = "Kies een nieuw wachtwoord van minimaal 6 tekens.";
-    return;
-  }
-
-  if (newPassword !== confirmPassword) {
- recoveryDebugOutput.textContent = "De wachtwoorden zijn niet gelijk.";
-    return;
-  }
-recoveryDebugOutput.textContent = "Nieuw wachtwoord opslaan...";";
-
-  const { error } = await supabaseClient.auth.updateUser({
-    password: newPassword
-  });
-
-  if (error) {
-    recoveryDebugOutput.textContent = "FOUT: " + error.message;
-    alert(error.message);
-    return;
-  }
-
- recoveryDebugOutput.textContent = "Nieuw wachtwoord opgeslagen. Je kunt nu inloggen.";
-recoveryCard.style.display = "none";
-loginCard.style.display = "block";
-newPasswordInput.value = "";
-confirmPasswordInput.value = "";
-window.history.replaceState({}, document.title, window.location.pathname);
-
-    async function register() {
-      const email = emailInput.value.trim();
-      const password = passwordInput.value;
-
-      debugOutput.textContent = "Bezig met account aanmaken...";
-
-      const { data, error } = await supabaseClient.auth.signUp({
-        email,
-        password
-      });
-
-      console.log("signUp result:", { data, error });
-
-      if (error) {
-        debugOutput.textContent = "FOUT: " + error.message;
-        alert(error.message);
-        return;
-      }
-
-      debugOutput.textContent = "OK: account aangemaakt. Log nu in.";
-      alert("Account aangemaakt. Log nu in met je e-mail en wachtwoord.");
+    if (isRecoveryLink) {
+      loginCard.style.display = "none";
+      recoveryCard.style.display = "block";
+      recoveryDebugOutput.textContent = "Stel hieronder je nieuwe wachtwoord in.";
+      return;
     }
 
-loginButton.addEventListener("click", login);
-registerButton.addEventListener("click", () => {
-  window.location.href = "register.html";
-});
-forgotPasswordButton.addEventListener("click", sendPasswordReset);
-saveNewPasswordButton.addEventListener("click", saveNewPassword);
+    const { data, error } = await supabaseClient.auth.getUser();
 
-redirectIfAlreadyLoggedIn();
-  </script>
+    console.log("login getUser:", data, error);
+
+    const user = data?.user;
+
+    if (!user) return;
+
+    if (!user.email_confirmed_at) {
+      await supabaseClient.auth.signOut();
+      debugOutput.textContent = "Bevestig eerst je e-mailadres voordat je kunt inloggen.";
+      return;
+    }
+
+    window.location.href = "index.html";
+  }
+
+  async function login() {
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+
+    if (!email || !password) {
+      debugOutput.textContent = "Vul e-mail en wachtwoord in.";
+      return;
+    }
+
+    debugOutput.textContent = "Bezig met inloggen...";
+
+    const { data, error } = await supabaseClient.auth.signInWithPassword({
+      email,
+      password
+    });
+
+    console.log("signInWithPassword result:", { data, error });
+
+    if (error) {
+      debugOutput.textContent = "FOUT: " + error.message;
+      alert(error.message);
+      return;
+    }
+
+    const user = data?.user;
+
+    if (!user || !user.email_confirmed_at) {
+      await supabaseClient.auth.signOut();
+      debugOutput.textContent = "Bevestig eerst je e-mailadres via de link in je mail.";
+      alert("Bevestig eerst je e-mailadres via de link in je mail.");
+      return;
+    }
+
+    debugOutput.textContent = "OK: ingelogd.";
+    window.location.href = "index.html";
+  }
+
+  async function sendPasswordReset(event) {
+    if (event) event.preventDefault();
+
+    const email = emailInput.value.trim();
+
+    if (!email) {
+      debugOutput.textContent = "Vul eerst je e-mailadres in.";
+      return;
+    }
+
+    debugOutput.textContent = "Bezig met reset e-mail versturen...";
+
+    const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin + window.location.pathname
+    });
+
+    if (error) {
+      debugOutput.textContent = "FOUT: " + error.message;
+      alert(error.message);
+      return;
+    }
+
+    debugOutput.textContent = "Reset e-mail verstuurd. Controleer je mailbox.";
+  }
+
+  async function saveNewPassword() {
+    const newPassword = newPasswordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    if (!newPassword || newPassword.length < 6) {
+      recoveryDebugOutput.textContent = "Kies een nieuw wachtwoord van minimaal 6 tekens.";
+      return;
+    }
+
+    if (newPassword !== confirmPassword) {
+      recoveryDebugOutput.textContent = "De wachtwoorden zijn niet gelijk.";
+      return;
+    }
+
+    recoveryDebugOutput.textContent = "Nieuw wachtwoord opslaan...";
+
+    const { error } = await supabaseClient.auth.updateUser({
+      password: newPassword
+    });
+
+    if (error) {
+      recoveryDebugOutput.textContent = "FOUT: " + error.message;
+      alert(error.message);
+      return;
+    }
+
+    recoveryDebugOutput.textContent = "Nieuw wachtwoord opgeslagen. Je kunt nu inloggen.";
+    recoveryCard.style.display = "none";
+    loginCard.style.display = "block";
+    newPasswordInput.value = "";
+    confirmPasswordInput.value = "";
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+
+  loginButton.addEventListener("click", login);
+
+  registerButton.addEventListener("click", () => {
+    window.location.href = "register.html";
+  });
+
+  forgotPasswordButton.addEventListener("click", sendPasswordReset);
+  saveNewPasswordButton.addEventListener("click", saveNewPassword);
+
+  redirectIfAlreadyLoggedIn();
+</script>
 </body>
 
   
