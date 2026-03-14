@@ -45,13 +45,41 @@
 
       <h1 id="pageHeading">KennisSprint</h1>
 
-      <div id="subjectDashboard" style="margin: 0 0 24px 0;"></div>
+          <div id="subjectDashboard" style="margin: 0 0 24px 0;"></div>
       <div id="recommendedSession" style="margin: 0 0 32px 0;"></div>
 
       <p id="pageIntro" class="intro">
         Kies eerst een vak, niveau en jaar om naar de juiste cursus te gaan.
       </p>
 
+      <div class="course-picker">
+        <div class="picker-row">
+          <label for="subjectSelect"><strong>Vak:</strong></label>
+          <select id="subjectSelect">
+            <option value="">Kies vak</option>
+          </select>
+        </div>
+
+        <div class="picker-row">
+          <label for="levelSelect"><strong>Niveau:</strong></label>
+          <select id="levelSelect">
+            <option value="">Kies niveau</option>
+          </select>
+        </div>
+
+        <div class="picker-row">
+          <label for="gradeSelect"><strong>Jaar:</strong></label>
+          <select id="gradeSelect">
+            <option value="">Kies jaar</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="landing-actions">
+        <button id="openCourseButton" type="button">Open cursus</button>
+      </div>
+
+      <p id="selectionMessage" class="intro"></p>
     
     </section>
   </main>
@@ -63,12 +91,6 @@
     import { courseCatalog } from "./data.js";
 
     const supabase = window.supabaseClient;
-
-    const subjectSelect = document.getElementById("subjectSelect");
-    const levelSelect = document.getElementById("levelSelect");
-    const gradeSelect = document.getElementById("gradeSelect");
-    const openCourseButton = document.getElementById("openCourseButton");
-    const selectionMessage = document.getElementById("selectionMessage");
     const accountButton = document.getElementById("accountButton");
     const accountMenu = document.getElementById("accountMenu");
     const logoutButton = document.getElementById("logoutButton");
@@ -95,27 +117,6 @@
       return [...new Set(courses.map((course) => course[key]))];
     }
 
-    function populateSelect(selectElement, values, placeholder, selectedValue = "") {
-      selectElement.innerHTML = "";
-
-      const placeholderOption = document.createElement("option");
-      placeholderOption.value = "";
-      placeholderOption.textContent = placeholder;
-      selectElement.appendChild(placeholderOption);
-
-      values.forEach((value) => {
-        const option = document.createElement("option");
-        option.value = value;
-        option.textContent = value;
-
-        if (value === selectedValue) {
-          option.selected = true;
-        }
-
-        selectElement.appendChild(option);
-      });
-    }
-
     function getFilteredCourses() {
       return courseCatalog.filter(
         (course) =>
@@ -126,33 +127,6 @@
 
     function getCoursesBySubject(subject) {
       return getFilteredCourses().filter((course) => course.subject === subject);
-    }
-
-    function findCourse(subject, level, grade) {
-      return getFilteredCourses().find(
-        (course) =>
-          course.subject === subject &&
-          course.level === level &&
-          course.grade === grade
-      );
-    }
-
-    function refreshLevelSelect() {
-      populateSelect(levelSelect, [currentProfile.level], "Kies niveau", currentProfile.level);
-      populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
-    }
-
-    function refreshGradeSelect() {
-      populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
-    }
-
-    function initSelectors() {
-      const filteredCourses = getFilteredCourses();
-      const subjects = getUniqueValues("subject", filteredCourses);
-
-      populateSelect(subjectSelect, subjects, "Kies vak");
-      populateSelect(levelSelect, [currentProfile.level], "Kies niveau", currentProfile.level);
-      populateSelect(gradeSelect, [currentProfile.grade], "Kies jaar", currentProfile.grade);
     }
 
     async function showAccountButton(user) {
