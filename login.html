@@ -205,8 +205,8 @@
       debugOutput.textContent = "Bevestig eerst je e-mailadres voordat je kunt inloggen.";
       return;
     }
-
-    window.location.href = "index.html";
+    const target = await getPostLoginTarget(user.id);
+    window.location.href = target;
   }
   
   async function getPostLoginTarget(userId) {
