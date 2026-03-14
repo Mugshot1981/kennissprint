@@ -208,7 +208,29 @@
 
     window.location.href = "index.html";
   }
+  
+  async function getPostLoginTarget(userId) {
+    const { data, error } = await supabaseClient
+      .from("profiles")
+      .select("display_name, level, grade")
+      .eq("id", userId)
+      .maybeSingle();
 
+    if (error) {
+      console.error("Profielcontrole mislukt:", error);
+      return "profile.html";
+    }
+
+    const displayName = data?.display_name?.trim() || "";
+    const level = data?.level?.trim() || "";
+    const grade = data?.grade?.trim() || "";
+
+    if (!displayName || !level || !grade) {
+      return "profile.html";
+    }
+
+    return "index.html";
+  }
   async function login() {
     const email = emailInput.value.trim();
     const password = passwordInput.value;
