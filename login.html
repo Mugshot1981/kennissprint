@@ -184,11 +184,12 @@ const saveNewPasswordButton = document.getElementById("saveNewPasswordButton");
     hash.includes("access_token=") ||
     hash.includes("refresh_token=");
 
-  if (isRecoveryLink) {
-   recoveryBox.style.display = "flex";
-    debugOutput.textContent = "Stel hieronder je nieuwe wachtwoord in.";
-    return;
-  }
+ if (isRecoveryLink) {
+  loginCard.style.display = "none";
+  recoveryCard.style.display = "block";
+  recoveryDebugOutput.textContent = "Stel hieronder je nieuwe wachtwoord in.";
+  return;
+}
 
   const { data, error } = await supabaseClient.auth.getUser();
 
