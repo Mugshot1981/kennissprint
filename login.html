@@ -105,60 +105,74 @@
     }
   </style>
 
-  <main class="login-page">
-    <section class="login-card">
-      <h1 class="login-title">KennisSprint</h1>
+ <main class="login-page">
+  <section class="login-card" id="loginCard">
+    <h1 class="login-title">KennisSprint</h1>
 
-      <div class="login-form">
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input id="email" type="email" placeholder="jouw@email.nl">
-        </div>
-
-        <div class="form-group">
-          <label for="password">Wachtwoord</label>
-          <input id="password" type="password" placeholder="Vul je wachtwoord in">
-        </div>
-
-       <div class="login-actions">
-  <button id="loginButton" type="button">Inloggen</button>
-  <button id="registerButton" type="button">Aanmelden</button>
-<div class="forgot-password">
-  <a href="#" id="forgotPasswordButton">Wachtwoord vergeten?</a>
-</div>
-</div>
-
-<div id="recoveryBox" style="display:none; margin-top:18px; flex-direction:column; gap:12px;">
-  <div class="form-group">
-    <label for="newPassword">Nieuw wachtwoord</label>
-    <input id="newPassword" type="password" placeholder="Nieuw wachtwoord">
-  </div>
-
-  <div class="form-group">
-    <label for="confirmPassword">Herhaal nieuw wachtwoord</label>
-    <input id="confirmPassword" type="password" placeholder="Herhaal nieuw wachtwoord">
-  </div>
-
-  <button id="saveNewPasswordButton" type="button">Nieuw wachtwoord opslaan</button>
-</div>
-
-        <pre id="debugOutput"></pre>
+    <div class="login-form">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="jouw@email.nl">
       </div>
-    </section>
-  </main>
+
+      <div class="form-group">
+        <label for="password">Wachtwoord</label>
+        <input id="password" type="password" placeholder="Vul je wachtwoord in">
+      </div>
+
+      <div class="forgot-password">
+        <a href="#" id="forgotPasswordButton">Wachtwoord vergeten?</a>
+      </div>
+
+      <div class="login-actions">
+        <button id="loginButton" type="button">Inloggen</button>
+        <button id="registerButton" type="button">Aanmelden</button>
+      </div>
+
+      <pre id="debugOutput"></pre>
+    </div>
+  </section>
+
+  <section class="login-card" id="recoveryCard" style="display:none;">
+    <h1 class="login-title">Nieuw wachtwoord</h1>
+
+    <div class="login-form">
+      <div class="form-group">
+        <label for="newPassword">Nieuw wachtwoord</label>
+        <input id="newPassword" type="password" placeholder="Nieuw wachtwoord">
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Herhaal nieuw wachtwoord</label>
+        <input id="confirmPassword" type="password" placeholder="Herhaal nieuw wachtwoord">
+      </div>
+
+      <div class="login-actions">
+        <button id="saveNewPasswordButton" type="button">Nieuw wachtwoord opslaan</button>
+      </div>
+
+      <pre id="recoveryDebugOutput"></pre>
+    </div>
+  </section>
+</main>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/supabaseClient.js"></script>
   <script>
     const supabaseClient = window.supabaseClient;
 
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
-    const debugOutput = document.getElementById("debugOutput");
+const loginCard = document.getElementById("loginCard");
+const recoveryCard = document.getElementById("recoveryCard");
+
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const debugOutput = document.getElementById("debugOutput");
+const recoveryDebugOutput = document.getElementById("recoveryDebugOutput");
+
 const loginButton = document.getElementById("loginButton");
 const registerButton = document.getElementById("registerButton");
 const forgotPasswordButton = document.getElementById("forgotPasswordButton");
-const recoveryBox = document.getElementById("recoveryBox");
+
 const newPasswordInput = document.getElementById("newPassword");
 const confirmPasswordInput = document.getElementById("confirmPassword");
 const saveNewPasswordButton = document.getElementById("saveNewPasswordButton");
