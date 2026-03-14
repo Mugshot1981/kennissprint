@@ -1,18 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KennisSprint Aanmelden</title>
+  <title>KennisSprint Account aanmaken</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: #f5f7fb;
-      color: #0f172a;
-    }
-
-    .register-page {
+    .login-page {
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -21,9 +16,9 @@
       box-sizing: border-box;
     }
 
-    .register-card {
+    .login-card {
       width: 100%;
-      max-width: 520px;
+      max-width: 460px;
       background: #ffffff;
       border-radius: 18px;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
@@ -31,22 +26,23 @@
       box-sizing: border-box;
     }
 
-    .register-title {
-      margin: 0 0 12px 0;
+    .login-title {
+      margin: 0 0 20px 0;
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 3rem;
       line-height: 1.05;
+      color: #0f172a;
     }
 
-    .register-intro {
-      margin: 0 0 28px 0;
+    .intro {
       text-align: center;
+      margin: 0 0 28px 0;
       color: #475569;
       font-size: 1rem;
       line-height: 1.5;
     }
 
-    .register-form {
+    .login-form {
       display: flex;
       flex-direction: column;
       gap: 18px;
@@ -61,163 +57,93 @@
     .form-group label {
       font-weight: 700;
       font-size: 1rem;
+      color: #0f172a;
     }
 
-    .form-group input,
-    .form-group select {
+    .form-group input {
       width: 100%;
       padding: 14px 16px;
       border: 1px solid #cbd5e1;
       border-radius: 10px;
       font: inherit;
       box-sizing: border-box;
-      background: #fff;
+      background: #ffffff;
+      color: #0f172a;
     }
 
-    .register-actions {
+    .login-actions {
       display: flex;
       flex-direction: column;
       gap: 12px;
       margin-top: 8px;
     }
 
-    .register-actions button,
-    .mail-actions a {
+    .login-actions button {
       width: 100%;
       padding: 14px 16px;
       border-radius: 10px;
       font: inherit;
       cursor: pointer;
-      box-sizing: border-box;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
     }
 
-    #createAccountButton {
+    #registerButton {
       background: #0f172a;
       color: #ffffff;
       border: none;
     }
 
-    #backToLoginButton,
-    #backToLoginLink {
+    .secondary-button {
       background: transparent;
       color: #0f172a;
       border: 1px solid #cbd5e1;
     }
 
-    .message {
-      margin-top: 16px;
+    #messageEl {
+      min-height: 24px;
+      margin-top: 12px;
+      color: #475569;
+      text-align: center;
       white-space: pre-wrap;
       word-break: break-word;
-      font-size: 0.95rem;
-      color: #475569;
-      min-height: 24px;
-    }
-
-.success-panel {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(15,23,42,0.55);
-  z-index: 1000;
-}
-
-.success-panel[hidden] {
-  display: none;
-}
-
-.success-panel-inner {
-  width: 100%;
-  max-width: 420px;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 32px;
-  box-sizing: border-box;
-  text-align: center;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-}
-
-    .success-panel h2 {
-      margin: 0 0 10px 0;
-      font-size: 1.2rem;
-    }
-
-    .success-panel p {
-      margin: 0 0 14px 0;
-      color: #475569;
-      line-height: 1.5;
-    }
-
-    .mail-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    #openMailLink {
-      background: #0f172a;
-      color: #ffffff;
-      border: none;
     }
   </style>
 </head>
 <body>
-  <main class="register-page">
-    <section class="register-card">
-      <h1 class="register-title">Account aanmaken</h1>
-      <p class="register-intro">
+  <main class="login-page">
+    <section class="login-card">
+      <h1 class="login-title">Account aanmaken</h1>
+      <p class="intro">
         Maak een account aan. Daarna bevestig je eerst je e-mailadres via de mail.
       </p>
 
-      <div class="register-form" id="registerForm">
-   
+      <div id="registerForm" class="login-form">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="jouw@email.nl" autocomplete="email">
+        </div>
 
         <div class="form-group">
-          <label for="grade">Jaar</label>
-          <select id="grade">
-            <option value="">Kies jaar</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
+          <label for="password">Wachtwoord</label>
+          <input id="password" type="password" placeholder="Kies een wachtwoord" autocomplete="new-password">
         </div>
 
-        <div class="register-actions">
-          <button id="createAccountButton" type="button">Account aanmaken</button>
-          <button id="backToLoginButton" type="button">Terug naar login</button>
+        <div class="login-actions">
+          <button id="registerButton" type="button">Account aanmaken</button>
+          <button id="backButton" type="button" class="secondary-button">Terug naar login</button>
         </div>
 
-        <div id="message" class="message"></div>
+        <p id="messageEl"></p>
       </div>
 
-<div id="successPanel" class="success-panel" hidden>
+      <div id="successPanel" hidden>
+        <p class="intro" style="margin-bottom: 20px;">
+          Je account is aangemaakt. Controleer je e-mail en bevestig eerst je account.
+        </p>
 
-  <div class="success-panel-inner">
-
-    <h2>Bevestig je e-mailadres</h2>
-
-    <p>
-     Je account is aangemaakt.
-
-📧 Controleer je e-mail en klik op de bevestigingslink.
-Daarna kun je inloggen.
-    </p>
-
-    <div class="mail-actions">
-     
-      <a id="backToLoginLink" href="login.html">Terug naar login</a>
-    </div>
-
-  </div>
-
-</div>
+        <div class="login-actions">
+          <button id="successBackButton" type="button" class="secondary-button">Terug naar login</button>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -228,40 +154,21 @@ Daarna kun je inloggen.
 
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
- 
-    const createAccountButton = document.getElementById("createAccountButton");
-    const backToLoginButton = document.getElementById("backToLoginButton");
-    const messageEl = document.getElementById("message");
-    const successPanel = document.getElementById("successPanel");
+
     const registerForm = document.getElementById("registerForm");
-    const openMailLink = document.getElementById("openMailLink");
+    const successPanel = document.getElementById("successPanel");
+    const messageEl = document.getElementById("messageEl");
 
-    function getMailInboxUrl(email) {
-      const domain = email.split("@")[1]?.toLowerCase() || "";
+    const registerButton = document.getElementById("registerButton");
+    const backButton = document.getElementById("backButton");
+    const successBackButton = document.getElementById("successBackButton");
 
-      if (domain.includes("gmail.com")) return "https://mail.google.com/";
-      if (domain.includes("outlook.com") || domain.includes("hotmail.com") || domain.includes("live.com")) {
-        return "https://outlook.live.com/mail/";
-      }
-      if (domain.includes("icloud.com") || domain.includes("me.com") || domain.includes("mac.com")) {
-        return "https://www.icloud.com/mail/";
-      }
-      if (domain.includes("yahoo.com")) return "https://mail.yahoo.com/";
-      if (domain.includes("ziggo.nl")) return "https://www.ziggo.nl/klantenservice/televisie-radio/e-mail";
-      if (domain.includes("kpnmail.nl") || domain.includes("planet.nl") || domain.includes("hetnet.nl")) {
-        return "https://mail.kpnmail.nl/";
-      }
-
-      return "https://mail.google.com/";
-    }
-
-    async function createAccount() {
+    async function register() {
       const email = emailInput.value.trim();
       const password = passwordInput.value;
 
-
       if (!email) {
-        messageEl.textContent = "Vul een e-mailadres in.";
+        messageEl.textContent = "Vul je e-mailadres in.";
         return;
       }
 
@@ -270,19 +177,14 @@ Daarna kun je inloggen.
         return;
       }
 
-   
-
       messageEl.textContent = "Bezig met account aanmaken...";
-
-      const redirectTo = window.location.origin + window.location.pathname.replace("register.html", "login.html");
 
       const { data, error } = await supabaseClient.auth.signUp({
         email,
-        password,
-        options: {
-          emailRedirectTo: redirectTo
-        }
+        password
       });
+
+      console.log("signUp result:", { data, error });
 
       if (error) {
         messageEl.textContent = "FOUT: " + error.message;
@@ -308,20 +210,23 @@ Daarna kun je inloggen.
           );
 
         if (profileError) {
-          messageEl.textContent = "Account gemaakt, maar profiel opslaan mislukte: " + profileError.message;
+          messageEl.textContent = "Account gemaakt, maar profiel initialiseren mislukte: " + profileError.message;
           return;
         }
       }
 
+      messageEl.textContent = "";
       registerForm.hidden = true;
       successPanel.hidden = false;
-      messageEl.textContent = "";
+    }
 
-    createAccountButton.addEventListener("click", createAccount);
-
-    backToLoginButton.addEventListener("click", () => {
+    function goToLogin() {
       window.location.href = "login.html";
-    });
+    }
+
+    registerButton.addEventListener("click", register);
+    backButton.addEventListener("click", goToLogin);
+    successBackButton.addEventListener("click", goToLogin);
   </script>
 </body>
 </html>
