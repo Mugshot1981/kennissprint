@@ -409,7 +409,17 @@ nameEl.textContent = name || user.email || "Account";
           "course.html?course=" + encodeURIComponent(course.id);
       });
     }
+    
+    function bindSessionGuard() {
+      supabase.auth.onAuthStateChange((event, session) => {
+        const isSignedOut = event === "SIGNED_OUT";
+        const noSession = !session;
 
+        if (isSignedOut || noSession) {
+          window.location.href = "login.html";
+        }
+      });
+    }
 
     async function bootIndex() {
       const user = await requireAuth();
