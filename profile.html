@@ -502,9 +502,18 @@
 
     resetPasswordButton.addEventListener("click", sendPasswordReset);
     logoutButton.addEventListener("click", logout);
-    startButton.addEventListener("click", () => {
-      window.location.href = "index.html";
-    });
+startButton.addEventListener("click", () => {
+  const nameOk = currentDisplayName && currentDisplayName.trim() !== "";
+  const levelOk = currentLevel && currentLevel.trim() !== "";
+  const gradeOk = currentGrade && currentGrade.trim() !== "";
+
+  if (!nameOk || !levelOk || !gradeOk) {
+    profileMessage.textContent = "Vul eerst je naam, niveau en jaar in.";
+    return;
+  }
+
+  window.location.href = "index.html";
+});
 
     loadProfile();
   </script>
