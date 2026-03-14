@@ -273,7 +273,7 @@ async function saveNewPassword() {
   const confirmPassword = confirmPasswordInput.value;
 
   if (!newPassword || newPassword.length < 6) {
-    debugOutput.textContent = "Kies een nieuw wachtwoord van minimaal 6 tekens.";
+    recoveryDebugOutput.textContent = "Kies een nieuw wachtwoord van minimaal 6 tekens.";
     return;
   }
 
