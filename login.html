@@ -280,7 +280,7 @@ async function saveNewPassword() {
   }
 
   debugOutput.textContent = "Nieuw wachtwoord opgeslagen. Je kunt nu inloggen.";
-  recoveryBox.hidden = true;
+recoveryBox.style.display = "none";
   newPasswordInput.value = "";
   confirmPasswordInput.value = "";
   window.history.replaceState({}, document.title, window.location.pathname);
