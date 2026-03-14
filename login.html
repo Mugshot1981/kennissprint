@@ -228,6 +228,62 @@ async function login() {
   window.location.href = "index.html";
 }
 
+async function sendPasswordReset() {
+  const email = emailInput.value.trim();
+
+  if (!email) {
+    debugOutput.textContent = "Vul eerst je e-mailadres in.";
+    return;
+  }
+
+  debugOutput.textContent = "Bezig met reset e-mail versturen...";
+
+  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+    redirectTo: window.location.origin + window.location.pathname
+  });
+
+  if (error) {
+    debugOutput.textContent = "FOUT: " + error.message;
+    alert(error.message);
+    return;
+  }
+
+  debugOutput.textContent = "Reset e-mail verstuurd. Controleer je mailbox.";
+}
+
+async function saveNewPassword() {
+  const newPassword = newPasswordInput.value;
+  const confirmPassword = confirmPasswordInput.value;
+
+  if (!newPassword || newPassword.length < 6) {
+    debugOutput.textContent = "Kies een nieuw wachtwoord van minimaal 6 tekens.";
+    return;
+  }
+
+  if (newPassword !== confirmPassword) {
+    debugOutput.textContent = "De wachtwoorden zijn niet gelijk.";
+    return;
+  }
+
+  debugOutput.textContent = "Nieuw wachtwoord opslaan...";
+
+  const { error } = await supabaseClient.auth.updateUser({
+    password: newPassword
+  });
+
+  if (error) {
+    debugOutput.textContent = "FOUT: " + error.message;
+    alert(error.message);
+    return;
+  }
+
+  debugOutput.textContent = "Nieuw wachtwoord opgeslagen. Je kunt nu inloggen.";
+  recoveryBox.hidden = true;
+  newPasswordInput.value = "";
+  confirmPasswordInput.value = "";
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
+
     async function register() {
       const email = emailInput.value.trim();
       const password = passwordInput.value;
