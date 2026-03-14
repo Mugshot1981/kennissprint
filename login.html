@@ -171,7 +171,7 @@ const saveNewPasswordButton = document.getElementById("saveNewPasswordButton");
     hash.includes("refresh_token=");
 
   if (isRecoveryLink) {
-    recoveryBox.hidden = false;
+   recoveryBox.style.display = "flex";
     debugOutput.textContent = "Stel hieronder je nieuwe wachtwoord in.";
     return;
   }
