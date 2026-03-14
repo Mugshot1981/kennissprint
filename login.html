@@ -293,12 +293,12 @@ recoveryDebugOutput.textContent = "Nieuw wachtwoord opslaan...";";
     return;
   }
 
-  debugOutput.textContent = "Nieuw wachtwoord opgeslagen. Je kunt nu inloggen.";
-recoveryBox.style.display = "none";
-  newPasswordInput.value = "";
-  confirmPasswordInput.value = "";
-  window.history.replaceState({}, document.title, window.location.pathname);
-}
+ recoveryDebugOutput.textContent = "Nieuw wachtwoord opgeslagen. Je kunt nu inloggen.";
+recoveryCard.style.display = "none";
+loginCard.style.display = "block";
+newPasswordInput.value = "";
+confirmPasswordInput.value = "";
+window.history.replaceState({}, document.title, window.location.pathname);
 
     async function register() {
       const email = emailInput.value.trim();
