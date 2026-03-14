@@ -250,6 +250,17 @@
     let currentGrade = "";
     let activeEditType = null;
 
+    function bindSessionGuard() {
+      supabaseClient.auth.onAuthStateChange((event, session) => {
+        const isSignedOut = event === "SIGNED_OUT";
+        const noSession = !session;
+
+        if (isSignedOut || noSession) {
+          window.location.href = "login.html";
+        }
+      });
+    }
+    
     async function requireAuth() {
       const { data, error } = await supabaseClient.auth.getUser();
       const user = data?.user;
