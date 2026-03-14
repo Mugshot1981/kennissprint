@@ -307,12 +307,14 @@ async function saveNewPassword() {
       alert("Account aangemaakt. Log nu in met je e-mail en wachtwoord.");
     }
 
-    loginButton.addEventListener("click", login);
-   registerButton.addEventListener("click", () => {
+loginButton.addEventListener("click", login);
+registerButton.addEventListener("click", () => {
   window.location.href = "register.html";
 });
+forgotPasswordButton.addEventListener("click", sendPasswordReset);
+saveNewPasswordButton.addEventListener("click", saveNewPassword);
 
-    redirectIfAlreadyLoggedIn();
+redirectIfAlreadyLoggedIn();
   </script>
 </body>
 
