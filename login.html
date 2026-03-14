@@ -153,8 +153,13 @@
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
     const debugOutput = document.getElementById("debugOutput");
-    const loginButton = document.getElementById("loginButton");
-    const registerButton = document.getElementById("registerButton");
+const loginButton = document.getElementById("loginButton");
+const registerButton = document.getElementById("registerButton");
+const forgotPasswordButton = document.getElementById("forgotPasswordButton");
+const recoveryBox = document.getElementById("recoveryBox");
+const newPasswordInput = document.getElementById("newPassword");
+const confirmPasswordInput = document.getElementById("confirmPassword");
+const saveNewPasswordButton = document.getElementById("saveNewPasswordButton");
 
    async function redirectIfAlreadyLoggedIn() {
   const { data, error } = await supabaseClient.auth.getUser();
