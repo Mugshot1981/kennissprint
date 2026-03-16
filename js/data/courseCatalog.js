@@ -5,8 +5,9 @@ import { economieMavo4Course } from "./courses/economie-mavo-4.js";
 import { duitsMavo4Course } from "./courses/duits-mavo-4.js";
 
 import { tekenenMavo4Course } from "./courses/tekenen-mavo-4.js";
-import { biologieMavo4Course } from "./courses/biologie-mavo-4.js";
 
+import { biologieMavo3Course } from "./courses/biologie-mavo-3.js";
+import { biologieMavo4Course } from "./courses/biologie-mavo-4.js";
 export const courseCatalog = [
   historyMavo4Course,
   historyHavo3Course,
