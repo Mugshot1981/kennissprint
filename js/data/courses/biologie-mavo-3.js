@@ -1,8 +1,12 @@
-
 /*
 Biologie 3 mavo
 KennisSprint dataset
+© 2026
 */
+
+/* =========================
+SUBJECT
+========================= */
 
 export const subjects = [
   {
@@ -12,45 +16,18 @@ export const subjects = [
 ];
 
 
-
 /* =========================
 CHAPTERS
 ========================= */
 
 const chapters = [
-
-  {
-    id: "bio-h1",
-    title: "Organen en cellen"
-  },
-
-  {
-    id: "bio-h2",
-    title: "Voortplanting en seksualiteit"
-  },
-
-  {
-    id: "bio-h3",
-    title: "Erfelijkheid en evolutie"
-  },
-
-  {
-    id: "bio-h4",
-    title: "Ordening"
-  },
-
-  {
-    id: "bio-h5",
-    title: "Stevigheid en beweging"
-  },
-
-  {
-    id: "bio-h6",
-    title: "Ecologie"
-  }
-
+  { id: "bio-h1", title: "Organen en cellen" },
+  { id: "bio-h2", title: "Voortplanting en seksualiteit" },
+  { id: "bio-h3", title: "Erfelijkheid en evolutie" },
+  { id: "bio-h4", title: "Ordening" },
+  { id: "bio-h5", title: "Stevigheid en beweging" },
+  { id: "bio-h6", title: "Ecologie" }
 ];
-
 
 
 /* =========================
@@ -69,23 +46,20 @@ H1 ORGANEN EN CELLEN
 //   subjectId: "biologie",
 //   chapterId: "bio-h1",
 //   type: "begrip",
-//   prompt: "organisme",
-//   answer: "Een levend wezen.",
-//   keywords: ["levend wezen"]
+//   prompt: "cel",
+//   answer: "De kleinste bouwsteen van een organisme die zelfstandig kan functioneren.",
+//   keywords: ["kleinste bouwsteen"]
 // },
 
 
-
 /* =========================
-H2 VOORTPLANTING
+H2 VOORTPLANTING EN SEKSUALITEIT
 ========================= */
 
 
-
 /* =========================
-H3 ERFELIJKHEID
+H3 ERFELIJKHEID EN EVOLUTIE
 ========================= */
-
 
 
 /* =========================
@@ -93,11 +67,9 @@ H4 ORDENING
 ========================= */
 
 
-
 /* =========================
 H5 STEVIGHEID EN BEWEGING
 ========================= */
-
 
 
 /* =========================
@@ -107,45 +79,32 @@ H6 ECOLOGIE
 ];
 
 
-
 /* =========================
 COURSE
 ========================= */
 
 export const biologieMavo3Course = {
-
   id: "biologie-mavo-3",
-
   subject: "biologie",
-
   level: "mavo",
-
   grade: "3",
-
   title: "Biologie 3 mavo",
-
-  chapters: chapters,
-
+  chapters,
   datasets: {
     terms: items,
     years: [],
     persons: []
   },
-
   modes: [
-
     {
       id: "term-to-answer",
       label: "Begrip → beschrijving",
       dataset: "terms"
     },
-
     {
       id: "answer-to-term",
       label: "Beschrijving → begrip",
       dataset: "terms"
     }
-
   ]
-
 };
