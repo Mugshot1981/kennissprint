@@ -15,6 +15,8 @@ export const courseCatalog = [
   economieMavo4Course,
   duitsMavo4Course,
 
-  tekenenMavo4Course,
-  biologieMavo4Course
+tekenenMavo4Course,
+
+biologieMavo3Course,
+biologieMavo4Course
 ];
