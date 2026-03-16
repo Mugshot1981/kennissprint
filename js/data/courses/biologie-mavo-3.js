@@ -27,6 +27,7 @@ const chapters = [
   { id: "bio-h4", title: "Ordening" },
   { id: "bio-h5", title: "Stevigheid en beweging" },
   { id: "bio-h6", title: "Ecologie" }
+  { id: "bio-h7", title: "Duurzaamheid en genetica" }
 ];
 
 
