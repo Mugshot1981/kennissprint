@@ -9,6 +9,7 @@ SUBJECT
 ========================= */
 
 export const subjects = [
+   ...biologieMavo3Course.datasets.terms,
   {
     id: "biologie",
     title: "Biologie"
