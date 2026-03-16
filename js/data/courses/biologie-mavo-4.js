@@ -7,9 +7,9 @@ KennisSprint dataset
 /* =========================
 SUBJECT
 ========================= */
+import { biologieMavo3Course } from "./biologie-mavo-3.js";
 
 export const subjects = [
-   ...biologieMavo3Course.datasets.terms,
   {
     id: "biologie",
     title: "Biologie"
