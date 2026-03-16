@@ -45,7 +45,8 @@ ITEMS (begrippen)
 ========================= */
 
 const items = [
-
+  ...biologieMavo3Course.datasets.terms,
+  ];
 /* =========================
 H1 ORGANEN EN CELLEN
 ========================= */
