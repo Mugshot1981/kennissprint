@@ -2883,7 +2883,205 @@ const items = [
     prompt: "Zuivere kleuren",
     answer: "Primaire en secundaire kleuren, die niet zijn gemengd met zwart of wit of andere kleuren.",
     keywords: ["zuivere kleuren", "primaire", "secundaire"]
-  }
+  },
+{
+id:"te-x-001",
+subjectId:"tekenen",
+chapterId:"te-1",
+type:"begrip",
+prompt:"compositie",
+answer:"Ordening van beeldelementen in een kunstwerk.",
+keywords:["ordening","beeldelementen","kunstwerk"]
+},
+{
+id:"te-x-002",
+subjectId:"tekenen",
+chapterId:"te-1",
+type:"begrip",
+prompt:"symmetrie",
+answer:"Gelijke verdeling van elementen aan weerszijden van een middenlijn.",
+keywords:["gelijke verdeling","middenlijn","spiegeling"]
+},
+{
+id:"te-x-003",
+subjectId:"tekenen",
+chapterId:"te-1",
+type:"begrip",
+prompt:"asymmetrie",
+answer:"Ongelijke verdeling van elementen die toch balans kan geven.",
+keywords:["ongelijke verdeling","balans"]
+},
+{
+id:"te-x-004",
+subjectId:"tekenen",
+chapterId:"te-2",
+type:"begrip",
+prompt:"plans",
+answer:"Indeling van ruimte in voorplan, middenplan en achterplan.",
+keywords:["voorplan","middenplan","achterplan"]
+},
+{
+id:"te-x-005",
+subjectId:"tekenen",
+chapterId:"te-1",
+type:"begrip",
+prompt:"tertiaire kleuren",
+answer:"Mengkleuren die ontstaan door een primaire kleur en een secundaire kleur te mengen.",
+keywords:["mengkleuren","primaire","secundaire"]
+},
+{
+id:"te-x-006",
+subjectId:"tekenen",
+chapterId:"te-1",
+type:"begrip",
+prompt:"kwaliteitscontrast",
+answer:"Tegenstelling tussen verzadigde en onverzadigde kleuren.",
+keywords:["verzadigd","onverzadigd","kleurcontrast"]
+},
+{
+id:"te-x-007",
+subjectId:"tekenen",
+chapterId:"te-1",
+type:"begrip",
+prompt:"kleurenharmonie",
+answer:"Kleuren die goed samen passen en een rustig geheel vormen.",
+keywords:["kleuren","passen samen","rustig"]
+},
+{
+id:"te-x-008",
+subjectId:"tekenen",
+chapterId:"te-4",
+type:"begrip",
+prompt:"textuur",
+answer:"De voelbare en zichtbare structuur van een oppervlak.",
+keywords:["structuur","oppervlak","voelbaar"]
+},
+{
+id:"te-x-009",
+subjectId:"tekenen",
+chapterId:"te-4",
+type:"begrip",
+prompt:"materiaalgebruik",
+answer:"Het gebruik van specifieke materialen zoals houtskool, verf of klei in een kunstwerk.",
+keywords:["materialen","houtskool","verf","klei"]
+},
+{
+id:"te-x-010",
+subjectId:"tekenen",
+chapterId:"te-4",
+type:"begrip",
+prompt:"arceren",
+answer:"Met lijnen schaduw of textuur aanbrengen in een tekening.",
+keywords:["lijnen","schaduw","textuur"]
+},
+{
+id:"te-x-011",
+subjectId:"tekenen",
+chapterId:"te-4",
+type:"begrip",
+prompt:"glaceren",
+answer:"Het aanbrengen van transparante verflagen over elkaar.",
+keywords:["transparante verflagen","verf"]
+},
+{
+id:"te-x-012",
+subjectId:"tekenen",
+chapterId:"te-5",
+type:"begrip",
+prompt:"beeldaspecten",
+answer:"Basiselementen van een kunstwerk, zoals kleur, licht, vorm, ruimte en compositie.",
+keywords:["kleur","licht","vorm","ruimte","compositie"]
+},
+{
+id:"te-x-013",
+subjectId:"tekenen",
+chapterId:"te-7",
+type:"begrip",
+prompt:"renaissance",
+answer:"Kunststroming met aandacht voor realisme, anatomie en perspectief.",
+keywords:["realisme","anatomie","perspectief"]
+},
+{
+id:"te-x-014",
+subjectId:"tekenen",
+chapterId:"te-7",
+type:"begrip",
+prompt:"barok",
+answer:"Kunststroming met dramatisch lichtgebruik en dynamische composities.",
+keywords:["dramatisch licht","dynamisch","composities"]
+},
+{
+id:"te-x-015",
+subjectId:"tekenen",
+chapterId:"te-7",
+type:"begrip",
+prompt:"impressionisme",
+answer:"Kunststroming met snelle penseelstreken en veel aandacht voor licht en sfeer.",
+keywords:["snelle penseelstreken","licht","sfeer"]
+},
+{
+id:"te-x-016",
+subjectId:"tekenen",
+chapterId:"te-7",
+type:"begrip",
+prompt:"expressionisme",
+answer:"Kunststroming waarbij felle kleuren en vormen worden gebruikt om emoties uit te drukken.",
+keywords:["felle kleuren","emoties"]
+},
+{
+id:"te-x-017",
+subjectId:"tekenen",
+chapterId:"te-7",
+type:"begrip",
+prompt:"kubisme",
+answer:"Kunststroming waarbij vormen worden teruggebracht tot geometrische vlakken.",
+keywords:["geometrische vlakken","vormen"]
+},
+{
+id:"te-x-018",
+subjectId:"tekenen",
+chapterId:"te-7",
+type:"begrip",
+prompt:"abstracte kunst",
+answer:"Kunst zonder herkenbare voorstelling, met nadruk op kleur, vorm en lijn.",
+keywords:["geen voorstelling","kleur","vorm","lijn"]
+},
+{
+id:"te-x-019",
+subjectId:"tekenen",
+chapterId:"te-7",
+type:"begrip",
+prompt:"vanitas",
+answer:"Stilleven met symbolen van vergankelijkheid, zoals schedels of kaarsen.",
+keywords:["stilleven","vergankelijkheid","symbolen"]
+},
+{
+id:"te-x-020",
+subjectId:"tekenen",
+chapterId:"te-7",
+type:"begrip",
+prompt:"allegorie",
+answer:"Een kunstwerk dat een abstract idee of begrip verbeeldt.",
+keywords:["abstract idee","verbeeldt"]
+},
+{
+id:"te-x-021",
+subjectId:"tekenen",
+chapterId:"te-4",
+type:"begrip",
+prompt:"waarnemingstekenen",
+answer:"Tekenen wat je ziet door goed naar de werkelijkheid te kijken.",
+keywords:["tekenen","zien","werkelijkheid"]
+},
+{
+id:"te-x-022",
+subjectId:"tekenen",
+chapterId:"te-3",
+type:"begrip",
+prompt:"tweedimensionaal",
+answer:"Kunst met alleen hoogte en breedte.",
+keywords:["hoogte","breedte","plat"]
+}
 ];
 
 export const tekenenMavo4Course = {
