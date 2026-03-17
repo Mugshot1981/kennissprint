@@ -1423,13 +1423,9 @@ export const historyMavo3Course = {
         prompt: "standplaatsgebondenheid",
         answer: "De opvattingen, ervaringen en persoonlijke eigenschappen van mensen hebben invloed op hoe zij gebeurtenissen ervaren en beschrijven.",
         keywords: ["opvattingen", "ervaringen", "persoonlijke eigenschappen", "gebeurtenissen"]
-      },
-   
-  
-
+      }
     ],
 
-   
     years: [
         
       {
