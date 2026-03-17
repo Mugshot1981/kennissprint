@@ -1287,3 +1287,21 @@ chapters: [
   ]
   }
 };
+
+    years: [],
+    persons: []
+  },
+
+  modes: [
+    {
+      id: "term-to-answer",
+      label: "Begrip → beschrijving",
+      dataset: "terms"
+    },
+    {
+      id: "answer-to-term",
+      label: "Beschrijving → begrip",
+      dataset: "terms"
+    }
+  ]
+};
