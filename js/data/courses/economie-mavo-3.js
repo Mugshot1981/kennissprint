@@ -57,8 +57,7 @@ chapters: [
   ],
 
   datasets: {
-    terms: [
-      datasets: {
+
   terms: [
     {
       id: "eco3-h1-001",
