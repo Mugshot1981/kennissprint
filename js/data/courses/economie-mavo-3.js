@@ -1284,8 +1284,6 @@ chapters: [
       prompt: "Vicieuze cirkel",
       answer: "De oorzaak van het ene probleem is een gevolg van een ander probleem."
     }
-  ];
-}
-    ]
+  ]
   }
 };
