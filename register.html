@@ -179,9 +179,12 @@
 
       messageEl.textContent = "Bezig met account aanmaken...";
 
-      const { data, error } = await supabaseClient.auth.signUp({
+          const { data, error } = await supabaseClient.auth.signUp({
         email,
-        password
+        password,
+        options: {
+          emailRedirectTo: window.location.origin + "/login.html"
+        }
       });
 
       console.log("signUp result:", { data, error });
