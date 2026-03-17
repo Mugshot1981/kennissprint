@@ -1197,18 +1197,14 @@ terms: [
     prompt: "Microkrediet",
     answer: "Een kleine lening die verstrekt wordt aan kleine ondernemers in ontwikkelingslanden die niet kunnen lenen bij de grote banken."
   },
-  {
+    {
     id: "eco-163",
     chapterId: "eco-h8",
     type: "begrip",
     prompt: "Fairtrade",
     answer: "Een organisatie die boeren in ontwikkelingslanden steunt met een gegarandeerde, betere prijs voor hun producten."
-  
-
-      }
-  ]
   }
-};
+],
     years: [],
     persons: []
   },
@@ -1226,3 +1222,4 @@ terms: [
     }
   ]
 };
+ 
