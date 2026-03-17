@@ -8,7 +8,7 @@ export const aardrijkskundeMavo3Course = {
   id: "aardrijkskunde-mavo-4",
   subject: "aardrijkskunde",
   level: "mavo",
-  grade: "4",
+  grade: "3",
   title: "Aardrijkskunde 3 mavo",
 
   chapters: [
