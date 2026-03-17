@@ -478,6 +478,517 @@ chapters: [
     prompt: "dividendbelasting",
     answer: "De belasting die over het dividend, een winstuitkering aan de aandeelhouders, moet worden betaald."
   },
+        {
+  id: "eco-vwo6-k7-h2-017",
+  chapterId: "eco-vwo6-k7",
+  type: "begrip",
+  prompt: "dividendbelasting",
+  answer: "De belasting die over het dividend, een winstuitkering aan de aandeelhouders, moet worden betaald."
+},
+{
+  id: "eco-vwo6-k8-001",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "feitelijke groei bbp",
+  answer: "De groei van het bbp (gemeten in procenten ten opzichte van een vorige periode)."
+},
+{
+  id: "eco-vwo6-k8-002",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "potentiële groei bbp",
+  answer: "De potentiële groei geeft aan hoeveel de economie kan groeien gegeven de groei van de productiecapaciteit."
+},
+{
+  id: "eco-vwo6-k8-003",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "output gap",
+  answer: "Het verschil tussen de potentiële groei en de feitelijke groei van het bbp."
+},
+{
+  id: "eco-vwo6-k8-004",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "trend (matige ontwikkeling)",
+  answer: "Verwachte gemiddelde economische groei, op basis van historische trend en economische vooruitzichten."
+},
+{
+  id: "eco-vwo6-k8-005",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "conjunctuurbeweging of conjunctuurgolf",
+  answer: "De veranderingen in de productiegroei van een economie."
+},
+{
+  id: "eco-vwo6-k8-006",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "laagconjunctuur",
+  answer: "Periode waarin de economische groei lager is dan je op basis van de trend mag verwachten."
+},
+{
+  id: "eco-vwo6-k8-007",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "recessie",
+  answer: "Wanneer het volume van het bruto binnenlands product (na correctie voor seizoensinvloeden) twee opeenvolgende kwartalen krimpt."
+},
+{
+  id: "eco-vwo6-k8-008",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "bezettingsgraad",
+  answer: "De mate waarin de productiecapaciteit bezet wordt."
+},
+{
+  id: "eco-vwo6-k8-009",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "onderbesteding",
+  answer: "De bestedingen zijn te laag om alle productiemiddelen volledig te benutten."
+},
+{
+  id: "eco-vwo6-k8-010",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "natuurlijke werkloosheid",
+  answer: "De werkloosheid die altijd aanwezig is als gevolg van potentiële groei."
+},
+{
+  id: "eco-vwo6-k8-011",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "conjuncturele werkloosheid",
+  answer: "Werkloosheid die ontstaat door terugvallende bestedingen."
+},
+{
+  id: "eco-vwo6-k8-012",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "hoogconjunctuur",
+  answer: "Periode waarin de economische groei hoger is dan je op basis van de trend mag verwachten."
+},
+{
+  id: "eco-vwo6-k8-013",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "overbesteding",
+  answer: "De (voorgenomen) bestedingen zijn hoger dan de productiecapaciteit."
+},
+{
+  id: "eco-vwo6-k8-014",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "bestedingsinflatie",
+  answer: "Stijging van het prijspeil veroorzaakt door overbesteding."
+},
+{
+  id: "eco-vwo6-k8-015",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "geldillusie",
+  answer: "De neiging van mensen om over geld in nominale en niet in reële (voor inflatie gecorrigeerde) termen te denken."
+},
+{
+  id: "eco-vwo6-k8-016",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "ingebouwde stabilisatoren",
+  answer: "Dit zijn in het verleden genomen overheidsmaatregelen (die in wetten zijn vastgelegd) die zorgen voor een demping van de conjunctuur."
+},
+{
+  id: "eco-vwo6-k8-017",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "conjunctuurbeleid",
+  answer: "De overheid zet maatregelen in om met conjuncturele schommelingen om te gaan."
+},
+{
+  id: "eco-vwo6-k8-018",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "anticyclisch conjunctuurbeleid",
+  answer: "Overheidsbeleid waarbij de conjunctuurbeweging wordt afgevlakt. De overheid zal tijdens een laagconjunctuur bestedingen stimuleren en tijdens een hoogconjunctuur afremmen."
+},
+{
+  id: "eco-vwo6-k8-019",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "procyclisch",
+  answer: "Overheidsbeleid waarbij de conjunctuurbeweging wordt versterkt. Bijvoorbeeld bezuinigingen in een laagconjunctuur."
+},
+{
+  id: "eco-vwo6-k8-020",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "inverdieneffect",
+  answer: "Overheidsmaatregelen die zich gedeeltelijk terugverdienen. Bijvoorbeeld: de overheid ontvangt een deel van de extra uitgaven via extra belastingontvangsten weer terug."
+},
+{
+  id: "eco-vwo6-k8-021",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "uitverdieneffect",
+  answer: "Overheidsmaatregelen die leiden tot minder opbrengsten elders dan de maatregel zelf. Bijvoorbeeld: als de overheid bezuinigt zal door een daling van de bestedingen en de belastingontvangsten daarvan het tekort minder afnemen dan verwacht."
+},
+{
+  id: "eco-vwo6-k8-022",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "prijsstabiliteit",
+  answer: "Prijzen moeten niet te snel stijgen of dalen."
+},
+{
+  id: "eco-vwo6-k8-023",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "monetair beleid",
+  answer: "Beleid van de centrale bank gericht op prijsstabiliteit of wisselkoers."
+},
+{
+  id: "eco-vwo6-k8-024",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "duaal mandaat",
+  answer: "Naast het reguleren van prijsstabiliteit heeft een centrale bank soms ook de taak om de economische groei te stimuleren."
+},
+{
+  id: "eco-vwo6-k8-025",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "geldscheppende instellingen",
+  answer: "Instellingen die ervoor kunnen zorgen dat de geldhoeveelheid stijgt: de centrale bank, private geldscheppende instellingen (banken) en de Rijksoverheid."
+},
+{
+  id: "eco-vwo6-k8-026",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "geldschepping",
+  answer: "Stijging van de geldhoeveelheid. Dit kan plaatsvinden door kredietverlening en transformatie."
+},
+{
+  id: "eco-vwo6-k8-027",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "geldvernietiging",
+  answer: "Een daling van de geldhoeveelheid."
+},
+{
+  id: "eco-vwo6-k8-028",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "refirente",
+  answer: "Rente die banken betalen aan de centrale bank wanneer ze geld opnemen."
+},
+{
+  id: "eco-vwo6-k8-029",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "zero lower bound",
+  answer: "Een situatie waarbij de centrale bank de rente niet verder kan verlagen om de economie te stimuleren."
+},
+{
+  id: "eco-vwo6-k8-030",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "kwantitatieve verruiming",
+  answer: "De centrale bank koopt op grote schaal obligaties en ander schuldpapier op waarmee ze geld in de economie pompen."
+},
+{
+  id: "eco-vwo6-k8-031",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "bankrun",
+  answer: "Veel consumenten en bedrijven willen gelijktijdig hun geld opnemen waardoor een bank in acute betalingsproblemen komt."
+},
+{
+  id: "eco-vwo6-k8-032",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "depositogarantiestelsel",
+  answer: "Als een bank failliet gaat, staan andere banken garant voor de tegoeden van klanten van de bank tot € 100.000."
+},
+{
+  id: "eco-vwo6-k8-033",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "Europese Monetaire Unie (EMU)",
+  answer: "Landen die betalen met de euro, de gemeenschappelijke munt van de meeste landen binnen de Europese Unie (maar niet alle landen van de Europese Unie)."
+},
+{
+  id: "eco-vwo6-k8-034",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "valuta",
+  answer: "Wettig betaalmiddel van een land."
+},
+{
+  id: "eco-vwo6-k8-035",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "wisselkoers",
+  answer: "Waarde van een munt uitgedrukt in een andere munt."
+},
+{
+  id: "eco-vwo6-k8-036",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "deviezenvoorraad of valutareserve",
+  answer: "Voorraad vreemde valuta die een land in bezit heeft."
+},
+{
+  id: "eco-vwo6-k8-037",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "flexibele wisselkoersen",
+  answer: "Wisselkoersen die door vraag en aanbod worden bepaald."
+},
+{
+  id: "eco-vwo6-k8-038",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "appreciatie",
+  answer: "Koersstijging van een valuta als gevolg van marktwerking."
+},
+{
+  id: "eco-vwo6-k8-039",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "depreciatie",
+  answer: "Koersdaling van een valuta als gevolg van marktwerking."
+},
+{
+  id: "eco-vwo6-k8-040",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "vaste wisselkoers",
+  answer: "Landen spreken een vaste wisselkoers af."
+},
+{
+  id: "eco-vwo6-k8-041",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "beperkt zwevende wisselkoers",
+  answer: "Landen spreken een wisselkoers (spilkoers) af met een bandbreedte waarbinnen de wisselkoers zich moet bewegen."
+},
+{
+  id: "eco-vwo6-k8-042",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "interventie",
+  answer: "De centrale bank grijpt in om de hoogte van de wisselkoers te verhogen of verlagen. Dit kan met een valuta-interventie of een rente-interventie."
+},
+{
+  id: "eco-vwo6-k8-043",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "revaluatie",
+  answer: "Verhoging van de officiële spilkoers."
+},
+{
+  id: "eco-vwo6-k8-044",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "devaluatie",
+  answer: "Verlaging van de officiële spilkoers."
+},
+{
+  id: "eco-vwo6-k8-045",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "optimaal valutagebied",
+  answer: "Optimale grootte van muntunie waarbij de aanpassing van de economie aan onevenwichtigheden optimaal is."
+},
+{
+  id: "eco-vwo6-k8-046",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "monetair trilemma",
+  answer: "Het realiseren van een vrij kapitaalverkeer, een vaste wisselkoers en onafhankelijk monetair beleid gericht op de inflatie kan niet zonder problemen gelijktijdig plaatsvinden."
+},
+{
+  id: "eco-vwo6-k8-047",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "effectieve vraag",
+  answer: "De totale vraag in een land naar producten en diensten die worden voortgebracht uit de productiefactoren in een land."
+},
+{
+  id: "eco-vwo6-k8-048",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "Keynesiaanse kruis",
+  answer: "Het Keynesiaanse kruis geeft het evenwicht weer op de goederenmarkt van een economie. Het model geeft het verband weer tussen de bestedingen (de effectieve vraag: C + I + O) en het inkomen (Y)."
+},
+{
+  id: "eco-vwo6-k8-049",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "bestedingslijn",
+  answer: "De bestedingslijn geeft weer wat de bestedingen zullen zijn van consumenten, bedrijven en de overheid bij een bepaald inkomensniveau."
+},
+{
+  id: "eco-vwo6-k8-050",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "autonome consumptie",
+  answer: "Consumptie die onafhankelijk van het inkomen worden gedaan."
+},
+{
+  id: "eco-vwo6-k8-051",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "autonome investeringen",
+  answer: "Investeringen van bedrijven die onafhankelijk van het inkomen worden gedaan."
+},
+{
+  id: "eco-vwo6-k8-052",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "autonome overheidsbestedingen",
+  answer: "Bestedingen van de overheid die onafhankelijk van het inkomen worden gedaan."
+},
+{
+  id: "eco-vwo6-k8-053",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "(marginale) consumptiequote",
+  answer: "Het percentage van het inkomen dat wordt besteed aan consumptie. De marginale consumptiequote bereken je door de verandering van de consumptie (C) te delen door de verandering van het inkomen (Y)."
+},
+{
+  id: "eco-vwo6-k8-054",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "multipliereffect",
+  answer: "Effect dat wanneer de marginale consumptiequote of een autonome besteding toeneemt (bijv. overheidsbesteding), het effect op de totale bestedingen in een land groter zal zijn dan de toename van de oorspronkelijke besteding zelf."
+},
+{
+  id: "eco-vwo6-k8-055",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "spaarlek",
+  answer: "Het spaarlek geeft aan hoeveel van het inkomen consumenten sparen, en dus niet uitgeven."
+},
+{
+  id: "eco-vwo6-k8-056",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "marginale spaarquote",
+  answer: "De marginale spaarquote geeft aan welk deel van het extra inkomen consumenten sparen, en dus niet uitgeven."
+},
+{
+  id: "eco-vwo6-k8-057",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "belastinglek",
+  answer: "Het belastinglek geeft aan hoeveel van het inkomen consumenten aan belasting moeten betalen, en dus niet kunnen uitgeven."
+},
+{
+  id: "eco-vwo6-k8-058",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "marginale belastingquote",
+  answer: "De marginale belastingquote geeft aan welk deel van het extra inkomen consumenten aan belasting moeten betalen, en dus niet kunnen uitgeven."
+},
+{
+  id: "eco-vwo6-k8-059",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "IS-curve",
+  answer: "De IS-curve (Investeren-Sparen) geeft alle combinaties tussen het inkomen en de reële rente weer waarbij een evenwicht op de goederenmarkt geldt, gegeven een bepaald niveau van de inflatie."
+},
+{
+  id: "eco-vwo6-k8-060",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "rentebesluit",
+  answer: "Het vaststellen van de (nominale) rente die hoort bij de economische situatie op dat moment. Het rentebesluit wordt genomen door de centrale bank."
+},
+{
+  id: "eco-vwo6-k8-061",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "naïeve inflatieverwachting",
+  answer: "De verwachting dat de inflatie in de volgende periode gelijk is aan de inflatie in de huidige periode."
+},
+{
+  id: "eco-vwo6-k8-062",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "MB-curve",
+  answer: "De MB-curve (Monetair Beleid) geeft een horizontaal verband tussen de reële rente en het inkomen."
+},
+{
+  id: "eco-vwo6-k8-063",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "monetaire beleidsregel / Taylor-regel",
+  answer: "Deze regel geeft aan dat wanneer de verwachte inflatie stijgt, de rente zal moeten stijgen. Je zult dan zien dat de MB-curve omhoog gaat. En andersom geldt dat wanneer de verwachte inflatie daalt, de rente zal moeten dalen. De MB-curve gaat dan omlaag."
+},
+{
+  id: "eco-vwo6-k8-064",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "GA-curve",
+  answer: "De GA-curve (Geaggregeerd Aanbod) staat voor het aanbod van goederen en diensten in een economie. Bij het geaggregeerde aanbod tellen we al het aanbod in een economie in een periode bij elkaar op. De GA-curve geeft het geaggregeerde aanbod weer bij ieder inflatieniveau."
+},
+{
+  id: "eco-vwo6-k8-065",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "prijsrigiditeit",
+  answer: "De prijzen zijn op korte termijn star en veranderen niet gemakkelijk."
+},
+{
+  id: "eco-vwo6-k8-066",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "loonstarheid",
+  answer: "De lonen kunnen op korte termijn niet aangepast worden. De hoogte van de lonen is vaak vastgelegd in cao’s die voor een jaar of langer gelden. Gedurende de looptijd van de cao kunnen de lonen niet veranderen."
+},
+{
+  id: "eco-vwo6-k8-067",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "conjuncturele werkloosheid",
+  answer: "Werkloosheid die ontstaat door het tekortschieten van de bestedingen. Hoe negatiever de output gap is, des te groter de conjuncturele werkloosheid zal zijn."
+},
+{
+  id: "eco-vwo6-k8-068",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "IS-MB-GA-model",
+  answer: "Een model waarmee we de conjunctuur kunnen analyseren. Het is een model dat de economie op korte termijn analyseert."
+},
+{
+  id: "eco-vwo6-k8-069",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "economische scholen",
+  answer: "Een verzameling van gedachten rondom de uitgangspunten en het functioneren van de economie."
+},
+{
+  id: "eco-vwo6-k8-070",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "Keynesianen",
+  answer: "Economische denkrichting waarbij de gedachte is dat het begrotingsbeleid van de overheid krachtig is en het monetaire beleid van de centrale bank zwak is."
+},
+{
+  id: "eco-vwo6-k8-071",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "monetaristen",
+  answer: "Economische denkrichting waarbij de gedachte is dat het begrotingsbeleid van de overheid zwak is en het monetaire beleid van de centrale bank juist krachtig is."
+},
+{
+  id: "eco-vwo6-k8-072",
+  chapterId: "eco-vwo6-k8",
+  type: "begrip",
+  prompt: "neo- en nieuw-klassieken",
+  answer: "Economische denkrichting waarbij de gedachte is dat vraagstimulering (budgettair en monetair) niet effectief is. Vraagstimulering heeft alleen effect op de inflatie in een land, niet op het inkomen."
+}
         
 ],
     
