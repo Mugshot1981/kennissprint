@@ -1277,6 +1277,7 @@ chapters: [
       prompt: "Structurele hulp",
       answer: "Hulp aan ontwikkelingslanden met als doel dat zij op lange termijn economisch zelfstandig worden."
     },
+    {
     id: "eco3-h8-020",
       chapterId: "eco3-h8",
       type: "begrip",
