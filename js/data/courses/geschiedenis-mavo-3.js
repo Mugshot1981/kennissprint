@@ -781,15 +781,7 @@ export const historyMavo3Course = {
         answer: "Een gevolg dat direct merkbaar is.",
         keywords: ["gevolg", "direct merkbaar"]
       },
-      {
-        id: "ges3-h3-023",
-        subjectId: "geschiedenis",
-        chapterId: "ges3-h3",
-        type: "begrip",
-        prompt: "gevolg op lange termijn",
-        answer: "Een gevolg dat pas later duidelijk wordt.",
-        keywords: ["gevolg", "later duidelijk"]
-      },
+
        {
         id: "ges3-h3-023",
         subjectId: "geschiedenis",
