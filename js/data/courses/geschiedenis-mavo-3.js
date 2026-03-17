@@ -289,15 +289,7 @@ export const historyMavo3Course = {
         answer: "Bepalen uit welk jaar of welke periode een historische bron komt.",
         keywords: ["jaar", "periode", "historische bron"]
       },
-      {
-        id: "ges3-h1-028",
-        subjectId: "geschiedenis",
-        chapterId: "ges3-h1",
-        type: "begrip",
-        prompt: "tijdvak",
-        answer: "Een periode in de Europese geschiedenis.",
-        keywords: ["periode", "europese geschiedenis"]
-      },
+
             {
         id: "ges3-h1-028",
         subjectId: "geschiedenis",
