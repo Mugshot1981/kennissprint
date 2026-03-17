@@ -5,7 +5,7 @@ KennisSprint dataset
 2026
 */
 export const aardrijkskundeMavo3Course = {
-  id: "aardrijkskunde-mavo-4",
+  id: "aardrijkskunde-mavo-3",
   subject: "aardrijkskunde",
   level: "mavo",
   grade: "3",
