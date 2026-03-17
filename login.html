@@ -200,11 +200,6 @@
 
     if (!user) return;
 
-    if (!user.email_confirmed_at) {
-      await supabaseClient.auth.signOut();
-      debugOutput.textContent = "Bevestig eerst je e-mailadres voordat je kunt inloggen.";
-      return;
-    }
     const target = await getPostLoginTarget(user.id);
     window.location.href = target;
   }
