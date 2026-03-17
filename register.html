@@ -219,8 +219,10 @@ const { data, error } = await supabaseClient.auth.signUp({
             }
           );
 
-        if (profileError) {
+           if (profileError) {
           messageEl.textContent = "Account gemaakt, maar profiel initialiseren mislukte: " + profileError.message;
+          isRegistering = false;
+          registerButton.disabled = false;
           return;
         }
       }
