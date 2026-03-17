@@ -257,10 +257,8 @@
 
     const user = data?.user;
 
-    if (!user || !user.email_confirmed_at) {
-      await supabaseClient.auth.signOut();
-      debugOutput.textContent = "Bevestig eerst je e-mailadres via de link in je mail.";
-      alert("Bevestig eerst je e-mailadres via de link in je mail.");
+      if (!user) {
+      debugOutput.textContent = "Inloggen mislukt.";
       return;
     }
 
