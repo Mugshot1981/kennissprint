@@ -1277,19 +1277,15 @@ chapters: [
       prompt: "Structurele hulp",
       answer: "Hulp aan ontwikkelingslanden met als doel dat zij op lange termijn economisch zelfstandig worden."
     },
-    {
-      id: "eco3-h8-020",
+    id: "eco3-h8-020",
       chapterId: "eco3-h8",
       type: "begrip",
       prompt: "Vicieuze cirkel",
       answer: "De oorzaak van het ene probleem is een gevolg van een ander probleem."
     }
-  ]
-  }
-};
-
-    years: [],
-    persons: []
+  ],
+  years: [],
+  persons: []
   },
 
   modes: [
@@ -1302,6 +1298,34 @@ chapters: [
       id: "answer-to-term",
       label: "Beschrijving → begrip",
       dataset: "terms"
+    },
+    {
+      id: "years",
+      label: "Jaartal → gebeurtenis",
+      dataset: "years"
+    },
+    {
+      id: "event-years",
+      label: "Gebeurtenis → jaartal",
+      dataset: "years"
+    },
+    {
+      id: "person-to-description",
+      label: "Persoon → beschrijving",
+      dataset: "persons",
+      questionLabel: "Persoon",
+      sessionModeLabel: "Persoon → beschrijving",
+      questionField: "name",
+      answerField: "description"
+    },
+    {
+      id: "description-to-person",
+      label: "Beschrijving → persoon",
+      dataset: "persons",
+      questionLabel: "Beschrijving",
+      sessionModeLabel: "Beschrijving → persoon",
+      questionField: "description",
+      answerField: "name"
     }
   ]
 };
