@@ -570,17 +570,8 @@ export const historyMavo3Course = {
         prompt: "bruikbaar (bron)",
         answer: "De bron geeft informatie die je helpt bij je onderzoek.",
         keywords: ["bron", "informatie", "onderzoek"]
-      }
-    ],
-
-    years: [
-      {
-        id: "ges3-h1-y001",
-        chapterId: "ges3-h1",
-        year: "1602",
-        event: "Oprichting VOC",
-        keywords: ["voc", "oprichting", "1602"]
       },
+ 
 
       {
         id: "ges3-h2-030",
