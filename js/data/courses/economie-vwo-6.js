@@ -470,7 +470,7 @@ chapters: [
         prompt: "vennootschapsbelasting",
         answer: "De belasting die een bv of nv over de winst moet betalen."
       },
-          terms: [
+    
       {
         id: "eco-vwo6-k7-h1-001",
         chapterId: "eco-vwo6-k7",
