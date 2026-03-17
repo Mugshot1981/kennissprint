@@ -215,9 +215,10 @@ const { data, error } = await supabaseClient.auth.signUp({
         }
       }
 
-      messageEl.textContent = "";
-      registerForm.hidden = true;
-      successPanel.hidden = false;
+         messageEl.textContent = "Account aangemaakt. Je gaat nu naar het login-scherm...";
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 800);
     }
 
     function goToLogin() {
