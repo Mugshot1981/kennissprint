@@ -163,21 +163,29 @@
     const backButton = document.getElementById("backButton");
     const successBackButton = document.getElementById("successBackButton");
 
-    async function register() {
-      const email = emailInput.value.trim();
-      const password = passwordInput.value;
+let isRegistering = false;
 
-      if (!email) {
-        messageEl.textContent = "Vul je e-mailadres in.";
-        return;
-      }
+async function register() {
+  if (isRegistering) return;
+  isRegistering = true;
 
-      if (!password || password.length < 6) {
-        messageEl.textContent = "Kies een wachtwoord van minimaal 6 tekens.";
-        return;
-      }
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
 
-      messageEl.textContent = "Bezig met account aanmaken...";
+  if (!email) {
+    messageEl.textContent = "Vul je e-mailadres in.";
+    isRegistering = false;
+    return;
+  }
+
+  if (!password || password.length < 6) {
+    messageEl.textContent = "Kies een wachtwoord van minimaal 6 tekens.";
+    isRegistering = false;
+    return;
+  }
+
+  messageEl.textContent = "Bezig met account aanmaken...";
+  registerButton.disabled = true;
 
 const { data, error } = await supabaseClient.auth.signUp({
   email,
