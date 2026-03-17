@@ -11,46 +11,49 @@ export const economieMavo3Course = {
   title: "Economie 3 mavo",
 
   chapters: [
-    {
-      id: "eco3-h1",
-      subjectId: "economie",
-      title: "Hoofdstuk 1"
-    },
-    {
-      id: "eco3-h2",
-      subjectId: "economie",
-      title: "Hoofdstuk 2"
-    },
-    {
-      id: "eco3-h3",
-      subjectId: "economie",
-      title: "Hoofdstuk 3"
-    },
-    {
-      id: "eco3-h4",
-      subjectId: "economie",
-      title: "Hoofdstuk 4"
-    },
-    {
-      id: "eco3-h5",
-      subjectId: "economie",
-      title: "Hoofdstuk 5"
-    },
-    {
-      id: "eco3-h6",
-      subjectId: "economie",
-      title: "Hoofdstuk 6"
-    },
-    {
-      id: "eco3-h7",
-      subjectId: "economie",
-      title: "Hoofdstuk 7"
-    },
-    {
-      id: "eco3-h8",
-      subjectId: "economie",
-      title: "Hoofdstuk 8"
-    }
+   
+chapters: [
+  {
+    id: "eco3-h1",
+    subjectId: "economie",
+    title: "Hoe welvarend ben jij?"
+  },
+  {
+    id: "eco3-h2",
+    subjectId: "economie",
+    title: "Wat voor consument ben jij?"
+  },
+  {
+    id: "eco3-h3",
+    subjectId: "economie",
+    title: "De bank en jouw geld"
+  },
+  {
+    id: "eco3-h4",
+    subjectId: "economie",
+    title: "Kies je voor zekerheid?"
+  },
+  {
+    id: "eco3-h5",
+    subjectId: "economie",
+    title: "Is er werk voor jou?"
+  },
+  {
+    id: "eco3-h6",
+    subjectId: "economie",
+    title: "Productie en markt"
+  },
+  {
+    id: "eco3-h7",
+    subjectId: "economie",
+    title: "Wie heeft het voor het zeggen?"
+  },
+  {
+    id: "eco3-h8",
+    subjectId: "economie",
+    title: "Over de grens"
+  }
+],
   ],
 
   datasets: {
