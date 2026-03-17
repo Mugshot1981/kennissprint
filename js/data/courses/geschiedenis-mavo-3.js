@@ -561,15 +561,7 @@ export const historyMavo3Course = {
         answer: "De informatie in een bron klopt.",
         keywords: ["informatie", "bron", "klopt"]
       },
-      {
-        id: "ges3-h2-030",
-        subjectId: "geschiedenis",
-        chapterId: "ges3-h2",
-        type: "begrip",
-        prompt: "bruikbaar (bron)",
-        answer: "De bron geeft informatie die je helpt bij je onderzoek.",
-        keywords: ["bron", "informatie", "onderzoek"]
-      },
+   
             {
         id: "ges3-h2-030",
         subjectId: "geschiedenis",
@@ -589,7 +581,7 @@ export const historyMavo3Course = {
         event: "Oprichting VOC",
         keywords: ["voc", "oprichting", "1602"]
       },
-VERVANG DOOR
+
       {
         id: "ges3-h2-030",
         subjectId: "geschiedenis",
