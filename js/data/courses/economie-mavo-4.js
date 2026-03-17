@@ -1203,8 +1203,12 @@ terms: [
     type: "begrip",
     prompt: "Fairtrade",
     answer: "Een organisatie die boeren in ontwikkelingslanden steunt met een gegarandeerde, betere prijs voor hun producten."
+  
+
+      }
+  ]
   }
-],
+};
     years: [],
     persons: []
   },
