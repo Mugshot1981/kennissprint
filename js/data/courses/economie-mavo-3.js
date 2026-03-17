@@ -54,7 +54,7 @@ chapters: [
     title: "Over de grens"
   }
 ],
-  ],
+  
 
   datasets: {
 
