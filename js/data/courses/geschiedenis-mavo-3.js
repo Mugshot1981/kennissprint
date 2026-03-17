@@ -1547,13 +1547,7 @@ export const historyMavo3Course = {
         event: "Euro ingevoerd",
         keywords: ["euro", "ingevoerd", "2002"]
       },
-      {
-        id: "ges3-h2-y010",
-        chapterId: "ges3-h2",
-        year: "2015",
-        event: "Akkoord van Parijs",
-        keywords: ["akkoord van parijs", "2015"]
-      },
+   
          {
         id: "ges3-h2-y010",
         chapterId: "ges3-h2",
