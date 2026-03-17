@@ -24,7 +24,7 @@ export const economieVwo6Course = {
     years: [],
     persons: []
   },
-
+ 
   modes: [
     {
       id: "term-to-answer",
