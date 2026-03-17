@@ -10,49 +10,50 @@ export const economieMavo4Course = {
   grade: "4",
   title: "Economie 4 mavo",
 
-  chapters: [
+   chapters: [
     {
-      id: "eco-h1",
+      id: "eco3-h1",
       subjectId: "economie",
-      title: "Inkomen en welvaart"
+      title: "Hoe welvarend ben jij?"
     },
     {
-      id: "eco-h2",
+      id: "eco3-h2",
       subjectId: "economie",
-      title: "Geld genoeg?"
+      title: "Wat voor consument ben jij?"
     },
     {
-      id: "eco-h3",
+      id: "eco3-h3",
       subjectId: "economie",
-      title: "Ben jij ondernemend?"
+      title: "De bank en jouw geld"
     },
     {
-      id: "eco-h4",
+      id: "eco3-h4",
       subjectId: "economie",
-      title: "Werk aan de winkel!"
+      title: "Kies je voor zekerheid?"
     },
     {
-      id: "eco-h5",
+      id: "eco3-h5",
       subjectId: "economie",
-      title: "Hoe werkt de overheid?"
+      title: "Is er werk voor jou?"
     },
     {
-      id: "eco-h6",
+      id: "eco3-h6",
       subjectId: "economie",
-      title: "Iedereen betaalt belasting"
+      title: "Productie en markt"
     },
     {
-      id: "eco-h7",
+      id: "eco3-h7",
       subjectId: "economie",
-      title: "Nederland en het buitenland"
+      title: "Wie heeft het voor het zeggen?"
     },
     {
-      id: "eco-h8",
+      id: "eco3-h8",
       subjectId: "economie",
-      title: "Ontwikkelingslanden"
+      title: "Over de grens"
     }
   ],
 
+ 
   datasets: {
 terms: [
   {
