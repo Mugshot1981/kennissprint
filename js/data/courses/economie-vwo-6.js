@@ -477,7 +477,8 @@ chapters: [
     type: "begrip",
     prompt: "dividendbelasting",
     answer: "De belasting die over het dividend, een winstuitkering aan de aandeelhouders, moet worden betaald."
-  }
+  },
+        
 ],
     
 
