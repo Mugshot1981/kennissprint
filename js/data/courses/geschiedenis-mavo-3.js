@@ -1,9 +1,8 @@
 /*
-Geschiedenis 3 mavo
 KennisSprint dataset
-© 2026
+© Joas de Wit
+2026
 */
-
 export const historyMavo3Course = {
   id: "geschiedenis-mavo-3",
   subject: "geschiedenis",
@@ -13,9 +12,34 @@ export const historyMavo3Course = {
 
   chapters: [
     {
-      id: "his3-h1",
+      id: "ges3-h1",
       subjectId: "geschiedenis",
-      title: "Hoofdstuk 1"
+      title: "Nederland en Indonesië"
+    },
+    {
+      id: "ges3-h2",
+      subjectId: "geschiedenis",
+      title: "Nederland als industriële samenleving"
+    },
+    {
+      id: "ges3-h3",
+      subjectId: "geschiedenis",
+      title: "Sociale zekerheid en de verzorgingsstaat in Nederland"
+    },
+    {
+      id: "ges3-h4",
+      subjectId: "geschiedenis",
+      title: "Nederland na 1945: cultuur en mentaliteit"
+    },
+    {
+      id: "ges3-h5",
+      subjectId: "geschiedenis",
+      title: "De Koude Oorlog"
+    },
+    {
+      id: "ges3-h6",
+      subjectId: "geschiedenis",
+      title: "Het Israëlisch-Palestijnse conflict"
     }
   ],
 
