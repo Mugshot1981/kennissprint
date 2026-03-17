@@ -194,8 +194,10 @@ const { data, error } = await supabaseClient.auth.signUp({
 
       console.log("signUp result:", { data, error });
 
-      if (error) {
+       if (error) {
         messageEl.textContent = "FOUT: " + error.message;
+        isRegistering = false;
+        registerButton.disabled = false;
         alert(error.message);
         return;
       }
