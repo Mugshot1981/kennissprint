@@ -680,6 +680,21 @@ body.quiz-active .controls {
 
 /* ===== MOBILE ===== */
 
+.top-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.top-links > div:last-child {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 900px) {
   body {
     padding: 20px;
