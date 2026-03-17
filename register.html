@@ -179,12 +179,9 @@
 
       messageEl.textContent = "Bezig met account aanmaken...";
 
- const { data, error } = await supabaseClient.auth.signUp({
+const { data, error } = await supabaseClient.auth.signUp({
   email,
-  password,
-  options: {
-    emailRedirectTo: "https://mugshot1981.github.io/kennissprint/login.html"
-  }
+  password
 });
 
       console.log("signUp result:", { data, error });
