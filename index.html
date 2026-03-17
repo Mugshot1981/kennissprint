@@ -296,7 +296,7 @@ nameEl.textContent = name || user.email || "Account";
         <div style="margin-bottom:16px; font-size:18px; font-weight:700; color:#0f172a;">
           Jouw vakken
         </div>
-        <div style="display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:20px;">
+       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
           ${cardsHtml}
         </div>
       `;
