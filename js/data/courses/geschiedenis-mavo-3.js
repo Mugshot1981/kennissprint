@@ -1035,15 +1035,7 @@ export const historyMavo3Course = {
         answer: "Een mening of idee.",
         keywords: ["mening", "idee"]
       },
-      {
-        id: "ges3-h4-028",
-        subjectId: "geschiedenis",
-        chapterId: "ges3-h4",
-        type: "begrip",
-        prompt: "waarden",
-        answer: "Zaken die mensen belangrijk vinden in hun leven.",
-        keywords: ["zaken", "belangrijk", "leven"]
-      },
+
             {
         id: "ges3-h4-028",
         subjectId: "geschiedenis",
