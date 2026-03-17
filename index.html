@@ -9,7 +9,9 @@
 <body>
   <main class="page">
     <section class="card" style="max-width: 1400px; width: min(1400px, calc(100vw - 64px)); margin: 0 auto;">
-      <div style="display:flex; justify-content:flex-end; margin-bottom:24px; position:relative;">
+             <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px;">
+          ${cardsHtml}
+        </div>
 <button id="accountButton" type="button" class="account-button" hidden>
   <span class="account-avatar">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
