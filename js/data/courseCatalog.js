@@ -7,6 +7,9 @@ import { aardrijkskundeMavo4Course } from "./courses/aardrijkskunde-mavo-4.js";
 import { aardrijkskundeMavo3Course } from "./courses/aardrijkskunde-mavo-3.js";
 
 import { economieMavo4Course } from "./courses/economie-mavo-4.js";
+
+import { economieVwo6Course } from "./courses/economie-vwo-6.js";
+
 import { duitsMavo4Course } from "./courses/duits-mavo-4.js";
 
 import { tekenenMavo4Course } from "./courses/tekenen-mavo-4.js";
@@ -21,6 +24,7 @@ export const courseCatalog = [
   aardrijkskundeMavo4Course,
   aardrijkskundeMavo3Course,
   economieMavo4Course,
+  economieVwo6Course,
   duitsMavo4Course,
 
 tekenenMavo4Course,
