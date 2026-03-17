@@ -1,4 +1,3 @@
-
 import { historyMavo4Course } from "./courses/geschiedenis-mavo-4.js";
 import { historyMavo3Course } from "./courses/geschiedenis-mavo-3.js";
 import { historyHavo3Course } from "./courses/geschiedenis-havo-3.js";
@@ -6,8 +5,8 @@ import { historyHavo3Course } from "./courses/geschiedenis-havo-3.js";
 import { aardrijkskundeMavo4Course } from "./courses/aardrijkskunde-mavo-4.js";
 import { aardrijkskundeMavo3Course } from "./courses/aardrijkskunde-mavo-3.js";
 
+import { economieMavo3Course } from "./courses/economie-mavo-3.js";
 import { economieMavo4Course } from "./courses/economie-mavo-4.js";
-
 import { economieVwo6Course } from "./courses/economie-vwo-6.js";
 
 import { duitsMavo4Course } from "./courses/duits-mavo-4.js";
@@ -21,14 +20,18 @@ export const courseCatalog = [
   historyMavo4Course,
   historyHavo3Course,
   historyMavo3Course,
+
   aardrijkskundeMavo4Course,
   aardrijkskundeMavo3Course,
+
+  economieMavo3Course,
   economieMavo4Course,
   economieVwo6Course,
+
   duitsMavo4Course,
 
-tekenenMavo4Course,
+  tekenenMavo4Course,
 
-biologieMavo3Course,
-biologieMavo4Course
+  biologieMavo3Course,
+  biologieMavo4Course
 ];
