@@ -9,7 +9,7 @@ export const aardrijkskundeMavo3Course = {
   subject: "aardrijkskunde",
   level: "mavo",
   grade: "4",
-  title: "Aardrijkskunde 4 mavo",
+  title: "Aardrijkskunde 3 mavo",
 
   chapters: [
     {
