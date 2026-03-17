@@ -10,7 +10,7 @@ export const economieMavo3Course = {
   grade: "3",
   title: "Economie 3 mavo",
 
-  chapters: [
+
    
 chapters: [
   {
