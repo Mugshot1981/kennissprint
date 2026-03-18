@@ -1745,14 +1745,14 @@ function closeQuizSession() {
 }
 
 if (stopButton) {
-  stopButton.addEventListener("click", () => {
-    closeQuizSession();
+  stopButton.addEventListener("click", async () => {
+    await closeQuizSession();
   });
 }
 
 if (backToCourseButton) {
-  backToCourseButton.addEventListener("click", () => {
-    closeQuizSession();
+  backToCourseButton.addEventListener("click", async () => {
+    await closeQuizSession();
   });
 }
 
