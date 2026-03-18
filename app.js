@@ -1657,9 +1657,10 @@ async function handleTypedSubmit() {
     feedback.className = "feedback show good";
     feedback.style.display = "block";
 
-    updateScoreDisplay();
+updateScoreDisplay();
+await syncStudentSessionStats();
 
-    setTimeout(() => {
+setTimeout(() => {
       typedRecallInput.disabled = false;
       typedRecallSubmit.disabled = false;
       buildQuestion();
