@@ -944,6 +944,71 @@ function getMasteryClass(level) {
   return "term-mastery-new";
 }
 
+async function startStudentSession() {
+  try {
+    const { data, error } = await supabase.auth.getUser();
+    const user = data?.user;
+
+    if (error || !user) {
+      console.error("Geen gebruiker voor student session start:", error);
+      return;
+    }
+
+    const startedAt = new Date().toISOString();
+
+    const { data: inserted, error: insertError } = await supabase
+      .from("student_sessions")
+      .insert({
+        user_id: user.id,
+        course_id: activeCourse.id,
+        started_at: startedAt
+      })
+      .select("id")
+      .single();
+
+    if (insertError) {
+      console.error("student_sessions insert fout:", insertError);
+      return;
+    }
+
+    activeSessionId = inserted.id;
+    activeSessionStartedAt = startedAt;
+  } catch (err) {
+    console.error("startStudentSession exception:", err);
+  }
+}
+
+async function endStudentSession() {
+  try {
+    if (!activeSessionId) {
+      return;
+    }
+
+    const sessionIdToClose = activeSessionId;
+
+    activeSessionId = null;
+    activeSessionStartedAt = null;
+
+    const { error } = await supabase
+      .from("student_sessions")
+      .update({
+        ended_at: new Date().toISOString(),
+        question_count: scoreTotal,
+        correct_count: scoreCorrect,
+        typed_count: sessionResults.filter(
+          (result) => result.item?.questionMode === "typed"
+        ).length
+      })
+      .eq("id", sessionIdToClose);
+
+    if (error) {
+      console.error("student_sessions update fout:", error);
+    }
+  } catch (err) {
+    console.error("endStudentSession exception:", err);
+  }
+}
+
 function showEndScreen() {
   answersContainer.innerHTML = "";
   feedback.textContent = "";
