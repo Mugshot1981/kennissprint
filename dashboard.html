@@ -32,61 +32,68 @@
   <script>
     const supabase = window.supabaseClient;
 
-    async function loadDashboard() {
-      const { data, error } = await supabase
-        .from("student_sessions")
-        .select(`
-          user_id,
-          started_at,
-          question_count,
-          profiles (
-            display_name
-          )
-        `);
+  async function loadDashboard() {
+  const { data: sessions, error: sessionsError } = await supabase
+    .from("student_sessions")
+    .select("user_id, started_at, question_count");
 
-      if (error) {
-        console.error(error);
-        return;
-      }
+  if (sessionsError) {
+    console.error("student_sessions fout:", sessionsError);
+    return;
+  }
 
-      const perUser = {};
+  const { data: profiles, error: profilesError } = await supabase
+    .from("profiles")
+    .select("id, display_name");
 
-      data.forEach(row => {
-        const uid = row.user_id;
+  if (profilesError) {
+    console.error("profiles fout:", profilesError);
+    return;
+  }
 
-        if (!perUser[uid]) {
-          perUser[uid] = {
-            name: row.profiles?.display_name || "Onbekend",
-            sessions: 0,
-            totalQuestions: 0,
-            lastActivity: row.started_at
-          };
-        }
+  const profileMap = {};
+  profiles.forEach((profile) => {
+    profileMap[profile.id] = profile.display_name || "Onbekend";
+  });
 
-        perUser[uid].sessions += 1;
-        perUser[uid].totalQuestions += row.question_count || 0;
+  const perUser = {};
 
-        if (row.started_at > perUser[uid].lastActivity) {
-          perUser[uid].lastActivity = row.started_at;
-        }
-      });
+  sessions.forEach((row) => {
+    const uid = row.user_id;
 
-      const tbody = document.querySelector("#dashboardTable tbody");
-      tbody.innerHTML = "";
-
-      Object.values(perUser).forEach(user => {
-        const tr = document.createElement("tr");
-
-        tr.innerHTML = `
-          <td>${user.name}</td>
-          <td>${user.sessions}</td>
-          <td>${user.totalQuestions}</td>
-          <td>${new Date(user.lastActivity).toLocaleString()}</td>
-        `;
-
-        tbody.appendChild(tr);
-      });
+    if (!perUser[uid]) {
+      perUser[uid] = {
+        name: profileMap[uid] || "Onbekend",
+        sessions: 0,
+        totalQuestions: 0,
+        lastActivity: row.started_at
+      };
     }
+
+    perUser[uid].sessions += 1;
+    perUser[uid].totalQuestions += row.question_count || 0;
+
+    if (row.started_at > perUser[uid].lastActivity) {
+      perUser[uid].lastActivity = row.started_at;
+    }
+  });
+
+  const tbody = document.querySelector("#dashboardTable tbody");
+  tbody.innerHTML = "";
+
+  Object.values(perUser).forEach((user) => {
+    const tr = document.createElement("tr");
+
+    tr.innerHTML = `
+      <td>${user.name}</td>
+      <td>${user.sessions}</td>
+      <td>${user.totalQuestions}</td>
+      <td>${new Date(user.lastActivity).toLocaleString()}</td>
+    `;
+
+    tbody.appendChild(tr);
+  });
+}
 
     loadDashboard();
   </script>
