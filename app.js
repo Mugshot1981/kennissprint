@@ -1495,13 +1495,8 @@ const promptBox = document.querySelector(".prompt-box");
       item: currentQuestion.item,
       correct: false
     });
-    // typed fout = kaart terug naar training
-const cardId = currentQuestion.cardId;
-const newLevel = Math.max(2, (progressMap[cardId] || 3) - 1);
-
-progressMap[cardId] = newLevel;
-
-saveCardProgress(cardId, newLevel);
+    // geen extra lokale level-mutatie:
+    // fout antwoord is al opgeslagen via saveCardProgress(currentQuestion.cardId, false)
 
     clickedButton.classList.add("wrong");
     allButtons.forEach((button, index) => {
