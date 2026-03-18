@@ -1655,6 +1655,214 @@ export const historyHavo5Course = {
     prompt: "Noord-Atlantische Verdragsorganisatie (NAVO)",
     answer: "Militair bondgenootschap tussen westerse landen die hebben afgesproken dat als een van de lidstaten wordt aangevallen, de andere militair te hulp zullen schieten.",
     keywords: ["militair", "bondgenootschap", "westen"]
+  },
+   {
+    id: "his5h-h9-001",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h9",
+    type: "begrip",
+    prompt: "soevereiniteit",
+    answer: "De hoogste macht in een staat.",
+    keywords: ["hoogste macht", "staat", "gezag"]
+  },
+  {
+    id: "his5h-h9-002",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h9",
+    type: "begrip",
+    prompt: "supranationaal",
+    answer: "Letterlijk ‘boven de staat’; internationale organisaties waarbij staten bevoegdheden overdragen en die bindende regels kunnen opleggen.",
+    keywords: ["boven staat", "internationale organisatie", "macht overdragen"]
+  },
+  {
+    id: "his5h-h9-003",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h9",
+    type: "begrip",
+    prompt: "Veiligheidsraad",
+    answer: "Orgaan van de Verenigde Naties dat zich bezighoudt met internationale vrede en veiligheid, met vijf permanente leden met vetorecht.",
+    keywords: ["VN orgaan", "vrede", "vetorecht"]
+  },
+  {
+    id: "his5h-h9-004",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h9",
+    type: "begrip",
+    prompt: "Verenigde Naties (VN)",
+    answer: "Internationale organisatie opgericht in 1948 met als doel vrede, veiligheid en samenwerking tussen landen te bevorderen.",
+    keywords: ["internationale organisatie", "vrede", "1948"]
+  },
+  {
+    id: "his5h-h9-005",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h9",
+    type: "begrip",
+    prompt: "vetorecht",
+    answer: "Het recht om een besluit van een meerderheid tegen te houden.",
+    keywords: ["tegenhouden besluit", "meerderheid", "macht"]
+  },
+  {
+    id: "his5h-h9-006",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h9",
+    type: "begrip",
+    prompt: "vredesmissie",
+    answer: "Inzet van VN-militairen om vrede te handhaven of te herstellen in conflictgebieden.",
+    keywords: ["VN militairen", "vrede", "conflict"]
+  },
+  {
+    id: "his5h-h9-007",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h9",
+    type: "begrip",
+    prompt: "wapenwedloop",
+    answer: "Strijd tussen landen om steeds meer en betere wapens te ontwikkelen.",
+    keywords: ["wapens", "concurrentie", "landen"]
+  },
+  {
+    id: "his5h-h9-008",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h9",
+    type: "begrip",
+    prompt: "wederzijdse afschrikking",
+    answer: "Situatie waarin landen elkaar niet aanvallen omdat beide partijen over vernietigende wapens beschikken.",
+    keywords: ["afschrikking", "wapens", "geen oorlog"]
+  },
+
+  {
+    id: "his5h-h10-001",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "consumptiemaatschappij",
+    answer: "Samenleving waarin mensen over voldoende inkomen beschikken om naast basisbehoeften ook veel luxeproducten te kopen.",
+    keywords: ["veel consumptie", "welvaart", "luxe"]
+  },
+  {
+    id: "his5h-h10-002",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "diversiteit",
+    answer: "Situatie waarin mensen met verschillende achtergronden en kenmerken samenleven en gelijkwaardig worden behandeld.",
+    keywords: ["verschillen", "achtergrond", "gelijk"]
+  },
+  {
+    id: "his5h-h10-003",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "euroscepsis",
+    answer: "Kritische houding tegenover Europese samenwerking en de EU.",
+    keywords: ["kritiek EU", "Europa", "politiek"]
+  },
+  {
+    id: "his5h-h10-004",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "globalisering",
+    answer: "Het proces waarbij landen wereldwijd steeds meer met elkaar verbonden raken op economisch, politiek en cultureel gebied.",
+    keywords: ["wereldwijd", "verbonden", "economie"]
+  },
+  {
+    id: "his5h-h10-005",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "informatiemaatschappij",
+    answer: "Samenleving waarin het verzamelen, verwerken en verspreiden van informatie centraal staat.",
+    keywords: ["informatie", "technologie", "economie"]
+  },
+  {
+    id: "his5h-h10-006",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "Marshallplan",
+    answer: "Amerikaans hulpprogramma om Europa na de Tweede Wereldoorlog economisch te herstellen.",
+    keywords: ["VS hulp", "Europa", "herstel"]
+  },
+  {
+    id: "his5h-h10-007",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "neoliberalisme",
+    answer: "Economische stroming die pleit voor een vrije markt met zo min mogelijk overheidsbemoeienis.",
+    keywords: ["vrije markt", "weinig overheid", "economie"]
+  },
+  {
+    id: "his5h-h10-008",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "neonationalisme",
+    answer: "Moderne vorm van nationalisme waarbij de nadruk ligt op eigen volk en cultuur, vaak met uitsluiting van anderen.",
+    keywords: ["nationalisme", "eigen volk", "uitsluiting"]
+  },
+  {
+    id: "his5h-h10-009",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "orthodox",
+    answer: "Strikt vasthouden aan traditionele of oorspronkelijke opvattingen.",
+    keywords: ["streng", "traditie", "geloof"]
+  },
+  {
+    id: "his5h-h10-010",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "pluriforme en multiculturele samenleving",
+    answer: "Samenleving waarin mensen met verschillende culturen, achtergronden en overtuigingen samenleven.",
+    keywords: ["verschillende culturen", "samenleving", "divers"]
+  },
+  {
+    id: "his5h-h10-011",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "politieke islam",
+    answer: "Politieke stroming die streeft naar een samenleving gebaseerd op islamitische regels en wetten.",
+    keywords: ["islam", "politiek", "regels"]
+  },
+  {
+    id: "his5h-h10-012",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "populisme",
+    answer: "Politieke stroming waarbij politici zeggen op te komen voor het volk tegenover de elite.",
+    keywords: ["volk vs elite", "politiek", "tegenstelling"]
+  },
+  {
+    id: "his5h-h10-013",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "secularisatie",
+    answer: "Proces waarbij religie een steeds kleinere rol speelt in de samenleving.",
+    keywords: ["minder religie", "maatschappij", "ontkerkelijking"]
+  },
+  {
+    id: "his5h-h10-014",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "verzorgingsstaat",
+    answer: "Samenleving waarin de overheid zorgt voor sociale zekerheid en voorzieningen voor burgers.",
+    keywords: ["sociale zekerheid", "overheid", "zorg"]
+  },
+  {
+    id: "his5h-h10-015",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-h10",
+    type: "begrip",
+    prompt: "wederopbouw",
+    answer: "Periode na de Tweede Wereldoorlog waarin Europa economisch en fysiek werd hersteld.",
+    keywords: ["herstel", "na oorlog", "Europa"]
   }
 
 
