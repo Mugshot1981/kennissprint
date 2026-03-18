@@ -111,13 +111,13 @@
       return [...new Set(courses.map((course) => course[key]))];
     }
 
-    function getFilteredCourses() {
-      return courseCatalog.filter(
-        (course) =>
-          course.level === currentProfile.level &&
-          course.grade === currentProfile.grade
-      );
-    }
+function getFilteredCourses() {
+  return courseCatalog.filter(
+    (course) =>
+      course.level === currentProfile.level &&
+      String(course.grade) === String(currentProfile.grade)
+  );
+}
 
     function getCoursesBySubject(subject) {
       return getFilteredCourses().filter((course) => course.subject === subject);
