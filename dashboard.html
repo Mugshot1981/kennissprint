@@ -2,101 +2,122 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Docent Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <main class="page">
     <div class="card">
       <h1>Docent Dashboard</h1>
 
-      <table id="dashboardTable" style="width:100%; margin-top:20px;">
+      <p id="statusMessage" class="intro" style="margin-top: 12px;"></p>
+
+      <table id="dashboardTable" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
         <thead>
           <tr>
-            <th>Naam</th>
-            <th>Aantal sessies</th>
-            <th>Totaal vragen</th>
-            <th>Laatste activiteit</th>
+            <th style="text-align:left; padding: 12px 8px;">Naam</th>
+            <th style="text-align:left; padding: 12px 8px;">Aantal sessies</th>
+            <th style="text-align:left; padding: 12px 8px;">Totaal vragen</th>
+            <th style="text-align:left; padding: 12px 8px;">Laatste activiteit</th>
           </tr>
         </thead>
         <tbody></tbody>
       </table>
-
     </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/supabaseClient.js"></script>
 
-<script>
-  const supabase = window.supabaseClient;
-
-  async function loadDashboard() {
-    const { data: sessions, error: sessionsError } = await supabase
-      .from("student_sessions")
-      .select("user_id, started_at, question_count");
-
-    if (sessionsError) {
-      console.error("student_sessions fout:", sessionsError);
-      return;
-    }
-
-    const { data: profiles, error: profilesError } = await supabase
-      .from("profiles")
-      .select("id, display_name");
-
-    if (profilesError) {
-      console.error("profiles fout:", profilesError);
-      return;
-    }
-
-    const profileMap = {};
-    profiles.forEach((profile) => {
-      profileMap[profile.id] = profile.display_name || "Onbekend";
-    });
-
-    const perUser = {};
-
-    sessions.forEach((row) => {
-      const uid = row.user_id;
-
-      if (!perUser[uid]) {
-        perUser[uid] = {
-          name: profileMap[uid] || "Onbekend",
-          sessions: 0,
-          totalQuestions: 0,
-          lastActivity: row.started_at
-        };
-      }
-
-      perUser[uid].sessions += 1;
-      perUser[uid].totalQuestions += row.question_count || 0;
-
-      if (row.started_at > perUser[uid].lastActivity) {
-        perUser[uid].lastActivity = row.started_at;
-      }
-    });
-
+  <script>
+    const sb = window.supabaseClient;
+    const statusMessage = document.getElementById("statusMessage");
     const tbody = document.querySelector("#dashboardTable tbody");
-    tbody.innerHTML = "";
 
-    Object.values(perUser).forEach((user) => {
-      const tr = document.createElement("tr");
+    async function loadDashboard() {
+      statusMessage.textContent = "Dashboard laden...";
+      tbody.innerHTML = "";
 
-      tr.innerHTML = `
-        <td>${user.name}</td>
-        <td>${user.sessions}</td>
-        <td>${user.totalQuestions}</td>
-        <td>${new Date(user.lastActivity).toLocaleString()}</td>
-      `;
+      const {
+        data: sessionData,
+        error: sessionError
+      } = await sb
+        .from("student_sessions")
+        .select("user_id, started_at, question_count");
 
-      tbody.appendChild(tr);
-    });
-  }
+      if (sessionError) {
+        console.error("student_sessions fout:", sessionError);
+        statusMessage.textContent = "Fout bij laden van sessies: " + sessionError.message;
+        return;
+      }
 
-  loadDashboard();
-</script>
+      const {
+        data: profileData,
+        error: profileError
+      } = await sb
+        .from("profiles")
+        .select("id, display_name");
 
+      if (profileError) {
+        console.error("profiles fout:", profileError);
+        statusMessage.textContent = "Fout bij laden van profielen: " + profileError.message;
+        return;
+      }
+
+      if (!sessionData || sessionData.length === 0) {
+        statusMessage.textContent = "Geen sessies gevonden.";
+        return;
+      }
+
+      const profileMap = {};
+      profileData.forEach((profile) => {
+        profileMap[profile.id] = profile.display_name || "Onbekend";
+      });
+
+      const perUser = {};
+
+      sessionData.forEach((row) => {
+        const uid = row.user_id;
+
+        if (!perUser[uid]) {
+          perUser[uid] = {
+            name: profileMap[uid] || "Onbekend",
+            sessions: 0,
+            totalQuestions: 0,
+            lastActivity: row.started_at
+          };
+        }
+
+        perUser[uid].sessions += 1;
+        perUser[uid].totalQuestions += row.question_count || 0;
+
+        if (row.started_at > perUser[uid].lastActivity) {
+          perUser[uid].lastActivity = row.started_at;
+        }
+      });
+
+      const users = Object.values(perUser).sort((a, b) => {
+        return new Date(b.lastActivity) - new Date(a.lastActivity);
+      });
+
+      users.forEach((user) => {
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td style="padding: 12px 8px; border-top: 1px solid #e5e7eb;">${user.name}</td>
+          <td style="padding: 12px 8px; border-top: 1px solid #e5e7eb;">${user.sessions}</td>
+          <td style="padding: 12px 8px; border-top: 1px solid #e5e7eb;">${user.totalQuestions}</td>
+          <td style="padding: 12px 8px; border-top: 1px solid #e5e7eb;">${new Date(user.lastActivity).toLocaleString("nl-NL")}</td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+
+      statusMessage.textContent = "";
+    }
+
+    loadDashboard();
+  </script>
 </body>
 </html>
