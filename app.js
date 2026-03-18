@@ -944,14 +944,18 @@ function getMasteryClass(level) {
   return "term-mastery-new";
 }
 
-async function startStudentSession() {
+async function ensureStudentSession() {
   try {
+    if (activeSessionId) {
+      return activeSessionId;
+    }
+
     const { data, error } = await supabase.auth.getUser();
     const user = data?.user;
 
     if (error || !user) {
       console.error("Geen gebruiker voor student session start:", error);
-      return;
+      return null;
     }
 
     const startedAt = new Date().toISOString();
@@ -961,20 +965,54 @@ async function startStudentSession() {
       .insert({
         user_id: user.id,
         course_id: activeCourse.id,
-        started_at: startedAt
+        started_at: startedAt,
+        question_count: scoreTotal,
+        correct_count: scoreCorrect,
+        typed_count: sessionResults.filter(
+          (result) => result.item?.questionMode === "typed"
+        ).length
       })
       .select("id")
       .single();
 
     if (insertError) {
       console.error("student_sessions insert fout:", insertError);
-      return;
+      return null;
     }
 
     activeSessionId = inserted.id;
     activeSessionStartedAt = startedAt;
+    return activeSessionId;
   } catch (err) {
-    console.error("startStudentSession exception:", err);
+    console.error("ensureStudentSession exception:", err);
+    return null;
+  }
+}
+
+async function syncStudentSessionStats() {
+  try {
+    const sessionId = await ensureStudentSession();
+
+    if (!sessionId) {
+      return;
+    }
+
+    const { error } = await supabase
+      .from("student_sessions")
+      .update({
+        question_count: scoreTotal,
+        correct_count: scoreCorrect,
+        typed_count: sessionResults.filter(
+          (result) => result.item?.questionMode === "typed"
+        ).length
+      })
+      .eq("id", sessionId);
+
+    if (error) {
+      console.error("student_sessions sync fout:", error);
+    }
+  } catch (err) {
+    console.error("syncStudentSessionStats exception:", err);
   }
 }
 
@@ -985,9 +1023,6 @@ async function endStudentSession() {
     }
 
     const sessionIdToClose = activeSessionId;
-
-    activeSessionId = null;
-    activeSessionStartedAt = null;
 
     const { error } = await supabase
       .from("student_sessions")
@@ -1003,12 +1038,15 @@ async function endStudentSession() {
 
     if (error) {
       console.error("student_sessions update fout:", error);
+      return;
     }
+
+    activeSessionId = null;
+    activeSessionStartedAt = null;
   } catch (err) {
     console.error("endStudentSession exception:", err);
   }
 }
-
 async function showEndScreen() {
     await endStudentSession();
   answersContainer.innerHTML = "";
