@@ -1,0 +1,22 @@
+{
+  id: "geschiedenis-vwo-2",
+  subject: "geschiedenis",
+  level: "vwo",
+  grade: "2",
+  title: "Geschiedenis vwo 2",
+
+  chapters: [
+    // voorlopig leeg of kopie van structuur
+  ],
+
+  datasets: {
+    terms: [],
+    years: [],
+    persons: []
+  },
+
+  modes: [
+    { id: "terms", label: "Begrippen", dataset: "terms" },
+    { id: "years", label: "Jaartallen", dataset: "years" }
+  ]
+}
