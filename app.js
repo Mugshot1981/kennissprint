@@ -1695,7 +1695,7 @@ feedback.addEventListener("click", (event) => {
 // ===== FOUTEN OPNIEUW OEFENEN =====
 
 if (retryWrongButton) {
-  retryWrongButton.addEventListener("click", () => {
+  retryWrongButton.addEventListener("click", async () => {
     currentChapterItems = [...wrongItems];
     sessionItems = [...wrongItems];
     remainingQuestions = shuffleArray([...wrongItems]);
@@ -1706,24 +1706,28 @@ if (retryWrongButton) {
     updateScoreDisplay();
 
     endScreen.classList.add("hidden");
+
+    await startStudentSession();
+
     buildQuestion();
   });
 }
 
 if (restartButton) {
-  
-  restartButton.addEventListener("click", () => {
-      currentChapterItems = getAvailableItems(quizMode);
-
-      sessionItems = getRecommendedSessionItems(currentChapterItems, 10);
+  restartButton.addEventListener("click", async () => {
+    currentChapterItems = getAvailableItems(quizMode);
+    sessionItems = getRecommendedSessionItems(currentChapterItems, 10);
     remainingQuestions = shuffleArray([...sessionItems]);
-     scoreCorrect = 0;
+    scoreCorrect = 0;
     scoreTotal = 0;
     sessionResults = [];
     wrongItems = [];
     updateScoreDisplay();
 
     endScreen.classList.add("hidden");
+
+    await startStudentSession();
+
     buildQuestion();
   });
 }
