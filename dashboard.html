@@ -29,74 +29,74 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/supabaseClient.js"></script>
 
-  <script>
-    const supabase = window.supabaseClient;
+<script>
+  const supabase = window.supabaseClient;
 
   async function loadDashboard() {
-  const { data: sessions, error: sessionsError } = await supabase
-    .from("student_sessions")
-    .select("user_id, started_at, question_count");
+    const { data: sessions, error: sessionsError } = await supabase
+      .from("student_sessions")
+      .select("user_id, started_at, question_count");
 
-  if (sessionsError) {
-    console.error("student_sessions fout:", sessionsError);
-    return;
-  }
-
-  const { data: profiles, error: profilesError } = await supabase
-    .from("profiles")
-    .select("id, display_name");
-
-  if (profilesError) {
-    console.error("profiles fout:", profilesError);
-    return;
-  }
-
-  const profileMap = {};
-  profiles.forEach((profile) => {
-    profileMap[profile.id] = profile.display_name || "Onbekend";
-  });
-
-  const perUser = {};
-
-  sessions.forEach((row) => {
-    const uid = row.user_id;
-
-    if (!perUser[uid]) {
-      perUser[uid] = {
-        name: profileMap[uid] || "Onbekend",
-        sessions: 0,
-        totalQuestions: 0,
-        lastActivity: row.started_at
-      };
+    if (sessionsError) {
+      console.error("student_sessions fout:", sessionsError);
+      return;
     }
 
-    perUser[uid].sessions += 1;
-    perUser[uid].totalQuestions += row.question_count || 0;
+    const { data: profiles, error: profilesError } = await supabase
+      .from("profiles")
+      .select("id, display_name");
 
-    if (row.started_at > perUser[uid].lastActivity) {
-      perUser[uid].lastActivity = row.started_at;
+    if (profilesError) {
+      console.error("profiles fout:", profilesError);
+      return;
     }
-  });
 
-  const tbody = document.querySelector("#dashboardTable tbody");
-  tbody.innerHTML = "";
+    const profileMap = {};
+    profiles.forEach((profile) => {
+      profileMap[profile.id] = profile.display_name || "Onbekend";
+    });
 
-  Object.values(perUser).forEach((user) => {
-    const tr = document.createElement("tr");
+    const perUser = {};
 
-    tr.innerHTML = `
-      <td>${user.name}</td>
-      <td>${user.sessions}</td>
-      <td>${user.totalQuestions}</td>
-      <td>${new Date(user.lastActivity).toLocaleString()}</td>
-    `;
+    sessions.forEach((row) => {
+      const uid = row.user_id;
 
-    tbody.appendChild(tr);
-  });
-}
+      if (!perUser[uid]) {
+        perUser[uid] = {
+          name: profileMap[uid] || "Onbekend",
+          sessions: 0,
+          totalQuestions: 0,
+          lastActivity: row.started_at
+        };
+      }
 
-    loadDashboard();
-  </script>
+      perUser[uid].sessions += 1;
+      perUser[uid].totalQuestions += row.question_count || 0;
+
+      if (row.started_at > perUser[uid].lastActivity) {
+        perUser[uid].lastActivity = row.started_at;
+      }
+    });
+
+    const tbody = document.querySelector("#dashboardTable tbody");
+    tbody.innerHTML = "";
+
+    Object.values(perUser).forEach((user) => {
+      const tr = document.createElement("tr");
+
+      tr.innerHTML = `
+        <td>${user.name}</td>
+        <td>${user.sessions}</td>
+        <td>${user.totalQuestions}</td>
+        <td>${new Date(user.lastActivity).toLocaleString()}</td>
+      `;
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  loadDashboard();
+</script>
 
 </body>
 </html>
