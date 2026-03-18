@@ -1455,9 +1455,10 @@ async function handleAnswer(clickedButton, selectedOption) {
     feedback.className = "feedback show good";
     feedback.style.display = "block";
 
-    updateScoreDisplay();
+updateScoreDisplay();
+await syncStudentSessionStats();
 
-    const promptBox = document.querySelector(".prompt-box");
+const promptBox = document.querySelector(".prompt-box");
     const masterySegments = document.querySelectorAll("#masterySegments .mastery-segment");
     const level = Math.max(0, Math.min(nextLevel ?? 0, 4));
 
