@@ -1,6 +1,7 @@
 import { historyMavo4Course } from "./courses/geschiedenis-mavo-4.js";
 import { historyMavo3Course } from "./courses/geschiedenis-mavo-3.js";
 import { historyHavo3Course } from "./courses/geschiedenis-havo-3.js";
+import { historyVwo2Course } from "./courses/geschiedenis-vwo-2.js";
 
 import { aardrijkskundeMavo4Course } from "./courses/aardrijkskunde-mavo-4.js";
 import { aardrijkskundeMavo3Course } from "./courses/aardrijkskunde-mavo-3.js";
@@ -20,6 +21,7 @@ export const courseCatalog = [
   historyMavo4Course,
   historyHavo3Course,
   historyMavo3Course,
+  historyVwo2Course,
 
   aardrijkskundeMavo4Course,
   aardrijkskundeMavo3Course,
