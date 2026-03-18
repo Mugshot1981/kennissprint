@@ -1737,7 +1737,10 @@ feedback.addEventListener("click", (event) => {
 // ===== FOUTEN OPNIEUW OEFENEN =====
 
 if (retryWrongButton) {
-  retryWrongButton.addEventListener("click", async () => {
+  retryWrongButton.addEventListener("click", () => {
+    activeSessionId = null;
+    activeSessionStartedAt = null;
+
     currentChapterItems = [...wrongItems];
     sessionItems = [...wrongItems];
     remainingQuestions = shuffleArray([...wrongItems]);
@@ -1748,15 +1751,15 @@ if (retryWrongButton) {
     updateScoreDisplay();
 
     endScreen.classList.add("hidden");
-
-    await startStudentSession();
-
     buildQuestion();
   });
 }
 
 if (restartButton) {
-  restartButton.addEventListener("click", async () => {
+  restartButton.addEventListener("click", () => {
+    activeSessionId = null;
+    activeSessionStartedAt = null;
+
     currentChapterItems = getAvailableItems(quizMode);
     sessionItems = getRecommendedSessionItems(currentChapterItems, 10);
     remainingQuestions = shuffleArray([...sessionItems]);
@@ -1767,13 +1770,9 @@ if (restartButton) {
     updateScoreDisplay();
 
     endScreen.classList.add("hidden");
-
-    await startStudentSession();
-
     buildQuestion();
   });
 }
-
 async function closeQuizSession() {
     await endStudentSession();
   document.body.classList.remove("quiz-active");
