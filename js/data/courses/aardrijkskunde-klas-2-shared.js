@@ -403,7 +403,7 @@ export const aardrijkskundeKlas2Shared = {
   answer: "Klei dat is gesedimenteerd door de zee.",
   keywords: ["klei", "zee"]
 },
-      export const akH2Begrippen = [
+    
 
 /* =========================
 2.1 Steden in de wereld
