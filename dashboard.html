@@ -43,8 +43,9 @@
         data: sessionData,
         error: sessionError
       } = await sb
-        .from("student_sessions")
-        .select("user_id, started_at, question_count");
+       .from("student_sessions")
+.select("user_id, started_at, question_count, ended_at")
+.not("ended_at", "is", null);
 
       if (sessionError) {
         console.error("student_sessions fout:", sessionError);
