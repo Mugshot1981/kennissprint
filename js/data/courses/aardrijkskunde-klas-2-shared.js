@@ -1340,7 +1340,7 @@ export const aardrijkskundeKlas2Shared = {
   keywords: ["geen afval", "leven"]
 }
 
-];
+
     ],
     years: [],
     persons: []
