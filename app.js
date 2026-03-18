@@ -1729,6 +1729,7 @@ if (restartButton) {
 }
 
 function closeQuizSession() {
+    await endStudentSession();
   document.body.classList.remove("quiz-active");
 
   quizArea.classList.add("hidden");
