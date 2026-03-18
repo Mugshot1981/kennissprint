@@ -5,6 +5,9 @@ import { historyVwo2Course } from "./courses/geschiedenis-vwo-2.js";
 
 import { aardrijkskundeMavo4Course } from "./courses/aardrijkskunde-mavo-4.js";
 import { aardrijkskundeMavo3Course } from "./courses/aardrijkskunde-mavo-3.js";
+import { aardrijkskundeMavo2Course } from "./courses/aardrijkskunde-mavo-2.js";
+import { aardrijkskundeHavo2Course } from "./courses/aardrijkskunde-havo-2.js";
+import { aardrijkskundeVwo2Course } from "./courses/aardrijkskunde-vwo-2.js";
 
 import { economieMavo3Course } from "./courses/economie-mavo-3.js";
 import { economieMavo4Course } from "./courses/economie-mavo-4.js";
