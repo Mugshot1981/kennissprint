@@ -1009,7 +1009,7 @@ async function endStudentSession() {
   }
 }
 
-function showEndScreen() {
+async function showEndScreen() {
     await endStudentSession();
   answersContainer.innerHTML = "";
   feedback.textContent = "";
