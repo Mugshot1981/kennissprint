@@ -217,6 +217,9 @@ let answered = false;
 let scoreCorrect = 0;
 let scoreTotal = 0;
 
+let activeSessionId = null;
+let activeSessionStartedAt = null;
+
 // Resultaten van huidige sessie
 let sessionResults = [];
 
