@@ -1728,7 +1728,7 @@ if (restartButton) {
   });
 }
 
-function closeQuizSession() {
+async function closeQuizSession() {
     await endStudentSession();
   document.body.classList.remove("quiz-active");
 
