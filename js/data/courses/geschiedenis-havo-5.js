@@ -11,11 +11,18 @@ export const historyHavo5Course = {
   title: "Geschiedenis 5 havo",
 
   chapters: [
-    {
-      id: "his5h-h1",
-      subjectId: "geschiedenis",
-      title: "Hoofdstuk 1"
-    }
+  [
+  { id: "his5h-h1", subjectId: "geschiedenis", title: "De wereld tot 1500" },
+  { id: "his5h-h2", subjectId: "geschiedenis", title: "Veranderend mens- en wereldbeeld" },
+  { id: "his5h-h3", subjectId: "geschiedenis", title: "Een nieuwe republiek in Europa" },
+  { id: "his5h-h4", subjectId: "geschiedenis", title: "Verlichting en revoluties" },
+  { id: "his5h-h5", subjectId: "geschiedenis", title: "Industrialisatie en emancipatie" },
+  { id: "his5h-h6", subjectId: "geschiedenis", title: "De strijd om de wereld" },
+  { id: "his5h-h7", subjectId: "geschiedenis", title: "Leven in een massasamenleving" },
+  { id: "his5h-h8", subjectId: "geschiedenis", title: "De Tweede Wereldoorlog" },
+  { id: "his5h-h9", subjectId: "geschiedenis", title: "Een nieuwe wereldorde" },
+  { id: "his5h-h10", subjectId: "geschiedenis", title: "Een kleine wereld" }
+]
   ],
 
   datasets: {
