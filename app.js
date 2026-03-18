@@ -1657,7 +1657,7 @@ async function handleTypedSubmit() {
     feedback.className = "feedback show good";
     feedback.style.display = "block";
 
-updateScoreDisplay();
+updateScoreDisplay(); 
 await syncStudentSessionStats();
 
 setTimeout(() => {
