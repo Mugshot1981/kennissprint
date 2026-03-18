@@ -1532,7 +1532,7 @@ function updateStartButtonState() {
   startButton.textContent = "Start aanbevolen sessie";
 }
 // ===== QUIZ STARTEN =====
-startButton.addEventListener("click", () => {
+startButton.addEventListener("click", async () => {
   console.log("START CLICK");
   const selectedChapterIds = Array.from(chapterSelect.selectedOptions).map(
     (option) => option.value
