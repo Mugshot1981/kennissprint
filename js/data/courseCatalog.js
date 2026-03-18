@@ -28,6 +28,9 @@ export const courseCatalog = [
 
   aardrijkskundeMavo4Course,
   aardrijkskundeMavo3Course,
+   aardrijkskundeMavo2Course,
+  aardrijkskundeHavo2Course,
+  aardrijkskundeVwo2Course,
 
   economieMavo3Course,
   economieMavo4Course,
