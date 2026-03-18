@@ -1534,6 +1534,7 @@ document.body.appendChild(backdrop);
     }
 
     updateScoreDisplay();
+    await syncStudentSessionStats();
   }
 }
 
