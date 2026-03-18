@@ -1010,6 +1010,7 @@ async function endStudentSession() {
 }
 
 function showEndScreen() {
+    await endStudentSession();
   answersContainer.innerHTML = "";
   feedback.textContent = "";
   feedback.className = "feedback";
