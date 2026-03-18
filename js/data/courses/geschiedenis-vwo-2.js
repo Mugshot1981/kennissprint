@@ -1,0 +1,373 @@
+{
+  id: "geschiedenis-vwo-2",
+  subject: "geschiedenis",
+  level: "vwo",
+  grade: "2",
+  title: "Geschiedenis vwo 2",
+
+  chapters: [
+    {
+      id: "his-vwo2-h1",
+      subjectId: "geschiedenis",
+      title: "Franse Revolutie"
+    }
+  ],
+
+  datasets: {
+    terms: [
+      {
+        id: "his-vwo2-h1-001",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "absolute macht",
+        answer: "onbeperkte macht, die is gegeven door God.",
+        keywords: ["onbeperkte macht", "macht van god"]
+      },
+      {
+        id: "his-vwo2-h1-002",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "encyclopedie",
+        answer: "boek waarin informatie over uiteenlopende onderwerpen te vinden is.",
+        keywords: ["kennisboek", "informatieboek"]
+      },
+      {
+        id: "his-vwo2-h1-003",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "filosoof",
+        answer: "denker.",
+        keywords: ["denker"]
+      },
+      {
+        id: "his-vwo2-h1-004",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "franse revolutie",
+        answer: "grote politiek-bestuurlijke, sociale en culturele omwenteling in Frankrijk (1789-1799).",
+        keywords: ["omwenteling frankrijk", "revolutie 1789"]
+      },
+      {
+        id: "his-vwo2-h1-005",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "rationeel",
+        answer: "logisch, op basis van je verstand.",
+        keywords: ["logisch denken", "verstand"]
+      },
+      {
+        id: "his-vwo2-h1-006",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "rechtsstaat",
+        answer: "land waarin de belangrijkste rechten en plichten van de mensen zijn vastgelegd in de wet.",
+        keywords: ["wetten land", "rechten plichten"]
+      },
+      {
+        id: "his-vwo2-h1-007",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "revolutie",
+        answer: "grote verandering in een korte tijd.",
+        keywords: ["snelle verandering"]
+      },
+      {
+        id: "his-vwo2-h1-008",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "tijd van pruiken en revoluties",
+        answer: "tijdvak van 1700 tot 1800 in West-Europa.",
+        keywords: ["1700 1800", "tijdvak verlichting"]
+      },
+      {
+        id: "his-vwo2-h1-009",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "tolerantie",
+        answer: "accepteren van verschillende godsdiensten, meningen, culturen en gebruiken.",
+        keywords: ["acceptatie verschillen", "verschillende meningen"]
+      },
+      {
+        id: "his-vwo2-h1-010",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "trias politica",
+        answer: "verdeling van de macht in drie delen: wetgevende, uitvoerende en rechtsprekende macht.",
+        keywords: ["drie machten", "scheiding macht"]
+      },
+      {
+        id: "his-vwo2-h1-011",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "verlichte denkers",
+        answer: "denkers die geloofden dat je met verstand vooruitgang kon bereiken.",
+        keywords: ["verstand vooruitgang", "denken centraal"]
+      },
+      {
+        id: "his-vwo2-h1-012",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "verlichting",
+        answer: "beweging waarin men geloofde dat alles met verstand te verklaren en te begrijpen was.",
+        keywords: ["verstand centraal", "18e eeuw ideeën"]
+      },
+      {
+        id: "his-vwo2-h1-013",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "absolute monarchie",
+        answer: "land met een koning die de absolute macht heeft.",
+        keywords: ["koning macht", "alleenheerser"]
+      },
+      {
+        id: "his-vwo2-h1-014",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "privilege",
+        answer: "voordeel of recht dat anderen niet hebben.",
+        keywords: ["voordeel recht", "extra rechten"]
+      },
+      {
+        id: "his-vwo2-h1-015",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "standen",
+        answer: "groepen mensen die van elkaar verschillen in rechten en plichten.",
+        keywords: ["groepen rechten", "standen maatschappij"]
+      },
+      {
+        id: "his-vwo2-h1-016",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "staten-generaal",
+        answer: "vergadering van de drie standen in Frankrijk.",
+        keywords: ["standen vergadering"]
+      },
+      {
+        id: "his-vwo2-h1-017",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "versailles",
+        answer: "paleis dat symbool stond voor de macht van de koning.",
+        keywords: ["paleis koning", "symbool macht"]
+      },
+      {
+        id: "his-vwo2-h1-018",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "vrijheid gelijkheid en broederschap",
+        answer: "leus van de Franse Revolutie.",
+        keywords: ["leus revolutie"]
+      },
+      {
+        id: "his-vwo2-h1-019",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "bastille",
+        answer: "gevangenis in Parijs die symbool stond voor de macht van de koning.",
+        keywords: ["gevangenis parijs", "symbool macht"]
+      },
+      {
+        id: "his-vwo2-h1-020",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "eed op de kaatsbaan",
+        answer: "belofte om door te gaan tot er een grondwet was.",
+        keywords: ["belofte grondwet"]
+      },
+      {
+        id: "his-vwo2-h1-021",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "grondwet",
+        answer: "belangrijkste wetten van een land.",
+        keywords: ["wetten land"]
+      },
+      {
+        id: "his-vwo2-h1-022",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "nationale vergadering",
+        answer: "nieuwe volksvertegenwoordiging van Frankrijk.",
+        keywords: ["volksvertegenwoordiging"]
+      },
+      {
+        id: "his-vwo2-h1-023",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "revolutionairen",
+        answer: "mensen die verandering willen door een revolutie.",
+        keywords: ["verandering willen"]
+      },
+      {
+        id: "his-vwo2-h1-024",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "rechten van de mens",
+        answer: "document met rechten voor burgers in Frankrijk.",
+        keywords: ["rechten burgers"]
+      },
+      {
+        id: "his-vwo2-h1-025",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "guillotine",
+        answer: "machine om mensen te onthoofden tijdens de revolutie.",
+        keywords: ["onthoofding machine"]
+      },
+      {
+        id: "his-vwo2-h1-026",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "terreur",
+        answer: "periode waarin veel mensen werden geëxecuteerd.",
+        keywords: ["executies periode"]
+      },
+      {
+        id: "his-vwo2-h1-027",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "staatsgreep",
+        answer: "met geweld de macht overnemen.",
+        keywords: ["macht overnemen"]
+      },
+      {
+        id: "his-vwo2-h1-028",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "consulaat",
+        answer: "regering van Frankrijk na de revolutie onder Napoleon.",
+        keywords: ["napoleon regering"]
+      },
+      {
+        id: "his-vwo2-h1-029",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "directoire",
+        answer: "bestuur van Frankrijk na de revolutie (1795-1799).",
+        keywords: ["bestuur frankrijk"]
+      },
+      {
+        id: "his-vwo2-h1-030",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "begrip",
+        prompt: "monarchist",
+        answer: "aanhanger van de monarchie.",
+        keywords: ["koning aanhanger"]
+      }
+    ],
+
+    years: [],
+
+    persons: [
+      {
+        id: "his-vwo2-h1-p1",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "persoon",
+        prompt: "diderot",
+        answer: "schrijver van de encyclopedie.",
+        keywords: ["encyclopedie"]
+      },
+      {
+        id: "his-vwo2-h1-p2",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "persoon",
+        prompt: "montesquieu",
+        answer: "bedenker van de trias politica.",
+        keywords: ["scheiding macht"]
+      },
+      {
+        id: "his-vwo2-h1-p3",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "persoon",
+        prompt: "rousseau",
+        answer: "filosoof die stelde dat mensen gelijke rechten hebben.",
+        keywords: ["gelijke rechten"]
+      },
+      {
+        id: "his-vwo2-h1-p4",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "persoon",
+        prompt: "adam smith",
+        answer: "grondlegger van de vrijemarkteconomie.",
+        keywords: ["vrije markt"]
+      },
+      {
+        id: "his-vwo2-h1-p5",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "persoon",
+        prompt: "voltaire",
+        answer: "pleitte voor tolerantie.",
+        keywords: ["tolerantie"]
+      },
+      {
+        id: "his-vwo2-h1-p6",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "persoon",
+        prompt: "lodewijk xvi",
+        answer: "koning van Frankrijk tijdens de revolutie.",
+        keywords: ["koning frankrijk"]
+      },
+      {
+        id: "his-vwo2-h1-p7",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "persoon",
+        prompt: "robespierre",
+        answer: "leider tijdens de terreur.",
+        keywords: ["terreur leider"]
+      },
+      {
+        id: "his-vwo2-h1-p8",
+        subjectId: "geschiedenis",
+        chapterId: "his-vwo2-h1",
+        type: "persoon",
+        prompt: "napoleon bonaparte",
+        answer: "pleegde staatsgreep en werd keizer.",
+        keywords: ["staatsgreep", "keizer"]
+      }
+    ]
+  },
+
+  modes: [
+    { id: "terms", label: "Begrippen", dataset: "terms" },
+    { id: "years", label: "Jaartallen", dataset: "years" },
+    { id: "persons", label: "Personen", dataset: "persons" }
+  ]
+}
