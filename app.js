@@ -1701,6 +1701,7 @@ setTimeout(() => {
   }
 
   updateScoreDisplay();
+  await syncStudentSessionStats();
 }
 
 if (typedRecallSubmit) {
