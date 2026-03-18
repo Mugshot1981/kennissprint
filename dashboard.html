@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Docent Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <div class="card">
+      <h1>Docent Dashboard</h1>
+
+      <table id="dashboardTable" style="width:100%; margin-top:20px;">
+        <thead>
+          <tr>
+            <th>Naam</th>
+            <th>Aantal sessies</th>
+            <th>Totaal vragen</th>
+            <th>Laatste activiteit</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+
+  <script>
+    const supabase = window.supabaseClient;
+
+    async function loadDashboard() {
+      const { data, error } = await supabase
+        .from("student_sessions")
+        .select(`
+          user_id,
+          started_at,
+          question_count,
+          profiles (
+            display_name
+          )
+        `);
+
+      if (error) {
+        console.error(error);
+        return;
+      }
+
+      const perUser = {};
+
+      data.forEach(row => {
+        const uid = row.user_id;
+
+        if (!perUser[uid]) {
+          perUser[uid] = {
+            name: row.profiles?.display_name || "Onbekend",
+            sessions: 0,
+            totalQuestions: 0,
+            lastActivity: row.started_at
+          };
+        }
+
+        perUser[uid].sessions += 1;
+        perUser[uid].totalQuestions += row.question_count || 0;
+
+        if (row.started_at > perUser[uid].lastActivity) {
+          perUser[uid].lastActivity = row.started_at;
+        }
+      });
+
+      const tbody = document.querySelector("#dashboardTable tbody");
+      tbody.innerHTML = "";
+
+      Object.values(perUser).forEach(user => {
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td>${user.name}</td>
+          <td>${user.sessions}</td>
+          <td>${user.totalQuestions}</td>
+          <td>${new Date(user.lastActivity).toLocaleString()}</td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    loadDashboard();
+  </script>
+
+</body>
+</html>
