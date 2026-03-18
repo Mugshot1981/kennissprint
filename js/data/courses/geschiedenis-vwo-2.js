@@ -1,4 +1,4 @@
-{
+export const historyVwo2Course = {
   id: "geschiedenis-vwo-2",
   subject: "geschiedenis",
   level: "vwo",
