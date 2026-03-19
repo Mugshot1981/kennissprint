@@ -1657,7 +1657,7 @@ export const historyHavo5Course = {
     keywords: ["militair", "bondgenootschap", "westen"]
   },
    {
-    id: "his5h-h9-016",
+    id: "his5h-h9-013",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1666,7 +1666,7 @@ export const historyHavo5Course = {
     keywords: ["hoogste macht", "staat", "gezag"]
   },
   {
-    id: "his5h-h9-017",
+    id: "his5h-h9-014",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1675,7 +1675,7 @@ export const historyHavo5Course = {
     keywords: ["boven staat", "internationale organisatie", "macht overdragen"]
   },
   {
-    id: "his5h-h9-018",
+    id: "his5h-h9-015",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1684,7 +1684,7 @@ export const historyHavo5Course = {
     keywords: ["VN orgaan", "vrede", "vetorecht"]
   },
   {
-    id: "his5h-h9-019",
+    id: "his5h-h9-016",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1693,7 +1693,7 @@ export const historyHavo5Course = {
     keywords: ["internationale organisatie", "vrede", "1948"]
   },
   {
-    id: "his5h-h9-020",
+    id: "his5h-h9-017",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
