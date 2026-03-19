@@ -1478,7 +1478,7 @@ id: "his5h-h4-001",
     chapterId: "his5h-h8",
     type: "begrip",
     prompt: "genocide",
-    answer: "Stelselmatige uitroeiing van een volk of bevolkingsgroep, ook wel 'volkenmoord' genoemd.",
+ answer: "Stelselmatige uitroeiing van een volk of bevolkingsgroep, ook wel 'volkenmoord' genoemd.",
     keywords: ["uitroeiing", "volk", "moord"]
   },
   {
