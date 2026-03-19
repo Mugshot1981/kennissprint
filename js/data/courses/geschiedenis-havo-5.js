@@ -1657,7 +1657,7 @@ export const historyHavo5Course = {
     keywords: ["militair", "bondgenootschap", "westen"]
   },
    {
-    id: "his5h-h9-001",
+    id: "his5h-h9-016",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1666,7 +1666,7 @@ export const historyHavo5Course = {
     keywords: ["hoogste macht", "staat", "gezag"]
   },
   {
-    id: "his5h-h9-002",
+    id: "his5h-h9-017",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1675,7 +1675,7 @@ export const historyHavo5Course = {
     keywords: ["boven staat", "internationale organisatie", "macht overdragen"]
   },
   {
-    id: "his5h-h9-003",
+    id: "his5h-h9-018",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1684,7 +1684,7 @@ export const historyHavo5Course = {
     keywords: ["VN orgaan", "vrede", "vetorecht"]
   },
   {
-    id: "his5h-h9-004",
+    id: "his5h-h9-019",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1693,7 +1693,7 @@ export const historyHavo5Course = {
     keywords: ["internationale organisatie", "vrede", "1948"]
   },
   {
-    id: "his5h-h9-005",
+    id: "his5h-h9-020",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1702,7 +1702,7 @@ export const historyHavo5Course = {
     keywords: ["tegenhouden besluit", "meerderheid", "macht"]
   },
   {
-    id: "his5h-h9-006",
+    id: "his5h-h9-021",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1711,7 +1711,7 @@ export const historyHavo5Course = {
     keywords: ["VN militairen", "vrede", "conflict"]
   },
   {
-    id: "his5h-h9-007",
+    id: "his5h-h9-022",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
@@ -1720,7 +1720,7 @@ export const historyHavo5Course = {
     keywords: ["wapens", "concurrentie", "landen"]
   },
   {
-    id: "his5h-h9-008",
+    id: "his5h-h9-023",
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
