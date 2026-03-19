@@ -11,7 +11,7 @@ export const historyHavo5Course = {
   title: "Geschiedenis 5 havo",
 
   chapters: [
-  [
+  
   { id: "his5h-h1", subjectId: "geschiedenis", title: "De wereld tot 1500" },
   { id: "his5h-h2", subjectId: "geschiedenis", title: "Veranderend mens- en wereldbeeld" },
   { id: "his5h-h3", subjectId: "geschiedenis", title: "Een nieuwe republiek in Europa" },
@@ -22,7 +22,7 @@ export const historyHavo5Course = {
   { id: "his5h-h8", subjectId: "geschiedenis", title: "De Tweede Wereldoorlog" },
   { id: "his5h-h9", subjectId: "geschiedenis", title: "Een nieuwe wereldorde" },
   { id: "his5h-h10", subjectId: "geschiedenis", title: "Een kleine wereld" }
-]
+
   ],
 
   datasets: {
