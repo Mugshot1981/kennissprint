@@ -578,7 +578,7 @@ export const historyHavo5Course = {
     keywords: ["kerkhervorming", "protestantisme"]
   },
   {
-    id: "his5h-h2-001",
+    id: "his5h-h2-016",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -587,7 +587,7 @@ export const historyHavo5Course = {
     keywords: ["1300-1600", "mens centraal", "hier en nu"]
   },
   {
-    id: "his5h-h2-002",
+    id: "his5h-h2-017",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -596,7 +596,7 @@ export const historyHavo5Course = {
     keywords: ["geen koning", "burgers besturen", "staat"]
   },
   {
-    id: "his5h-h2-003",
+    id: "his5h-h2-018",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -605,7 +605,7 @@ export const historyHavo5Course = {
     keywords: ["gebied", "bestuur", "monopolie geweld"]
   },
   {
-    id: "his5h-h2-004",
+    id: "his5h-h2-019",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -614,7 +614,7 @@ export const historyHavo5Course = {
     keywords: ["verdraagzaamheid", "andersdenkenden", "geloof"]
   },
   {
-    id: "his5h-h2-005",
+    id: "his5h-h2-020",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -623,7 +623,7 @@ export const historyHavo5Course = {
     keywords: ["ideeën", "wereld", "beeld"]
   },
   {
-    id: "his5h-h2-006",
+    id: "his5h-h2-021",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -632,7 +632,7 @@ export const historyHavo5Course = {
     keywords: ["handel", "winst", "investeren"]
   },
   {
-    id: "his5h-h2-007",
+    id: "his5h-h2-022",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -641,7 +641,7 @@ export const historyHavo5Course = {
     keywords: ["vorst", "hof", "cultuur"]
   },
   {
-    id: "his5h-h2-008",
+    id: "his5h-h2-023",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -650,7 +650,7 @@ export const historyHavo5Course = {
     keywords: ["machine", "natuurwetten", "God"]
   },
   {
-    id: "his5h-h2-009",
+    id: "his5h-h2-024",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -659,7 +659,7 @@ export const historyHavo5Course = {
     keywords: ["koning", "erfelijk", "bestuur"]
   },
   {
-    id: "his5h-h2-010",
+    id: "his5h-h2-025",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -668,7 +668,7 @@ export const historyHavo5Course = {
     keywords: ["hoogste ambtenaar", "Holland", "buitenlandse zaken"]
   },
   {
-    id: "his5h-h2-011",
+    id: "his5h-h2-026",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
@@ -677,7 +677,7 @@ export const historyHavo5Course = {
     keywords: ["logica", "verstand", "kennis"]
   },
   {
-    id: "his5h-h2-012",
+    id: "his5h-h2-027",
     subjectId: "geschiedenis",
     chapterId: "his5h-h2",
     type: "begrip",
