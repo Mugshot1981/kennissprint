@@ -385,7 +385,7 @@ export const historyHavo5Course = {
     keywords: ["burgers besturen", "geen koning", "geen keizer"]
   },
   {
-    id: "his5h-h1-053",
+    id: "his5h-h1-054",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
