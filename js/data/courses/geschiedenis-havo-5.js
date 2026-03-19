@@ -367,7 +367,7 @@ export const historyHavo5Course = {
     keywords: ["geen schrift", "periode"]
   },
   {
-    id: "his5h-h1-044",
+    id: "his5h-h1-051",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -376,7 +376,7 @@ export const historyHavo5Course = {
     keywords: ["voorrecht", "specifieke groep"]
   },
   {
-    id: "his5h-h1-045",
+    id: "his5h-h1-052",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -385,7 +385,7 @@ export const historyHavo5Course = {
     keywords: ["burgers besturen", "geen koning", "geen keizer"]
   },
   {
-    id: "his5h-h1-046",
+    id: "his5h-h1-053",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
