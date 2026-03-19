@@ -21,7 +21,22 @@ export const historyHavo5Course = {
   { id: "his5h-h7", subjectId: "geschiedenis", title: "Leven in een massasamenleving" },
   { id: "his5h-h8", subjectId: "geschiedenis", title: "De Tweede Wereldoorlog" },
   { id: "his5h-h9", subjectId: "geschiedenis", title: "Een nieuwe wereldorde" },
-  { id: "his5h-h10", subjectId: "geschiedenis", title: "Een kleine wereld" }
+  { id: "his5h-h10", subjectId: "geschiedenis", title: "Een kleine wereld" },
+    {
+  id: "his5h-ex1",
+  subjectId: "geschiedenis",
+  title: "EXAMENKATERN – Het Britse Rijk 1585-1900"
+},
+{
+  id: "his5h-ex2",
+  subjectId: "geschiedenis",
+  title: "EXAMENKATERN – Duitsland in Europa 1918-1991"
+},
+{
+  id: "his5h-ex3",
+  subjectId: "geschiedenis",
+  title: "EXAMENKATERN – Nederland 1948-2008"
+}
 
   ],
 
@@ -1863,17 +1878,1269 @@ id: "his5h-h4-001",
     prompt: "wederopbouw",
     answer: "Periode na de Tweede Wereldoorlog waarin Europa economisch en fysiek werd hersteld.",
     keywords: ["herstel", "na oorlog", "Europa"]
+  },
+
+       {
+    id: "his5h-ex1-001",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "abolitionisme",
+    answer: "Beweging die streefde naar afschaffing van slavenhandel en slavernij.",
+    keywords: ["afschaffing slavernij", "beweging", "tegen slavernij"]
+  },
+  {
+    id: "his5h-ex1-002",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "driehoekshandel",
+    answer: "Handelsroute tussen Europa, Afrika en Amerika waarbij slavenhandel een onderdeel was.",
+    keywords: ["handel Europa Afrika Amerika", "slavenhandel", "driehoek"]
+  },
+  {
+    id: "his5h-ex1-003",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "federale staat",
+    answer: "Staat die bestaat uit deelstaten met eigen bestuur, verbonden onder één nationale overheid.",
+    keywords: ["deelstaten", "centrale overheid", "federatie"]
+  },
+  {
+    id: "his5h-ex1-004",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "natuurlijke rechten",
+    answer: "Rechten die ieder mens van nature heeft, zoals recht op leven, bezit en vrijheid.",
+    keywords: ["rechten mens", "vrijheid", "leven bezit"]
+  },
+  {
+    id: "his5h-ex1-005",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Pilgrim Fathers",
+    answer: "Engelse protestanten die in 1620 een kolonie stichtten in Noord-Amerika.",
+    keywords: ["kolonie Amerika", "Engelse protestanten", "1620"]
+  },
+  {
+    id: "his5h-ex1-006",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "plantage-economie",
+    answer: "Economie gericht op grootschalige landbouw met slaven voor exportgewassen.",
+    keywords: ["slavenarbeid", "landbouw", "exportgewassen"]
+  },
+  {
+    id: "his5h-ex1-007",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Royal African Company",
+    answer: "Engelse handelscompagnie (1660-1752) gericht op handel met West-Afrika.",
+    keywords: ["handel Afrika", "Engels bedrijf", "slavenhandel"]
+  },
+  {
+    id: "his5h-ex1-008",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "trias politica",
+    answer: "Scheidingsprincipe van wetgevende, uitvoerende en rechtsprekende macht.",
+    keywords: ["scheiding macht", "wetgevend uitvoerend rechterlijk", "machtenscheiding"]
+  },
+  {
+    id: "his5h-ex1-009",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "vestigingskolonie",
+    answer: "Kolonie waar Europeanen zich permanent vestigen om een nieuw bestaan op te bouwen.",
+    keywords: ["kolonie vestigen", "migratie", "nieuw leven"]
+  },
+  {
+    id: "his5h-ex1-010",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "volkssoevereiniteit",
+    answer: "Het idee dat de hoogste macht in een staat bij het volk ligt.",
+    keywords: ["macht volk", "democratie", "soevereiniteit"]
+  },
+
+  // 1.2 (9)
+  {
+    id: "his5h-ex1-011",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Brits-Indisch leger",
+    answer: "Leger in India bestaande uit Indiase soldaten onder Britse officieren.",
+    keywords: ["India leger", "Britse officieren", "koloniaal leger"]
+  },
+  {
+    id: "his5h-ex1-012",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "East India Company",
+    answer: "Engelse handelscompagnie (1600-1874) gericht op handel met Azië, vooral India.",
+    keywords: ["handel Azië", "India", "Brits bedrijf"]
+  },
+  {
+    id: "his5h-ex1-013",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "emancipatie",
+    answer: "Streven naar gelijke rechten voor achtergestelde groepen.",
+    keywords: ["gelijke rechten", "achterstelling", "vrijheid"]
+  },
+  {
+    id: "his5h-ex1-014",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "factorij",
+    answer: "Handelspost van een Europese compagnie in een kolonie waar goederen worden opgeslagen en verhandeld.",
+    keywords: ["handelspost", "kolonie", "opslag handel"]
+  },
+  {
+    id: "his5h-ex1-015",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Indian National Congress",
+    answer: "Politieke beweging (1885) die streefde naar gelijke rechten voor Indiërs.",
+    keywords: ["India politiek", "nationalisme", "rechten"]
+  },
+  {
+    id: "his5h-ex1-016",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "modern imperialisme",
+    answer: "Europese uitbreiding in de 19e eeuw gericht op economische en politieke macht.",
+    keywords: ["kolonialisme", "Europa", "uitbreiding"]
+  },
+  {
+    id: "his5h-ex1-017",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Mogolrijk",
+    answer: "Rijk in Zuid-Azië (1526-1858) bestuurd door een vorst.",
+    keywords: ["India rijk", "vorst", "Azië"]
+  },
+  {
+    id: "his5h-ex1-018",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Royal Navy",
+    answer: "Britse koninklijke oorlogsvloot.",
+    keywords: ["Britse vloot", "marine", "macht zee"]
+  },
+  {
+    id: "his5h-ex1-019",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Suezkanaal",
+    answer: "Kanaal in Egypte (1869) dat Europa en Azië via zee verbindt.",
+    keywords: ["kanaal Egypte", "route Azië", "handel"]
+  },
+  {
+    id: "his5h-ex1-020",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Verdrag van Allahabad",
+    answer: "Verdrag (1765) waarbij de East India Company belastingrechten kreeg in India.",
+    keywords: ["India verdrag", "belasting", "Britse macht"]
+  },
+
+  // 1.3 (9)
+  {
+    id: "his5h-ex1-021",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Factory Acts",
+    answer: "Britse wetten (vanaf 1833) die regels stelden voor arbeid in fabrieken.",
+    keywords: ["arbeidswetten", "fabrieken", "arbeid bescherming"]
+  },
+  {
+    id: "his5h-ex1-022",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "handelskapitalisme",
+    answer: "Economisch systeem gericht op winst door handel.",
+    keywords: ["handel winst", "kapitalisme", "handel systeem"]
+  },
+  {
+    id: "his5h-ex1-023",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "industrieel kapitalisme",
+    answer: "Economisch systeem gebaseerd op productie met vrije arbeid en marktverkoop.",
+    keywords: ["industrie", "vrije arbeid", "productie"]
+  },
+  {
+    id: "his5h-ex1-024",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "industriële revolutie",
+    answer: "Overgang naar grootschalige mechanische productie en industrialisatie.",
+    keywords: ["machines", "industrie", "verandering samenleving"]
+  },
+  {
+    id: "his5h-ex1-025",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "Reform Bill",
+    answer: "Britse wet (1832) die het kiesstelsel hervormde.",
+    keywords: ["kiesrecht", "hervorming", "parlement"]
+  },
+  {
+    id: "his5h-ex1-026",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "sociale klasse",
+    answer: "Groep mensen met vergelijkbare positie op basis van bezit en inkomen.",
+    keywords: ["maatschappij", "inkomen", "positie"]
+  },
+  {
+    id: "his5h-ex1-027",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "spinning jenny",
+    answer: "Spintoestel dat meerdere draden tegelijk kon spinnen.",
+    keywords: ["textiel", "machine", "productie"]
+  },
+  {
+    id: "his5h-ex1-028",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "vrijemarkteconomie",
+    answer: "Economie waarin prijzen worden bepaald door vraag en aanbod.",
+    keywords: ["vraag aanbod", "markt", "economie"]
+  },
+  {
+    id: "his5h-ex1-029",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex1",
+    type: "begrip",
+    prompt: "wereldtentoonstelling",
+    answer: "Internationale tentoonstelling van economische en culturele ontwikkelingen.",
+    keywords: ["tentoonstelling", "internationaal", "industrie cultuur"]
+  },
+      terms: [
+  // 2.1 (1–10)
+  {
+    id: "his5h-ex2-001",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "antisemitisme",
+    answer: "Haat tegen en/of discriminatie van Joden.",
+    keywords: ["joden", "haat", "discriminatie"]
+  },
+  {
+    id: "his5h-ex2-002",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "appeasementpolitiek",
+    answer: "Politiek van toegeven aan Hitler om oorlog te voorkomen.",
+    keywords: ["toegeven", "Hitler", "oorlog voorkomen"]
+  },
+  {
+    id: "his5h-ex2-003",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "arbeidsdienst",
+    answer: "Gedwongen tewerkstelling van arbeiders in nazi-Duitsland.",
+    keywords: ["dwang", "arbeid", "nazi"]
+  },
+  {
+    id: "his5h-ex2-004",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "beurskrach",
+    answer: "Plotselinge instorting van de aandelenbeurs.",
+    keywords: ["crisis", "beurs", "instorting"]
+  },
+  {
+    id: "his5h-ex2-005",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "communisme",
+    answer: "Ideologie waarin bezit gemeenschappelijk is en ongelijkheid verdwijnt.",
+    keywords: ["gelijkheid", "collectief", "Sovjet"]
+  },
+  {
+    id: "his5h-ex2-006",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Dawesplan",
+    answer: "Plan (1924) om Duitse herstelbetalingen te regelen met hulp van leningen.",
+    keywords: ["herstel", "betalingen", "VS"]
+  },
+  {
+    id: "his5h-ex2-007",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "dolkstootlegende",
+    answer: "Mythe dat Duitsland WO1 verloor door verraad van binnenuit.",
+    keywords: ["mythe", "verraad", "Weimar"]
+  },
+  {
+    id: "his5h-ex2-008",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "geallieerden",
+    answer: "Bondgenoten die samen tegen Duitsland vochten.",
+    keywords: ["bondgenoten", "oorlog", "landen"]
+  },
+  {
+    id: "his5h-ex2-009",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "herstelbetaling",
+    answer: "Vergoeding voor schade na een oorlog.",
+    keywords: ["betaling", "oorlog", "schade"]
+  },
+  {
+    id: "his5h-ex2-010",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "machtigingswet",
+    answer: "Wet die Hitler alle macht gaf zonder parlement.",
+    keywords: ["macht", "dictatuur", "Hitler"]
+  },
+
+  // 11–20
+  {
+    id: "his5h-ex2-011",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "nazificatie",
+    answer: "Omvorming van de samenleving volgens nazi-ideeën.",
+    keywords: ["nazisme", "propaganda", "controle"]
+  },
+  {
+    id: "his5h-ex2-012",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "NSDAP",
+    answer: "Nationaalsocialistische Duitse Arbeiderspartij van Hitler.",
+    keywords: ["partij", "Hitler", "nazi"]
+  },
+  {
+    id: "his5h-ex2-013",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "parlementaire democratie",
+    answer: "Systeem waarin gekozen parlement de macht heeft.",
+    keywords: ["parlement", "verkiezingen", "democratie"]
+  },
+  {
+    id: "his5h-ex2-014",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "propaganda",
+    answer: "Beïnvloeding van mensen via informatie en media.",
+    keywords: ["beïnvloeden", "media", "politiek"]
+  },
+  {
+    id: "his5h-ex2-015",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "rechtsstaat",
+    answer: "Staat waarin wetten burgers beschermen en macht beperken.",
+    keywords: ["wet", "rechten", "bescherming"]
+  },
+  {
+    id: "his5h-ex2-016",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Republiek van Weimar",
+    answer: "Democratische Duitse staat van 1919 tot 1933.",
+    keywords: ["Weimar", "democratie", "Duitsland"]
+  },
+  {
+    id: "his5h-ex2-017",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Rijksdagbrand",
+    answer: "Brand in het Duitse parlement in 1933.",
+    keywords: ["brand", "parlement", "Hitler"]
+  },
+  {
+    id: "his5h-ex2-018",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "totalitair regime",
+    answer: "Staat waarin overheid volledige controle heeft over samenleving.",
+    keywords: ["dictatuur", "controle", "staat"]
+  },
+  {
+    id: "his5h-ex2-019",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Verdrag van Versailles",
+    answer: "Vredesverdrag na WO1 waarin Duitsland zwaar werd gestraft.",
+    keywords: ["vrede", "WO1", "straffen"]
+  },
+  {
+    id: "his5h-ex2-020",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Volksgemeinschaft",
+    answer: "Nazi-idee van een raciaal zuivere volksgemeenschap.",
+    keywords: ["ras", "nazi", "eenheid"]
+  },
+
+  // 2.2 + 2.3 (21–38)
+  {
+    id: "his5h-ex2-021",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Berlijnse Muur",
+    answer: "Scheiding tussen Oost- en West-Berlijn (1961-1989).",
+    keywords: ["muur", "scheiding", "DDR"]
+  },
+  {
+    id: "his5h-ex2-022",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Blokkade van Berlijn",
+    answer: "Afsluiting van West-Berlijn door de Sovjet-Unie in 1948.",
+    keywords: ["blokkade", "luchtbrug", "Sovjet"]
+  },
+  {
+    id: "his5h-ex2-023",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Bondsrepubliek Duitsland (BRD)",
+    answer: "West-Duitsland na de Tweede Wereldoorlog.",
+    keywords: ["West", "Duitsland", "kapitalisme"]
+  },
+  {
+    id: "his5h-ex2-024",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Comecon",
+    answer: "Economisch samenwerkingsverband van communistische landen.",
+    keywords: ["samenwerking", "Sovjet", "economie"]
+  },
+  {
+    id: "his5h-ex2-025",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Duitse Democratische Republiek (DDR)",
+    answer: "Communistisch Oost-Duitsland na WO2.",
+    keywords: ["Oost", "Duitsland", "communisme"]
+  },
+  {
+    id: "his5h-ex2-026",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Europese Gemeenschap voor Kolen en Staal (EGKS)",
+    answer: "Eerste Europese samenwerking voor economie (1951).",
+    keywords: ["Europa", "samenwerking", "economie"]
+  },
+  {
+    id: "his5h-ex2-027",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Heimatvertriebene",
+    answer: "Duitsers die na WO2 uit Oost-Europa werden verdreven.",
+    keywords: ["vlucht", "Duitsers", "WO2"]
+  },
+  {
+    id: "his5h-ex2-028",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "invloedssfeer",
+    answer: "Gebied waarin een grootmacht invloed uitoefent.",
+    keywords: ["macht", "gebied", "invloed"]
+  },
+  {
+    id: "his5h-ex2-029",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Koude Oorlog",
+    answer: "Spanning tussen VS en Sovjet-Unie zonder directe oorlog.",
+    keywords: ["VS", "Sovjet", "conflict"]
+  },
+  {
+    id: "his5h-ex2-030",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Marshallplan",
+    answer: "Amerikaanse hulp voor Europese wederopbouw.",
+    keywords: ["hulp", "VS", "herstel"]
+  },
+  {
+    id: "his5h-ex2-031",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "NAVO",
+    answer: "Militair bondgenootschap van westerse landen.",
+    keywords: ["bondgenoot", "militair", "West"]
+  },
+  {
+    id: "his5h-ex2-032",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Oostblok",
+    answer: "Communistische landen onder Sovjet-invloed.",
+    keywords: ["Sovjet", "Oost", "blok"]
+  },
+  {
+    id: "his5h-ex2-033",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "planeconomie",
+    answer: "Economie waarin de staat productie bepaalt.",
+    keywords: ["staat", "planning", "economie"]
+  },
+  {
+    id: "his5h-ex2-034",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Stasi",
+    answer: "Geheime dienst van de DDR.",
+    keywords: ["spionage", "DDR", "controle"]
+  },
+  {
+    id: "his5h-ex2-035",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Trumandoctrine",
+    answer: "Amerikaanse politiek om communisme tegen te gaan.",
+    keywords: ["VS", "communisme", "steun"]
+  },
+  {
+    id: "his5h-ex2-036",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "volksdemocratie",
+    answer: "Communistische vorm van democratie zonder echte keuze.",
+    keywords: ["communisme", "verkiezing", "schijn"]
+  },
+  {
+    id: "his5h-ex2-037",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Warschauspact",
+    answer: "Militair bondgenootschap van communistische landen.",
+    keywords: ["Sovjet", "leger", "bondgenoot"]
+  },
+  {
+    id: "his5h-ex2-038",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex2",
+    type: "begrip",
+    prompt: "Wirtschaftswunder",
+    answer: "Snelle economische groei in West-Duitsland na WO2.",
+    keywords: ["groei", "Duitsland", "economie"]
+  },
+        {
+    id: "his5h-ex3-001",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "babyboom",
+    answer: "Periode waarin veel kinderen worden geboren.",
+    keywords: ["geboorte", "na oorlog", "groei"]
+  },
+  {
+    id: "his5h-ex3-002",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "consumptiemaatschappij",
+    answer: "Samenleving waarin mensen veel goederen kopen en gebruiken.",
+    keywords: ["consumeren", "welvaart", "producten"]
+  },
+  {
+    id: "his5h-ex3-003",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "dekolonisatie",
+    answer: "Proces waarbij koloniën onafhankelijk worden.",
+    keywords: ["kolonie", "onafhankelijk", "einde rijk"]
+  },
+  {
+    id: "his5h-ex3-004",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "EEG",
+    answer: "Economisch samenwerkingsverband van Europese landen (1958-1992).",
+    keywords: ["Europa", "samenwerking", "economie"]
+  },
+  {
+    id: "his5h-ex3-005",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "EGKS",
+    answer: "Eerste Europese economische samenwerking (1951).",
+    keywords: ["Europa", "kolen", "staal"]
+  },
+  {
+    id: "his5h-ex3-006",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "gastarbeider",
+    answer: "Arbeider uit het buitenland die tijdelijk komt werken.",
+    keywords: ["arbeid", "migratie", "buitenland"]
+  },
+  {
+    id: "his5h-ex3-007",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "geleide loonpolitiek",
+    answer: "Overheid bepaalt hoogte van lonen.",
+    keywords: ["loon", "overheid", "economie"]
+  },
+  {
+    id: "his5h-ex3-008",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "handelingsonbekwaamheid",
+    answer: "Situatie waarin vrouwen geen zelfstandige rechtshandelingen mochten verrichten.",
+    keywords: ["vrouw", "rechten", "beperking"]
+  },
+  {
+    id: "his5h-ex3-009",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "jeugdcultuur",
+    answer: "Eigen cultuur van jongeren met eigen muziek en gedrag.",
+    keywords: ["jongeren", "cultuur", "identiteit"]
+  },
+  {
+    id: "his5h-ex3-010",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "maakbare samenleving",
+    answer: "Idee dat overheid de samenleving kan verbeteren.",
+    keywords: ["overheid", "sturen", "verbeteren"]
+  },
+
+  // vervolg
+  {
+    id: "his5h-ex3-011",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "Marshallplan",
+    answer: "Amerikaanse hulp voor Europese wederopbouw.",
+    keywords: ["VS", "hulp", "herstel"]
+  },
+  {
+    id: "his5h-ex3-012",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "NAVO",
+    answer: "Militair bondgenootschap van westerse landen.",
+    keywords: ["militair", "bondgenoot", "West"]
+  },
+  {
+    id: "his5h-ex3-013",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "ontzuiling",
+    answer: "Verdwijnen van scheiding tussen groepen in samenleving.",
+    keywords: ["zuilen", "samenleving", "verandering"]
+  },
+  {
+    id: "his5h-ex3-014",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "rooms-rode regering",
+    answer: "Samenwerking tussen katholieken en sociaaldemocraten.",
+    keywords: ["politiek", "samenwerking", "Nederland"]
+  },
+  {
+    id: "his5h-ex3-015",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "tweede feministische golf",
+    answer: "Beweging voor gelijke rechten voor vrouwen na 1960.",
+    keywords: ["vrouwen", "rechten", "emancipatie"]
+  },
+  {
+    id: "his5h-ex3-016",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "verzorgingsstaat",
+    answer: "Staat die zorgt voor sociale zekerheid.",
+    keywords: ["zorg", "sociaal", "overheid"]
+  },
+  {
+    id: "his5h-ex3-017",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "wederopbouw",
+    answer: "Herstel van Europa na de Tweede Wereldoorlog.",
+    keywords: ["herstel", "na oorlog", "Europa"]
+  },
+
+  // 3.2
+  {
+    id: "his5h-ex3-018",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "digitale revolutie",
+    answer: "Verandering door opkomst van digitale technologie.",
+    keywords: ["technologie", "internet", "verandering"]
+  },
+  {
+    id: "his5h-ex3-019",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "Europese Unie",
+    answer: "Samenwerkingsverband van Europese landen.",
+    keywords: ["Europa", "politiek", "samenwerking"]
+  },
+  {
+    id: "his5h-ex3-020",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "gidsland",
+    answer: "Land dat voorbeeld is voor andere landen.",
+    keywords: ["voorbeeld", "voorloper", "beleid"]
+  },
+  {
+    id: "his5h-ex3-021",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "globalisering",
+    answer: "Wereldwijde verbondenheid tussen landen.",
+    keywords: ["wereld", "verbonden", "handel"]
+  },
+  {
+    id: "his5h-ex3-022",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "individualisering",
+    answer: "Mensen worden minder afhankelijk van groepen.",
+    keywords: ["individu", "zelfstandig", "vrijheid"]
+  },
+  {
+    id: "his5h-ex3-023",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "multiculturele samenleving",
+    answer: "Samenleving met verschillende culturen.",
+    keywords: ["culturen", "diversiteit", "migratie"]
+  },
+  {
+    id: "his5h-ex3-024",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "oliecrisis",
+    answer: "Wereldwijde crisis door stijgende olieprijzen (1973).",
+    keywords: ["energie", "crisis", "olie"]
+  },
+  {
+    id: "his5h-ex3-025",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "polarisatie",
+    answer: "Toenemende tegenstellingen tussen groepen.",
+    keywords: ["tegenstelling", "conflict", "groepen"]
+  },
+  {
+    id: "his5h-ex3-026",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "poldermodel",
+    answer: "Overleg tussen werkgevers, werknemers en overheid.",
+    keywords: ["overleg", "consensus", "Nederland"]
+  },
+  {
+    id: "his5h-ex3-027",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "privatisering",
+    answer: "Overheidsbedrijven worden particulier.",
+    keywords: ["markt", "bedrijf", "overheid"]
+  },
+  {
+    id: "his5h-ex3-028",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "Srebrenica",
+    answer: "Val van enclave in Bosnië waarbij Nederlandse troepen betrokken waren.",
+    keywords: ["oorlog", "Bosnië", "Nederland"]
+  },
+  {
+    id: "his5h-ex3-029",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "Verdrag van Maastricht",
+    answer: "Verdrag dat de basis legde voor de Europese Unie.",
+    keywords: ["EU", "Europa", "verdrag"]
+  },
+  {
+    id: "his5h-ex3-030",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "begrip",
+    prompt: "Verdrag van Schengen",
+    answer: "Verdrag dat vrij reizen binnen de EU mogelijk maakt.",
+    keywords: ["grenzen", "Europa", "vrij reizen"]
   }
+],
 
 
       
 
     ],
 
-    years: [],
+    years: [
 
-    persons: []
+  {
+    id: "his5h-ex1-y001",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1620",
+    answer: "Pilgrim Fathers stichten kolonie in Amerika",
+    keywords: ["kolonie", "Amerika", "Pilgrim Fathers"]
   },
+  {
+    id: "his5h-ex1-y002",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1776",
+    answer: "Onafhankelijkheidsverklaring van de Verenigde Staten",
+    keywords: ["VS", "onafhankelijkheid", "Amerika"]
+  },
+  {
+    id: "his5h-ex1-y003",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1807",
+    answer: "Verbod op slavenhandel in het Britse Rijk",
+    keywords: ["slavenhandel", "Britse Rijk", "afschaffing"]
+  },
+  {
+    id: "his5h-ex1-y004",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1833",
+    answer: "Verbod op slavernij in grote delen van het Britse Rijk",
+    keywords: ["slavernij", "afschaffing", "Britse Rijk"]
+  },
+  {
+    id: "his5h-ex1-y005",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1765",
+    answer: "Verdrag van Allahabad",
+    keywords: ["India", "Britse Rijk", "verdrag"]
+  },
+  {
+    id: "his5h-ex1-y006",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1857",
+    answer: "Opstand van Indiase soldaten (Sepoy-opstand)",
+    keywords: ["India", "opstand", "Sepoys"]
+  },
+  {
+    id: "his5h-ex1-y007",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1885",
+    answer: "Oprichting van het Indian National Congress",
+    keywords: ["India", "nationalisme", "politiek"]
+  },
+  {
+    id: "his5h-ex1-y008",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1832",
+    answer: "Reform Bill aangenomen in Groot-Brittannië",
+    keywords: ["politiek", "hervorming", "Britse politiek"]
+  },
+  {
+    id: "his5h-ex1-y009",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1851",
+    answer: "Eerste wereldtentoonstelling in Londen",
+    keywords: ["industrie", "tentoonstelling", "Londen"]
+  },
+  {
+    id: "his5h-ex1-y010",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1870",
+    answer: "Begin economische concurrentie met Verenigde Staten en Duitsland",
+    keywords: ["economie", "concurrentie", "industrialisatie"]
+  },
+  {
+    id: "his5h-ex1-y011",
+    chapterId: "his5h-ex1",
+    type: "jaartal",
+    prompt: "1900",
+    answer: "Groot-Brittannië beheerst een kwart van de wereldbevolking",
+    keywords: ["imperium", "Britse Rijk", "kolonialisme"]
+  },
+        {
+    id: "his5h-ex2-y001",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1919",
+    answer: "Verdrag van Versailles",
+    keywords: ["vrede", "Eerste Wereldoorlog", "Duitsland straf"]
+  },
+  {
+    id: "his5h-ex2-y002",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1929",
+    answer: "Beurskrach in de Verenigde Staten",
+    keywords: ["crisis", "economie", "Wall Street"]
+  },
+  {
+    id: "his5h-ex2-y003",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1933",
+    answer: "Hitler wordt rijkskanselier; Rijksdagbrand en machtigingswet",
+    keywords: ["Hitler", "machtsovername", "dictatuur"]
+  },
+  {
+    id: "his5h-ex2-y004",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1938",
+    answer: "Conferentie van München",
+    keywords: ["appeasement", "Europa", "Duitsland"]
+  },
+  {
+    id: "his5h-ex2-y005",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1939",
+    answer: "Duitse inval in Polen; begin Tweede Wereldoorlog",
+    keywords: ["oorlog", "Polen", "WO2"]
+  },
+
+  // 2.2 (5)
+  {
+    id: "his5h-ex2-y006",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1945",
+    answer: "Duitsland capituleert (mei 1945)",
+    keywords: ["einde oorlog", "capitulatie", "WO2"]
+  },
+  {
+    id: "his5h-ex2-y007",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1948",
+    answer: "Blokkade van Berlijn",
+    keywords: ["Berlijn", "Koude Oorlog", "luchtbrug"]
+  },
+  {
+    id: "his5h-ex2-y008",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1949",
+    answer: "Oprichting van BRD en DDR",
+    keywords: ["Duitsland splitsing", "West Oost", "Koude Oorlog"]
+  },
+  {
+    id: "his5h-ex2-y009",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1953",
+    answer: "Opstand in de DDR mislukt",
+    keywords: ["DDR", "opstand", "Sovjet"]
+  },
+  {
+    id: "his5h-ex2-y010",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1961",
+    answer: "Bouw van de Berlijnse Muur",
+    keywords: ["muur", "Berlijn", "scheiding"]
+  },
+
+  // 2.3 (5)
+  {
+    id: "his5h-ex2-y011",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1972",
+    answer: "BRD en DDR erkennen elkaar",
+    keywords: ["erkenning", "Duitsland", "Oost West"]
+  },
+  {
+    id: "his5h-ex2-y012",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1985",
+    answer: "Gorbatsjov start hervormingen",
+    keywords: ["Sovjet", "glasnost", "perestrojka"]
+  },
+  {
+    id: "his5h-ex2-y013",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1989",
+    answer: "Val van de Berlijnse Muur",
+    keywords: ["muur", "einde DDR", "vrijheid"]
+  },
+  {
+    id: "his5h-ex2-y014",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1990",
+    answer: "Hereniging van Duitsland",
+    keywords: ["Duitsland", "eenheid", "na Koude Oorlog"]
+  },
+  {
+    id: "his5h-ex2-y015",
+    chapterId: "his5h-ex2",
+    type: "jaartal",
+    prompt: "1991",
+    answer: "Einde Sovjet-Unie en communisme in Oost-Europa",
+    keywords: ["Sovjet einde", "communisme", "Koude Oorlog"]
+  },
+  
+  {
+    id: "his5h-ex3-y001",
+    chapterId: "his5h-ex3",
+    type: "jaartal",
+    prompt: "1956",
+    answer: "Afschaffing handelingsonbekwaamheid van de vrouw",
+    keywords: ["vrouw", "rechten", "emancipatie"]
+  },
+  {
+    id: "his5h-ex3-y002",
+    chapterId: "his5h-ex3",
+    type: "jaartal",
+    prompt: "1957",
+    answer: "Invoering van de AOW",
+    keywords: ["pensioen", "sociaal", "oudere"]
+  },
+  {
+    id: "his5h-ex3-y003",
+    chapterId: "his5h-ex3",
+    type: "jaartal",
+    prompt: "1973",
+    answer: "Oliecrisis",
+    keywords: ["energie", "crisis", "olie"]
+  },
+  {
+    id: "his5h-ex3-y004",
+    chapterId: "his5h-ex3",
+    type: "jaartal",
+    prompt: "2001",
+    answer: "Aanslagen in de Verenigde Staten (11 september)",
+    keywords: ["terrorisme", "VS", "11 september"]
+  },
+  {
+    id: "his5h-ex3-y005",
+    chapterId: "his5h-ex3",
+    type: "jaartal",
+    prompt: "2002",
+    answer: "Moord op Pim Fortuyn; aanpassing migratiebeleid",
+    keywords: ["moord", "Fortuyn", "politiek"]
+  },
+  {
+    id: "his5h-ex3-y006",
+    chapterId: "his5h-ex3",
+    type: "jaartal",
+    prompt: "2008",
+    answer: "Bankencrisis",
+    keywords: ["crisis", "banken", "economie"]
+  }
+
+
+    ],
+
+    persons: [
+  {
+    id: "his5h-ex1-p001",
+    chapterId: "his5h-ex1",
+    type: "persoon",
+    prompt: "Robert Owen",
+    answer: "Socialistische fabriekseigenaar uit Groot-Brittannië die zich inzette voor betere arbeidsomstandigheden, tegen kinderarbeid en voor vakbonden.",
+    keywords: ["fabriek", "arbeiders", "socialisme", "kinderarbeid", "vakbonden"]
+  },
+  {
+    id: "his5h-ex1-p002",
+    chapterId: "his5h-ex1",
+    type: "persoon",
+    prompt: "Koningin Victoria",
+    answer: "Koningin van Groot-Brittannië en Ierland (1837-1901) en vanaf 1876 keizerin van India.",
+    keywords: ["koningin", "Groot-Brittannië", "India", "imperium", "Victoriaans tijdperk"]
+  },
+      {
+    id: "his5h-ex2-p001",
+    chapterId: "his5h-ex2",
+    type: "persoon",
+    prompt: "Konrad Adenauer",
+    answer: "Eerste bondskanselier van West-Duitsland (1949-1963) die de wederopbouw leidde en West-Duitsland integreerde in het Westen.",
+    keywords: ["West-Duitsland", "bondskanselier", "wederopbouw", "Europa", "anti-communisme"]
+  },
+  {
+    id: "his5h-ex2-p002",
+    chapterId: "his5h-ex2",
+    type: "persoon",
+    prompt: "Jozef Stalin",
+    answer: "Leider van de Sovjet-Unie (1928-1953) die een totalitair communistisch regime opbouwde en invloed uitbreidde in Oost-Europa.",
+    keywords: ["Sovjet-Unie", "communisme", "dictatuur", "totalitair", "Oost-Europa"]
+  },
+  {
+    id: "his5h-ex2-p003",
+    chapterId: "his5h-ex2",
+    type: "persoon",
+    prompt: "Adolf Hitler",
+    answer: "Duitse dictator (1933-1945) die het naziregime leidde en verantwoordelijk was voor de Tweede Wereldoorlog.",
+    keywords: ["nazisme", "Duitsland", "dictator", "Tweede Wereldoorlog", "NSDAP"]
+  },
+  {
+    id: "his5h-ex2-p004",
+    chapterId: "his5h-ex2",
+    type: "persoon",
+    prompt: "Walter Ulbricht",
+    answer: "Leider van de DDR (1950-1971) die een communistische dictatuur vestigde en de bouw van de Berlijnse Muur initieerde.",
+    keywords: ["DDR", "communisme", "Berlijnse Muur", "Oost-Duitsland", "Sovjet"]
+  },
+  {
+    id: "his5h-ex2-p005",
+    chapterId: "his5h-ex2",
+    type: "persoon",
+    prompt: "Erich Honecker",
+    answer: "Leider van de DDR (vanaf 1971) die hervormingen tegenhield en tijdens de val van de Berlijnse Muur werd afgezet.",
+    keywords: ["DDR", "Berlijnse Muur", "communisme", "val 1989", "Oost-Duitsland"]
+  },
+  {
+    id: "his5h-ex2-p006",
+    chapterId: "his5h-ex2",
+    type: "persoon",
+    prompt: "Willy Brandt",
+    answer: "West-Duitse bondskanselier (1969-1974) die met Ostpolitik toenadering zocht tot Oost-Duitsland en het Oostblok.",
+    keywords: ["Ostpolitik", "West-Duitsland", "diplomatie", "Oostblok", "verzoening"]
+  },
+  {
+    id: "his5h-ex2-p007",
+    chapterId: "his5h-ex2",
+    type: "persoon",
+    prompt: "Helmut Kohl",
+    answer: "Bondskanselier van Duitsland (1982-1998) die de Duitse hereniging realiseerde.",
+    keywords: ["Duitse hereniging", "Duitsland", "bondskanselier", "1990", "Europa"]
+  },
+  {
+    id: "his5h-ex2-p008",
+    chapterId: "his5h-ex2",
+    type: "persoon",
+    prompt: "Michail Gorbatsjov",
+    answer: "Leider van de Sovjet-Unie (1985-1991) die hervormingen invoerde (glasnost en perestrojka) waardoor het communisme instortte.",
+    keywords: ["glasnost", "perestrojka", "Sovjet-Unie", "hervorming", "einde communisme"]
+  },  
+       {
+    id: "his5h-ex3-p001",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "persoon",
+    prompt: "Ruud Lubbers",
+    answer: "Nederlandse minister-president (1982-1994) namens het CDA die een liberaal beleid voerde.",
+    keywords: ["premier", "CDA", "Nederland"]
+  },
+  {
+    id: "his5h-ex3-p002",
+    subjectId: "geschiedenis",
+    chapterId: "his5h-ex3",
+    type: "persoon",
+    prompt: "Pim Fortuyn",
+    answer: "Nederlandse politicus die kritisch was op de multiculturele samenleving en in 2002 werd vermoord.",
+    keywords: ["politicus", "moord", "multicultureel"]
+  }
+  ],
 
   modes: [
     {
