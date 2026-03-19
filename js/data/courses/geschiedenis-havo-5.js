@@ -813,7 +813,7 @@ export const historyHavo5Course = {
     keywords: ["geschenk", "oppermacht", "erkenning"]
   },
       {
-  id: "his5h-h3-015",
+id: "his5h-h4-001",
   subjectId: "geschiedenis",
   chapterId: "his5h-h4",
   type: "begrip",
@@ -822,7 +822,7 @@ export const historyHavo5Course = {
   keywords: ["wereld", "handel", "economie"]
 },
 {
-  id: "his5h-h3-016",
+ id: "his5h-h4-017",
   subjectId: "geschiedenis",
   chapterId: "his5h-h4",
   type: "begrip",
