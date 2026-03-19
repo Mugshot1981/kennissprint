@@ -2145,8 +2145,7 @@ id: "his5h-h4-001",
     answer: "Internationale tentoonstelling van economische en culturele ontwikkelingen.",
     keywords: ["tentoonstelling", "internationaal", "industrie cultuur"]
   },
-      terms: [
-  // 2.1 (1–10)
+ 
   {
     id: "his5h-ex2-001",
     subjectId: "geschiedenis",
