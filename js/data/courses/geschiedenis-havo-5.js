@@ -352,7 +352,7 @@ export const historyHavo5Course = {
     keywords: ["geen schrift", "periode"]
   },
   {
-    id: "his5h-h1-037",
+    id: "his5h-h1-044",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -361,7 +361,7 @@ export const historyHavo5Course = {
     keywords: ["voorrecht", "specifieke groep"]
   },
   {
-    id: "his5h-h1-038",
+    id: "his5h-h1-045",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -370,7 +370,7 @@ export const historyHavo5Course = {
     keywords: ["burgers besturen", "geen koning", "geen keizer"]
   },
   {
-    id: "his5h-h1-039",
+    id: "his5h-h1-046",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -379,7 +379,7 @@ export const historyHavo5Course = {
     keywords: ["heilige handeling", "goddelijke macht", "bovennatuurlijk"]
   },
   {
-    id: "his5h-h1-040",
+    id: "his5h-h1-047",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -388,7 +388,7 @@ export const historyHavo5Course = {
     keywords: ["islam", "wetgeving", "koran"]
   },
   {
-    id: "his5h-h1-041",
+    id: "his5h-h1-048",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -397,7 +397,7 @@ export const historyHavo5Course = {
     keywords: ["gebied", "bestuur", "rechtssysteem", "geweld monopolie"]
   },
   {
-    id: "his5h-h1-042",
+    id: "his5h-h1-049",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -406,7 +406,7 @@ export const historyHavo5Course = {
     keywords: ["eigen bestuur", "eigen rechtspraak"]
   },
   {
-    id: "his5h-h1-043",
+    id: "his5h-h1-050",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
