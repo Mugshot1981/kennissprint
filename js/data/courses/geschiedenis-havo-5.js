@@ -1549,7 +1549,7 @@ export const historyHavo5Course = {
   },
 
   {
-    id: "his5h-h9-001",
+    id: "his5h-h9-001", 
     subjectId: "geschiedenis",
     chapterId: "his5h-h9",
     type: "begrip",
