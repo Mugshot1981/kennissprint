@@ -430,7 +430,7 @@ export const historyHavo5Course = {
     keywords: ["stad", "zelfstandig bestuur", "platteland"]
   },
   {
-    id: "his5h-h1-044",
+    id: "his5h-h1-051",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -439,7 +439,7 @@ export const historyHavo5Course = {
     keywords: ["maatschappelijke groep", "adel", "geestelijkheid", "derde stand"]
   },
   {
-    id: "his5h-h1-045",
+    id: "his5h-h1-052",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
@@ -448,7 +448,7 @@ export const historyHavo5Course = {
     keywords: ["stad", "bevolking"]
   },
   {
-    id: "his5h-h1-046",
+    id: "his5h-h1-053",
     subjectId: "geschiedenis",
     chapterId: "his5h-h1",
     type: "begrip",
