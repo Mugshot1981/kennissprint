@@ -3079,105 +3079,103 @@ id: "his5h-h4-001",
 
     ],
 
-    persons: [
-  {
-    id: "his5h-ex1-p001",
-    chapterId: "his5h-ex1",
-    type: "persoon",
-    prompt: "Robert Owen",
-    answer: "Socialistische fabriekseigenaar uit Groot-Brittannië die zich inzette voor betere arbeidsomstandigheden, tegen kinderarbeid en voor vakbonden.",
-    keywords: ["fabriek", "arbeiders", "socialisme", "kinderarbeid", "vakbonden"]
-  },
-  {
-    id: "his5h-ex1-p002",
-    chapterId: "his5h-ex1",
-    type: "persoon",
-    prompt: "Koningin Victoria",
-    answer: "Koningin van Groot-Brittannië en Ierland (1837-1901) en vanaf 1876 keizerin van India.",
-    keywords: ["koningin", "Groot-Brittannië", "India", "imperium", "Victoriaans tijdperk"]
-  },
-      {
-    id: "his5h-ex2-p001",
-    chapterId: "his5h-ex2",
-    type: "persoon",
-    prompt: "Konrad Adenauer",
-    answer: "Eerste bondskanselier van West-Duitsland (1949-1963) die de wederopbouw leidde en West-Duitsland integreerde in het Westen.",
-    keywords: ["West-Duitsland", "bondskanselier", "wederopbouw", "Europa", "anti-communisme"]
-  },
-  {
-    id: "his5h-ex2-p002",
-    chapterId: "his5h-ex2",
-    type: "persoon",
-    prompt: "Jozef Stalin",
-    answer: "Leider van de Sovjet-Unie (1928-1953) die een totalitair communistisch regime opbouwde en invloed uitbreidde in Oost-Europa.",
-    keywords: ["Sovjet-Unie", "communisme", "dictatuur", "totalitair", "Oost-Europa"]
-  },
-  {
-    id: "his5h-ex2-p003",
-    chapterId: "his5h-ex2",
-    type: "persoon",
-    prompt: "Adolf Hitler",
-    answer: "Duitse dictator (1933-1945) die het naziregime leidde en verantwoordelijk was voor de Tweede Wereldoorlog.",
-    keywords: ["nazisme", "Duitsland", "dictator", "Tweede Wereldoorlog", "NSDAP"]
-  },
-  {
-    id: "his5h-ex2-p004",
-    chapterId: "his5h-ex2",
-    type: "persoon",
-    prompt: "Walter Ulbricht",
-    answer: "Leider van de DDR (1950-1971) die een communistische dictatuur vestigde en de bouw van de Berlijnse Muur initieerde.",
-    keywords: ["DDR", "communisme", "Berlijnse Muur", "Oost-Duitsland", "Sovjet"]
-  },
-  {
-    id: "his5h-ex2-p005",
-    chapterId: "his5h-ex2",
-    type: "persoon",
-    prompt: "Erich Honecker",
-    answer: "Leider van de DDR (vanaf 1971) die hervormingen tegenhield en tijdens de val van de Berlijnse Muur werd afgezet.",
-    keywords: ["DDR", "Berlijnse Muur", "communisme", "val 1989", "Oost-Duitsland"]
-  },
-  {
-    id: "his5h-ex2-p006",
-    chapterId: "his5h-ex2",
-    type: "persoon",
-    prompt: "Willy Brandt",
-    answer: "West-Duitse bondskanselier (1969-1974) die met Ostpolitik toenadering zocht tot Oost-Duitsland en het Oostblok.",
-    keywords: ["Ostpolitik", "West-Duitsland", "diplomatie", "Oostblok", "verzoening"]
-  },
-  {
-    id: "his5h-ex2-p007",
-    chapterId: "his5h-ex2",
-    type: "persoon",
-    prompt: "Helmut Kohl",
-    answer: "Bondskanselier van Duitsland (1982-1998) die de Duitse hereniging realiseerde.",
-    keywords: ["Duitse hereniging", "Duitsland", "bondskanselier", "1990", "Europa"]
-  },
-  {
-    id: "his5h-ex2-p008",
-    chapterId: "his5h-ex2",
-    type: "persoon",
-    prompt: "Michail Gorbatsjov",
-    answer: "Leider van de Sovjet-Unie (1985-1991) die hervormingen invoerde (glasnost en perestrojka) waardoor het communisme instortte.",
-    keywords: ["glasnost", "perestrojka", "Sovjet-Unie", "hervorming", "einde communisme"]
-  },  
-       {
-    id: "his5h-ex3-p001",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-ex3",
-    type: "persoon",
-    prompt: "Ruud Lubbers",
-    answer: "Nederlandse minister-president (1982-1994) namens het CDA die een liberaal beleid voerde.",
-    keywords: ["premier", "CDA", "Nederland"]
-  },
-  {
-    id: "his5h-ex3-p002",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-ex3",
-    type: "persoon",
-    prompt: "Pim Fortuyn",
-    answer: "Nederlandse politicus die kritisch was op de multiculturele samenleving en in 2002 werd vermoord.",
-    keywords: ["politicus", "moord", "multicultureel"]
-  }
+     persons: [
+    {
+      id: "his5h-ex1-p001",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      name: "Robert Owen",
+      description: "Socialistische fabriekseigenaar uit Groot-Brittannië die zich inzette voor betere arbeidsomstandigheden, tegen kinderarbeid en voor vakbonden.",
+      keywords: ["fabriek", "arbeiders", "socialisme", "kinderarbeid", "vakbonden"]
+    },
+    {
+      id: "his5h-ex1-p002",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      name: "Koningin Victoria",
+      description: "Koningin van Groot-Brittannië en Ierland (1837-1901) en vanaf 1876 keizerin van India.",
+      keywords: ["koningin", "Groot-Brittannië", "India", "imperium", "Victoriaans tijdperk"]
+    },
+    {
+      id: "his5h-ex2-p001",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      name: "Konrad Adenauer",
+      description: "Eerste bondskanselier van West-Duitsland (1949-1963) die de wederopbouw leidde en West-Duitsland integreerde in het Westen.",
+      keywords: ["West-Duitsland", "bondskanselier", "wederopbouw", "Europa", "anti-communisme"]
+    },
+    {
+      id: "his5h-ex2-p002",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      name: "Jozef Stalin",
+      description: "Leider van de Sovjet-Unie (1928-1953) die een totalitair communistisch regime opbouwde en invloed uitbreidde in Oost-Europa.",
+      keywords: ["Sovjet-Unie", "communisme", "dictatuur", "totalitair", "Oost-Europa"]
+    },
+    {
+      id: "his5h-ex2-p003",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      name: "Adolf Hitler",
+      description: "Duitse dictator (1933-1945) die het naziregime leidde en verantwoordelijk was voor de Tweede Wereldoorlog.",
+      keywords: ["nazisme", "Duitsland", "dictator", "Tweede Wereldoorlog", "NSDAP"]
+    },
+    {
+      id: "his5h-ex2-p004",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      name: "Walter Ulbricht",
+      description: "Leider van de DDR (1950-1971) die een communistische dictatuur vestigde en de bouw van de Berlijnse Muur initieerde.",
+      keywords: ["DDR", "communisme", "Berlijnse Muur", "Oost-Duitsland", "Sovjet"]
+    },
+    {
+      id: "his5h-ex2-p005",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      name: "Erich Honecker",
+      description: "Leider van de DDR (vanaf 1971) die hervormingen tegenhield en tijdens de val van de Berlijnse Muur werd afgezet.",
+      keywords: ["DDR", "Berlijnse Muur", "communisme", "val 1989", "Oost-Duitsland"]
+    },
+    {
+      id: "his5h-ex2-p006",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      name: "Willy Brandt",
+      description: "West-Duitse bondskanselier (1969-1974) die met Ostpolitik toenadering zocht tot Oost-Duitsland en het Oostblok.",
+      keywords: ["Ostpolitik", "West-Duitsland", "diplomatie", "Oostblok", "verzoening"]
+    },
+    {
+      id: "his5h-ex2-p007",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      name: "Helmut Kohl",
+      description: "Bondskanselier van Duitsland (1982-1998) die de Duitse hereniging realiseerde.",
+      keywords: ["Duitse hereniging", "Duitsland", "bondskanselier", "1990", "Europa"]
+    },
+    {
+      id: "his5h-ex2-p008",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      name: "Michail Gorbatsjov",
+      description: "Leider van de Sovjet-Unie (1985-1991) die hervormingen invoerde (glasnost en perestrojka) waardoor het communisme instortte.",
+      keywords: ["glasnost", "perestrojka", "Sovjet-Unie", "hervorming", "einde communisme"]
+    },
+    {
+      id: "his5h-ex3-p001",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex3",
+      name: "Ruud Lubbers",
+      description: "Nederlandse minister-president (1982-1994) namens het CDA die een liberaal beleid voerde.",
+      keywords: ["premier", "CDA", "Nederland"]
+    },
+    {
+      id: "his5h-ex3-p002",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex3",
+      name: "Pim Fortuyn",
+      description: "Nederlandse politicus die kritisch was op de multiculturele samenleving en in 2002 werd vermoord.",
+      keywords: ["politicus", "moord", "multicultureel"]
+    }
   ],
 
   modes: [
