@@ -515,7 +515,7 @@ const items = [
   id: "bio-h2-020",
   chapterId: "bio-h2",
   type: "begrip",
-  prompt: "ejaculatie",
+  prompt: "menstruatie",
   answer: "Maandelijks afstoten van baarmoederslijmvlies en bloed."
 },
 {
