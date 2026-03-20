@@ -3167,7 +3167,7 @@ id: "his5h-h4-001",
       description: "Nederlandse politicus die kritisch was op de multiculturele samenleving en in 2002 werd vermoord.",
       keywords: ["politicus", "moord", "multicultureel"]
     }
-  ],
+  ]
   },
   modes: [
     {
