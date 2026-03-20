@@ -17,7 +17,7 @@ export const historyHavo5Course = {
     {
       id: "his5h-h1",
       subjectId: "geschiedenis",
-      title: "Tijd van jagers en boeren t/m tijd van steden en staten"
+      title: "De wereld tot 1500"
     },
     {
       id: "his5h-h2",
@@ -37,15 +37,49 @@ export const historyHavo5Course = {
     {
       id: "his5h-h5",
       subjectId: "geschiedenis",
-      title: "Examenkatern 1"
+      title: "Industrialisatie en emancipatie"
     },
     {
       id: "his5h-h6",
       subjectId: "geschiedenis",
-      title: "Examenkatern 2"
+      title: "De strijd om de wereld"
+    },
+    {
+      id: "his5h-h7",
+      subjectId: "geschiedenis",
+      title: "Leven in een massasamenleving"
+    },
+    {
+      id: "his5h-h8",
+      subjectId: "geschiedenis",
+      title: "De Tweede Wereldoorlog"
+    },
+    {
+      id: "his5h-h9",
+      subjectId: "geschiedenis",
+      title: "Een nieuwe wereldorde"
+    },
+    {
+      id: "his5h-h10",
+      subjectId: "geschiedenis",
+      title: "Een kleine wereld"
+    },
+    {
+      id: "his5h-ex1",
+      subjectId: "geschiedenis",
+      title: "EXAMENKATERN – Het Britse Rijk 1585-1900"
+    },
+    {
+      id: "his5h-ex2",
+      subjectId: "geschiedenis",
+      title: "EXAMENKATERN – Duitsland in Europa 1918-1991"
+    },
+    {
+      id: "his5h-ex3",
+      subjectId: "geschiedenis",
+      title: "EXAMENKATERN – Nederland 1948-2008"
     }
   ],
-
   datasets: {
     terms: [
       {
