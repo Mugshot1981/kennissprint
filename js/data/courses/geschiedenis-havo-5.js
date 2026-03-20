@@ -3168,7 +3168,7 @@ id: "his5h-h4-001",
       keywords: ["politicus", "moord", "multicultureel"]
     }
   ],
-
+  },
   modes: [
     {
       id: "term-to-answer",
