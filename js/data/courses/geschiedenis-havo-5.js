@@ -2808,276 +2808,267 @@ id: "his5h-h4-001",
 ],
 
 
-      
+        years: [
+    {
+      id: "his5h-ex1-y001",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1620",
+      event: "Pilgrim Fathers stichten kolonie in Amerika",
+      keywords: ["kolonie", "Amerika", "Pilgrim Fathers"]
+    },
+    {
+      id: "his5h-ex1-y002",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1776",
+      event: "Onafhankelijkheidsverklaring van de Verenigde Staten",
+      keywords: ["VS", "onafhankelijkheid", "Amerika"]
+    },
+    {
+      id: "his5h-ex1-y003",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1807",
+      event: "Verbod op slavenhandel in het Britse Rijk",
+      keywords: ["slavenhandel", "Britse Rijk", "afschaffing"]
+    },
+    {
+      id: "his5h-ex1-y004",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1833",
+      event: "Verbod op slavernij in grote delen van het Britse Rijk",
+      keywords: ["slavernij", "afschaffing", "Britse Rijk"]
+    },
+    {
+      id: "his5h-ex1-y005",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1765",
+      event: "Verdrag van Allahabad",
+      keywords: ["India", "Britse Rijk", "verdrag"]
+    },
+    {
+      id: "his5h-ex1-y006",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1857",
+      event: "Opstand van Indiase soldaten (Sepoy-opstand)",
+      keywords: ["India", "opstand", "Sepoys"]
+    },
+    {
+      id: "his5h-ex1-y007",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1885",
+      event: "Oprichting van het Indian National Congress",
+      keywords: ["India", "nationalisme", "politiek"]
+    },
+    {
+      id: "his5h-ex1-y008",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1832",
+      event: "Reform Bill aangenomen in Groot-Brittannië",
+      keywords: ["politiek", "hervorming", "Britse politiek"]
+    },
+    {
+      id: "his5h-ex1-y009",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1851",
+      event: "Eerste wereldtentoonstelling in Londen",
+      keywords: ["industrie", "tentoonstelling", "Londen"]
+    },
+    {
+      id: "his5h-ex1-y010",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1870",
+      event: "Begin economische concurrentie met Verenigde Staten en Duitsland",
+      keywords: ["economie", "concurrentie", "industrialisatie"]
+    },
+    {
+      id: "his5h-ex1-y011",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex1",
+      year: "1900",
+      event: "Groot-Brittannië beheerst een kwart van de wereldbevolking",
+      keywords: ["imperium", "Britse Rijk", "kolonialisme"]
+    },
+    {
+      id: "his5h-ex2-y001",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1919",
+      event: "Verdrag van Versailles",
+      keywords: ["vrede", "Eerste Wereldoorlog", "Duitsland straf"]
+    },
+    {
+      id: "his5h-ex2-y002",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1929",
+      event: "Beurskrach in de Verenigde Staten",
+      keywords: ["crisis", "economie", "Wall Street"]
+    },
+    {
+      id: "his5h-ex2-y003",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1933",
+      event: "Hitler wordt rijkskanselier; Rijksdagbrand en machtigingswet",
+      keywords: ["Hitler", "machtsovername", "dictatuur"]
+    },
+    {
+      id: "his5h-ex2-y004",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1938",
+      event: "Conferentie van München",
+      keywords: ["appeasement", "Europa", "Duitsland"]
+    },
+    {
+      id: "his5h-ex2-y005",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1939",
+      event: "Duitse inval in Polen; begin Tweede Wereldoorlog",
+      keywords: ["oorlog", "Polen", "WO2"]
+    },
+    {
+      id: "his5h-ex2-y006",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1945",
+      event: "Duitsland capituleert (mei 1945)",
+      keywords: ["einde oorlog", "capitulatie", "WO2"]
+    },
+    {
+      id: "his5h-ex2-y007",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1948",
+      event: "Blokkade van Berlijn",
+      keywords: ["Berlijn", "Koude Oorlog", "luchtbrug"]
+    },
+    {
+      id: "his5h-ex2-y008",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1949",
+      event: "Oprichting van BRD en DDR",
+      keywords: ["Duitsland splitsing", "West Oost", "Koude Oorlog"]
+    },
+    {
+      id: "his5h-ex2-y009",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1953",
+      event: "Opstand in de DDR mislukt",
+      keywords: ["DDR", "opstand", "Sovjet"]
+    },
+    {
+      id: "his5h-ex2-y010",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1961",
+      event: "Bouw van de Berlijnse Muur",
+      keywords: ["muur", "Berlijn", "scheiding"]
+    },
+    {
+      id: "his5h-ex2-y011",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1972",
+      event: "BRD en DDR erkennen elkaar",
+      keywords: ["erkenning", "Duitsland", "Oost West"]
+    },
+    {
+      id: "his5h-ex2-y012",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1985",
+      event: "Gorbatsjov start hervormingen",
+      keywords: ["Sovjet", "glasnost", "perestrojka"]
+    },
+    {
+      id: "his5h-ex2-y013",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1989",
+      event: "Val van de Berlijnse Muur",
+      keywords: ["muur", "einde DDR", "vrijheid"]
+    },
+    {
+      id: "his5h-ex2-y014",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1990",
+      event: "Hereniging van Duitsland",
+      keywords: ["Duitsland", "eenheid", "na Koude Oorlog"]
+    },
+    {
+      id: "his5h-ex2-y015",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex2",
+      year: "1991",
+      event: "Einde Sovjet-Unie en communisme in Oost-Europa",
+      keywords: ["Sovjet einde", "communisme", "Koude Oorlog"]
+    },
+    {
+      id: "his5h-ex3-y001",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex3",
+      year: "1956",
+      event: "Afschaffing handelingsonbekwaamheid van de vrouw",
+      keywords: ["vrouw", "rechten", "emancipatie"]
+    },
+    {
+      id: "his5h-ex3-y002",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex3",
+      year: "1957",
+      event: "Invoering van de AOW",
+      keywords: ["pensioen", "sociaal", "oudere"]
+    },
+    {
+      id: "his5h-ex3-y003",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex3",
+      year: "1973",
+      event: "Oliecrisis",
+      keywords: ["energie", "crisis", "olie"]
+    },
+    {
+      id: "his5h-ex3-y004",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex3",
+      year: "2001",
+      event: "Aanslagen in de Verenigde Staten (11 september)",
+      keywords: ["terrorisme", "VS", "11 september"]
+    },
+    {
+      id: "his5h-ex3-y005",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex3",
+      year: "2002",
+      event: "Moord op Pim Fortuyn; aanpassing migratiebeleid",
+      keywords: ["moord", "Fortuyn", "politiek"]
+    },
+    {
+      id: "his5h-ex3-y006",
+      subjectId: "geschiedenis",
+      chapterId: "his5h-ex3",
+      year: "2008",
+      event: "Bankencrisis",
+      keywords: ["crisis", "banken", "economie"]
+    }
+  ],
 
 
 
-    years: [
-
-  {
-    id: "his5h-ex1-y001",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1620",
-    answer: "Pilgrim Fathers stichten kolonie in Amerika",
-    keywords: ["kolonie", "Amerika", "Pilgrim Fathers"]
-  },
-  {
-    id: "his5h-ex1-y002",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1776",
-    answer: "Onafhankelijkheidsverklaring van de Verenigde Staten",
-    keywords: ["VS", "onafhankelijkheid", "Amerika"]
-  },
-  {
-    id: "his5h-ex1-y003",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1807",
-    answer: "Verbod op slavenhandel in het Britse Rijk",
-    keywords: ["slavenhandel", "Britse Rijk", "afschaffing"]
-  },
-  {
-    id: "his5h-ex1-y004",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1833",
-    answer: "Verbod op slavernij in grote delen van het Britse Rijk",
-    keywords: ["slavernij", "afschaffing", "Britse Rijk"]
-  },
-  {
-    id: "his5h-ex1-y005",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1765",
-    answer: "Verdrag van Allahabad",
-    keywords: ["India", "Britse Rijk", "verdrag"]
-  },
-  {
-    id: "his5h-ex1-y006",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1857",
-    answer: "Opstand van Indiase soldaten (Sepoy-opstand)",
-    keywords: ["India", "opstand", "Sepoys"]
-  },
-  {
-    id: "his5h-ex1-y007",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1885",
-    answer: "Oprichting van het Indian National Congress",
-    keywords: ["India", "nationalisme", "politiek"]
-  },
-  {
-    id: "his5h-ex1-y008",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1832",
-    answer: "Reform Bill aangenomen in Groot-Brittannië",
-    keywords: ["politiek", "hervorming", "Britse politiek"]
-  },
-  {
-    id: "his5h-ex1-y009",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1851",
-    answer: "Eerste wereldtentoonstelling in Londen",
-    keywords: ["industrie", "tentoonstelling", "Londen"]
-  },
-  {
-    id: "his5h-ex1-y010",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1870",
-    answer: "Begin economische concurrentie met Verenigde Staten en Duitsland",
-    keywords: ["economie", "concurrentie", "industrialisatie"]
-  },
-  {
-    id: "his5h-ex1-y011",
-    chapterId: "his5h-ex1",
-    type: "jaartal",
-    prompt: "1900",
-    answer: "Groot-Brittannië beheerst een kwart van de wereldbevolking",
-    keywords: ["imperium", "Britse Rijk", "kolonialisme"]
-  },
-        {
-    id: "his5h-ex2-y001",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1919",
-    answer: "Verdrag van Versailles",
-    keywords: ["vrede", "Eerste Wereldoorlog", "Duitsland straf"]
-  },
-  {
-    id: "his5h-ex2-y002",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1929",
-    answer: "Beurskrach in de Verenigde Staten",
-    keywords: ["crisis", "economie", "Wall Street"]
-  },
-  {
-    id: "his5h-ex2-y003",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1933",
-    answer: "Hitler wordt rijkskanselier; Rijksdagbrand en machtigingswet",
-    keywords: ["Hitler", "machtsovername", "dictatuur"]
-  },
-  {
-    id: "his5h-ex2-y004",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1938",
-    answer: "Conferentie van München",
-    keywords: ["appeasement", "Europa", "Duitsland"]
-  },
-  {
-    id: "his5h-ex2-y005",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1939",
-    answer: "Duitse inval in Polen; begin Tweede Wereldoorlog",
-    keywords: ["oorlog", "Polen", "WO2"]
-  },
-
-  // 2.2 (5)
-  {
-    id: "his5h-ex2-y006",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1945",
-    answer: "Duitsland capituleert (mei 1945)",
-    keywords: ["einde oorlog", "capitulatie", "WO2"]
-  },
-  {
-    id: "his5h-ex2-y007",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1948",
-    answer: "Blokkade van Berlijn",
-    keywords: ["Berlijn", "Koude Oorlog", "luchtbrug"]
-  },
-  {
-    id: "his5h-ex2-y008",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1949",
-    answer: "Oprichting van BRD en DDR",
-    keywords: ["Duitsland splitsing", "West Oost", "Koude Oorlog"]
-  },
-  {
-    id: "his5h-ex2-y009",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1953",
-    answer: "Opstand in de DDR mislukt",
-    keywords: ["DDR", "opstand", "Sovjet"]
-  },
-  {
-    id: "his5h-ex2-y010",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1961",
-    answer: "Bouw van de Berlijnse Muur",
-    keywords: ["muur", "Berlijn", "scheiding"]
-  },
-
-  // 2.3 (5)
-  {
-    id: "his5h-ex2-y011",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1972",
-    answer: "BRD en DDR erkennen elkaar",
-    keywords: ["erkenning", "Duitsland", "Oost West"]
-  },
-  {
-    id: "his5h-ex2-y012",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1985",
-    answer: "Gorbatsjov start hervormingen",
-    keywords: ["Sovjet", "glasnost", "perestrojka"]
-  },
-  {
-    id: "his5h-ex2-y013",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1989",
-    answer: "Val van de Berlijnse Muur",
-    keywords: ["muur", "einde DDR", "vrijheid"]
-  },
-  {
-    id: "his5h-ex2-y014",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1990",
-    answer: "Hereniging van Duitsland",
-    keywords: ["Duitsland", "eenheid", "na Koude Oorlog"]
-  },
-  {
-    id: "his5h-ex2-y015",
-    chapterId: "his5h-ex2",
-    type: "jaartal",
-    prompt: "1991",
-    answer: "Einde Sovjet-Unie en communisme in Oost-Europa",
-    keywords: ["Sovjet einde", "communisme", "Koude Oorlog"]
-  },
-  
-  {
-    id: "his5h-ex3-y001",
-    chapterId: "his5h-ex3",
-    type: "jaartal",
-    prompt: "1956",
-    answer: "Afschaffing handelingsonbekwaamheid van de vrouw",
-    keywords: ["vrouw", "rechten", "emancipatie"]
-  },
-  {
-    id: "his5h-ex3-y002",
-    chapterId: "his5h-ex3",
-    type: "jaartal",
-    prompt: "1957",
-    answer: "Invoering van de AOW",
-    keywords: ["pensioen", "sociaal", "oudere"]
-  },
-  {
-    id: "his5h-ex3-y003",
-    chapterId: "his5h-ex3",
-    type: "jaartal",
-    prompt: "1973",
-    answer: "Oliecrisis",
-    keywords: ["energie", "crisis", "olie"]
-  },
-  {
-    id: "his5h-ex3-y004",
-    chapterId: "his5h-ex3",
-    type: "jaartal",
-    prompt: "2001",
-    answer: "Aanslagen in de Verenigde Staten (11 september)",
-    keywords: ["terrorisme", "VS", "11 september"]
-  },
-  {
-    id: "his5h-ex3-y005",
-    chapterId: "his5h-ex3",
-    type: "jaartal",
-    prompt: "2002",
-    answer: "Moord op Pim Fortuyn; aanpassing migratiebeleid",
-    keywords: ["moord", "Fortuyn", "politiek"]
-  },
-  {
-    id: "his5h-ex3-y006",
-    chapterId: "his5h-ex3",
-    type: "jaartal",
-    prompt: "2008",
-    answer: "Bankencrisis",
-    keywords: ["crisis", "banken", "economie"]
-  }
-
-
-    ],
 
      persons: [
     {
