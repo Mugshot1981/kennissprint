@@ -8,22 +8,22 @@ KennisSprint dataset
 export const aardrijkskundeKlas2Shared = {
   chapters: [
     {
-      id: "ak2-h1",
+      id: "ak-h1",
       subjectId: "aardrijkskunde",
       title: "Landschappen"
     },
     {
-      id: "ak2-h2",
+      id: "ak-h2",
       subjectId: "aardrijkskunde",
       title: "Steden"
     },
     {
-      id: "ak2-h3",
+      id: "ak-h3",
       subjectId: "aardrijkskunde",
       title: "Water"
     },
     {
-      id: "ak2-h4",
+      id: "ak-h4",
       subjectId: "aardrijkskunde",
       title: "Duurzaamheid"
     }
