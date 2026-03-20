@@ -1,3 +1,6 @@
+
+
+
 /*
 KennisSprint dataset
 © Joas de Wit
@@ -11,217 +14,220 @@ export const historyHavo5Course = {
   title: "Geschiedenis 5 havo",
 
   chapters: [
-  
-  { id: "his5h-h1", subjectId: "geschiedenis", title: "De wereld tot 1500" },
-  { id: "his5h-h2", subjectId: "geschiedenis", title: "Veranderend mens- en wereldbeeld" },
-  { id: "his5h-h3", subjectId: "geschiedenis", title: "Een nieuwe republiek in Europa" },
-  { id: "his5h-h4", subjectId: "geschiedenis", title: "Verlichting en revoluties" },
-  { id: "his5h-h5", subjectId: "geschiedenis", title: "Industrialisatie en emancipatie" },
-  { id: "his5h-h6", subjectId: "geschiedenis", title: "De strijd om de wereld" },
-  { id: "his5h-h7", subjectId: "geschiedenis", title: "Leven in een massasamenleving" },
-  { id: "his5h-h8", subjectId: "geschiedenis", title: "De Tweede Wereldoorlog" },
-  { id: "his5h-h9", subjectId: "geschiedenis", title: "Een nieuwe wereldorde" },
-  { id: "his5h-h10", subjectId: "geschiedenis", title: "Een kleine wereld" },
     {
-  id: "his5h-ex1",
-  subjectId: "geschiedenis",
-  title: "EXAMENKATERN – Het Britse Rijk 1585-1900"
-},
-{
-  id: "his5h-ex2",
-  subjectId: "geschiedenis",
-  title: "EXAMENKATERN – Duitsland in Europa 1918-1991"
-},
-{
-  id: "his5h-ex3",
-  subjectId: "geschiedenis",
-  title: "EXAMENKATERN – Nederland 1948-2008"
-}
-
+      id: "his5h-h1",
+      subjectId: "geschiedenis",
+      title: "Tijd van jagers en boeren t/m tijd van steden en staten"
+    },
+    {
+      id: "his5h-h2",
+      subjectId: "geschiedenis",
+      title: "Veranderend mens- en wereldbeeld"
+    },
+    {
+      id: "his5h-h3",
+      subjectId: "geschiedenis",
+      title: "Een nieuwe republiek in Europa"
+    },
+    {
+      id: "his5h-h4",
+      subjectId: "geschiedenis",
+      title: "Verlichting en revoluties"
+    },
+    {
+      id: "his5h-h5",
+      subjectId: "geschiedenis",
+      title: "Examenkatern 1"
+    },
+    {
+      id: "his5h-h6",
+      subjectId: "geschiedenis",
+      title: "Examenkatern 2"
+    }
   ],
 
   datasets: {
     terms: [
-  {
-    id: "his5h-h1-001",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "adel",
-    answer: "Machtige groep in de samenleving, bestaande uit militaire leiders en/of lokale bestuurders en hun familie. Adel is in veel samenlevingen erfelijk.",
-    keywords: ["militaire leiders", "lokale bestuurders", "familie", "erfelijk"]
-  },
-  {
-    id: "his5h-h1-002",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "agrarische revolutie",
-    answer: "De overgang van jagen en verzamelen als voornaamste middel van bestaan naar een sedentair bestaan als boer.",
-    keywords: ["jagen verzamelen", "sedentair", "boer", "overgang"]
-  },
-  {
-    id: "his5h-h1-003",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "agrarische samenleving",
-    answer: "Samenleving waarin de meeste mensen leven van akkerbouw en veeteelt. Ook wel: landbouwsamenleving.",
-    keywords: ["akkerbouw", "veeteelt", "landbouwsamenleving", "boeren"]
-  },
-  {
-    id: "his5h-h1-004",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "agrarisch-urbane samenleving",
-    answer: "Samenleving waarin de meeste mensen werkzaam zijn in de landbouw, maar waar ook steden zijn, waarin veel mensen werken als ambachtsman of handelaar.",
-    keywords: ["landbouw", "steden", "ambachtsman", "handelaar"]
-  },
-  {
-    id: "his5h-h1-005",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "aristocratie",
-    answer: "Vorm van bestuur waarbij de macht beperkt blijft tot een aantal families (adel).",
-    keywords: ["bestuur", "adel", "families", "macht"]
-  },
-  {
-    id: "his5h-h1-006",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "Bijbel",
-    answer: "Het heilige boek van de christenen, dat uit twee delen bestaat: het Oude Testament (met boeken die ook heilig zijn voor joden) en het Nieuwe Testament (met verhalen over het leven van Christus en zijn eerste volgelingen).",
-    keywords: ["heilige boek", "christenen", "oude testament", "nieuwe testament"]
-  },
-  {
-    id: "his5h-h1-007",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "boeddhisme",
-    answer: "De levensleer die grote waarde hecht aan een leven in deugd en bescheidenheid. De leer is vernoemd naar de Indiase stichter, de Boeddha.",
-    keywords: ["levensleer", "deugd", "bescheidenheid", "Boeddha"]
-  },
-  {
-    id: "his5h-h1-008",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "burger",
-    answer: "Een erkende bewoner van een stad, stadsstaat of staat.",
-    keywords: ["erkende bewoner", "stad", "stadsstaat", "staat"]
-  },
-  {
-    id: "his5h-h1-009",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "centraal bestuur",
-    answer: "Bestuur over een groter gebied vanuit één plaats, waarbij overal in het bestuurde gebied dezelfde wetten en belastingen gelden.",
-    keywords: ["groter gebied", "één plaats", "zelfde wetten", "belastingen"]
-  },
-  {
-    id: "his5h-h1-010",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "centralisatie",
-    answer: "Het streven van heersers om hun gebied vanuit één punt te besturen en in het hele grondgebied gelijke wetten en belastingen in te voeren.",
-    keywords: ["heersers", "één punt", "gelijke wetten", "belastingen"]
-  },
-  {
-    id: "his5h-h1-011",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "christendom",
-    answer: "Monotheïstische godsdienst die het geheel van christelijke waarden, voorschriften en gebruiken omvat en die is gebaseerd op de Bijbel.",
-    keywords: ["monotheïstische godsdienst", "Bijbel", "christelijke waarden", "gebruiken"]
-  },
-  {
-    id: "his5h-h1-012",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "confucianisme",
-    answer: "Leer van de Chinese filosoof Confucius, waarin hij nadruk legt op respect voor anderen en de waarde van traditionele machtsverhoudingen.",
-    keywords: ["Confucius", "respect", "traditionele machtsverhoudingen", "Chinese filosoof"]
-  },
-  {
-    id: "his5h-h1-013",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "democratie",
-    answer: "Vorm van bestuur waarbij alle burgers invloed hebben op het beleid van de staat.",
-    keywords: ["bestuur", "alle burgers", "invloed", "beleid van de staat"]
-  },
-  {
-    id: "his5h-h1-014",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "dynastie",
-    answer: "Reeks van heersers uit dezelfde familie.",
-    keywords: ["reeks heersers", "zelfde familie", "erfopvolging"]
-  },
-  {
-    id: "his5h-h1-015",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "expansie",
-    answer: "De uitbreiding van een gebied of invloed.",
-    keywords: ["uitbreiding", "gebied", "invloed"]
-  },
-  {
-    id: "his5h-h1-016",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "hiërarchie",
-    answer: "Een rangorde binnen de samenleving of een onderdeel daarvan, op basis van aanzien en macht.",
-    keywords: ["rangorde", "samenleving", "aanzien", "macht"]
-  },
-  {
-    id: "his5h-h1-017",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "hindoeïsme",
-    answer: "Polytheïstische godsdienst, ontstaan in India. Hindoes geloven in een eeuwige ziel die steeds terugkeert op aarde.",
-    keywords: ["polytheïstische godsdienst", "India", "eeuwige ziel", "terugkeert op aarde"]
-  },
-  {
-    id: "his5h-h1-018",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "hofstelsel",
-    answer: "Een economisch systeem waarin min of meer zelfvoorzienende domeinen centraal staan.",
-    keywords: ["economisch systeem", "zelfvoorzienende domeinen", "domeinen"]
-  },
-  {
-    id: "his5h-h1-019",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "homo sapiens",
-    answer: "De laatste en enige menssoort die nu nog bestaat en waartoe ook wij behoren. (Letterlijk: de wetende mens).",
-    keywords: ["menssoort", "wij behoren", "wetende mens"]
-  },
-  {
-    id: "his5h-h1-020",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "horige",
-    answer: "Een halfvrije boer.",
-    keywords: ["halfvrije boer", "boer"]
-  },
+      {
+        id: "his5h-h1-001",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "adel",
+        answer: "Machtige groep in de samenleving, bestaande uit militaire leiders en/of lokale bestuurders en hun familie. Adel is in veel samenlevingen erfelijk.",
+        keywords: ["militaire leiders", "lokale bestuurders", "familie", "erfelijk"]
+      },
+      {
+        id: "his5h-h1-002",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "agrarische revolutie",
+        answer: "De overgang van jagen en verzamelen als voornaamste middel van bestaan naar een sedentair bestaan als boer.",
+        keywords: ["jagen verzamelen", "sedentair", "boer", "overgang"]
+      },
+      {
+        id: "his5h-h1-003",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "agrarische samenleving",
+        answer: "Samenleving waarin de meeste mensen leven van akkerbouw en veeteelt. Ook wel: landbouwsamenleving.",
+        keywords: ["akkerbouw", "veeteelt", "landbouwsamenleving", "boeren"]
+      },
+      {
+        id: "his5h-h1-004",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "agrarisch-urbane samenleving",
+        answer: "Samenleving waarin de meeste mensen werkzaam zijn in de landbouw, maar waar ook steden zijn, waarin veel mensen werken als ambachtsman of handelaar.",
+        keywords: ["landbouw", "steden", "ambachtsman", "handelaar"]
+      },
+      {
+        id: "his5h-h1-005",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "aristocratie",
+        answer: "Vorm van bestuur waarbij de macht beperkt blijft tot een aantal families (adel).",
+        keywords: ["bestuur", "adel", "families", "macht"]
+      },
+      {
+        id: "his5h-h1-006",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "Bijbel",
+        answer: "Het heilige boek van de christenen, dat uit twee delen bestaat: het Oude Testament (met boeken die ook heilig zijn voor joden) en het Nieuwe Testament (met verhalen over het leven van Christus en zijn eerste volgelingen).",
+        keywords: ["heilige boek", "christenen", "oude testament", "nieuwe testament"]
+      },
+      {
+        id: "his5h-h1-007",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "boeddhisme",
+        answer: "De levensleer die grote waarde hecht aan een leven in deugd en bescheidenheid. De leer is vernoemd naar de Indiase stichter, de Boeddha.",
+        keywords: ["levensleer", "deugd", "bescheidenheid", "Boeddha"]
+      },
+      {
+        id: "his5h-h1-008",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "burger",
+        answer: "Een erkende bewoner van een stad, stadsstaat of staat.",
+        keywords: ["erkende bewoner", "stad", "stadsstaat", "staat"]
+      },
+      {
+        id: "his5h-h1-009",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "centraal bestuur",
+        answer: "Bestuur over een groter gebied vanuit één plaats, waarbij overal in het bestuurde gebied dezelfde wetten en belastingen gelden.",
+        keywords: ["groter gebied", "één plaats", "zelfde wetten", "belastingen"]
+      },
+      {
+        id: "his5h-h1-010",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "centralisatie",
+        answer: "Het streven van heersers om hun gebied vanuit één punt te besturen en in het hele grondgebied gelijke wetten en belastingen in te voeren.",
+        keywords: ["heersers", "één punt", "gelijke wetten", "belastingen"]
+      },
+      {
+        id: "his5h-h1-011",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "christendom",
+        answer: "Monotheïstische godsdienst die het geheel van christelijke waarden, voorschriften en gebruiken omvat en die is gebaseerd op de Bijbel.",
+        keywords: ["monotheïstische godsdienst", "Bijbel", "christelijke waarden", "gebruiken"]
+      },
+      {
+        id: "his5h-h1-012",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "confucianisme",
+        answer: "Leer van de Chinese filosoof Confucius, waarin hij nadruk legt op respect voor anderen en de waarde van traditionele machtsverhoudingen.",
+        keywords: ["Confucius", "respect", "traditionele machtsverhoudingen", "Chinese filosoof"]
+      },
+      {
+        id: "his5h-h1-013",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "democratie",
+        answer: "Vorm van bestuur waarbij alle burgers invloed hebben op het beleid van de staat.",
+        keywords: ["bestuur", "alle burgers", "invloed", "beleid van de staat"]
+      },
+      {
+        id: "his5h-h1-014",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "dynastie",
+        answer: "Reeks van heersers uit dezelfde familie.",
+        keywords: ["reeks heersers", "zelfde familie", "erfopvolging"]
+      },
+      {
+        id: "his5h-h1-015",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "expansie",
+        answer: "De uitbreiding van een gebied of invloed.",
+        keywords: ["uitbreiding", "gebied", "invloed"]
+      },
+      {
+        id: "his5h-h1-016",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "hiërarchie",
+        answer: "Een rangorde binnen de samenleving of een onderdeel daarvan, op basis van aanzien en macht.",
+        keywords: ["rangorde", "samenleving", "aanzien", "macht"]
+      },
+      {
+        id: "his5h-h1-017",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "hindoeïsme",
+        answer: "Polytheïstische godsdienst, ontstaan in India. Hindoes geloven in een eeuwige ziel die steeds terugkeert op aarde.",
+        keywords: ["polytheïstische godsdienst", "India", "eeuwige ziel", "terugkeert op aarde"]
+      },
+      {
+        id: "his5h-h1-018",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "hofstelsel",
+        answer: "Een economisch systeem waarin min of meer zelfvoorzienende domeinen centraal staan.",
+        keywords: ["economisch systeem", "zelfvoorzienende domeinen", "domeinen"]
+      },
+      {
+        id: "his5h-h1-019",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "homo sapiens",
+        answer: "De laatste en enige menssoort die nu nog bestaat en waartoe ook wij behoren. (Letterlijk: de wetende mens).",
+        keywords: ["menssoort", "wij behoren", "wetende mens"]
+      },
+      {
+        id: "his5h-h1-020",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "horige",
+        answer: "Een halfvrije boer.",
+        keywords: ["halfvrije boer", "boer"]
+      },
   {
     id: "his5h-h1-021",
     subjectId: "geschiedenis",
@@ -366,97 +372,96 @@ export const historyHavo5Course = {
     answer: "Periode waarin een volk geen schrift gebruikt.",
     keywords: ["geen schrift", "periode"]
   },
-  {
-    id: "his5h-h1-051",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "privilege",
-    answer: "Voorrecht. Een recht dat alleen is toegekend aan een specifieke groep mensen.",
-    keywords: ["voorrecht", "specifieke groep"]
-  },
-  {
-    id: "his5h-h1-052",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "republiek",
-    answer: "Staat die door (een deel van) de burgers zelf wordt bestuurd en niet door een koning of keizer.",
-    keywords: ["burgers besturen", "geen koning", "geen keizer"]
-  },
-  {
-    id: "his5h-h1-054",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "ritueel",
-    answer: "Een heilige handeling die bedoeld is om een goddelijke of bovennatuurlijke macht gunstig te stemmen.",
-    keywords: ["heilige handeling", "goddelijke macht", "bovennatuurlijk"]
-  },
-  {
-    id: "his5h-h1-047",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "sharia",
-    answer: "Islamitische wetgeving, gebaseerd op onder andere de Koran.",
-    keywords: ["islam", "wetgeving", "koran"]
-  },
-  {
-    id: "his5h-h1-048",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "staat",
-    answer: "Een afgebakend gebied met een gecentraliseerd bestuur en een overkoepelend rechtssysteem waarin de overheid als enige geweld mag gebruiken en verantwoordelijk is voor de ordehandhaving en de verdediging van de landsgrenzen.",
-    keywords: ["gebied", "bestuur", "rechtssysteem", "geweld monopolie"]
-  },
-  {
-    id: "his5h-h1-049",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "stadsrecht",
-    answer: "Het recht van een plaats op eigen bestuur en eigen rechtspraak.",
-    keywords: ["eigen bestuur", "eigen rechtspraak"]
-  },
-  {
-    id: "his5h-h1-050",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "stadsstaat",
-    answer: "Een stad (plus het omringende platteland) met een zelfstandig bestuur.",
-    keywords: ["stad", "zelfstandig bestuur", "platteland"]
-  },
-  {
-    id: "his5h-h1-051",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "stand",
-    answer: "Een groep van mensen met een vergelijkbare maatschappelijke functie, zoals priesters (de geestelijkheid), bestuurders en militairen (de adel) en boeren en burgers (de derde stand).",
-    keywords: ["maatschappelijke groep", "adel", "geestelijkheid", "derde stand"]
-  },
-  {
-    id: "his5h-h1-052",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "stedelijke gemeenschap",
-    answer: "De groep mensen die samen de bevolking van een stad vormt.",
-    keywords: ["stad", "bevolking"]
-  },
-  {
-    id: "his5h-h1-053",
-    subjectId: "geschiedenis",
-    chapterId: "his5h-h1",
-    type: "begrip",
-    prompt: "tribuut",
-    answer: "Een waardevol geschenk (of een reeks waardevolle geschenken) waarmee een volk de oppermacht van een buurstaat erkent.",
-    keywords: ["geschenk", "oppermacht", "burenstaat"]
-  },
-
+   {
+        id: "his5h-h1-037",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "privilege",
+        answer: "Voorrecht. Een recht dat alleen is toegekend aan een specifieke groep mensen.",
+        keywords: ["voorrecht", "specifieke groep"]
+      },
+      {
+        id: "his5h-h1-038",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "republiek",
+        answer: "Staat die door (een deel van) de burgers zelf wordt bestuurd en niet door een koning of keizer.",
+        keywords: ["burgers besturen", "geen koning", "geen keizer"]
+      },
+      {
+        id: "his5h-h1-039",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "ritueel",
+        answer: "Een heilige handeling die bedoeld is om een goddelijke of bovennatuurlijke macht gunstig te stemmen.",
+        keywords: ["heilige handeling", "goddelijke macht", "bovennatuurlijk"]
+      },
+      {
+        id: "his5h-h1-040",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "sharia",
+        answer: "Islamitische wetgeving, gebaseerd op onder andere de Koran.",
+        keywords: ["islam", "wetgeving", "koran"]
+      },
+      {
+        id: "his5h-h1-041",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "staat",
+        answer: "Een afgebakend gebied met een gecentraliseerd bestuur en een overkoepelend rechtssysteem waarin de overheid als enige geweld mag gebruiken en verantwoordelijk is voor de ordehandhaving en de verdediging van de landsgrenzen.",
+        keywords: ["gebied", "bestuur", "rechtssysteem", "geweld monopolie"]
+      },
+      {
+        id: "his5h-h1-042",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "stadsrecht",
+        answer: "Het recht van een plaats op eigen bestuur en eigen rechtspraak.",
+        keywords: ["eigen bestuur", "eigen rechtspraak"]
+      },
+      {
+        id: "his5h-h1-043",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "stadsstaat",
+        answer: "Een stad (plus het omringende platteland) met een zelfstandig bestuur.",
+        keywords: ["stad", "zelfstandig bestuur", "platteland"]
+      },
+      {
+        id: "his5h-h1-044",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "stand",
+        answer: "Een groep van mensen met een vergelijkbare maatschappelijke functie, zoals priesters (de geestelijkheid), bestuurders en militairen (de adel) en boeren en burgers (de derde stand).",
+        keywords: ["maatschappelijke groep", "adel", "geestelijkheid", "derde stand"]
+      },
+      {
+        id: "his5h-h1-045",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "stedelijke gemeenschap",
+        answer: "De groep mensen die samen de bevolking van een stad vormt.",
+        keywords: ["stad", "bevolking"]
+      },
+      {
+        id: "his5h-h1-046",
+        subjectId: "geschiedenis",
+        chapterId: "his5h-h1",
+        type: "begrip",
+        prompt: "tribuut",
+        answer: "Een waardevol geschenk (of een reeks waardevolle geschenken) waarmee een volk de oppermacht van een buurstaat erkent.",
+        keywords: ["geschenk", "oppermacht", "burenstaat"]
+      },
   {
     id: "his5h-h2-001",
     subjectId: "geschiedenis",
