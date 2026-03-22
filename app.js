@@ -746,7 +746,17 @@ function isLooseTermMatch(input, expected) {
   if (aCompact === bCompact) return true;
 
   const distance = getLevenshteinDistance(aCompact, bCompact);
-  return distance <= 1;
+  const longestLength = Math.max(aCompact.length, bCompact.length);
+
+  if (longestLength <= 5) {
+    return distance <= 1;
+  }
+
+  if (longestLength <= 10) {
+    return distance <= 2;
+  }
+
+  return distance <= 3;
 }
 function isYearMatch(input, expected) {
   const a = normalizeTypedText(input).replace(/[^\d]/g, "");
