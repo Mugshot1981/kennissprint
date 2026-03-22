@@ -754,11 +754,52 @@ function isYearMatch(input, expected) {
   return a !== "" && a === b;
 }
 
+function getAllowedWordDistance(word) {
+  const len = String(word || "").length;
+
+  if (len <= 4) return 0;
+  if (len <= 7) return 1;
+  return 2;
+}
+
+function wordsRoughlyMatch(a, b) {
+  const left = normalizeTypedText(a).replace(/\s+/g, "");
+  const right = normalizeTypedText(b).replace(/\s+/g, "");
+
+  if (!left || !right) return false;
+  if (left === right) return true;
+
+  const distance = getLevenshteinDistance(left, right);
+  const allowed = Math.max(getAllowedWordDistance(left), getAllowedWordDistance(right));
+
+  return distance <= allowed;
+}
+
+function hasApproximateKeywordMatch(inputWords, keyword) {
+  const keywordWords = normalizeTypedText(keyword)
+    .split(" ")
+    .map((word) => word.trim())
+    .filter(Boolean);
+
+  if (keywordWords.length === 0) {
+    return false;
+  }
+
+  return keywordWords.every((keywordWord) =>
+    inputWords.some((inputWord) => wordsRoughlyMatch(inputWord, keywordWord))
+  );
+}
+
 function isKeywordMatch(input, expectedText, keywordList = []) {
   const normalizedInput = normalizeTypedText(input);
   if (!normalizedInput) {
     return false;
   }
+
+  const inputWords = normalizedInput
+    .split(" ")
+    .map((word) => word.trim())
+    .filter(Boolean);
 
   const normalizedKeywords = Array.isArray(keywordList)
     ? keywordList
@@ -767,9 +808,9 @@ function isKeywordMatch(input, expectedText, keywordList = []) {
     : [];
 
   if (normalizedKeywords.length > 0) {
-    const matchedKeywords = normalizedKeywords.filter((keyword) => {
-      return normalizedInput.includes(keyword);
-    });
+    const matchedKeywords = normalizedKeywords.filter((keyword) =>
+      hasApproximateKeywordMatch(inputWords, keyword)
+    );
 
     const requiredMatches = Math.max(
       1,
@@ -779,19 +820,23 @@ function isKeywordMatch(input, expectedText, keywordList = []) {
     return matchedKeywords.length >= requiredMatches;
   }
 
-  const inputWords = new Set(getCoreKeywords(input));
   const expectedWords = getCoreKeywords(expectedText);
 
-  if (inputWords.size === 0 || expectedWords.length === 0) {
+  if (inputWords.length === 0 || expectedWords.length === 0) {
     return false;
   }
 
-  const matchedCount = expectedWords.filter((word) => inputWords.has(word)).length;
-  const requiredMatches = Math.max(1, Math.min(3, Math.ceil(expectedWords.length * 0.4)));
+  const matchedCount = expectedWords.filter((expectedWord) =>
+    inputWords.some((inputWord) => wordsRoughlyMatch(inputWord, expectedWord))
+  ).length;
+
+  const requiredMatches = Math.max(
+    1,
+    Math.min(3, Math.ceil(expectedWords.length * 0.4))
+  );
 
   return matchedCount >= requiredMatches;
 }
-
 function checkTypedAnswer(question, userInput, modeId) {
   const answerKind = getTypedAnswerKind(modeId);
 
