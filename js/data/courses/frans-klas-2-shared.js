@@ -120,7 +120,7 @@ export const fransKlas2Shared = {
   type: "begrip",
   prompt: "repose-toi",
   answer: "rust uit",
-  keywords: ["rust"]
+  keywords: ["rust uit"]
 },
 {
   id: "fr-h5-010",
@@ -160,7 +160,7 @@ export const fransKlas2Shared = {
   type: "begrip",
   prompt: "avoir besoin de",
   answer: "nodig hebben",
-  keywords: ["nodig"]
+  keywords: ["nodig hebben"]
 },
 {
   id: "fr-h5-015",
@@ -176,7 +176,7 @@ export const fransKlas2Shared = {
   type: "begrip",
   prompt: "ce matin",
   answer: "vanochtend",
-  keywords: ["ochtend"]
+  keywords: ["vanochtend"]
 },
 {
   id: "fr-h5-017",
@@ -184,15 +184,15 @@ export const fransKlas2Shared = {
   type: "begrip",
   prompt: "cet après-midi",
   answer: "vanmiddag",
-  keywords: ["middag"]
+  keywords: ["vanmiddag"]
 },
 {
   id: "fr-h5-018",
   chapterId: "fr-h5",
   type: "begrip",
   prompt: "ce soir",
-  answer: "vanavond",
-  keywords: ["avond"]
+  answer: "tot vanavond",
+  keywords: ["vanavond"]
 },
 {
   id: "fr-h5-019",
@@ -296,7 +296,7 @@ export const fransKlas2Shared = {
   type: "begrip",
   prompt: "être en train de",
   answer: "bezig zijn met",
-  keywords: ["bezig"]
+  keywords: ["bezig zijn"]
 },
 {
   id: "fr-h5-032",
@@ -1989,8 +1989,8 @@ export const fransKlas2Shared = {
   chapterId: "fr-h5",
   type: "zin",
   prompt: "Wat heb jij?",
-  answer: "Qu’est-ce que tu as ?",
-  keywords: ["qu est ce", "as"]
+  answer: "Qu’est-ce que tu as?",
+  keywords: ["qu est ce", "tu as"]
 },
 {
   id: "fr-h5-p-002",
@@ -2013,7 +2013,7 @@ export const fransKlas2Shared = {
   chapterId: "fr-h5",
   type: "zin",
   prompt: "Ga je naar de arts?",
-  answer: "Tu vas voir le docteur ?",
+  answer: "Tu vas voir le docteur?",
   keywords: ["vas voir", "docteur"]
 },
 {
@@ -2037,7 +2037,7 @@ export const fransKlas2Shared = {
   chapterId: "fr-h5",
   type: "zin",
   prompt: "Gaat het?",
-  answer: "Ça va ?",
+  answer: "Ça va?",
   keywords: ["ca va"]
 },
 {
@@ -2046,7 +2046,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Ik denk dat ik ziek ben.",
   answer: "Je pense que je suis malade.",
-  keywords: ["pense", "suis malade"]
+  keywords: ["pense", "malade"]
 },
 {
   id: "fr-h5-p-009",
@@ -2064,12 +2064,13 @@ export const fransKlas2Shared = {
   answer: "Je ne peux rien manger.",
   keywords: ["peux rien", "manger"]
 },
+
 {
   id: "fr-h5-p-011",
   chapterId: "fr-h5",
   type: "zin",
   prompt: "Sport jij?",
-  answer: "Tu fais du sport ?",
+  answer: "Tu fais du sport?",
   keywords: ["fais du sport"]
 },
 {
@@ -2085,8 +2086,8 @@ export const fransKlas2Shared = {
   chapterId: "fr-h5",
   type: "zin",
   prompt: "Wat doe je voor sport?",
-  answer: "Qu’est-ce que tu fais comme sport ?",
-  keywords: ["qu est ce", "comme sport"]
+  answer: "Qu’est-ce que tu fais comme sport?",
+  keywords: ["comme sport"]
 },
 {
   id: "fr-h5-p-014",
@@ -2102,91 +2103,8 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Ik train drie keer per week.",
   answer: "Je m’entraîne trois fois par semaine.",
-  keywords: ["entraine", "trois fois", "semaine"]
+  keywords: ["entraine", "trois fois"]
 },
-{
-  id: "fr-h5-p-016",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Gaat het?",
-  answer: "Ça va ?",
-  keywords: ["ca va"]
-},
-{
-  id: "fr-h5-p-017",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Nee, ik ben niet in vorm.",
-  answer: "Non, je ne suis pas en forme.",
-  keywords: ["ne suis pas", "forme"]
-},
-{
-  id: "fr-h5-p-018",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Ik denk dat ik ziek ben.",
-  answer: "Je pense que je suis malade.",
-  keywords: ["pense", "suis malade"]
-},
-{
-  id: "fr-h5-p-019",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Wat heb jij?",
-  answer: "Qu’est-ce que tu as ?",
-  keywords: ["qu est ce", "as"]
-},
-{
-  id: "fr-h5-p-020",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Ik heb hoofdpijn.",
-  answer: "J’ai mal à la tête.",
-  keywords: ["mal", "tete"]
-},
-{
-  id: "fr-h5-p-021",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Ik heb 39 graden koorts.",
-  answer: "J’ai 39 de fièvre.",
-  keywords: ["39", "fievre"]
-},
-{
-  id: "fr-h5-p-022",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Ik kan niets eten.",
-  answer: "Je ne peux rien manger.",
-  keywords: ["peux rien", "manger"]
-},
-{
-  id: "fr-h5-p-023",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Ga je naar de arts?",
-  answer: "Tu vas voir le docteur ?",
-  keywords: ["vas voir", "docteur"]
-},
-{
-  id: "fr-h5-p-024",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Ja, ik heb morgen een afspraak.",
-  answer: "Oui, j’ai rendez-vous demain.",
-  keywords: ["rendez vous", "demain"]
-},
-{
-  id: "fr-h5-p-025",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Nee, ik blijf in bed.",
-  answer: "Non, je reste au lit.",
-  keywords: ["reste", "lit"]
-},
-
-
-
 {
   id: "fr-h5-p-026",
   chapterId: "fr-h5",
@@ -2207,52 +2125,12 @@ export const fransKlas2Shared = {
   id: "fr-h5-p-028",
   chapterId: "fr-h5",
   type: "zin",
-  prompt: "Sport jij?",
-  answer: "Tu fais du sport?",
-  keywords: ["fais du sport"]
+  prompt: "Ja, omdat ik het leuk vind om te bewegen.",
+  answer: "Oui, parce que j’aime bouger.",
+  keywords: ["parce", "bouger"]
 },
 {
   id: "fr-h5-p-029",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Ja, omdat ik het leuk vind om te bewegen.",
-  answer: "Oui, parce que j’aime bouger.",
-  keywords: ["parce", "aime bouger"]
-},
-{
-  id: "fr-h5-p-030",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Nee, ik sport niet.",
-  answer: "Non, je ne fais pas de sport.",
-  keywords: ["ne fais pas", "sport"]
-},
-{
-  id: "fr-h5-p-031",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Wat doe je voor sport?",
-  answer: "Qu’est-ce que tu fais comme sport?",
-  keywords: ["comme sport"]
-},
-{
-  id: "fr-h5-p-032",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Ik voetbal.",
-  answer: "Je fais du foot.",
-  keywords: ["fais du foot"]
-},
-{
-  id: "fr-h5-p-033",
-  chapterId: "fr-h5",
-  type: "zin",
-  prompt: "Ik train drie keer per week.",
-  answer: "Je m’entraîne trois fois par semaine.",
-  keywords: ["entraine", "trois fois"]
-},
-{
-  id: "fr-h5-p-034",
   chapterId: "fr-h5",
   type: "zin",
   prompt: "Eet je goed?",
@@ -2260,7 +2138,7 @@ export const fransKlas2Shared = {
   keywords: ["manges bien"]
 },
 {
-  id: "fr-h5-p-035",
+  id: "fr-h5-p-030",
   chapterId: "fr-h5",
   type: "zin",
   prompt: "Ja, ik eet veel fruit.",
@@ -2268,14 +2146,13 @@ export const fransKlas2Shared = {
   keywords: ["mange", "fruits"]
 },
 {
-  id: "fr-h5-p-036",
+  id: "fr-h5-p-031",
   chapterId: "fr-h5",
   type: "zin",
   prompt: "Maar ik lust geen groenten.",
   answer: "Mais je déteste les légumes.",
   keywords: ["deteste", "legumes"]
 },
-
 
 
 {
