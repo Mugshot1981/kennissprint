@@ -51,6 +51,655 @@ export const fransKlas2Shared = {
   datasets: {
     terms: [
 {
+  id: "fr-h1-001",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la rentrée",
+  answer: "de eerste schooldag",
+  keywords: ["schooldag"]
+},
+{
+  id: "fr-h1-002",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le voyage",
+  answer: "de reis",
+  keywords: ["reis"]
+},
+{
+  id: "fr-h1-003",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le train",
+  answer: "de trein",
+  keywords: ["trein"]
+},
+{
+  id: "fr-h1-004",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "l’hôtel",
+  answer: "het hotel",
+  keywords: ["hotel"]
+},
+{
+  id: "fr-h1-005",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la piscine",
+  answer: "het zwembad",
+  keywords: ["zwembad"]
+},
+{
+  id: "fr-h1-006",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "parler",
+  answer: "praten, spreken",
+  keywords: ["spreken"]
+},
+{
+  id: "fr-h1-007",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "raconter",
+  answer: "vertellen",
+  keywords: ["vertellen"]
+},
+{
+  id: "fr-h1-008",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "expliquer",
+  answer: "uitleggen",
+  keywords: ["uitleggen"]
+},
+{
+  id: "fr-h1-009",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "pendant",
+  answer: "tijdens",
+  keywords: ["tijd"]
+},
+{
+  id: "fr-h1-010",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "formidable",
+  answer: "geweldig",
+  keywords: ["geweldig"]
+},
+{
+  id: "fr-h1-011",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "nul",
+  answer: "waardeloos",
+  keywords: ["slecht"]
+},
+{
+  id: "fr-h1-012",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "terrible",
+  answer: "vreselijk",
+  keywords: ["vreselijk"]
+},
+{
+  id: "fr-h1-013",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le pays",
+  answer: "het land",
+  keywords: ["land"]
+},
+{
+  id: "fr-h1-014",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "aux Pays-Bas",
+  answer: "in/naar Nederland",
+  keywords: ["Nederland"]
+},
+{
+  id: "fr-h1-015",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "en France",
+  answer: "in/naar Frankrijk",
+  keywords: ["Frankrijk"]
+},
+{
+  id: "fr-h1-016",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "en Belgique",
+  answer: "in/naar België",
+  keywords: ["België"]
+},
+{
+  id: "fr-h1-017",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "au Luxembourg",
+  answer: "in/naar Luxemburg",
+  keywords: ["Luxemburg"]
+},
+{
+  id: "fr-h1-018",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "en Allemagne",
+  answer: "in/naar Duitsland",
+  keywords: ["Duitsland"]
+},
+{
+  id: "fr-h1-019",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "en Angleterre",
+  answer: "in/naar Engeland",
+  keywords: ["Engeland"]
+},
+{
+  id: "fr-h1-020",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "en Espagne",
+  answer: "in/naar Spanje",
+  keywords: ["Spanje"]
+},
+{
+  id: "fr-h1-021",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le frère",
+  answer: "de broer",
+  keywords: ["broer"]
+},
+{
+  id: "fr-h1-022",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la sœur",
+  answer: "de zus",
+  keywords: ["zus"]
+},
+{
+  id: "fr-h1-023",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "l’ami(e)",
+  answer: "de vriend(in)",
+  keywords: ["vriend"]
+},
+{
+  id: "fr-h1-024",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le/la jeune",
+  answer: "de jongere",
+  keywords: ["jongere"]
+},
+{
+  id: "fr-h1-025",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la liberté",
+  answer: "de vrijheid",
+  keywords: ["vrijheid"]
+},
+{
+  id: "fr-h1-026",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la montagne",
+  answer: "de berg",
+  keywords: ["berg"]
+},
+{
+  id: "fr-h1-027",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "l’île",
+  answer: "het eiland",
+  keywords: ["eiland"]
+},
+{
+  id: "fr-h1-028",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la mer",
+  answer: "de zee",
+  keywords: ["zee"]
+},
+{
+  id: "fr-h1-029",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "l’avion",
+  answer: "het vliegtuig",
+  keywords: ["vliegtuig"]
+},
+{
+  id: "fr-h1-030",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "premier, première",
+  answer: "eerste",
+  keywords: ["eerste"]
+},
+{
+  id: "fr-h1-031",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "car",
+  answer: "want",
+  keywords: ["want"]
+},
+{
+  id: "fr-h1-032",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "enfin",
+  answer: "(uit)eindelijk",
+  keywords: ["eindelijk"]
+},
+{
+  id: "fr-h1-033",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "rencontrer",
+  answer: "ontmoeten",
+  keywords: ["ontmoeten"]
+},
+{
+  id: "fr-h1-034",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "découvrir",
+  answer: "ontdekken",
+  keywords: ["ontdekken"]
+},
+{
+  id: "fr-h1-035",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le temps",
+  answer: "het weer",
+  keywords: ["weer"]
+},
+{
+  id: "fr-h1-036",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "il fait beau",
+  answer: "het is mooi weer",
+  keywords: ["mooi weer"]
+},
+{
+  id: "fr-h1-037",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "il fait mauvais",
+  answer: "het is slecht weer",
+  keywords: ["slecht weer"]
+},
+{
+  id: "fr-h1-038",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "il fait 20 degrés",
+  answer: "het is 20 graden",
+  keywords: ["graden"]
+},
+{
+  id: "fr-h1-039",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "il fait froid",
+  answer: "het is koud",
+  keywords: ["koud"]
+},
+{
+  id: "fr-h1-040",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "il fait chaud",
+  answer: "het is warm",
+  keywords: ["warm"]
+},
+{
+  id: "fr-h1-041",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le sac à dos",
+  answer: "de rugtas",
+  keywords: ["tas"]
+},
+{
+  id: "fr-h1-042",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la gare",
+  answer: "het station",
+  keywords: ["station"]
+},
+{
+  id: "fr-h1-043",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la dispute",
+  answer: "de ruzie",
+  keywords: ["ruzie"]
+},
+{
+  id: "fr-h1-044",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "important(e)",
+  answer: "belangrijk",
+  keywords: ["belangrijk"]
+},
+{
+  id: "fr-h1-045",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "fatigué(e)",
+  answer: "moe",
+  keywords: ["moe"]
+},
+{
+  id: "fr-h1-046",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "je veux",
+  answer: "ik wil",
+  keywords: ["willen"]
+},
+{
+  id: "fr-h1-047",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "arrêter",
+  answer: "stoppen",
+  keywords: ["stoppen"]
+},
+{
+  id: "fr-h1-048",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "arriver",
+  answer: "aankomen",
+  keywords: ["aankomen"]
+},
+{
+  id: "fr-h1-049",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "dormir",
+  answer: "slapen",
+  keywords: ["slapen"]
+},
+{
+  id: "fr-h1-050",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "voir",
+  answer: "zien",
+  keywords: ["zien"]
+},
+{
+  id: "fr-h1-051",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "néerlandais(e)",
+  answer: "Nederlands",
+  keywords: ["Nederlands"]
+},
+{
+  id: "fr-h1-052",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "anglais(e)",
+  answer: "Engels",
+  keywords: ["Engels"]
+},
+{
+  id: "fr-h1-053",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "allemand(e)",
+  answer: "Duits",
+  keywords: ["Duits"]
+},
+{
+  id: "fr-h1-054",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "belge",
+  answer: "Belgisch",
+  keywords: ["België"]
+},
+{
+  id: "fr-h1-055",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "espagnol(e)",
+  answer: "Spaans",
+  keywords: ["Spaans"]
+},
+{
+  id: "fr-h1-056",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "trop",
+  answer: "te veel",
+  keywords: ["veel"]
+},
+{
+  id: "fr-h1-057",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "d’abord",
+  answer: "ten eerste",
+  keywords: ["eerst"]
+},
+{
+  id: "fr-h1-058",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "ce weekend",
+  answer: "dit weekend",
+  keywords: ["weekend"]
+},
+{
+  id: "fr-h1-059",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la semaine dernière",
+  answer: "vorige week",
+  keywords: ["week"]
+},
+{
+  id: "fr-h1-060",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "louer une maison",
+  answer: "een huis huren",
+  keywords: ["huren"]
+},
+{
+  id: "fr-h1-061",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "au printemps",
+  answer: "in de lente",
+  keywords: ["lente"]
+},
+{
+  id: "fr-h1-062",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "en été",
+  answer: "in de zomer",
+  keywords: ["zomer"]
+},
+{
+  id: "fr-h1-063",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "en automne",
+  answer: "in de herfst",
+  keywords: ["herfst"]
+},
+{
+  id: "fr-h1-064",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "en hiver",
+  answer: "in de winter",
+  keywords: ["winter"]
+},
+{
+  id: "fr-h1-065",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "l’histoire",
+  answer: "het verhaal",
+  keywords: ["verhaal"]
+},
+{
+  id: "fr-h1-066",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le village",
+  answer: "het dorp",
+  keywords: ["dorp"]
+},
+{
+  id: "fr-h1-067",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le château",
+  answer: "het kasteel",
+  keywords: ["kasteel"]
+},
+{
+  id: "fr-h1-068",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "l’église",
+  answer: "de kerk",
+  keywords: ["kerk"]
+},
+{
+  id: "fr-h1-069",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "le garçon",
+  answer: "de jongen",
+  keywords: ["jongen"]
+},
+{
+  id: "fr-h1-070",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la fille",
+  answer: "het meisje",
+  keywords: ["meisje"]
+},
+{
+  id: "fr-h1-071",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "la semaine",
+  answer: "de week",
+  keywords: ["week"]
+},
+{
+  id: "fr-h1-072",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "hier",
+  answer: "gisteren",
+  keywords: ["gisteren"]
+},
+{
+  id: "fr-h1-073",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "ici",
+  answer: "hier",
+  keywords: ["plaats"]
+},
+{
+  id: "fr-h1-074",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "là-bas",
+  answer: "daar",
+  keywords: ["plaats"]
+},
+{
+  id: "fr-h1-075",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "pourquoi",
+  answer: "waarom",
+  keywords: ["vraag"]
+},
+{
+  id: "fr-h1-076",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "magnifique",
+  answer: "prachtig",
+  keywords: ["prachtig"]
+},
+{
+  id: "fr-h1-077",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "donner",
+  answer: "geven",
+  keywords: ["geven"]
+},
+{
+  id: "fr-h1-078",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "nager",
+  answer: "zwemmen",
+  keywords: ["zwemmen"]
+},
+{
+  id: "fr-h1-079",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "faire de la plongée",
+  answer: "duiken",
+  keywords: ["duiken"]
+},
+{
+  id: "fr-h1-080",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "faire les magasins",
+  answer: "winkelen",
+  keywords: ["winkelen"]
+},
+{
+  id: "fr-h1-081",
+  chapterId: "fr-h1",
+  type: "begrip",
+  prompt: "faire la grasse matinée",
+  answer: "uitslapen",
+  keywords: ["uitslapen"]
+},
+  
+{
   id: "fr-h5-001",
   chapterId: "fr-h5",
   type: "begrip",
@@ -1984,6 +2633,345 @@ export const fransKlas2Shared = {
 
     
     phrases: [
+
+{
+  id: "fr-h1-p-001",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Heb je een leuke vakantie gehad?",
+  answer: "Tu as passé de bonnes vacances ?",
+  keywords: ["vakantie"]
+},
+{
+  id: "fr-h1-p-002",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ja, het was super!",
+  answer: "Oui, c’était super !",
+  keywords: ["super"]
+},
+{
+  id: "fr-h1-p-003",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Waar ben je naartoe geweest?",
+  answer: "Tu es allé où ?",
+  keywords: ["waar"]
+},
+{
+  id: "fr-h1-p-004",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ik ben in Nice geweest.",
+  answer: "J’ai été à Nice.",
+  keywords: ["Nice"]
+},
+{
+  id: "fr-h1-p-005",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Met wie?",
+  answer: "Avec qui ?",
+  keywords: ["wie"]
+},
+{
+  id: "fr-h1-p-006",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Met mijn ouders en mijn broer.",
+  answer: "Avec mes parents et mon frère.",
+  keywords: ["ouders"]
+},
+{
+  id: "fr-h1-p-007",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Was het mooi weer?",
+  answer: "Il a fait beau ?",
+  keywords: ["weer"]
+},
+{
+  id: "fr-h1-p-008",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ja, het was warm.",
+  answer: "Oui, il a fait chaud.",
+  keywords: ["warm"]
+},
+{
+  id: "fr-h1-p-009",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Het was 28 graden.",
+  answer: "Il a fait 28 degrés.",
+  keywords: ["graden"]
+},
+{
+  id: "fr-h1-p-010",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Wat heb je deze zomer gedaan?",
+  answer: "Qu’est-ce que tu as fait cet été ?",
+  keywords: ["zomer"]
+},
+{
+  id: "fr-h1-p-011",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ik heb gefietst.",
+  answer: "J’ai fait du vélo.",
+  keywords: ["fietsen"]
+},
+{
+  id: "fr-h1-p-012",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Hebben jullie gekampeerd?",
+  answer: "Vous avez fait du camping ?",
+  keywords: ["kamperen"]
+},
+{
+  id: "fr-h1-p-013",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ja, we hebben gekampeerd.",
+  answer: "Oui, on a fait du camping.",
+  keywords: ["kamperen"]
+},
+{
+  id: "fr-h1-p-014",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Hoe was het?",
+  answer: "C’était comment ?",
+  keywords: ["hoe"]
+},
+{
+  id: "fr-h1-p-015",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Het was geweldig!",
+  answer: "C’était génial !",
+  keywords: ["geweldig"]
+},
+{
+  id: "fr-h1-p-016",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Nu heb ik veel Franse vrienden.",
+  answer: "Maintenant, j’ai beaucoup d’amis français.",
+  keywords: ["vrienden"]
+},
+{
+  id: "fr-h1-p-017",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Nee, we zijn in een hotel geweest.",
+  answer: "Non, on a été à l’hôtel.",
+  keywords: ["hotel"]
+},
+{
+  id: "fr-h1-p-018",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ik ben met mijn vrienden naar het strand geweest.",
+  answer: "J’ai été à la plage avec mes copains.",
+  keywords: ["strand"]
+},
+{
+  id: "fr-h1-p-019",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ik heb Brussel bezocht.",
+  answer: "J’ai visité Bruxelles.",
+  keywords: ["Brussel"]
+},
+{
+  id: "fr-h1-p-020",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Heb je Frans gesproken?",
+  answer: "Tu as parlé français ?",
+  keywords: ["Frans"]
+},
+{
+  id: "fr-h1-p-021",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ja, ik heb Frans gesproken.",
+  answer: "Oui, j’ai parlé français.",
+  keywords: ["Frans"]
+},
+{
+  id: "fr-h1-p-022",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Heb je een leuke vakantie gehad?",
+  answer: "Tu as passé de bonnes vacances ?",
+  keywords: ["vakantie"]
+},
+{
+  id: "fr-h1-p-023",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ja, het was super!",
+  answer: "Oui, c’était super !",
+  keywords: ["super"]
+},
+{
+  id: "fr-h1-p-024",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Waar ben je naartoe geweest?",
+  answer: "Tu es allé où ?",
+  keywords: ["waar"]
+},
+{
+  id: "fr-h1-p-025",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ik ben in Nice geweest.",
+  answer: "J’ai été à Nice.",
+  keywords: ["Nice"]
+},
+{
+  id: "fr-h1-p-026",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Met wie?",
+  answer: "Avec qui ?",
+  keywords: ["wie"]
+},
+{
+  id: "fr-h1-p-027",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Met mijn ouders en mijn broer.",
+  answer: "Avec mes parents et mon frère.",
+  keywords: ["ouders"]
+},
+{
+  id: "fr-h1-p-028",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Was het mooi weer?",
+  answer: "Il a fait beau ?",
+  keywords: ["weer"]
+},
+{
+  id: "fr-h1-p-029",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ja, het was warm.",
+  answer: "Oui, il a fait chaud.",
+  keywords: ["warm"]
+},
+{
+  id: "fr-h1-p-030",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Het was 28 graden.",
+  answer: "Il a fait 28 degrés.",
+  keywords: ["graden"]
+},
+
+{
+  id: "fr-h1-p-031",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Wat heb je deze zomer gedaan?",
+  answer: "Qu’est-ce que tu as fait cet été ?",
+  keywords: ["zomer"]
+},
+{
+  id: "fr-h1-p-032",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ik ben met mijn vrienden naar het strand geweest.",
+  answer: "J’ai été à la plage avec mes copains.",
+  keywords: ["strand"]
+},
+{
+  id: "fr-h1-p-033",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ik heb gefietst.",
+  answer: "J’ai fait du vélo.",
+  keywords: ["fietsen"]
+},
+{
+  id: "fr-h1-p-034",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ik heb Brussel bezocht.",
+  answer: "J’ai visité Bruxelles.",
+  keywords: ["Brussel"]
+},
+{
+  id: "fr-h1-p-035",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Hoe was het?",
+  answer: "C’était comment ?",
+  keywords: ["hoe"]
+},
+{
+  id: "fr-h1-p-036",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Het was geweldig!",
+  answer: "C’était génial !",
+  keywords: ["geweldig"]
+},
+{
+  id: "fr-h1-p-037",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Hebben jullie gekampeerd?",
+  answer: "Vous avez fait du camping ?",
+  keywords: ["kamperen"]
+},
+{
+  id: "fr-h1-p-038",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ja, we hebben gekampeerd.",
+  answer: "Oui, on a fait du camping.",
+  keywords: ["kamperen"]
+},
+{
+  id: "fr-h1-p-039",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Nee, we zijn in een hotel geweest.",
+  answer: "Non, on a été à l’hôtel.",
+  keywords: ["hotel"]
+},
+{
+  id: "fr-h1-p-040",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Heb je Frans gesproken?",
+  answer: "Tu as parlé français ?",
+  keywords: ["Frans"]
+},
+{
+  id: "fr-h1-p-041",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Ja, ik heb Frans gesproken.",
+  answer: "Oui, j’ai parlé français.",
+  keywords: ["Frans"]
+},
+{
+  id: "fr-h1-p-042",
+  chapterId: "fr-h1",
+  type: "zin",
+  prompt: "Nu heb ik veel Franse vrienden.",
+  answer: "Maintenant, j’ai beaucoup d’amis français.",
+  keywords: ["vrienden"]
+},
+  
 {
   id: "fr-h5-p-001",
   chapterId: "fr-h5",
