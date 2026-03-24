@@ -1329,6 +1329,646 @@ export const fransKlas2Shared = {
   prompt: "c’est tout droit",
   answer: "het is rechtdoor",
   keywords: ["rechtdoor"]
+},
+{
+  id: "fr-h7-001",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "l’invitation",
+  answer: "de uitnodiging",
+  keywords: ["uitnodiging"]
+},
+{
+  id: "fr-h7-002",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le thème",
+  answer: "het thema",
+  keywords: ["thema"]
+},
+{
+  id: "fr-h7-003",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le vêtement",
+  answer: "het kledingstuk",
+  keywords: ["kleding"]
+},
+{
+  id: "fr-h7-004",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "les animaux",
+  answer: "de dieren",
+  keywords: ["dieren"]
+},
+{
+  id: "fr-h7-005",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le singe",
+  answer: "de aap",
+  keywords: ["aap"]
+},
+{
+  id: "fr-h7-006",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "mettre",
+  answer: "aandoen",
+  keywords: ["aandoen"]
+},
+{
+  id: "fr-h7-007",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "porter",
+  answer: "dragen",
+  keywords: ["dragen"]
+},
+{
+  id: "fr-h7-008",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "arriver",
+  answer: "aankomen",
+  keywords: ["aankomen"]
+},
+{
+  id: "fr-h7-009",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "j’ai compris",
+  answer: "ik heb begrepen",
+  keywords: ["begrepen"]
+},
+{
+  id: "fr-h7-010",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "moi aussi",
+  answer: "ik ook",
+  keywords: ["ik ook"]
+},
+{
+  id: "fr-h7-011",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "pendant les vacances",
+  answer: "in de vakantie",
+  keywords: ["vakantie"]
+},
+{
+  id: "fr-h7-012",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la semaine prochaine",
+  answer: "volgende week",
+  keywords: ["volgende week"]
+},
+{
+  id: "fr-h7-013",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "demain",
+  answer: "morgen",
+  keywords: ["morgen"]
+},
+{
+  id: "fr-h7-014",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "il y a un an",
+  answer: "een jaar geleden",
+  keywords: ["jaar geleden"]
+},
+{
+  id: "fr-h7-015",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "il y a une semaine",
+  answer: "een week geleden",
+  keywords: ["week geleden"]
+},
+{
+  id: "fr-h7-016",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "à la fête",
+  answer: "naar het feest",
+  keywords: ["feest"]
+},
+{
+  id: "fr-h7-017",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "au spectacle",
+  answer: "naar de voorstelling",
+  keywords: ["voorstelling"]
+},
+{
+  id: "fr-h7-018",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "au festival",
+  answer: "naar het festival",
+  keywords: ["festival"]
+},
+{
+  id: "fr-h7-019",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "au cinéma",
+  answer: "naar de bioscoop",
+  keywords: ["bioscoop"]
+},
+{
+  id: "fr-h7-020",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "au restaurant",
+  answer: "naar het restaurant",
+  keywords: ["restaurant"]
+},
+{
+  id: "fr-h7-021",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "les gens",
+  answer: "de mensen",
+  keywords: ["mensen"]
+},
+{
+  id: "fr-h7-022",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "l’ambiance",
+  answer: "de sfeer",
+  keywords: ["sfeer"]
+},
+{
+  id: "fr-h7-023",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la cour",
+  answer: "het (school)plein",
+  keywords: ["plein"]
+},
+{
+  id: "fr-h7-024",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le mec",
+  answer: "de gozer",
+  keywords: ["gozer"]
+},
+{
+  id: "fr-h7-025",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la nourriture",
+  answer: "het eten",
+  keywords: ["eten"]
+},
+{
+  id: "fr-h7-026",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la cuisine",
+  answer: "de keuken",
+  keywords: ["keuken"]
+},
+{
+  id: "fr-h7-027",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la catastrophe",
+  answer: "de ramp",
+  keywords: ["ramp"]
+},
+{
+  id: "fr-h7-028",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "l’arbre",
+  answer: "de boom",
+  keywords: ["boom"]
+},
+{
+  id: "fr-h7-029",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le chanteur",
+  answer: "de zanger",
+  keywords: ["zanger"]
+},
+{
+  id: "fr-h7-030",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la chanteuse",
+  answer: "de zangeres",
+  keywords: ["zangeres"]
+},
+{
+  id: "fr-h7-031",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "préparer",
+  answer: "voorbereiden",
+  keywords: ["voorbereiden"]
+},
+{
+  id: "fr-h7-032",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "réussir",
+  answer: "slagen",
+  keywords: ["slagen"]
+},
+{
+  id: "fr-h7-033",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "oublier",
+  answer: "vergeten",
+  keywords: ["vergeten"]
+},
+{
+  id: "fr-h7-034",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "penser",
+  answer: "denken",
+  keywords: ["denken"]
+},
+{
+  id: "fr-h7-035",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "utiliser",
+  answer: "gebruiken",
+  keywords: ["gebruiken"]
+},
+{
+  id: "fr-h7-036",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "tous les",
+  answer: "alle",
+  keywords: ["alle"]
+},
+{
+  id: "fr-h7-037",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "surtout",
+  answer: "vooral",
+  keywords: ["vooral"]
+},
+{
+  id: "fr-h7-038",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "presque",
+  answer: "bijna",
+  keywords: ["bijna"]
+},
+{
+  id: "fr-h7-039",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "d’abord",
+  answer: "ten eerste",
+  keywords: ["eerste"]
+},
+{
+  id: "fr-h7-040",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "ensuite",
+  answer: "vervolgens",
+  keywords: ["vervolgens"]
+},
+{
+  id: "fr-h7-041",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "appeler",
+  answer: "bellen",
+  keywords: ["bellen"]
+},
+{
+  id: "fr-h7-042",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "espérer",
+  answer: "hopen",
+  keywords: ["hopen"]
+},
+{
+  id: "fr-h7-043",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "envoyer",
+  answer: "sturen",
+  keywords: ["sturen"]
+},
+{
+  id: "fr-h7-044",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "jusqu’à",
+  answer: "tot",
+  keywords: ["tot"]
+},
+{
+  id: "fr-h7-045",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "vraiment",
+  answer: "echt",
+  keywords: ["echt"]
+},
+{
+  id: "fr-h7-046",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "zut!",
+  answer: "verdorie!",
+  keywords: ["verdorie"]
+},
+{
+  id: "fr-h7-047",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "pour",
+  answer: "voor",
+  keywords: ["voor"]
+},
+{
+  id: "fr-h7-048",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "fini(e)",
+  answer: "afgelopen",
+  keywords: ["afgelopen"]
+},
+{
+  id: "fr-h7-049",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "sympa",
+  answer: "aardig",
+  keywords: ["aardig"]
+},
+{
+  id: "fr-h7-050",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "formidable",
+  answer: "geweldig",
+  keywords: ["geweldig"]
+},
+{
+  id: "fr-h7-051",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le copain",
+  answer: "de vriend",
+  keywords: ["vriend"]
+},
+{
+  id: "fr-h7-052",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la surprise",
+  answer: "de verrassing",
+  keywords: ["verrassing"]
+},
+{
+  id: "fr-h7-053",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le message",
+  answer: "het bericht",
+  keywords: ["bericht"]
+},
+{
+  id: "fr-h7-054",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le portable",
+  answer: "de mobiele telefoon",
+  keywords: ["telefoon"]
+},
+{
+  id: "fr-h7-055",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la viande",
+  answer: "het vlees",
+  keywords: ["vlees"]
+},
+{
+  id: "fr-h7-056",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le poisson",
+  answer: "de vis",
+  keywords: ["vis"]
+},
+{
+  id: "fr-h7-057",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le fromage",
+  answer: "de kaas",
+  keywords: ["kaas"]
+},
+{
+  id: "fr-h7-058",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le riz",
+  answer: "de rijst",
+  keywords: ["rijst"]
+},
+{
+  id: "fr-h7-059",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la pomme de terre",
+  answer: "de aardappel",
+  keywords: ["aardappel"]
+},
+{
+  id: "fr-h7-060",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "l’œuf",
+  answer: "het ei",
+  keywords: ["ei"]
+},
+{
+  id: "fr-h7-061",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "bouger",
+  answer: "bewegen",
+  keywords: ["bewegen"]
+},
+{
+  id: "fr-h7-062",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "trouver",
+  answer: "vinden",
+  keywords: ["vinden"]
+},
+{
+  id: "fr-h7-063",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "découvrir",
+  answer: "ontdekken",
+  keywords: ["ontdekken"]
+},
+{
+  id: "fr-h7-064",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "venir",
+  answer: "komen",
+  keywords: ["komen"]
+},
+{
+  id: "fr-h7-065",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "entendre",
+  answer: "horen",
+  keywords: ["horen"]
+},
+{
+  id: "fr-h7-066",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "aller au cinéma",
+  answer: "naar de bioscoop gaan",
+  keywords: ["bioscoop"]
+},
+{
+  id: "fr-h7-067",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "aller au café",
+  answer: "naar het café gaan",
+  keywords: ["cafe"]
+},
+{
+  id: "fr-h7-068",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "célèbre",
+  answer: "beroemd",
+  keywords: ["beroemd"]
+},
+{
+  id: "fr-h7-069",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "libre",
+  answer: "vrij",
+  keywords: ["vrij"]
+},
+{
+  id: "fr-h7-070",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "interdit(e)",
+  answer: "verboden",
+  keywords: ["verboden"]
+},
+{
+  id: "fr-h7-071",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le monde",
+  answer: "de wereld",
+  keywords: ["wereld"]
+},
+{
+  id: "fr-h7-072",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "la fleur",
+  answer: "de bloem",
+  keywords: ["bloem"]
+},
+{
+  id: "fr-h7-073",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le temps",
+  answer: "het weer",
+  keywords: ["weer"]
+},
+{
+  id: "fr-h7-074",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "le/la jeune",
+  answer: "de jongere",
+  keywords: ["jongere"]
+},
+{
+  id: "fr-h7-075",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "si",
+  answer: "als",
+  keywords: ["als"]
+},
+{
+  id: "fr-h7-076",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "quand même",
+  answer: "toch",
+  keywords: ["toch"]
+},
+{
+  id: "fr-h7-077",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "chaque",
+  answer: "elke",
+  keywords: ["elke"]
+},
+{
+  id: "fr-h7-078",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "c’est pourquoi",
+  answer: "daarom",
+  keywords: ["daarom"]
+},
+{
+  id: "fr-h7-079",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "bien sûr",
+  answer: "natuurlijk",
+  keywords: ["natuurlijk"]
+},
+{
+  id: "fr-h7-080",
+  chapterId: "fr-h7",
+  type: "begrip",
+  prompt: "beaucoup de",
+  answer: "veel",
+  keywords: ["veel"]
 }
 
     ],
@@ -1543,7 +2183,7 @@ export const fransKlas2Shared = {
   keywords: ["reste", "lit"]
 },
 
-// G blok
+
 
 {
   id: "fr-h5-p-026",
@@ -2036,6 +2676,326 @@ export const fransKlas2Shared = {
   prompt: "Dat is dichtbij.",
   answer: "C’est près.",
   keywords: ["pres"]
+},
+{
+  id: "fr-h7-p-001",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Wat doe je dit weekend?",
+  answer: "Qu’est-ce que tu fais ce weekend?",
+  keywords: ["fais", "weekend"]
+},
+{
+  id: "fr-h7-p-002",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Zaterdag ga ik naar het feest van Enzo.",
+  answer: "Samedi, je vais à la fête d’Enzo.",
+  keywords: ["samedi", "fete"]
+},
+{
+  id: "fr-h7-p-003",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ben je naar het concert van MHD gegaan?",
+  answer: "Tu es allé au concert de MHD?",
+  keywords: ["alle", "concert"]
+},
+{
+  id: "fr-h7-p-004",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ik ben een maand geleden naar het concert van MHD gegaan.",
+  answer: "Oui, je suis allé au concert de MHD il y a un mois.",
+  keywords: ["alle", "mois"]
+},
+{
+  id: "fr-h7-p-005",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Hoe was het?",
+  answer: "C’était comment?",
+  keywords: ["comment"]
+},
+{
+  id: "fr-h7-p-006",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Het was geweldig.",
+  answer: "C’était génial.",
+  keywords: ["genial"]
+},
+{
+  id: "fr-h7-p-007",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Met wie?",
+  answer: "Avec qui?",
+  keywords: ["avec qui"]
+},
+{
+  id: "fr-h7-p-008",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Met mijn vriendin Sarah.",
+  answer: "Avec ma copine Sarah.",
+  keywords: ["copine", "sarah"]
+},
+{
+  id: "fr-h7-p-009",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Zullen we samen gaan dan?",
+  answer: "Alors, on y va ensemble?",
+  keywords: ["ensemble"]
+},
+{
+  id: "fr-h7-p-010",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ja, te gek!",
+  answer: "Oui, trop bien!",
+  keywords: ["trop bien"]
+},
+{
+  id: "fr-h7-p-011",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Eet je vlees?",
+  answer: "Tu manges de la viande?",
+  keywords: ["manges", "viande"]
+},
+{
+  id: "fr-h7-p-012",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Nee, ik ben vegetariër.",
+  answer: "Non, je suis végétarien(ne).",
+  keywords: ["vegetarien"]
+},
+{
+  id: "fr-h7-p-013",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Vind je pasta lekker?",
+  answer: "Tu aimes les pâtes?",
+  keywords: ["aimes", "pates"]
+},
+{
+  id: "fr-h7-p-014",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ja, ik ben er gek op!",
+  answer: "Oui, j’adore ça!",
+  keywords: ["adore"]
+},
+{
+  id: "fr-h7-p-015",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Kom je bij mij eten vanavond?",
+  answer: "Tu viens manger chez moi ce soir?",
+  keywords: ["viens", "manger", "soir"]
+},
+{
+  id: "fr-h7-p-016",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ja, dat wil ik graag.",
+  answer: "Oui, je veux bien.",
+  keywords: ["veux bien"]
+},
+{
+  id: "fr-h7-p-017",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ik ga het aan mijn ouders vragen.",
+  answer: "Je vais demander à mes parents.",
+  keywords: ["demander", "parents"]
+},
+{
+  id: "fr-h7-p-018",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Nee, ik kan niet, ik heb liever zaterdag.",
+  answer: "Non, je ne peux pas, je préfère samedi.",
+  keywords: ["peux pas", "prefere"]
+},
+{
+  id: "fr-h7-p-019",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "En zullen we daarna een film kijken?",
+  answer: "Et après, on regarde un film?",
+  keywords: ["apres", "film"]
+},
+{
+  id: "fr-h7-p-020",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ja, oké! Ik ga chips kopen.",
+  answer: "Oui, d’accord! Je vais acheter des chips.",
+  keywords: ["acheter", "chips"]
+},
+{
+  id: "fr-h7-p-021",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ben je naar het concert van MHD gegaan?",
+  answer: "Tu es allé au concert de MHD?",
+  keywords: ["alle", "concert"]
+},
+{
+  id: "fr-h7-p-022",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ik ben een maand geleden naar het concert van MHD gegaan.",
+  answer: "Oui, je suis allé au concert de MHD il y a un mois.",
+  keywords: ["alle", "mois"]
+},
+{
+  id: "fr-h7-p-023",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Hoe was het?",
+  answer: "C’était comment?",
+  keywords: ["comment"]
+},
+{
+  id: "fr-h7-p-024",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Het was geweldig.",
+  answer: "C’était génial.",
+  keywords: ["genial"]
+},
+{
+  id: "fr-h7-p-025",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Wat doe je dit weekend?",
+  answer: "Qu’est-ce que tu fais ce weekend?",
+  keywords: ["fais", "weekend"]
+},
+{
+  id: "fr-h7-p-026",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Zaterdag ga ik naar het feest van Enzo.",
+  answer: "Samedi, je vais à la fête d’Enzo.",
+  keywords: ["samedi", "fete"]
+},
+{
+  id: "fr-h7-p-027",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Oh, ja! Super! Met wie?",
+  answer: "Ah ouais! Super! Avec qui?",
+  keywords: ["avec qui"]
+},
+{
+  id: "fr-h7-p-028",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Met mijn vriendin Sarah.",
+  answer: "Avec ma copine Sarah.",
+  keywords: ["copine", "sarah"]
+},
+{
+  id: "fr-h7-p-029",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Zullen we samen gaan dan?",
+  answer: "Alors, on y va ensemble?",
+  keywords: ["ensemble"]
+},
+{
+  id: "fr-h7-p-030",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ja, te gek!",
+  answer: "Oui, trop bien!",
+  keywords: ["trop bien"]
+},
+{
+  id: "fr-h7-p-031",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Kom je bij mij eten vanavond?",
+  answer: "Tu viens manger chez moi ce soir?",
+  keywords: ["viens", "manger", "soir"]
+},
+{
+  id: "fr-h7-p-032",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ja, dat wil ik graag.",
+  answer: "Oui, je veux bien.",
+  keywords: ["veux bien"]
+},
+{
+  id: "fr-h7-p-033",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ik ga het aan mijn ouders vragen.",
+  answer: "Je vais demander à mes parents.",
+  keywords: ["demander", "parents"]
+},
+{
+  id: "fr-h7-p-034",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Nee, ik kan niet, ik heb liever zaterdag.",
+  answer: "Non, je ne peux pas, je préfère samedi.",
+  keywords: ["peux pas", "prefere"]
+},
+{
+  id: "fr-h7-p-035",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Eet je vlees?",
+  answer: "Tu manges de la viande?",
+  keywords: ["manges", "viande"]
+},
+{
+  id: "fr-h7-p-036",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Nee, ik ben vegetariër.",
+  answer: "Non, je suis végétarien(ne).",
+  keywords: ["vegetarien"]
+},
+{
+  id: "fr-h7-p-037",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Vind je pasta lekker?",
+  answer: "Tu aimes les pâtes?",
+  keywords: ["aimes", "pates"]
+},
+{
+  id: "fr-h7-p-038",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ja, ik ben er gek op!",
+  answer: "Oui, j’adore ça!",
+  keywords: ["adore"]
+},
+{
+  id: "fr-h7-p-039",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "En zullen we daarna een film kijken?",
+  answer: "Et après, on regarde un film?",
+  keywords: ["apres", "film"]
+},
+{
+  id: "fr-h7-p-040",
+  chapterId: "fr-h7",
+  type: "zin",
+  prompt: "Ja, oké! Ik ga chips kopen.",
+  answer: "Oui, d’accord! Je vais acheter des chips.",
+  keywords: ["acheter", "chips"]
 }
     ],
     years: [],
