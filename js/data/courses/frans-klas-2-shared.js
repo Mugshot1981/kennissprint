@@ -689,8 +689,658 @@ export const fransKlas2Shared = {
   prompt: "le pain",
   answer: "het brood",
   keywords: ["brood"]
+},
+{
+  id: "fr-h6-001",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "l’endroit",
+  answer: "de plek",
+  keywords: ["plek"]
+},
+{
+  id: "fr-h6-002",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la discothèque",
+  answer: "de discotheek",
+  keywords: ["discotheek"]
+},
+{
+  id: "fr-h6-003",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la réception",
+  answer: "de receptie",
+  keywords: ["receptie"]
+},
+{
+  id: "fr-h6-004",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la nuit",
+  answer: "de nacht",
+  keywords: ["nacht"]
+},
+{
+  id: "fr-h6-005",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "maintenant",
+  answer: "nu",
+  keywords: ["nu"]
+},
+{
+  id: "fr-h6-006",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "anglais",
+  answer: "Engels",
+  keywords: ["engels"]
+},
+{
+  id: "fr-h6-007",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "allemand",
+  answer: "Duits",
+  keywords: ["duits"]
+},
+{
+  id: "fr-h6-008",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "espagnol",
+  answer: "Spaans",
+  keywords: ["spaans"]
+},
+{
+  id: "fr-h6-009",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "néerlandais",
+  answer: "Nederlands",
+  keywords: ["nederlands"]
+},
+{
+  id: "fr-h6-010",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "marocain",
+  answer: "Marokkaans",
+  keywords: ["marokkaans"]
+},
+{
+  id: "fr-h6-011",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "expliquer",
+  answer: "uitleggen",
+  keywords: ["uitleggen"]
+},
+{
+  id: "fr-h6-012",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "rester",
+  answer: "blijven",
+  keywords: ["blijven"]
+},
+{
+  id: "fr-h6-013",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "faire du camping",
+  answer: "kamperen",
+  keywords: ["kamperen"]
+},
+{
+  id: "fr-h6-014",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "préférer",
+  answer: "liever hebben",
+  keywords: ["liever"]
+},
+{
+  id: "fr-h6-015",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "désolé(e)",
+  answer: "sorry",
+  keywords: ["sorry"]
+},
+{
+  id: "fr-h6-016",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "tous les ans",
+  answer: "ieder jaar",
+  keywords: ["ieder jaar"]
+},
+{
+  id: "fr-h6-017",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "loin de",
+  answer: "ver",
+  keywords: ["ver"]
+},
+{
+  id: "fr-h6-018",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "près de",
+  answer: "dichtbij",
+  keywords: ["dichtbij"]
+},
+{
+  id: "fr-h6-019",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "bonne journée",
+  answer: "fijne dag",
+  keywords: ["fijne dag"]
+},
+{
+  id: "fr-h6-020",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "assez bien",
+  answer: "vrij goed",
+  keywords: ["vrij goed"]
+},
+{
+  id: "fr-h6-021",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "tout le monde",
+  answer: "iedereen",
+  keywords: ["iedereen"]
+},
+{
+  id: "fr-h6-022",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "bientôt",
+  answer: "binnenkort",
+  keywords: ["binnenkort"]
+},
+{
+  id: "fr-h6-023",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "sauf",
+  answer: "behalve",
+  keywords: ["behalve"]
+},
+{
+  id: "fr-h6-024",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "seulement",
+  answer: "slechts, alleen maar",
+  keywords: ["alleen"]
+},
+{
+  id: "fr-h6-025",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "libre",
+  answer: "vrij",
+  keywords: ["vrij"]
+},
+{
+  id: "fr-h6-026",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "pareil(le)",
+  answer: "hetzelfde",
+  keywords: ["zelfde"]
+},
+{
+  id: "fr-h6-027",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "possible",
+  answer: "mogelijk",
+  keywords: ["mogelijk"]
+},
+{
+  id: "fr-h6-028",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "aider",
+  answer: "helpen",
+  keywords: ["helpen"]
+},
+{
+  id: "fr-h6-029",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "faire les magasins",
+  answer: "winkelen",
+  keywords: ["winkelen"]
+},
+{
+  id: "fr-h6-030",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "partir",
+  answer: "weggaan",
+  keywords: ["weg"]
+},
+{
+  id: "fr-h6-031",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "tout le temps",
+  answer: "de hele tijd",
+  keywords: ["hele tijd"]
+},
+{
+  id: "fr-h6-032",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "pour",
+  answer: "voor",
+  keywords: ["voor"]
+},
+{
+  id: "fr-h6-033",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "contre",
+  answer: "tegen",
+  keywords: ["tegen"]
+},
+{
+  id: "fr-h6-034",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "quelle horreur!",
+  answer: "verschrikkelijk!",
+  keywords: ["verschrikkelijk"]
+},
+{
+  id: "fr-h6-035",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "cette année",
+  answer: "dit jaar",
+  keywords: ["dit jaar"]
+},
+{
+  id: "fr-h6-036",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le jour",
+  answer: "de dag",
+  keywords: ["dag"]
+},
+{
+  id: "fr-h6-037",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le mois",
+  answer: "de maand",
+  keywords: ["maand"]
+},
+{
+  id: "fr-h6-038",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "au cinéma",
+  answer: "naar de bioscoop",
+  keywords: ["bioscoop"]
+},
+{
+  id: "fr-h6-039",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "au restaurant",
+  answer: "naar het restaurant",
+  keywords: ["restaurant"]
+},
+{
+  id: "fr-h6-040",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "en ville",
+  answer: "naar de stad",
+  keywords: ["stad"]
+},
+{
+  id: "fr-h6-041",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "acheter",
+  answer: "kopen",
+  keywords: ["kopen"]
+},
+{
+  id: "fr-h6-042",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "chercher",
+  answer: "zoeken",
+  keywords: ["zoeken"]
+},
+{
+  id: "fr-h6-043",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "manger",
+  answer: "eten",
+  keywords: ["eten"]
+},
+{
+  id: "fr-h6-044",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "attendre",
+  answer: "wachten",
+  keywords: ["wachten"]
+},
+{
+  id: "fr-h6-045",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "j’ai vu",
+  answer: "ik heb gezien",
+  keywords: ["gezien"]
+},
+{
+  id: "fr-h6-046",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "je connais",
+  answer: "ik ken",
+  keywords: ["ken"]
+},
+{
+  id: "fr-h6-047",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "avoir faim",
+  answer: "honger hebben",
+  keywords: ["honger"]
+},
+{
+  id: "fr-h6-048",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "vite",
+  answer: "snel",
+  keywords: ["snel"]
+},
+{
+  id: "fr-h6-049",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "ici",
+  answer: "hier",
+  keywords: ["hier"]
+},
+{
+  id: "fr-h6-050",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le rendez-vous",
+  answer: "de afspraak",
+  keywords: ["afspraak"]
+},
+{
+  id: "fr-h6-051",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le plan",
+  answer: "de plattegrond",
+  keywords: ["plattegrond"]
+},
+{
+  id: "fr-h6-052",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la ville",
+  answer: "de stad",
+  keywords: ["stad"]
+},
+{
+  id: "fr-h6-053",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le magasin",
+  answer: "de winkel",
+  keywords: ["winkel"]
+},
+{
+  id: "fr-h6-054",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la boulangerie",
+  answer: "de bakkerij",
+  keywords: ["bakkerij"]
+},
+{
+  id: "fr-h6-055",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la pâtisserie",
+  answer: "de banketbakkerij",
+  keywords: ["banketbakkerij"]
+},
+{
+  id: "fr-h6-056",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la boucherie",
+  answer: "de slagerij",
+  keywords: ["slagerij"]
+},
+{
+  id: "fr-h6-057",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la poissonnerie",
+  answer: "de viswinkel",
+  keywords: ["viswinkel"]
+},
+{
+  id: "fr-h6-058",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le supermarché",
+  answer: "de supermarkt",
+  keywords: ["supermarkt"]
+},
+{
+  id: "fr-h6-059",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le marché",
+  answer: "de markt",
+  keywords: ["markt"]
+},
+{
+  id: "fr-h6-060",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la pharmacie",
+  answer: "de apotheek",
+  keywords: ["apotheek"]
+},
+{
+  id: "fr-h6-061",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "l’adulte",
+  answer: "de volwassene",
+  keywords: ["volwassene"]
+},
+{
+  id: "fr-h6-062",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "l’ambiance",
+  answer: "de sfeer",
+  keywords: ["sfeer"]
+},
+{
+  id: "fr-h6-063",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la découverte",
+  answer: "de ontdekking",
+  keywords: ["ontdekking"]
+},
+{
+  id: "fr-h6-064",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le port",
+  answer: "de haven",
+  keywords: ["haven"]
+},
+{
+  id: "fr-h6-065",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le quartier",
+  answer: "de wijk",
+  keywords: ["wijk"]
+},
+{
+  id: "fr-h6-066",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "l’auberge de jeunesse",
+  answer: "de jeugdherberg",
+  keywords: ["jeugdherberg"]
+},
+{
+  id: "fr-h6-067",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "la destination",
+  answer: "de bestemming",
+  keywords: ["bestemming"]
+},
+{
+  id: "fr-h6-068",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le vol",
+  answer: "de vlucht",
+  keywords: ["vlucht"]
+},
+{
+  id: "fr-h6-069",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "le voyage",
+  answer: "de reis",
+  keywords: ["reis"]
+},
+{
+  id: "fr-h6-070",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "plein de",
+  answer: "veel",
+  keywords: ["veel"]
+},
+{
+  id: "fr-h6-071",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "magnifique",
+  answer: "prachtig",
+  keywords: ["prachtig"]
+},
+{
+  id: "fr-h6-072",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "prendre",
+  answer: "nemen",
+  keywords: ["nemen"]
+},
+{
+  id: "fr-h6-073",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "visiter",
+  answer: "bezoeken",
+  keywords: ["bezoeken"]
+},
+{
+  id: "fr-h6-074",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "trouver",
+  answer: "vinden",
+  keywords: ["vinden"]
+},
+{
+  id: "fr-h6-075",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "après",
+  answer: "na",
+  keywords: ["na"]
+},
+{
+  id: "fr-h6-076",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "entre",
+  answer: "tussen",
+  keywords: ["tussen"]
+},
+{
+  id: "fr-h6-077",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "à côté de",
+  answer: "naast",
+  keywords: ["naast"]
+},
+{
+  id: "fr-h6-078",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "deuxième",
+  answer: "tweede",
+  keywords: ["tweede"]
+},
+{
+  id: "fr-h6-079",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "à gauche",
+  answer: "links",
+  keywords: ["links"]
+},
+{
+  id: "fr-h6-080",
+  chapterId: "fr-h6",
+  type: "begrip",
+  prompt: "c’est tout droit",
+  answer: "het is rechtdoor",
+  keywords: ["rechtdoor"]
 }
+
     ],
+
+
+
+
+
+
+
+
+    
     phrases: [
 {
   id: "fr-h5-p-001",
@@ -982,6 +1632,410 @@ export const fransKlas2Shared = {
   prompt: "Maar ik lust geen groenten.",
   answer: "Mais je déteste les légumes.",
   keywords: ["deteste", "legumes"]
+},
+
+{
+  id: "fr-h6-p-001",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Hoi, spreek je Frans?",
+  answer: "Salut, tu parles français ?",
+  keywords: ["parles", "francais"]
+},
+{
+  id: "fr-h6-p-002",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ja, ik spreek een beetje Frans.",
+  answer: "Oui, je parle un peu français.",
+  keywords: ["parle", "un peu", "francais"]
+},
+{
+  id: "fr-h6-p-003",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Hoe heet je?",
+  answer: "Comment tu t’appelles ?",
+  keywords: ["comment", "t appelles"]
+},
+{
+  id: "fr-h6-p-004",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ik heet Willem.",
+  answer: "Je m’appelle Willem.",
+  keywords: ["m appelle", "willem"]
+},
+{
+  id: "fr-h6-p-005",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Sorry?",
+  answer: "Pardon?",
+  keywords: ["pardon"]
+},
+{
+  id: "fr-h6-p-006",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Willem: W-I-L-L-E-M.",
+  answer: "Willem: W-I-L-L-E-M.",
+  keywords: ["willem"]
+},
+{
+  id: "fr-h6-p-007",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Waar kom je vandaan?",
+  answer: "Tu viens d’où ?",
+  keywords: ["viens", "d ou"]
+},
+{
+  id: "fr-h6-p-008",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ik kom uit Nederland.",
+  answer: "Je viens des Pays-Bas.",
+  keywords: ["viens", "pays bas"]
+},
+{
+  id: "fr-h6-p-009",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Wanneer ga je weg?",
+  answer: "Tu pars quand?",
+  keywords: ["pars", "quand"]
+},
+{
+  id: "fr-h6-p-010",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ik ga over twee weken weg.",
+  answer: "Je pars dans deux semaines.",
+  keywords: ["pars", "deux semaines"]
+},
+{
+  id: "fr-h6-p-011",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Gaan we morgen naar het zwembad?",
+  answer: "On va à la piscine demain?",
+  keywords: ["va", "piscine", "demain"]
+},
+{
+  id: "fr-h6-p-012",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ja, hoe laat?",
+  answer: "Oui, à quelle heure?",
+  keywords: ["quelle heure"]
+},
+{
+  id: "fr-h6-p-013",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Om 10 uur.",
+  answer: "À dix heures.",
+  keywords: ["dix heures"]
+},
+{
+  id: "fr-h6-p-014",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Oké! Tot morgen!",
+  answer: "D’accord! À demain!",
+  keywords: ["a demain"]
+},
+{
+  id: "fr-h6-p-015",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Hoe laat gaat de supermarkt dicht?",
+  answer: "À quelle heure ferme le supermarché?",
+  keywords: ["quelle heure", "ferme", "supermarche"]
+},
+{
+  id: "fr-h6-p-016",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Hij is van 8 tot 21 uur geopend.",
+  answer: "Il est ouvert de 8 heures à 21 heures.",
+  keywords: ["ouvert", "8", "21"]
+},
+{
+  id: "fr-h6-p-017",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Sorry. Kunt u het herhalen?",
+  answer: "Excusez-moi. Vous pouvez répéter?",
+  keywords: ["excusez", "repeter"]
+},
+{
+  id: "fr-h6-p-018",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Kunt u mij helpen?",
+  answer: "Vous pouvez m’aider?",
+  keywords: ["pouvez", "aider"]
+},
+{
+  id: "fr-h6-p-019",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ja, natuurlijk.",
+  answer: "Oui, bien sûr.",
+  keywords: ["bien sur"]
+},
+{
+  id: "fr-h6-p-020",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Waar is de supermarkt?",
+  answer: "Où est le supermarché?",
+  keywords: ["ou", "supermarche"]
+},
+{
+  id: "fr-h6-p-021",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Neem de eerste straat rechts.",
+  answer: "Prends la première rue à droite.",
+  keywords: ["premiere", "droite"]
+},
+{
+  id: "fr-h6-p-022",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Heeft u een plattegrond van de stad?",
+  answer: "Vous avez un plan de la ville?",
+  keywords: ["plan", "ville"]
+},
+{
+  id: "fr-h6-p-023",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ja, alstublieft.",
+  answer: "Oui, voilà.",
+  keywords: ["voila"]
+},
+{
+  id: "fr-h6-p-024",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Hoi, hoe gaat het?",
+  answer: "Salut, ça va?",
+  keywords: ["ca va"]
+},
+{
+  id: "fr-h6-p-025",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Goed, en met jou?",
+  answer: "Ça va bien, et toi?",
+  keywords: ["bien", "toi"]
+},
+{
+  id: "fr-h6-p-026",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Wat doe je hier?",
+  answer: "Qu’est-ce que tu fais ici?",
+  keywords: ["fais", "ici"]
+},
+{
+  id: "fr-h6-p-027",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ik ben op vakantie.",
+  answer: "Je suis en vacances.",
+  keywords: ["suis", "vacances"]
+},
+{
+  id: "fr-h6-p-028",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Met wie ga je?",
+  answer: "Avec qui tu pars?",
+  keywords: ["avec qui", "pars"]
+},
+{
+  id: "fr-h6-p-029",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ik ga met mijn ouders.",
+  answer: "Je pars avec mes parents.",
+  keywords: ["pars", "parents"]
+},
+{
+  id: "fr-h6-p-030",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Waar verblijf je?",
+  answer: "Tu loges où?",
+  keywords: ["loges", "ou"]
+},
+{
+  id: "fr-h6-p-031",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ik verblijf op een camping.",
+  answer: "Je loge au camping.",
+  keywords: ["loge", "camping"]
+},
+{
+  id: "fr-h6-p-032",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Is het ver?",
+  answer: "C’est loin?",
+  keywords: ["loin"]
+},
+{
+  id: "fr-h6-p-033",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Nee, het is dichtbij.",
+  answer: "Non, c’est près.",
+  keywords: ["pres"]
+},
+{
+  id: "fr-h6-p-034",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Hoe lang blijf je?",
+  answer: "Tu restes combien de temps?",
+  keywords: ["restes", "combien"]
+},
+{
+  id: "fr-h6-p-035",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ik blijf twee weken.",
+  answer: "Je reste deux semaines.",
+  keywords: ["reste", "deux semaines"]
+},
+{
+  id: "fr-h6-p-036",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Wat ga je doen?",
+  answer: "Qu’est-ce que tu vas faire?",
+  keywords: ["vas faire"]
+},
+
+// G blok
+
+{
+  id: "fr-h6-p-037",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Pardon, waar is het station?",
+  answer: "Pardon, où est la gare?",
+  keywords: ["ou", "gare"]
+},
+{
+  id: "fr-h6-p-038",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ga rechtdoor.",
+  answer: "Allez tout droit.",
+  keywords: ["tout droit"]
+},
+{
+  id: "fr-h6-p-039",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Neem de tweede straat links.",
+  answer: "Prenez la deuxième rue à gauche.",
+  keywords: ["deuxieme", "gauche"]
+},
+{
+  id: "fr-h6-p-040",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Het is naast de supermarkt.",
+  answer: "C’est à côté du supermarché.",
+  keywords: ["cote", "supermarche"]
+},
+{
+  id: "fr-h6-p-041",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Dank u wel.",
+  answer: "Merci beaucoup.",
+  keywords: ["merci"]
+},
+{
+  id: "fr-h6-p-042",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Graag gedaan.",
+  answer: "De rien.",
+  keywords: ["rien"]
+},
+{
+  id: "fr-h6-p-043",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Waar is de bakkerij?",
+  answer: "Où est la boulangerie?",
+  keywords: ["boulangerie"]
+},
+{
+  id: "fr-h6-p-044",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ga naar links.",
+  answer: "Tournez à gauche.",
+  keywords: ["gauche"]
+},
+{
+  id: "fr-h6-p-045",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "En dan naar rechts.",
+  answer: "Puis à droite.",
+  keywords: ["droite"]
+},
+{
+  id: "fr-h6-p-046",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Het is tussen de winkel en de apotheek.",
+  answer: "C’est entre le magasin et la pharmacie.",
+  keywords: ["entre", "pharmacie"]
+},
+{
+  id: "fr-h6-p-047",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Heeft u een kaart?",
+  answer: "Vous avez une carte?",
+  keywords: ["carte"]
+},
+{
+  id: "fr-h6-p-048",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Ja, hier is een kaart.",
+  answer: "Oui, voilà une carte.",
+  keywords: ["voila", "carte"]
+},
+{
+  id: "fr-h6-p-049",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Dat is ver.",
+  answer: "C’est loin.",
+  keywords: ["loin"]
+},
+{
+  id: "fr-h6-p-050",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Dat is dichtbij.",
+  answer: "C’est près.",
+  keywords: ["pres"]
 }
     ],
     years: [],
