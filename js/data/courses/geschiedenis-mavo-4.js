@@ -2175,6 +2175,78 @@ export const historyMavo4Course = {
     years: historyYears,
         persons: [
       {
+    id: "his-p-001",
+    chapterId: "his-h1",
+    name: "Koning Willem II",
+    description: "Koning van 1840 tot 1849. Hij gaf in 1848 opdracht tot het maken van een nieuwe grondwet."
+  },
+  {
+    id: "his-p-002",
+    chapterId: "his-h1",
+    name: "Koningin Juliana",
+    description: "Koningin van 1948 tot 1980."
+  },
+  {
+    id: "his-p-003",
+    chapterId: "his-h1",
+    name: "Koning Willem III",
+    description: "Koning van 1849 tot 1890. Hij kreeg in 1866-1867 ruzie met het parlement over Luxemburg."
+  },
+  {
+    id: "his-p-004",
+    chapterId: "his-h1",
+    name: "Koningin Beatrix",
+    description: "Koningin van 1980 tot 2013."
+  },
+  {
+    id: "his-p-005",
+    chapterId: "his-h1",
+    name: "Koningin Wilhelmina",
+    description: "Koningin van 1890 tot 1948. Zij was koningin van Nederland tijdens de Tweede Wereldoorlog. Tijdens de Duitse bezetting woonde en werkte ze in Londen."
+  },
+  {
+    id: "his-p-006",
+    chapterId: "his-h1",
+    name: "Koning Willem-Alexander",
+    description: "Koning sinds 2013."
+  },
+  {
+    id: "his-p-007",
+    chapterId: "his-h1",
+    name: "Johan Rudolf Thorbecke",
+    description: "Een liberale politicus. In 1848 vroeg koning Willem II hem om de grondwet te herzien."
+  },
+  {
+    id: "his-p-008",
+    chapterId: "his-h1",
+    name: "Pieter Jelles Troelstra",
+    description: "Een socialistisch politicus. Hij was een van de oprichters van de SDAP. In 1918 riep hij op tot een revolutie."
+  },
+  {
+    id: "his-p-009",
+    chapterId: "his-h1",
+    name: "Abraham Kuyper",
+    description: "Een protestants politicus. Hij richtte de ARP op. Zijn aanhangers werden ook wel ‘kleine luyden’ genoemd."
+  },
+  {
+    id: "his-p-010",
+    chapterId: "his-h1",
+    name: "Wilhelmina Drucker",
+    description: "Een feminist uit de eerste feministische golf. Zij richtte de VVV op en later, samen met Aletta Jacobs, de VvVK."
+  },
+  {
+    id: "his-p-011",
+    chapterId: "his-h1",
+    name: "Herman Schaepman",
+    description: "Een katholieke politicus. Onder zijn leiding gingen de katholieken zich beter organiseren en kwamen er meer katholieken in het parlement."
+  },
+  {
+    id: "his-p-012",
+    chapterId: "his-h1",
+    name: "Aletta Jacobs",
+    description: "Een feminist uit de eerste feministische golf. Zij richtte samen met Wilhelmina Drucker de VvVK op."
+  },
+      {
         id: "his-p-001",
         chapterId: "his-h2",
         name: "Frans Ferdinand",
@@ -2197,7 +2269,103 @@ export const historyMavo4Course = {
         chapterId: "his-h2",
         name: "Pieter Jelles Troelstra",
         description: "Socialistisch politicus en een van de oprichters van de SDAP. In 1918 riep hij op tot een revolutie."
-      }
+      },
+    {
+    id: "his-p-001",
+    chapterId: "his-h3",
+    name: "Adolf Hitler",
+    description: "Dictator (Führer) van nazi-Duitsland. Hij begon de Tweede Wereldoorlog en gaf opdracht tot de Holocaust."
+  },
+  {
+    id: "his-p-002",
+    chapterId: "his-h3",
+    name: "Hendrik Colijn",
+    description: "Minister-president van Nederland tijdens de crisis. Hij kwam met de aanpassingspolitiek en hield vast aan de politiek van neutraliteit."
+  },
+  {
+    id: "his-p-003",
+    chapterId: "his-h3",
+    name: "Jozef Stalin",
+    description: "Dictator van de communistische Sovjet-Unie. Hij moderniseerde de economie en leidde de Sovjet-Unie tijdens de Tweede Wereldoorlog en het begin van de Koude Oorlog."
+  },
+  {
+    id: "his-p-004",
+    chapterId: "his-h3",
+    name: "Anton Mussert",
+    description: "Leider van de extreemrechtse NSB. Tijdens de oorlog werkte hij samen met de Duitse bezetters."
+  },
+  {
+    id: "his-p-005",
+    chapterId: "his-h3",
+    name: "Benito Mussolini",
+    description: "Dictator van het fascistische Italië. Hij bedacht het fascisme."
+  },
+    {
+    id: "his-p-001",
+    chapterId: "his-h4",
+    name: "Winston Churchill",
+    description: "Minister-president van Groot-Brittannië tijdens de Tweede Wereldoorlog."
+  },
+  {
+    id: "his-p-002",
+    chapterId: "his-h4",
+    name: "Anne Frank",
+    description: "Joods meisje dat in 1945 omkwam in een vernietigingskamp. Haar dagboek werd wereldberoemd."
+  },
+  {
+    id: "his-p-003",
+    chapterId: "his-h4",
+    name: "Franklin D. Roosevelt",
+    description: "President van de Verenigde Staten tijdens de Tweede Wereldoorlog."
+  },
+  {
+    id: "his-p-004",
+    chapterId: "his-h4",
+    name: "Soekarno",
+    description: "Indonesisch politicus die tot 1949 streed voor onafhankelijkheid. Hij was de eerste president van de Republiek Indonesië."
+  },
+  {
+    id: "his-p-005",
+    chapterId: "his-h4",
+    name: "Koningin Wilhelmina",
+    description: "Koningin van 1890 tot 1948. Zij was koningin van Nederland tijdens de Tweede Wereldoorlog. Tijdens de Duitse bezetting woonde en werkte ze in Londen."
+  },
+  {
+    id: "his-p-001",
+    chapterId: "his-h5",
+    name: "Willem Drees",
+    description: "Sociaaldemocraat en premier van Nederland. In de jaren 1950 begon zijn regering met de opbouw van een verzorgingsstaat."
+  },
+  {
+    id: "his-p-002",
+    chapterId: "his-h5",
+    name: "Ronald Reagan",
+    description: "Amerikaanse president. Hij sprak eind jaren 1980 met de Sovjet-Unie over ontwapening."
+  },
+  {
+    id: "his-p-003",
+    chapterId: "his-h5",
+    name: "Nikita Chroesjtsjov",
+    description: "Leider van de Sovjet-Unie tijdens de Hongaarse Opstand in 1956, de bouw van de Berlijnse Muur in 1961 en de Cubacrisis in 1962."
+  },
+  {
+    id: "his-p-004",
+    chapterId: "his-h5",
+    name: "Michael Gorbatsjov",
+    description: "Leider van de Sovjet-Unie. Hij kwam met grote hervormingen die leidden tot de val van de Berlijnse Muur en het einde van de Koude Oorlog in 1989."
+  },
+  {
+    id: "his-p-005",
+    chapterId: "his-h5",
+    name: "John F. Kennedy",
+    description: "President van de Verenigde Staten tijdens de bouw van de Berlijnse Muur in 1961 en de Cubacrisis in 1962."
+  },
+  {
+    id: "his-p-006",
+    chapterId: "his-h5",
+    name: "Pim Fortuyn",
+    description: "Een Nederlandse politicus die (in 2002) een nieuwe partij oprichtte. Zijn partij was tegen immigratie en tegen de islam."
+  }
     ]
   },
 
