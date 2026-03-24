@@ -698,7 +698,1293 @@ export const fransKlas2Shared = {
   answer: "uitslapen",
   keywords: ["uitslapen"]
 },
-  
+{
+  id: "fr-h2-001",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "l’anniversaire",
+  answer: "de verjaardag",
+  keywords: ["verjaardag"]
+},
+{
+  id: "fr-h2-002",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la fille / le fils unique",
+  answer: "het enig kind",
+  keywords: ["enig kind"]
+},
+{
+  id: "fr-h2-003",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le vêtement",
+  answer: "het kledingstuk",
+  keywords: ["kleding"]
+},
+{
+  id: "fr-h2-004",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "les parents",
+  answer: "de ouders",
+  keywords: ["ouders"]
+},
+{
+  id: "fr-h2-005",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la chambre",
+  answer: "de slaapkamer",
+  keywords: ["kamer"]
+},
+{
+  id: "fr-h2-006",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "rigoler",
+  answer: "lachen",
+  keywords: ["lachen"]
+},
+{
+  id: "fr-h2-007",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "chercher",
+  answer: "zoeken",
+  keywords: ["zoeken"]
+},
+{
+  id: "fr-h2-008",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "regarder la télé",
+  answer: "tv-kijken",
+  keywords: ["tv"]
+},
+{
+  id: "fr-h2-009",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "aller en ville",
+  answer: "naar de stad gaan",
+  keywords: ["stad"]
+},
+{
+  id: "fr-h2-010",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "jouer à la console",
+  answer: "gamen",
+  keywords: ["gamen"]
+},
+{
+  id: "fr-h2-011",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "attendre",
+  answer: "wachten",
+  keywords: ["wachten"]
+},
+{
+  id: "fr-h2-012",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "ce soir",
+  answer: "vanavond",
+  keywords: ["avond"]
+},
+{
+  id: "fr-h2-013",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "encore",
+  answer: "nog",
+  keywords: ["nog"]
+},
+{
+  id: "fr-h2-014",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "autre",
+  answer: "andere",
+  keywords: ["ander"]
+},
+{
+  id: "fr-h2-015",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "divorcé(e)",
+  answer: "gescheiden",
+  keywords: ["gescheiden"]
+},
+{
+  id: "fr-h2-016",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "casse-pied",
+  answer: "vervelend",
+  keywords: ["vervelend"]
+},
+{
+  id: "fr-h2-017",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "grand(e)",
+  answer: "groot",
+  keywords: ["groot"]
+},
+{
+  id: "fr-h2-018",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "noir(e)",
+  answer: "zwart",
+  keywords: ["zwart"]
+},
+{
+  id: "fr-h2-019",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "blanc, blanche",
+  answer: "wit",
+  keywords: ["wit"]
+},
+{
+  id: "fr-h2-020",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "nouveau, nouvelle",
+  answer: "nieuw",
+  keywords: ["nieuw"]
+},
+{
+  id: "fr-h2-021",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le lapin",
+  answer: "het konijn",
+  keywords: ["konijn"]
+},
+{
+  id: "fr-h2-022",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le chat",
+  answer: "de kat",
+  keywords: ["kat"]
+},
+{
+  id: "fr-h2-023",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le hamster",
+  answer: "de hamster",
+  keywords: ["hamster"]
+},
+{
+  id: "fr-h2-024",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "l’oiseau",
+  answer: "de vogel",
+  keywords: ["vogel"]
+},
+{
+  id: "fr-h2-025",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la poule",
+  answer: "de kip",
+  keywords: ["kip"]
+},
+{
+  id: "fr-h2-026",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la vache",
+  answer: "de koe",
+  keywords: ["koe"]
+},
+{
+  id: "fr-h2-027",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "l’animal de compagnie",
+  answer: "het huisdier",
+  keywords: ["huisdier"]
+},
+{
+  id: "fr-h2-028",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le frère jumeau",
+  answer: "de tweelingbroer",
+  keywords: ["tweeling"]
+},
+{
+  id: "fr-h2-029",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la sœur jumelle",
+  answer: "de tweelingzus",
+  keywords: ["tweeling"]
+},
+{
+  id: "fr-h2-030",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "prendre",
+  answer: "nemen",
+  keywords: ["nemen"]
+},
+{
+  id: "fr-h2-031",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "choisir",
+  answer: "kiezen",
+  keywords: ["kiezen"]
+},
+{
+  id: "fr-h2-032",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "dormir",
+  answer: "slapen",
+  keywords: ["slapen"]
+},
+{
+  id: "fr-h2-033",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "exister",
+  answer: "bestaan",
+  keywords: ["bestaan"]
+},
+{
+  id: "fr-h2-034",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "beau, belle",
+  answer: "mooi",
+  keywords: ["mooi"]
+},
+{
+  id: "fr-h2-035",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "actif, active",
+  answer: "actief",
+  keywords: ["actief"]
+},
+{
+  id: "fr-h2-036",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "adorable",
+  answer: "schattig",
+  keywords: ["schattig"]
+},
+{
+  id: "fr-h2-037",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "heureusement",
+  answer: "gelukkig (maar)",
+  keywords: ["gelukkig"]
+},
+{
+  id: "fr-h2-038",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "sinon",
+  answer: "anders",
+  keywords: ["anders"]
+},
+{
+  id: "fr-h2-039",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "parce que",
+  answer: "omdat",
+  keywords: ["omdat"]
+},
+{
+  id: "fr-h2-040",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "quelle horreur !",
+  answer: "(wat) vreselijk!",
+  keywords: ["vreselijk"]
+},
+{
+  id: "fr-h2-041",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la glace",
+  answer: "het ijsje",
+  keywords: ["ijs"]
+},
+{
+  id: "fr-h2-042",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le cousin",
+  answer: "de neef",
+  keywords: ["neef"]
+},
+{
+  id: "fr-h2-043",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la cousine",
+  answer: "de nicht",
+  keywords: ["nicht"]
+},
+{
+  id: "fr-h2-044",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le rendez-vous",
+  answer: "de afspraak",
+  keywords: ["afspraak"]
+},
+{
+  id: "fr-h2-045",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le portable",
+  answer: "de mobiele telefoon",
+  keywords: ["telefoon"]
+},
+{
+  id: "fr-h2-046",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "content(e)",
+  answer: "blij",
+  keywords: ["blij"]
+},
+{
+  id: "fr-h2-047",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "interdit(e)",
+  answer: "verboden",
+  keywords: ["verboden"]
+},
+{
+  id: "fr-h2-048",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "aider",
+  answer: "helpen",
+  keywords: ["helpen"]
+},
+{
+  id: "fr-h2-049",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "donc",
+  answer: "dus",
+  keywords: ["dus"]
+},
+{
+  id: "fr-h2-050",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "maintenant",
+  answer: "nu",
+  keywords: ["nu"]
+},
+{
+  id: "fr-h2-051",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le salon",
+  answer: "de woonkamer",
+  keywords: ["woonkamer"]
+},
+{
+  id: "fr-h2-052",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "les toilettes",
+  answer: "het toilet",
+  keywords: ["toilet"]
+},
+{
+  id: "fr-h2-053",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la salle de bains",
+  answer: "de badkamer",
+  keywords: ["badkamer"]
+},
+{
+  id: "fr-h2-054",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le grenier",
+  answer: "de zolder",
+  keywords: ["zolder"]
+},
+{
+  id: "fr-h2-055",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le bureau",
+  answer: "het bureau, de studeerkamer",
+  keywords: ["bureau"]
+},
+{
+  id: "fr-h2-056",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la cuisine",
+  answer: "de keuken",
+  keywords: ["keuken"]
+},
+{
+  id: "fr-h2-057",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le garage",
+  answer: "de garage",
+  keywords: ["garage"]
+},
+{
+  id: "fr-h2-058",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le jardin",
+  answer: "de tuin",
+  keywords: ["tuin"]
+},
+{
+  id: "fr-h2-059",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la table",
+  answer: "de tafel",
+  keywords: ["tafel"]
+},
+{
+  id: "fr-h2-060",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la chaise",
+  answer: "de stoel",
+  keywords: ["stoel"]
+},
+{
+  id: "fr-h2-061",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la piscine",
+  answer: "het zwembad",
+  keywords: ["zwembad"]
+},
+{
+  id: "fr-h2-062",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "l’écran",
+  answer: "het scherm",
+  keywords: ["scherm"]
+},
+{
+  id: "fr-h2-063",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la vue",
+  answer: "het uitzicht",
+  keywords: ["uitzicht"]
+},
+{
+  id: "fr-h2-064",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la décoration",
+  answer: "de decoratie",
+  keywords: ["decoratie"]
+},
+{
+  id: "fr-h2-065",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la montagne",
+  answer: "de berg",
+  keywords: ["berg"]
+},
+{
+  id: "fr-h2-066",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le monde entier",
+  answer: "de hele wereld",
+  keywords: ["wereld"]
+},
+{
+  id: "fr-h2-067",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "l’étage",
+  answer: "de verdieping",
+  keywords: ["verdieping"]
+},
+{
+  id: "fr-h2-068",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "la mer",
+  answer: "de zee",
+  keywords: ["zee"]
+},
+{
+  id: "fr-h2-069",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le centre",
+  answer: "het centrum",
+  keywords: ["centrum"]
+},
+{
+  id: "fr-h2-070",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "le château",
+  answer: "het kasteel",
+  keywords: ["kasteel"]
+},
+{
+  id: "fr-h2-071",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "il se trouve",
+  answer: "hij bevindt zich",
+  keywords: ["bevinden"]
+},
+{
+  id: "fr-h2-072",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "passer",
+  answer: "doorbrengen",
+  keywords: ["doorbrengen"]
+},
+{
+  id: "fr-h2-073",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "voyager",
+  answer: "reizen",
+  keywords: ["reizen"]
+},
+{
+  id: "fr-h2-074",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "inviter",
+  answer: "uitnodigen",
+  keywords: ["uitnodigen"]
+},
+{
+  id: "fr-h2-075",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "discuter",
+  answer: "kletsen",
+  keywords: ["kletsen"]
+},
+{
+  id: "fr-h2-076",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "après",
+  answer: "na",
+  keywords: ["na"]
+},
+{
+  id: "fr-h2-077",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "malheureusement",
+  answer: "helaas",
+  keywords: ["helaas"]
+},
+{
+  id: "fr-h2-078",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "près de",
+  answer: "dichtbij",
+  keywords: ["dichtbij"]
+},
+{
+  id: "fr-h2-079",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "quelques",
+  answer: "enkele",
+  keywords: ["enkele"]
+},
+{
+  id: "fr-h2-080",
+  chapterId: "fr-h2",
+  type: "begrip",
+  prompt: "à côté de",
+  answer: "naast",
+  keywords: ["naast"]
+}, 
+// A
+{
+  id: "fr-h3-001",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le short de bain",
+  answer: "de zwembroek",
+  keywords: ["zwembroek"]
+},
+{
+  id: "fr-h3-002",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le pull",
+  answer: "de trui",
+  keywords: ["trui"]
+},
+{
+  id: "fr-h3-003",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le T-shirt",
+  answer: "het T-shirt",
+  keywords: ["T-shirt"]
+},
+{
+  id: "fr-h3-004",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la robe",
+  answer: "de jurk",
+  keywords: ["jurk"]
+},
+{
+  id: "fr-h3-005",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le pantalon",
+  answer: "de broek",
+  keywords: ["broek"]
+},
+{
+  id: "fr-h3-006",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "l’anniversaire m",
+  answer: "de verjaardag",
+  keywords: ["verjaardag"]
+},
+{
+  id: "fr-h3-007",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le copain, la copine",
+  answer: "de vriend(in)",
+  keywords: ["vriend"]
+},
+{
+  id: "fr-h3-008",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le centre commercial",
+  answer: "het winkelcentrum",
+  keywords: ["winkelcentrum"]
+},
+{
+  id: "fr-h3-009",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le magasin",
+  answer: "de winkel",
+  keywords: ["winkel"]
+},
+{
+  id: "fr-h3-010",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "l’hiver m",
+  answer: "de winter",
+  keywords: ["winter"]
+},
+{
+  id: "fr-h3-011",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "acheter",
+  answer: "kopen",
+  keywords: ["kopen"]
+},
+{
+  id: "fr-h3-012",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "essayer",
+  answer: "passen, proberen",
+  keywords: ["passen"]
+},
+{
+  id: "fr-h3-013",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "prendre",
+  answer: "nemen",
+  keywords: ["nemen"]
+},
+{
+  id: "fr-h3-014",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "moche",
+  answer: "lelijk",
+  keywords: ["lelijk"]
+},
+{
+  id: "fr-h3-015",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "beau, belle",
+  answer: "mooi",
+  keywords: ["mooi"]
+},
+{
+  id: "fr-h3-016",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "comme",
+  answer: "zoals, net als",
+  keywords: ["zoals"]
+},
+{
+  id: "fr-h3-017",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "et toi",
+  answer: "en jij",
+  keywords: ["jij"]
+},
+{
+  id: "fr-h3-018",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "bien sûr",
+  answer: "natuurlijk",
+  keywords: ["natuurlijk"]
+},
+{
+  id: "fr-h3-019",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "bientôt",
+  answer: "binnenkort",
+  keywords: ["binnenkort"]
+},
+{
+  id: "fr-h3-020",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "on y va!",
+  answer: "laten we gaan!",
+  keywords: ["gaan"]
+},
+
+// B
+{
+  id: "fr-h3-021",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "les baskets v mv",
+  answer: "de gympen",
+  keywords: ["gympen"]
+},
+{
+  id: "fr-h3-022",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "les chaussures v mv",
+  answer: "de schoenen",
+  keywords: ["schoenen"]
+},
+{
+  id: "fr-h3-023",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la rue",
+  answer: "de straat",
+  keywords: ["straat"]
+},
+{
+  id: "fr-h3-024",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "l’histoire v",
+  answer: "de geschiedenis",
+  keywords: ["geschiedenis"]
+},
+{
+  id: "fr-h3-025",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "les ados m mv",
+  answer: "de tieners",
+  keywords: ["tieners"]
+},
+{
+  id: "fr-h3-026",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la couleur",
+  answer: "de kleur",
+  keywords: ["kleur"]
+},
+{
+  id: "fr-h3-027",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "l’objet m",
+  answer: "het object, voorwerp",
+  keywords: ["object"]
+},
+{
+  id: "fr-h3-028",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "porter",
+  answer: "dragen",
+  keywords: ["dragen"]
+},
+{
+  id: "fr-h3-029",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "dépenser",
+  answer: "uitgeven",
+  keywords: ["uitgeven"]
+},
+{
+  id: "fr-h3-030",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "appeler",
+  answer: "noemen",
+  keywords: ["noemen"]
+},
+{
+  id: "fr-h3-031",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "célèbre",
+  answer: "beroemd",
+  keywords: ["beroemd"]
+},
+{
+  id: "fr-h3-032",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "accro",
+  answer: "verslaafd",
+  keywords: ["verslaafd"]
+},
+{
+  id: "fr-h3-033",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "premier, première",
+  answer: "eerste",
+  keywords: ["eerste"]
+},
+{
+  id: "fr-h3-034",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "né(e)",
+  answer: "geboren",
+  keywords: ["geboren"]
+},
+{
+  id: "fr-h3-035",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "blanc, blanche",
+  answer: "wit",
+  keywords: ["wit"]
+},
+{
+  id: "fr-h3-036",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "grand(e)",
+  answer: "groot",
+  keywords: ["groot"]
+},
+{
+  id: "fr-h3-037",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "devant",
+  answer: "voor (plaats)",
+  keywords: ["voor"]
+},
+{
+  id: "fr-h3-038",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "vraiment",
+  answer: "echt",
+  keywords: ["echt"]
+},
+{
+  id: "fr-h3-039",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "presque",
+  answer: "bijna",
+  keywords: ["bijna"]
+},
+{
+  id: "fr-h3-040",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "plusieurs",
+  answer: "meerdere",
+  keywords: ["meerdere"]
+},
+
+// E
+{
+  id: "fr-h3-041",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "faire les courses",
+  answer: "boodschappen doen",
+  keywords: ["boodschappen"]
+},
+{
+  id: "fr-h3-042",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "finir",
+  answer: "afmaken",
+  keywords: ["afmaken"]
+},
+{
+  id: "fr-h3-043",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "décider",
+  answer: "besluiten",
+  keywords: ["besluiten"]
+},
+{
+  id: "fr-h3-044",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "j’ai perdu",
+  answer: "ik heb verloren",
+  keywords: ["verloren"]
+},
+{
+  id: "fr-h3-045",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "un peu",
+  answer: "een beetje",
+  keywords: ["beetje"]
+},
+{
+  id: "fr-h3-046",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "désolé(e)",
+  answer: "sorry",
+  keywords: ["sorry"]
+},
+{
+  id: "fr-h3-047",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "seul(e)",
+  answer: "alleen",
+  keywords: ["alleen"]
+},
+{
+  id: "fr-h3-048",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "gentil, gentille",
+  answer: "lief",
+  keywords: ["lief"]
+},
+{
+  id: "fr-h3-049",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "possible",
+  answer: "mogelijk",
+  keywords: ["mogelijk"]
+},
+{
+  id: "fr-h3-050",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "ensemble",
+  answer: "samen",
+  keywords: ["samen"]
+},
+{
+  id: "fr-h3-051",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "moi aussi",
+  answer: "ik ook",
+  keywords: ["ook"]
+},
+{
+  id: "fr-h3-052",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "ne... rien",
+  answer: "niets",
+  keywords: ["niets"]
+},
+{
+  id: "fr-h3-053",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "peut-être",
+  answer: "misschien",
+  keywords: ["misschien"]
+},
+{
+  id: "fr-h3-054",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le mois",
+  answer: "de maand",
+  keywords: ["maand"]
+},
+{
+  id: "fr-h3-055",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le supermarché",
+  answer: "de supermarkt",
+  keywords: ["supermarkt"]
+},
+{
+  id: "fr-h3-056",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la pomme",
+  answer: "de appel",
+  keywords: ["appel"]
+},
+{
+  id: "fr-h3-057",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le mec",
+  answer: "de gozer (pop.)",
+  keywords: ["gozer"]
+},
+{
+  id: "fr-h3-058",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le livre",
+  answer: "het boek",
+  keywords: ["boek"]
+},
+{
+  id: "fr-h3-059",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la BD",
+  answer: "het stripboek",
+  keywords: ["stripboek"]
+},
+{
+  id: "fr-h3-060",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le jeu",
+  answer: "het spel",
+  keywords: ["spel"]
+},
+
+// F
+{
+  id: "fr-h3-061",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la mode",
+  answer: "de mode",
+  keywords: ["mode"]
+},
+{
+  id: "fr-h3-062",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "l’exemple m",
+  answer: "het voorbeeld",
+  keywords: ["voorbeeld"]
+},
+{
+  id: "fr-h3-063",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la différence",
+  answer: "het verschil",
+  keywords: ["verschil"]
+},
+{
+  id: "fr-h3-064",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la chose",
+  answer: "het ding",
+  keywords: ["ding"]
+},
+{
+  id: "fr-h3-065",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la blague",
+  answer: "de grap",
+  keywords: ["grap"]
+},
+{
+  id: "fr-h3-066",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la marque",
+  answer: "het merk",
+  keywords: ["merk"]
+},
+{
+  id: "fr-h3-067",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le jean",
+  answer: "de spijkerbroek",
+  keywords: ["spijkerbroek"]
+},
+{
+  id: "fr-h3-068",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la jupe",
+  answer: "de rok",
+  keywords: ["rok"]
+},
+{
+  id: "fr-h3-069",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "la chemise",
+  answer: "het overhemd",
+  keywords: ["overhemd"]
+},
+{
+  id: "fr-h3-070",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "le chapeau",
+  answer: "de hoed",
+  keywords: ["hoed"]
+},
+{
+  id: "fr-h3-071",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "propre",
+  answer: "eigen",
+  keywords: ["eigen"]
+},
+{
+  id: "fr-h3-072",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "terrible",
+  answer: "vreselijk",
+  keywords: ["vreselijk"]
+},
+{
+  id: "fr-h3-073",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "original(e)",
+  answer: "origineel",
+  keywords: ["origineel"]
+},
+{
+  id: "fr-h3-074",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "noir(e)",
+  answer: "zwart",
+  keywords: ["zwart"]
+},
+{
+  id: "fr-h3-075",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "gris(e)",
+  answer: "grijs",
+  keywords: ["grijs"]
+},
+{
+  id: "fr-h3-076",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "moins",
+  answer: "minder",
+  keywords: ["minder"]
+},
+{
+  id: "fr-h3-077",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "assez",
+  answer: "genoeg",
+  keywords: ["genoeg"]
+},
+{
+  id: "fr-h3-078",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "ça dépend",
+  answer: "het hangt ervan af",
+  keywords: ["afhangen"]
+},
+{
+  id: "fr-h3-079",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "je veux",
+  answer: "ik wil",
+  keywords: ["willen"]
+},
+{
+  id: "fr-h3-080",
+  chapterId: "fr-h3",
+  type: "begrip",
+  prompt: "utiliser",
+  answer: "gebruiken",
+  keywords: ["gebruiken"]
+},
 {
   id: "fr-h5-001",
   chapterId: "fr-h5",
@@ -2970,6 +4256,658 @@ export const fransKlas2Shared = {
   prompt: "Nu heb ik veel Franse vrienden.",
   answer: "Maintenant, j’ai beaucoup d’amis français.",
   keywords: ["vrienden"]
+},
+{
+  id: "fr-h2-p-001",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Heb je broers of zussen?",
+  answer: "Tu as des frères ou des sœurs ?",
+  keywords: ["broers"]
+},
+{
+  id: "fr-h2-p-002",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ja, ik heb een kleine zus.",
+  answer: "Oui, j’ai une petite sœur.",
+  keywords: ["zus"]
+},
+{
+  id: "fr-h2-p-003",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Hoe heet zij?",
+  answer: "Comment elle s’appelle ?",
+  keywords: ["naam"]
+},
+{
+  id: "fr-h2-p-004",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Zij heet Lola.",
+  answer: "Elle s’appelle Lola.",
+  keywords: ["Lola"]
+},
+{
+  id: "fr-h2-p-005",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Wat vinden jullie leuk om te doen?",
+  answer: "Qu’est-ce que vous aimez faire ?",
+  keywords: ["doen"]
+},
+{
+  id: "fr-h2-p-006",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Wij vinden het leuk om te sporten.",
+  answer: "On aime faire du sport.",
+  keywords: ["sport"]
+},
+{
+  id: "fr-h2-p-007",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Heb jij een dier?",
+  answer: "Tu as un animal ?",
+  keywords: ["dier"]
+},
+{
+  id: "fr-h2-p-008",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ja, ik heb een hond en een vis.",
+  answer: "Oui, j’ai un chien et un poisson.",
+  keywords: ["hond"]
+},
+{
+  id: "fr-h2-p-009",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Mijn vis heet Nemo en hij is heel oud.",
+  answer: "Mon poisson s’appelle Nemo et il est très vieux.",
+  keywords: ["Nemo"]
+},
+{
+  id: "fr-h2-p-010",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Is zij aardig?",
+  answer: "Elle est sympa ?",
+  keywords: ["aardig"]
+},
+{
+  id: "fr-h2-p-011",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ja, zij is cool. / Nee, zij is vervelend.",
+  answer: "Oui, elle est cool. / Non, elle est casse-pied.",
+  keywords: ["cool"]
+},
+{
+  id: "fr-h2-p-012",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Hoe vind jij jouw slaapkamer?",
+  answer: "Comment tu trouves ta chambre ?",
+  keywords: ["slaapkamer"]
+},
+{
+  id: "fr-h2-p-013",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ik vind mijn slaapkamer leuk, hij is groot.",
+  answer: "J’aime bien ma chambre, elle est grande.",
+  keywords: ["groot"]
+},
+{
+  id: "fr-h2-p-014",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Er staat een bed in en een bureau.",
+  answer: "Il y a un lit et un bureau.",
+  keywords: ["bed"]
+},
+{
+  id: "fr-h2-p-015",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ben jij vaak in jouw slaapkamer?",
+  answer: "Tu es souvent dans ta chambre ?",
+  keywords: ["vaak"]
+},
+{
+  id: "fr-h2-p-016",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ja, om te kletsen met mijn vrienden.",
+  answer: "Oui, pour discuter avec mes copains.",
+  keywords: ["kletsen"]
+},
+{
+  id: "fr-h2-p-017",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Waar woon jij?",
+  answer: "Tu habites où ?",
+  keywords: ["wonen"]
+},
+{
+  id: "fr-h2-p-018",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ik woon in Parijs.",
+  answer: "J’habite à Paris.",
+  keywords: ["Parijs"]
+},
+{
+  id: "fr-h2-p-019",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Woon jij in een huis?",
+  answer: "Tu habites dans une maison ?",
+  keywords: ["huis"]
+},
+{
+  id: "fr-h2-p-020",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Nee, ik woon in een flat.",
+  answer: "Non, j’habite dans un appartement.",
+  keywords: ["flat"]
+},
+{
+  id: "fr-h2-p-021",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Gaan we dit weekend naar de stad?",
+  answer: "On va en ville, ce weekend ?",
+  keywords: ["stad"]
+},
+{
+  id: "fr-h2-p-022",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ja, ik wil een nieuwe spijkerbroek kopen.",
+  answer: "Oui, je voudrais acheter un nouveau jean.",
+  keywords: ["spijkerbroek"]
+},
+{
+  id: "fr-h2-p-023",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Hoe vind je deze blauwe spijkerbroek?",
+  answer: "Comment tu trouves ce jean bleu ?",
+  keywords: ["blauw"]
+},
+{
+  id: "fr-h2-p-024",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Niet slecht. Leuk.",
+  answer: "Pas mal.",
+  keywords: ["leuk"]
+},
+{
+  id: "fr-h2-p-025",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Hoeveel kost het?",
+  answer: "Il coûte combien ?",
+  keywords: ["prijs"]
+},
+{
+  id: "fr-h2-p-026",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Slechts 45 euro.",
+  answer: "45 euros seulement.",
+  keywords: ["euro"]
+},
+{
+  id: "fr-h2-p-027",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Dat is niet duur.",
+  answer: "Ce n’est pas cher.",
+  keywords: ["duur"]
+},
+{
+  id: "fr-h2-p-028",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Welke maat heb je?",
+  answer: "Tu fais quelle taille ?",
+  keywords: ["maat"]
+},
+{
+  id: "fr-h2-p-029",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "M.",
+  answer: "Du M.",
+  keywords: ["maat"]
+},
+{
+  id: "fr-h2-p-030",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Wil je het kopen?",
+  answer: "Tu veux l’acheter ?",
+  keywords: ["kopen"]
+},
+{
+  id: "fr-h2-p-031",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ja, hij is mooi!",
+  answer: "Oui, il est beau !",
+  keywords: ["mooi"]
+},
+{
+  id: "fr-h2-p-032",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Nee, hij is te klein.",
+  answer: "Non, il est trop petit.",
+  keywords: ["klein"]
+},
+
+{
+  id: "fr-h2-p-033",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Wat wil je kopen?",
+  answer: "Qu’est-ce que tu veux acheter ?",
+  keywords: ["kopen"]
+},
+{
+  id: "fr-h2-p-034",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Ik zoek een cadeau voor Lucas.",
+  answer: "Je cherche un cadeau pour Lucas.",
+  keywords: ["cadeau"]
+},
+{
+  id: "fr-h2-p-035",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Waar houdt hij van?",
+  answer: "Qu’est-ce qu’il aime ?",
+  keywords: ["houden"]
+},
+{
+  id: "fr-h2-p-036",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Hij houdt van sport en videogames.",
+  answer: "Il aime le sport et les jeux vidéos.",
+  keywords: ["sport"]
+},
+{
+  id: "fr-h2-p-037",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Wat vindt hij leuk om te dragen?",
+  answer: "Qu’est-ce qu’il aime porter ?",
+  keywords: ["dragen"]
+},
+{
+  id: "fr-h2-p-038",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Hij draagt vaak gympen en een pet.",
+  answer: "Il porte souvent des baskets et une casquette.",
+  keywords: ["kleding"]
+},
+{
+  id: "fr-h2-p-039",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Gaan we naar Mode&Co?",
+  answer: "On va à Mode&Co ?",
+  keywords: ["winkel"]
+},
+{
+  id: "fr-h2-p-040",
+  chapterId: "fr-h2",
+  type: "zin",
+  prompt: "Oké! Laten we gaan!",
+  answer: "D’accord ! On y va !",
+  keywords: ["gaan"]
+},
+// A
+{
+  id: "fr-h3-p-001",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Gaan we dit weekend naar de stad?",
+  answer: "On va en ville, ce weekend?",
+  keywords: ["stad"]
+},
+{
+  id: "fr-h3-p-002",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Ja, ik wil een nieuwe spijkerbroek kopen.",
+  answer: "Oui, je voudrais acheter un nouveau jean.",
+  keywords: ["spijkerbroek"]
+},
+{
+  id: "fr-h3-p-003",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Hoe vind je deze blauwe spijkerbroek?",
+  answer: "Comment tu trouves ce jean bleu?",
+  keywords: ["blauwe spijkerbroek"]
+},
+{
+  id: "fr-h3-p-004",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Niet slecht. / Leuk.",
+  answer: "Pas mal.",
+  keywords: ["leuk"]
+},
+{
+  id: "fr-h3-p-005",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Welke maat heb je?",
+  answer: "Tu fais quelle taille?",
+  keywords: ["maat"]
+},
+{
+  id: "fr-h3-p-006",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "M.",
+  answer: "Du M.",
+  keywords: ["M"]
+},
+
+// B
+{
+  id: "fr-h3-p-007",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Hoeveel kost het?",
+  answer: "Il coûte combien?",
+  keywords: ["kost"]
+},
+{
+  id: "fr-h3-p-008",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Slechts 45 euro.",
+  answer: "45 euros seulement.",
+  keywords: ["45 euro"]
+},
+{
+  id: "fr-h3-p-009",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Dat is niet duur.",
+  answer: "Ce n’est pas cher.",
+  keywords: ["duur"]
+},
+{
+  id: "fr-h3-p-010",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Wil je het kopen?",
+  answer: "Tu veux l’acheter?",
+  keywords: ["kopen"]
+},
+{
+  id: "fr-h3-p-011",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Ja, hij is mooi!",
+  answer: "Oui, il est beau!",
+  keywords: ["mooi"]
+},
+{
+  id: "fr-h3-p-012",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Nee, hij is te klein.",
+  answer: "Non, il est trop petit.",
+  keywords: ["klein"]
+},
+
+// E
+{
+  id: "fr-h3-p-013",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Wat wil je kopen?",
+  answer: "Qu’est-ce que tu veux acheter?",
+  keywords: ["kopen"]
+},
+{
+  id: "fr-h3-p-014",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Ik zoek een cadeau voor Lucas.",
+  answer: "Je cherche un cadeau pour Lucas.",
+  keywords: ["cadeau"]
+},
+{
+  id: "fr-h3-p-015",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Gaan we naar Mode&Co?",
+  answer: "On va à Mode&Co?",
+  keywords: ["Mode&Co"]
+},
+{
+  id: "fr-h3-p-016",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Oké! Laten we gaan!",
+  answer: "D’accord! On y va!",
+  keywords: ["gaan"]
+},
+
+// F
+{
+  id: "fr-h3-p-017",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Waar houdt hij van?",
+  answer: "Qu’est-ce qu’il aime?",
+  keywords: ["houden van"]
+},
+{
+  id: "fr-h3-p-018",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Hij houdt van sport en videogames.",
+  answer: "Il aime le sport et les jeux vidéos.",
+  keywords: ["videogames"]
+},
+{
+  id: "fr-h3-p-019",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Wat vindt hij leuk om te dragen?",
+  answer: "Qu’est-ce qu’il aime porter?",
+  keywords: ["dragen"]
+},
+{
+  id: "fr-h3-p-020",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Hij draagt vaak gympen en een pet.",
+  answer: "Il porte souvent des baskets et une casquette.",
+  keywords: ["gympen"]
+},
+
+// C
+{
+  id: "fr-h3-p-021",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Gaan we dit weekend naar de stad?",
+  answer: "On va en ville, ce weekend?",
+  keywords: ["stad"]
+},
+{
+  id: "fr-h3-p-022",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Ja, ik wil een nieuwe spijkerbroek kopen.",
+  answer: "Oui, je voudrais acheter un nouveau jean.",
+  keywords: ["spijkerbroek"]
+},
+{
+  id: "fr-h3-p-023",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Hoe vind je deze blauwe spijkerbroek?",
+  answer: "Comment tu trouves ce jean bleu?",
+  keywords: ["blauwe spijkerbroek"]
+},
+{
+  id: "fr-h3-p-024",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Niet slecht. / Leuk.",
+  answer: "Pas mal.",
+  keywords: ["leuk"]
+},
+{
+  id: "fr-h3-p-025",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Hoeveel kost het?",
+  answer: "Il coûte combien?",
+  keywords: ["kost"]
+},
+{
+  id: "fr-h3-p-026",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Slechts 45 euro.",
+  answer: "45 euros seulement.",
+  keywords: ["45 euro"]
+},
+{
+  id: "fr-h3-p-027",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Dat is niet duur.",
+  answer: "Ce n’est pas cher.",
+  keywords: ["duur"]
+},
+{
+  id: "fr-h3-p-028",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Welke maat heb je?",
+  answer: "Tu fais quelle taille?",
+  keywords: ["maat"]
+},
+{
+  id: "fr-h3-p-029",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "M.",
+  answer: "Du M.",
+  keywords: ["M"]
+},
+{
+  id: "fr-h3-p-030",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Wil je het kopen?",
+  answer: "Tu veux l’acheter?",
+  keywords: ["kopen"]
+},
+{
+  id: "fr-h3-p-031",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Ja, hij is mooi!",
+  answer: "Oui, il est beau!",
+  keywords: ["mooi"]
+},
+{
+  id: "fr-h3-p-032",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Nee, hij is te klein.",
+  answer: "Non, il est trop petit.",
+  keywords: ["klein"]
+},
+
+// G
+{
+  id: "fr-h3-p-033",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Wat wil je kopen?",
+  answer: "Qu’est-ce que tu veux acheter?",
+  keywords: ["kopen"]
+},
+{
+  id: "fr-h3-p-034",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Ik zoek een cadeau voor Lucas.",
+  answer: "Je cherche un cadeau pour Lucas.",
+  keywords: ["cadeau"]
+},
+{
+  id: "fr-h3-p-035",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Waar houdt hij van?",
+  answer: "Qu’est-ce qu’il aime?",
+  keywords: ["houden van"]
+},
+{
+  id: "fr-h3-p-036",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Hij houdt van sport en videogames.",
+  answer: "Il aime le sport et les jeux vidéos.",
+  keywords: ["videogames"]
+},
+{
+  id: "fr-h3-p-037",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Wat vindt hij leuk om te dragen?",
+  answer: "Qu’est-ce qu’il aime porter?",
+  keywords: ["dragen"]
+},
+{
+  id: "fr-h3-p-038",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Hij draagt vaak gympen en een pet.",
+  answer: "Il porte souvent des baskets et une casquette.",
+  keywords: ["pet"]
+},
+{
+  id: "fr-h3-p-039",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Gaan we naar Mode&Co?",
+  answer: "On va à Mode&Co?",
+  keywords: ["Mode&Co"]
+},
+{
+  id: "fr-h3-p-040",
+  chapterId: "fr-h3",
+  type: "zin",
+  prompt: "Oké! Laten we gaan!",
+  answer: "D’accord! On y va!",
+  keywords: ["gaan"]
 },
   
 {
