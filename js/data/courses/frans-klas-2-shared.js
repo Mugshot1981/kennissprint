@@ -1330,6 +1330,8 @@ export const fransKlas2Shared = {
   answer: "het is rechtdoor",
   keywords: ["rechtdoor"]
 },
+
+      
 {
   id: "fr-h7-001",
   chapterId: "fr-h7",
@@ -2274,12 +2276,14 @@ export const fransKlas2Shared = {
   keywords: ["deteste", "legumes"]
 },
 
+
+
 {
   id: "fr-h6-p-001",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Hoi, spreek je Frans?",
-  answer: "Salut, tu parles français ?",
+  answer: "Salut, tu parles français?",
   keywords: ["parles", "francais"]
 },
 {
@@ -2288,15 +2292,15 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Ja, ik spreek een beetje Frans.",
   answer: "Oui, je parle un peu français.",
-  keywords: ["parle", "un peu", "francais"]
+  keywords: ["parle", "francais"]
 },
 {
   id: "fr-h6-p-003",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Hoe heet je?",
-  answer: "Comment tu t’appelles ?",
-  keywords: ["comment", "t appelles"]
+  answer: "Comment tu t’appelles?",
+  keywords: ["comment", "appelles"]
 },
 {
   id: "fr-h6-p-004",
@@ -2304,7 +2308,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Ik heet Willem.",
   answer: "Je m’appelle Willem.",
-  keywords: ["m appelle", "willem"]
+  keywords: ["appelle", "willem"]
 },
 {
   id: "fr-h6-p-005",
@@ -2327,8 +2331,8 @@ export const fransKlas2Shared = {
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Waar kom je vandaan?",
-  answer: "Tu viens d’où ?",
-  keywords: ["viens", "d ou"]
+  answer: "Tu viens d’où?",
+  keywords: ["viens", "dou"]
 },
 {
   id: "fr-h6-p-008",
@@ -2384,7 +2388,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Oké! Tot morgen!",
   answer: "D’accord! À demain!",
-  keywords: ["a demain"]
+  keywords: ["demain"]
 },
 {
   id: "fr-h6-p-015",
@@ -2392,7 +2396,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Hoe laat gaat de supermarkt dicht?",
   answer: "À quelle heure ferme le supermarché?",
-  keywords: ["quelle heure", "ferme", "supermarche"]
+  keywords: ["quelle heure", "ferme"]
 },
 {
   id: "fr-h6-p-016",
@@ -2400,7 +2404,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Hij is van 8 tot 21 uur geopend.",
   answer: "Il est ouvert de 8 heures à 21 heures.",
-  keywords: ["ouvert", "8", "21"]
+  keywords: ["ouvert", "heures"]
 },
 {
   id: "fr-h6-p-017",
@@ -2408,7 +2412,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Sorry. Kunt u het herhalen?",
   answer: "Excusez-moi. Vous pouvez répéter?",
-  keywords: ["excusez", "repeter"]
+  keywords: ["repeter"]
 },
 {
   id: "fr-h6-p-018",
@@ -2488,7 +2492,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Ik ben op vakantie.",
   answer: "Je suis en vacances.",
-  keywords: ["suis", "vacances"]
+  keywords: ["vacances"]
 },
 {
   id: "fr-h6-p-028",
@@ -2504,7 +2508,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Ik ga met mijn ouders.",
   answer: "Je pars avec mes parents.",
-  keywords: ["pars", "parents"]
+  keywords: ["parents"]
 },
 {
   id: "fr-h6-p-030",
@@ -2520,7 +2524,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Ik verblijf op een camping.",
   answer: "Je loge au camping.",
-  keywords: ["loge", "camping"]
+  keywords: ["camping"]
 },
 {
   id: "fr-h6-p-032",
@@ -2552,7 +2556,7 @@ export const fransKlas2Shared = {
   type: "zin",
   prompt: "Ik blijf twee weken.",
   answer: "Je reste deux semaines.",
-  keywords: ["reste", "deux semaines"]
+  keywords: ["deux semaines"]
 },
 {
   id: "fr-h6-p-036",
@@ -2562,19 +2566,24 @@ export const fransKlas2Shared = {
   answer: "Qu’est-ce que tu vas faire?",
   keywords: ["vas faire"]
 },
-
-// G blok
-
 {
   id: "fr-h6-p-037",
   chapterId: "fr-h6",
   type: "zin",
-  prompt: "Pardon, waar is het station?",
-  answer: "Pardon, où est la gare?",
-  keywords: ["ou", "gare"]
+  prompt: "Ik ga naar het strand.",
+  answer: "Je vais à la plage.",
+  keywords: ["plage"]
 },
 {
   id: "fr-h6-p-038",
+  chapterId: "fr-h6",
+  type: "zin",
+  prompt: "Pardon, waar is het station?",
+  answer: "Pardon, où est la gare?",
+  keywords: ["gare"]
+},
+{
+  id: "fr-h6-p-039",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Ga rechtdoor.",
@@ -2582,7 +2591,7 @@ export const fransKlas2Shared = {
   keywords: ["tout droit"]
 },
 {
-  id: "fr-h6-p-039",
+  id: "fr-h6-p-040",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Neem de tweede straat links.",
@@ -2590,7 +2599,7 @@ export const fransKlas2Shared = {
   keywords: ["deuxieme", "gauche"]
 },
 {
-  id: "fr-h6-p-040",
+  id: "fr-h6-p-041",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Het is naast de supermarkt.",
@@ -2598,7 +2607,7 @@ export const fransKlas2Shared = {
   keywords: ["cote", "supermarche"]
 },
 {
-  id: "fr-h6-p-041",
+  id: "fr-h6-p-042",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Dank u wel.",
@@ -2606,7 +2615,7 @@ export const fransKlas2Shared = {
   keywords: ["merci"]
 },
 {
-  id: "fr-h6-p-042",
+  id: "fr-h6-p-043",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Graag gedaan.",
@@ -2614,7 +2623,7 @@ export const fransKlas2Shared = {
   keywords: ["rien"]
 },
 {
-  id: "fr-h6-p-043",
+  id: "fr-h6-p-044",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Waar is de bakkerij?",
@@ -2622,7 +2631,7 @@ export const fransKlas2Shared = {
   keywords: ["boulangerie"]
 },
 {
-  id: "fr-h6-p-044",
+  id: "fr-h6-p-045",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Ga naar links.",
@@ -2630,7 +2639,7 @@ export const fransKlas2Shared = {
   keywords: ["gauche"]
 },
 {
-  id: "fr-h6-p-045",
+  id: "fr-h6-p-046",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "En dan naar rechts.",
@@ -2638,44 +2647,12 @@ export const fransKlas2Shared = {
   keywords: ["droite"]
 },
 {
-  id: "fr-h6-p-046",
+  id: "fr-h6-p-047",
   chapterId: "fr-h6",
   type: "zin",
   prompt: "Het is tussen de winkel en de apotheek.",
   answer: "C’est entre le magasin et la pharmacie.",
   keywords: ["entre", "pharmacie"]
-},
-{
-  id: "fr-h6-p-047",
-  chapterId: "fr-h6",
-  type: "zin",
-  prompt: "Heeft u een kaart?",
-  answer: "Vous avez une carte?",
-  keywords: ["carte"]
-},
-{
-  id: "fr-h6-p-048",
-  chapterId: "fr-h6",
-  type: "zin",
-  prompt: "Ja, hier is een kaart.",
-  answer: "Oui, voilà une carte.",
-  keywords: ["voila", "carte"]
-},
-{
-  id: "fr-h6-p-049",
-  chapterId: "fr-h6",
-  type: "zin",
-  prompt: "Dat is ver.",
-  answer: "C’est loin.",
-  keywords: ["loin"]
-},
-{
-  id: "fr-h6-p-050",
-  chapterId: "fr-h6",
-  type: "zin",
-  prompt: "Dat is dichtbij.",
-  answer: "C’est près.",
-  keywords: ["pres"]
 },
 {
   id: "fr-h7-p-001",
