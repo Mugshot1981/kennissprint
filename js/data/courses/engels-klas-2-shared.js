@@ -816,8 +816,7 @@ export const english2Shared = {
   answer: "afdeling",
   keywords: ["afdeling"]
 },
-// UNIT 6
-terms: [
+
   // 6.1
   {
     id: "eng2-h6-001",
