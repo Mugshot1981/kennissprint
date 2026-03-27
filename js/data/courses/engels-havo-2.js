@@ -1,7 +1,6 @@
-
 import { english2Shared } from "./engels-klas-2-shared.js";
 
-export const englishHavo2Course = {
+export const engelsHavo2Course = {
   id: "engels-havo-2",
   subject: "engels",
   level: "havo",
