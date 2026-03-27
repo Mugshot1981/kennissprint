@@ -1,5 +1,5 @@
 
-import { english2Shared } from "./engels-2-shared.js";
+import { english2Shared } from "./engels-klas-2-shared.js";
 
 export const englishVwo2Course = {
   id: "engels-vwo-2",
