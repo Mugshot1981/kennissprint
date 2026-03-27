@@ -4,7 +4,7 @@ KennisSprint dataset
 2026
 */
 
-import { geschiedenisHavo3Shared } from "./geschiedenis-havo-3-shared.js";
+import { geschiedenisKlas3Shared } from "./geschiedenis-klas-3-shared.js";
 
 export const historyVwo3Course = {
   id: "geschiedenis-vwo-3",
