@@ -13,7 +13,7 @@ export const historyVwo3Course = {
   grade: "3",
   title: "Geschiedenis 3 vwo",
 
-  chapters: geschiedenisHavo3Shared.chapters,
-  datasets: geschiedenisHavo3Shared.datasets,
-  modes: geschiedenisHavo3Shared.modes
+chapters: geschiedenisKlas3Shared.chapters,
+datasets: geschiedenisKlas3Shared.datasets,
+modes: geschiedenisKlas3Shared.modes
 };
