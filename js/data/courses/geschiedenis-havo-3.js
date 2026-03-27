@@ -4,7 +4,7 @@ KennisSprint dataset
 2026
 */
 
-import { geschiedenisHavo3Shared } from "./geschiedenis-havo-3-shared.js";
+import { geschiedenisKlas3Shared } from "./geschiedenis-klas-3-shared.js";
 
 export const historyHavo3Course = {
   id: "geschiedenis-havo-3",
@@ -13,7 +13,7 @@ export const historyHavo3Course = {
   grade: "3",
   title: "Geschiedenis 3 havo",
 
-  chapters: geschiedenisHavo3Shared.chapters,
-  datasets: geschiedenisHavo3Shared.datasets,
-  modes: geschiedenisHavo3Shared.modes
+  chapters: geschiedenisKlas3Shared.chapters,
+  datasets: geschiedenisKlas3Shared.datasets,
+  modes: geschiedenisKlas3Shared.modes
 };
