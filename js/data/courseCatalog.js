@@ -22,6 +22,10 @@ import { fransMavo2Course } from "./courses/frans-mavo-2.js";
 import { fransHavo2Course } from "./courses/frans-havo-2.js";
 import { fransVwo2Course } from "./courses/frans-vwo-2.js";
 
+import { engelsMavo2Course } from "./courses/engels-mavo-2.js";
+import { engelsHavo2Course } from "./courses/engels-havo-2.js";
+import { engelsVwo2Course } from "./courses/engels-vwo-2.js";
+
 import { tekenenMavo4Course } from "./courses/tekenen-mavo-4.js";
 
 import { biologieMavo3Course } from "./courses/biologie-mavo-3.js";
@@ -51,6 +55,10 @@ export const courseCatalog = [
   fransMavo2Course,
   fransHavo2Course,
   fransVwo2Course,
+
+  engelsMavo2Course,
+engelsHavo2Course,
+engelsVwo2Course,
 
   tekenenMavo4Course,
 
