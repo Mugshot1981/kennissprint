@@ -91,7 +91,7 @@ export const geschiedenisKlas3Shared = {
   type: "begrip",
   prompt: "geallieerden (Eerste Wereldoorlog)",
   answer: "Letterlijk: 'bondgenoten'. In de Eerste Wereldoorlog de benaming van de landen die aan de zijde van de Britten en de Fransen vochten.",
-  keywords: ["bondgenoten", "eerste wereldoorlog", "benaming", "landen", "brittten", "fransen", "vochten"]
+  keywords: ["bondgenoten", "eerste wereldoorlog", "benaming", "landen", "britten", "fransen", "vochten"]
 },
 {
   id: "his3h-h1-t007",
