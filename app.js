@@ -1412,7 +1412,8 @@ function renderQuestion() {
     "mastery-gray",
     "mastery-green",
     "mastery-blue",
-    "mastery-purple"
+    "mastery-purple",
+    "mastery-orange"
   );
 
   const level = progressMap[currentQuestion.cardId] || 0;
