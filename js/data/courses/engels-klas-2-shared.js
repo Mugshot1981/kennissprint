@@ -645,8 +645,8 @@ export const english2Shared = {
   chapterId: "eng2-h5",
   type: "begrip",
   prompt: "amusing",
-  answer: "vermakkelijk",
-  keywords: ["leuk"]
+  answer: "vermakelijk",
+  keywords: ["vermakelijk"]
 },
 {
   id: "eng2-h5-080",
