@@ -134,7 +134,7 @@ export const geschiedenisKlas3Shared = {
   subjectId: "geschiedenis",
   chapterId: "his3h-h1",
   type: "begrip",
-  prompt: "moderne masssamenleving",
+  prompt: "moderne massasamenleving",
   answer: "Een samenleving waarin een groot deel van de bevolking in steden leeft en waarin mensen elkaar gemakkelijk kunnen bereiken dankzij een goed (gemotoriseerd) transportsysteem en massamedia.",
   keywords: ["samenleving", "groot deel", "bevolking", "steden", "gemakkelijk bereiken", "gemotoriseerd transportsysteem", "massamedia"]
 },
