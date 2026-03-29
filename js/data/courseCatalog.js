@@ -18,10 +18,12 @@ import { economieMavo4Course } from "./courses/economie-mavo-4.js";
 import { economieVwo6Course } from "./courses/economie-vwo-6.js";
 
 import { duitsMavo4Course } from "./courses/duits-mavo-4.js";
+import { duitsMavo5Course } from "./courses/duits-mavo-5.js";
 
 import { fransMavo2Course } from "./courses/frans-mavo-2.js";
 import { fransHavo2Course } from "./courses/frans-havo-2.js";
 import { fransVwo2Course } from "./courses/frans-vwo-2.js";
+import { fransMavo5Course } from "./courses/frans-mavo-5.js";
 
 import { engelsMavo2Course } from "./courses/engels-mavo-2.js";
 import { engelsHavo2Course } from "./courses/engels-havo-2.js";
@@ -53,10 +55,12 @@ export const courseCatalog = [
   economieVwo6Course,
 
   duitsMavo4Course,
+  duitsMavo5Course,
 
   fransMavo2Course,
   fransHavo2Course,
   fransVwo2Course,
+  fransMavo5Course,
 
   engelsMavo2Course,
 engelsHavo2Course,
