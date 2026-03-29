@@ -824,6 +824,140 @@ export const fransMavo5Course = {
   prompt: "Il porte souvent des baskets et une casquette.",
   answer: "Hij draagt vaak gympen en een pet.",
   keywords: ["gympen"]
+},
+// ===== H WERKWOORDEN =====
+
+{
+  id: "fr5m-h3-101",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "je veux",
+  answer: "ik wil",
+  keywords: ["wil"]
+},
+{
+  id: "fr5m-h3-102",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "tu veux",
+  answer: "jij wilt",
+  keywords: ["wilt"]
+},
+{
+  id: "fr5m-h3-103",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "il/elle veut",
+  answer: "hij/zij wil",
+  keywords: ["wil"]
+},
+{
+  id: "fr5m-h3-104",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "on veut",
+  answer: "wij willen",
+  keywords: ["willen"]
+},
+{
+  id: "fr5m-h3-105",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "nous voulons",
+  answer: "wij willen",
+  keywords: ["willen"]
+},
+{
+  id: "fr5m-h3-106",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "vous voulez",
+  answer: "jullie willen / u wilt",
+  keywords: ["willen"]
+},
+{
+  id: "fr5m-h3-107",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "ils/elles veulent",
+  answer: "zij willen",
+  keywords: ["willen"]
+},
+
+{
+  id: "fr5m-h3-108",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "je peux",
+  answer: "ik kan/mag",
+  keywords: ["kan"]
+},
+{
+  id: "fr5m-h3-109",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "tu peux",
+  answer: "jij kunt/mag",
+  keywords: ["kunt"]
+},
+{
+  id: "fr5m-h3-110",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "il/elle peut",
+  answer: "hij/zij kan/mag",
+  keywords: ["kan"]
+},
+{
+  id: "fr5m-h3-111",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "on peut",
+  answer: "wij kunnen/mogen",
+  keywords: ["kunnen"]
+},
+{
+  id: "fr5m-h3-112",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "nous pouvons",
+  answer: "wij kunnen/mogen",
+  keywords: ["kunnen"]
+},
+{
+  id: "fr5m-h3-113",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "vous pouvez",
+  answer: "jullie kunnen/mogen / u kunt/mag",
+  keywords: ["kunnen"]
+},
+{
+  id: "fr5m-h3-114",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "ils/elles peuvent",
+  answer: "zij kunnen/mogen",
+  keywords: ["kunnen"]
+},
+
+// ===== VOORBEELDZINNEN =====
+
+{
+  id: "fr5m-h3-115",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "Je veux acheter un cadeau.",
+  answer: "Ik wil een cadeau kopen.",
+  keywords: ["kopen"]
+},
+{
+  id: "fr5m-h3-116",
+  chapterId: "fr5m-h3",
+  type: "begrip",
+  prompt: "Je peux essayer ce jean?",
+  answer: "Mag ik deze spijkerbroek passen?",
+  keywords: ["passen"]
 }
 
     ]
