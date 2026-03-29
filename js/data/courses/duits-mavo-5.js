@@ -785,7 +785,7 @@ export const duitsMavo5Course = {
   answer: "weinig",
   keywords: ["weinig"]
 }
-]
+
     
     ]
   },
