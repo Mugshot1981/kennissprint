@@ -64,6 +64,7 @@ export const courseCatalog = [
   fransMavo5Course,
 
   engelsMavo2Course,
+   engelsMavo3Course,
 engelsHavo2Course,
 engelsVwo2Course,
 
