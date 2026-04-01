@@ -6,7 +6,9 @@ export const engelsMavo3Course = {
   title: "Engels 3 mavo",
 
   chapters: [
-    { id: "eng3m-h1", subjectId: "engels", title: "Hoofdstuk 1" }
+     { id: "eng3m-h5", subjectId: "engels", title: "Unit 5 - Health" },
+  { id: "eng3m-h6", subjectId: "engels", title: "Unit 6 - Nature" },
+  { id: "eng3m-h7", subjectId: "engels", title: "Unit 7 - Ambitions" }
   ],
 
   datasets: {
