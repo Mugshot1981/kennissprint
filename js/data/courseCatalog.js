@@ -26,6 +26,7 @@ import { fransVwo2Course } from "./courses/frans-vwo-2.js";
 import { fransMavo5Course } from "./courses/frans-mavo-5.js";
 
 import { engelsMavo2Course } from "./courses/engels-mavo-2.js";
+import { engelsMavo3Course } from "./courses/engels-mavo-3.js";
 import { engelsHavo2Course } from "./courses/engels-havo-2.js";
 import { engelsVwo2Course } from "./courses/engels-vwo-2.js";
 
