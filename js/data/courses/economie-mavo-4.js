@@ -50,6 +50,11 @@ export const economieMavo4Course = {
       id: "eco-h8",
       subjectId: "economie",
       title: "Over de grens"
+    },
+       {
+      id: "eco-h9",
+      subjectId: "economie",
+      title: "Ben jij ondernemend?"
     }
   ],
 
@@ -1363,6 +1368,190 @@ terms: [
     prompt: "Fairtrade",
     answer: "Een organisatie die boeren in ontwikkelingslanden steunt met een gegarandeerde, betere prijs voor hun producten.",
     keywords: ["eerlijke prijs", "boeren", "ontwikkelingslanden", "gegarandeerde prijs"]
+  },
+    {
+    id: "eco-014",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Investeren",
+    answer: "Bedrijven besteden geld aan productiemiddelen, zoals kapitaalgoederen.",
+    keywords: ["geld", "productiemiddelen", "kapitaalgoederen"]
+  },
+  {
+    id: "eco-015",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Kostprijs per product",
+    answer: "De gemiddelde kosten voor het maken van één product.",
+    keywords: ["gemiddelde kosten", "maken", "product"]
+  },
+  {
+    id: "eco-016",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Productiefactoren",
+    answer: "Alle middelen die je nodig hebt om te produceren: natuur, arbeid, kapitaal en ondernemerschap.",
+    keywords: ["natuur", "arbeid", "kapitaal", "ondernemerschap"]
+  },
+  {
+    id: "eco-017",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Toegevoegde waarde",
+    answer: "De extra waarde die ontstaat doordat een bedrijf een product bewerkt.",
+    keywords: ["extra waarde", "bedrijf", "bewerkt"]
+  },
+  {
+    id: "eco-018",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Variabele kosten",
+    answer: "Kosten die veranderen als je meer of minder gaat produceren. Bijvoorbeeld de kosten van grondstoffen.",
+    keywords: ["veranderen", "produceren", "grondstoffen"]
+  },
+  {
+    id: "eco-019",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Vaste kosten",
+    answer: "Kosten die niet meteen veranderen als je meer of minder gaat produceren. Bijvoorbeeld de huur van je gebouw.",
+    keywords: ["niet veranderen", "produceren", "huur"]
+  },
+  {
+    id: "eco-020",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Arbeidsproductiviteit",
+    answer: "De productie per persoon in een bepaalde tijd.",
+    keywords: ["productie", "persoon", "tijd"]
+  },
+  {
+    id: "eco-021",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Brutowinst",
+    answer: "Wat je overhoudt van de omzet nadat je de inkoopwaarde ervan betaald hebt.",
+    keywords: ["overhoudt", "omzet", "inkoopwaarde"]
+  },
+  {
+    id: "eco-022",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Maatschappelijk verantwoord ondernemen (mvo)",
+    answer: "Bedrijven houden bij hun productie zo veel mogelijk rekening met de gevolgen voor mens en milieu.",
+    keywords: ["productie", "gevolgen", "mens", "milieu"]
+  },
+  {
+    id: "eco-023",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Omzet",
+    answer: "Verkoopopbrengst. Het totaalbedrag dat een bedrijf ontvangt door de verkoop van producten.",
+    keywords: ["verkoopopbrengst", "totaalbedrag", "verkoop"]
+  },
+  {
+    id: "eco-024",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Productiecapaciteit",
+    answer: "De maximale hoeveelheid die een bedrijf kan produceren.",
+    keywords: ["maximale hoeveelheid", "bedrijf", "produceren"]
+  },
+  {
+    id: "eco-025",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Evenwichtshoeveelheid",
+    answer: "Het aantal producten dat gevraagd en aangeboden wordt bij de evenwichtsprijs.",
+    keywords: ["aantal producten", "gevraagd", "aangeboden", "evenwichtsprijs"]
+  },
+  {
+    id: "eco-026",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Evenwichtsprijs",
+    answer: "De prijs waarbij vraag en aanbod aan elkaar gelijk zijn.",
+    keywords: ["prijs", "vraag", "aanbod", "gelijk"]
+  },
+  {
+    id: "eco-027",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Transparante markt",
+    answer: "Een markt waarin je de aangeboden producten en prijzen goed met elkaar kunt vergelijken.",
+    keywords: ["markt", "producten", "prijzen", "vergelijken"]
+  },
+  {
+    id: "eco-028",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Fusie",
+    answer: "Twee bedrijven vormen samen één nieuw bedrijf.",
+    keywords: ["twee bedrijven", "samen", "nieuw bedrijf"]
+  },
+  {
+    id: "eco-029",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Heterogene goederen",
+    answer: "Producten waarbij het voor een klant verschil maakt wie het levert of van welk merk het is.",
+    keywords: ["producten", "verschil", "merk", "levert"]
+  },
+  {
+    id: "eco-030",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Homogene goederen",
+    answer: "Producten die voor klanten niet van elkaar verschillen.",
+    keywords: ["producten", "klanten", "niet verschillen"]
+  },
+  {
+    id: "eco-031",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Kartel",
+    answer: "Verboden afspraken tussen bedrijven om hun onderlinge concurrentie te beperken.",
+    keywords: ["afspraken", "bedrijven", "concurrentie", "beperken"]
+  },
+  {
+    id: "eco-032",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Marktaandeel",
+    answer: "De afzet (of omzet) van een bedrijf in procenten van de totale afzet (of omzet) op de markt.",
+    keywords: ["afzet", "omzet", "procenten", "totale"]
+  },
+  {
+    id: "eco-033",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Monopolie",
+    answer: "Marktvorm met maar één aanbieder.",
+    keywords: ["marktvorm", "één aanbieder"]
+  },
+  {
+    id: "eco-034",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Monopolistische concurrentie",
+    answer: "Marktvorm met veel aanbieders van heterogene goederen.",
+    keywords: ["marktvorm", "veel aanbieders", "heterogene goederen"]
+  },
+  {
+    id: "eco-035",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Oligopolie",
+    answer: "Marktvorm met een klein aantal aanbieders. Ze kunnen homogene of heterogene goederen aanbieden.",
+    keywords: ["marktvorm", "klein aantal", "aanbieders", "goederen"]
+  },
+  {
+    id: "eco-036",
+    chapterId: "eco-h9",
+    type: "begrip",
+    prompt: "Volkomen concurrentie",
+    answer: "Marktvorm met veel aanbieders van homogene goederen.",
+    keywords: ["marktvorm", "veel aanbieders", "homogene goederen"]
   }
 ],
     years: [],
