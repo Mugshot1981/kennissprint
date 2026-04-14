@@ -1027,7 +1027,7 @@ terms: [
     chapterId: "eco-h6",
     type: "begrip",
     prompt: "Aftrekposten",
-    answer: "Bepaalde kosten die je op je inkomen in mindering mag brengen, zodat je minder belasting hoeft te betalen. Bijvoorbeeld de hypotheekrente."
+    answer: "Bepaalde kosten die je op je inkomen in mindering mag brengen, zodat je minder belasting hoeft te betalen. Bijvoorbeeld de hypotheekrente.",
     keywords: ["kosten", "inkomen", "minder belasting"]
   },
 
