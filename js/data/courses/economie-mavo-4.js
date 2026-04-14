@@ -10,53 +10,48 @@ export const economieMavo4Course = {
   grade: "4",
   title: "Economie 4 mavo",
 
-   chapters: [
-    {
-      id: "eco-h1",
-      subjectId: "economie",
-      title: "Hoe welvarend ben jij?"
-    },
-    {
-      id: "eco-h2",
-      subjectId: "economie",
-      title: "Wat voor consument ben jij?"
-    },
-    {
-      id: "eco-h3",
-      subjectId: "economie",
-      title: "De bank en jouw geld"
-    },
-    {
-      id: "eco-h4",
-      subjectId: "economie",
-      title: "Kies je voor zekerheid?"
-    },
-    {
-      id: "eco-h5",
-      subjectId: "economie",
-      title: "Is er werk voor jou?"
-    },
-    {
-      id: "eco-h6",
-      subjectId: "economie",
-      title: "Productie en markt"
-    },
-    {
-      id: "eco-h7",
-      subjectId: "economie",
-      title: "Wie heeft het voor het zeggen?"
-    },
-    {
-      id: "eco-h8",
-      subjectId: "economie",
-      title: "Over de grens"
-    },
-       {
-      id: "eco-h9",
-      subjectId: "economie",
-      title: "Ben jij ondernemend?"
-    }
-  ],
+ chapters: [
+  {
+    id: "eco-h1",
+    subjectId: "economie",
+    title: "Inkomen en welvaart"
+  },
+  {
+    id: "eco-h2",
+    subjectId: "economie",
+    title: "Geld genoeg?"
+  },
+  {
+    id: "eco-h3",
+    subjectId: "economie",
+    title: "Ben jij ondernemend?"
+  },
+  {
+    id: "eco-h4",
+    subjectId: "economie",
+    title: "Werk aan de winkel!"
+  },
+  {
+    id: "eco-h5",
+    subjectId: "economie",
+    title: "Hoe werkt de overheid?"
+  },
+  {
+    id: "eco-h6",
+    subjectId: "economie",
+    title: "Iedereen betaalt belasting"
+  },
+  {
+    id: "eco-h7",
+    subjectId: "economie",
+    title: "Nederland en het buitenland"
+  },
+  {
+    id: "eco-h8",
+    subjectId: "economie",
+    title: "Ontwikkelingslanden"
+  }
+],
 
  
   datasets: {
@@ -615,222 +610,225 @@ terms: [
     keywords: ["veel aanbieders", "homogene goederen", "volledige concurrentie"]
   },
 
-    {
+
+
+  {
     id: "eco-070",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Aflossen",
-    answer: "Het terugbetalen van een lening in delen of in één keer.",
-    keywords: ["terugbetalen", "lening terugbetalen", "in delen", "in één keer"]
+    prompt: "Algemene wet gelijke behandeling",
+    answer: "Wet die het verbiedt om onderscheid te maken op basis van leeftijd, gender, afkomst, religie en seksuele geaardheid.",
+    keywords: ["onderscheid", "leeftijd", "gender"]
   },
   {
     id: "eco-071",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Annuïteit",
-    answer: "Een vast bedrag per periode voor rente en aflossing samen.",
-    keywords: ["vast bedrag", "per periode", "rente en aflossing", "zelfde bedrag"]
+    prompt: "Arbeidsmotieven",
+    answer: "Redenen om te willen werken.",
+    keywords: ["redenen", "werken"]
   },
   {
     id: "eco-072",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Debetkaart",
-    answer: "Betaalpas waarbij het geld direct van je betaalrekening wordt afgeschreven.",
-    keywords: ["betaalpas", "direct afgeschreven", "betaalrekening", "meteen van rekening"]
+    prompt: "Cao",
+    answer: "Collectieve arbeidsovereenkomst. Afspraken per bedrijfstak over de arbeidsvoorwaarden.",
+    keywords: ["collectieve arbeidsovereenkomst", "afspraken", "arbeidsvoorwaarden"]
   },
   {
     id: "eco-073",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Hypotheek",
-    answer: "Een lening voor de aankoop van een huis, waarbij het huis onderpand is.",
-    keywords: ["lening voor huis", "woning", "onderpand", "huis als onderpand"]
+    prompt: "Minimumloon",
+    answer: "Het loon dat je vanaf 21 jaar minstens moet verdienen in een voltijdbaan.",
+    keywords: ["loon", "21 jaar", "voltijdbaan"]
   },
   {
     id: "eco-074",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Internetbankieren",
-    answer: "Bankzaken regelen via internet.",
-    keywords: ["bankzaken", "via internet", "online bankieren"]
+    prompt: "Bv",
+    answer: "Besloten vennootschap. Onderneming met één of meer eigenaren die aandeelhouder zijn. De aandelen worden niet vrij verhandeld.",
+    keywords: ["besloten vennootschap", "aandeelhouder", "niet vrij verhandeld"]
   },
   {
     id: "eco-075",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Kredietwaardigheid",
-    answer: "De mate waarin iemand in staat is een lening terug te betalen.",
-    keywords: ["lening terugbetalen", "kunnen terugbetalen", "betrouwbaarheid", "financiële betrouwbaarheid"]
+    prompt: "Dividend",
+    answer: "De winstuitkering van een bv of nv aan de aandeelhouders.",
+    keywords: ["winstuitkering", "aandeelhouders"]
   },
   {
     id: "eco-076",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Looptijd",
-    answer: "De afgesproken periode waarbinnen een lening moet worden terugbetaald.",
-    keywords: ["periode", "terugbetaald", "duur van lening", "afgesproken tijd"]
+    prompt: "Eenmanszaak",
+    answer: "Onderneming met één eigenaar.",
+    keywords: ["één eigenaar"]
   },
   {
     id: "eco-077",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Maandlasten",
-    answer: "Het bedrag dat je per maand betaalt voor rente en aflossing.",
-    keywords: ["per maand", "rente en aflossing", "maandelijks betalen"]
+    prompt: "Flexibele baan",
+    answer: "Je hebt alleen werk wanneer een bedrijf je nodig heeft.",
+    keywords: ["alleen werk", "bedrijf", "nodig heeft"]
   },
   {
     id: "eco-078",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Mobiel bankieren",
-    answer: "Bankzaken regelen met een app op je telefoon of tablet.",
-    keywords: ["bankzaken", "app", "telefoon", "tablet"]
+    prompt: "Nv",
+    answer: "Naamloze vennootschap. Onderneming met meerdere eigenaren die aandeelhouder zijn. De aandelen worden verhandeld op de effectenbeurs.",
+    keywords: ["naamloze vennootschap", "aandeelhouder", "effectenbeurs"]
   },
   {
     id: "eco-079",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Onderpand",
-    answer: "Een bezit dat dient als zekerheid voor een lening.",
-    keywords: ["zekerheid", "bezit", "zekerheid voor lening"]
+    prompt: "Stichting",
+    answer: "Instelling die opgericht is om een maatschappelijk of ideëel doel te realiseren en die niet op winst gericht is.",
+    keywords: ["maatschappelijk doel", "ideëel doel", "niet op winst"]
   },
   {
     id: "eco-080",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Pinpas",
-    answer: "Een betaalpas waarmee je elektronisch kunt betalen en geld kunt opnemen.",
-    keywords: ["betaalpas", "elektronisch betalen", "geld opnemen"]
+    prompt: "Vaste baan",
+    answer: "Een arbeidsovereenkomst voor onbepaalde tijd, dus zonder einddatum.",
+    keywords: ["arbeidsovereenkomst", "onbepaalde tijd", "zonder einddatum"]
   },
   {
     id: "eco-081",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Rood staan",
-    answer: "Meer geld uitgeven dan er op je betaalrekening staat.",
-    keywords: ["meer uitgeven", "te weinig saldo", "negatief saldo", "betaalrekening"]
+    prompt: "Vof",
+    answer: "Vennootschap onder firma. Een onderneming met meerdere eigenaren die samen de leiding hebben.",
+    keywords: ["vennootschap onder firma", "meerdere eigenaren", "leiding"]
   },
   {
     id: "eco-082",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Schuld",
-    answer: "Een verplichting om geld terug te betalen.",
-    keywords: ["geld terugbetalen", "verplichting", "te betalen bedrag"]
+    prompt: "Zelfstandige",
+    answer: "Iemand die met een eigen bedrijf zijn inkomen verdient.",
+    keywords: ["eigen bedrijf", "inkomen"]
   },
   {
     id: "eco-083",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "BKR",
-    answer: "Bureau Krediet Registratie. Deze organisatie registreert leningen en betalingsachterstanden.",
-    keywords: ["bureau krediet registratie", "leningen", "betalingsachterstanden", "registratie"]
+    prompt: "Zzp’er",
+    answer: "Zelfstandige zonder personeel.",
+    keywords: ["zelfstandige", "zonder personeel"]
   },
   {
     id: "eco-084",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Consumptief krediet",
-    answer: "Een lening voor de aankoop van consumptiegoederen.",
-    keywords: ["lening", "consumptiegoederen", "aankoop", "kopen op krediet"]
+    prompt: "Arbeidsmarkt",
+    answer: "Het geheel van vraag naar arbeid en aanbod van arbeid.",
+    keywords: ["vraag naar arbeid", "aanbod van arbeid"]
   },
   {
     id: "eco-085",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Creditcard",
-    answer: "Kaart waarmee je kunt betalen, terwijl het bedrag pas later van je rekening wordt afgeschreven.",
-    keywords: ["later afgeschreven", "kaart", "betalen", "uitgestelde betaling"]
+    prompt: "Arbeidsparticipatie",
+    answer: "Arbeidsdeelname. Het percentage van de bevolking dat werkt of wil werken.",
+    keywords: ["arbeidsdeelname", "percentage", "werkt of wil werken"]
   },
   {
     id: "eco-086",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Doorlopend krediet",
-    answer: "Lening waarbij je tot een bepaald maximum geld kunt opnemen en opnieuw kunt lenen.",
-    keywords: ["tot maximum", "opnieuw lenen", "geld opnemen", "flexibele lening"]
+    prompt: "Arbeidsverdeling",
+    answer: "Personen of bedrijven doen werk waarin zij gespecialiseerd zijn.",
+    keywords: ["personen", "bedrijven", "gespecialiseerd"]
   },
   {
     id: "eco-087",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Huurkoop",
-    answer: "Koop op afbetaling waarbij het product pas jouw eigendom wordt nadat alles is betaald.",
-    keywords: ["koop op afbetaling", "pas eigendom na betalen", "termijnen", "afbetaling"]
+    prompt: "Krappe arbeidsmarkt",
+    answer: "De vraag naar arbeid is groter dan het aanbod.",
+    keywords: ["vraag naar arbeid", "groter", "aanbod"]
   },
   {
     id: "eco-088",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Koop op afbetaling",
-    answer: "Een product kopen en het in termijnen betalen.",
-    keywords: ["in termijnen betalen", "gespreid betalen", "later betalen"]
+    prompt: "Loon",
+    answer: "De prijs voor arbeid.",
+    keywords: ["prijs", "arbeid"]
   },
   {
     id: "eco-089",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Lenen",
-    answer: "Geld gebruiken van iemand anders, dat je later moet terugbetalen.",
-    keywords: ["geld van iemand anders", "later terugbetalen", "geld gebruiken"]
+    prompt: "Productiesectoren",
+    answer: "Indeling van productie en arbeid in primaire, secundaire, tertiaire en quartaire sector.",
+    keywords: ["primaire", "secundaire", "tertiaire"]
   },
   {
     id: "eco-090",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Persoonlijke lening",
-    answer: "Lening met een vast leenbedrag, vaste looptijd en vaste rente.",
-    keywords: ["vast leenbedrag", "vaste looptijd", "vaste rente"]
+    prompt: "Werkloosheid",
+    answer: "Het aanbod van arbeid is groter dan de vraag.",
+    keywords: ["aanbod van arbeid", "groter", "vraag"]
   },
   {
     id: "eco-091",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Salariskrediet",
-    answer: "Vorm van rood staan op je betaalrekening, gekoppeld aan je inkomen.",
-    keywords: ["rood staan", "betaalrekening", "gekoppeld aan inkomen", "salaris"]
+    prompt: "Werkgelegenheid",
+    answer: "Alle banen die er zijn.",
+    keywords: ["alle banen"]
   },
   {
     id: "eco-092",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Betalen",
-    answer: "Geld geven in ruil voor een product of dienst.",
-    keywords: ["geld geven", "ruil voor product", "ruil voor dienst", "afrekenen"]
+    prompt: "Conjuncturele werkloosheid",
+    answer: "Werkloosheid die het gevolg is van minder vraag naar goederen en diensten door afnemende bestedingen.",
+    keywords: ["minder vraag", "goederen en diensten", "afnemende bestedingen"]
   },
   {
     id: "eco-093",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Betalingsachterstand",
-    answer: "Een rekening of lening niet op tijd betalen.",
-    keywords: ["niet op tijd betalen", "achterstand", "rekening te laat", "lening te laat"]
+    prompt: "Frictiewerkloosheid",
+    answer: "Kortdurende werkloosheid omdat er tijd nodig is om een nieuwe baan te vinden.",
+    keywords: ["kortdurende werkloosheid", "tijd nodig", "nieuwe baan"]
   },
   {
     id: "eco-094",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Betalingsverkeer",
-    answer: "Alles wat te maken heeft met het overmaken en ontvangen van geld.",
-    keywords: ["overmaken van geld", "ontvangen van geld", "geldverkeer", "betalingen"]
+    prompt: "Regionale werkloosheid",
+    answer: "Werkloosheid die in bepaalde gebieden hoger is dan gemiddeld in het land.",
+    keywords: ["bepaalde gebieden", "hoger", "gemiddeld"]
   },
   {
     id: "eco-095",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Incasso",
-    answer: "Een bedrijf schrijft met toestemming geld van je rekening af.",
-    keywords: ["met toestemming afschrijven", "geld van rekening", "automatisch afschrijven", "rekening afschrijven"]
+    prompt: "Seizoenwerkloosheid",
+    answer: "Werkloosheid doordat werk alleen in een deel van het jaar gedaan kan worden.",
+    keywords: ["deel van het jaar", "werkloosheid", "werk"]
   },
   {
     id: "eco-096",
     chapterId: "eco-h4",
     type: "begrip",
-    prompt: "Overschrijving",
-    answer: "Geld overmaken van de ene rekening naar de andere.",
-    keywords: ["geld overmaken", "van ene rekening", "naar andere rekening", "overboeken"]
+    prompt: "Structurele werkloosheid",
+    answer: "Werkloosheid als gevolg van problemen aan de aanbodkant van de economie.",
+    keywords: ["problemen", "aanbodkant", "economie"]
   },
+
   {
     id: "eco-097",
     chapterId: "eco-h5",
@@ -1368,191 +1366,8 @@ terms: [
     prompt: "Fairtrade",
     answer: "Een organisatie die boeren in ontwikkelingslanden steunt met een gegarandeerde, betere prijs voor hun producten.",
     keywords: ["eerlijke prijs", "boeren", "ontwikkelingslanden", "gegarandeerde prijs"]
-  },
-    {
-    id: "eco-014",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Investeren",
-    answer: "Bedrijven besteden geld aan productiemiddelen, zoals kapitaalgoederen.",
-    keywords: ["geld", "productiemiddelen", "kapitaalgoederen"]
-  },
-  {
-    id: "eco-015",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Kostprijs per product",
-    answer: "De gemiddelde kosten voor het maken van één product.",
-    keywords: ["gemiddelde kosten", "maken", "product"]
-  },
-  {
-    id: "eco-016",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Productiefactoren",
-    answer: "Alle middelen die je nodig hebt om te produceren: natuur, arbeid, kapitaal en ondernemerschap.",
-    keywords: ["natuur", "arbeid", "kapitaal", "ondernemerschap"]
-  },
-  {
-    id: "eco-017",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Toegevoegde waarde",
-    answer: "De extra waarde die ontstaat doordat een bedrijf een product bewerkt.",
-    keywords: ["extra waarde", "bedrijf", "bewerkt"]
-  },
-  {
-    id: "eco-018",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Variabele kosten",
-    answer: "Kosten die veranderen als je meer of minder gaat produceren. Bijvoorbeeld de kosten van grondstoffen.",
-    keywords: ["veranderen", "produceren", "grondstoffen"]
-  },
-  {
-    id: "eco-019",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Vaste kosten",
-    answer: "Kosten die niet meteen veranderen als je meer of minder gaat produceren. Bijvoorbeeld de huur van je gebouw.",
-    keywords: ["niet veranderen", "produceren", "huur"]
-  },
-  {
-    id: "eco-020",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Arbeidsproductiviteit",
-    answer: "De productie per persoon in een bepaalde tijd.",
-    keywords: ["productie", "persoon", "tijd"]
-  },
-  {
-    id: "eco-021",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Brutowinst",
-    answer: "Wat je overhoudt van de omzet nadat je de inkoopwaarde ervan betaald hebt.",
-    keywords: ["overhoudt", "omzet", "inkoopwaarde"]
-  },
-  {
-    id: "eco-022",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Maatschappelijk verantwoord ondernemen (mvo)",
-    answer: "Bedrijven houden bij hun productie zo veel mogelijk rekening met de gevolgen voor mens en milieu.",
-    keywords: ["productie", "gevolgen", "mens", "milieu"]
-  },
-  {
-    id: "eco-023",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Omzet",
-    answer: "Verkoopopbrengst. Het totaalbedrag dat een bedrijf ontvangt door de verkoop van producten.",
-    keywords: ["verkoopopbrengst", "totaalbedrag", "verkoop"]
-  },
-  {
-    id: "eco-024",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Productiecapaciteit",
-    answer: "De maximale hoeveelheid die een bedrijf kan produceren.",
-    keywords: ["maximale hoeveelheid", "bedrijf", "produceren"]
-  },
-  {
-    id: "eco-025",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Evenwichtshoeveelheid",
-    answer: "Het aantal producten dat gevraagd en aangeboden wordt bij de evenwichtsprijs.",
-    keywords: ["aantal producten", "gevraagd", "aangeboden", "evenwichtsprijs"]
-  },
-  {
-    id: "eco-026",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Evenwichtsprijs",
-    answer: "De prijs waarbij vraag en aanbod aan elkaar gelijk zijn.",
-    keywords: ["prijs", "vraag", "aanbod", "gelijk"]
-  },
-  {
-    id: "eco-027",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Transparante markt",
-    answer: "Een markt waarin je de aangeboden producten en prijzen goed met elkaar kunt vergelijken.",
-    keywords: ["markt", "producten", "prijzen", "vergelijken"]
-  },
-  {
-    id: "eco-028",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Fusie",
-    answer: "Twee bedrijven vormen samen één nieuw bedrijf.",
-    keywords: ["twee bedrijven", "samen", "nieuw bedrijf"]
-  },
-  {
-    id: "eco-029",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Heterogene goederen",
-    answer: "Producten waarbij het voor een klant verschil maakt wie het levert of van welk merk het is.",
-    keywords: ["producten", "verschil", "merk", "levert"]
-  },
-  {
-    id: "eco-030",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Homogene goederen",
-    answer: "Producten die voor klanten niet van elkaar verschillen.",
-    keywords: ["producten", "klanten", "niet verschillen"]
-  },
-  {
-    id: "eco-031",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Kartel",
-    answer: "Verboden afspraken tussen bedrijven om hun onderlinge concurrentie te beperken.",
-    keywords: ["afspraken", "bedrijven", "concurrentie", "beperken"]
-  },
-  {
-    id: "eco-032",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Marktaandeel",
-    answer: "De afzet (of omzet) van een bedrijf in procenten van de totale afzet (of omzet) op de markt.",
-    keywords: ["afzet", "omzet", "procenten", "totale"]
-  },
-  {
-    id: "eco-033",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Monopolie",
-    answer: "Marktvorm met maar één aanbieder.",
-    keywords: ["marktvorm", "één aanbieder"]
-  },
-  {
-    id: "eco-034",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Monopolistische concurrentie",
-    answer: "Marktvorm met veel aanbieders van heterogene goederen.",
-    keywords: ["marktvorm", "veel aanbieders", "heterogene goederen"]
-  },
-  {
-    id: "eco-035",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Oligopolie",
-    answer: "Marktvorm met een klein aantal aanbieders. Ze kunnen homogene of heterogene goederen aanbieden.",
-    keywords: ["marktvorm", "klein aantal", "aanbieders", "goederen"]
-  },
-  {
-    id: "eco-036",
-    chapterId: "eco-h9",
-    type: "begrip",
-    prompt: "Volkomen concurrentie",
-    answer: "Marktvorm met veel aanbieders van homogene goederen.",
-    keywords: ["marktvorm", "veel aanbieders", "homogene goederen"]
   }
+  
 ],
     years: [],
     persons: []
