@@ -24,8 +24,7 @@ export const engelsMavo4Course = {
     { id: "en-h16", subjectId: "engels", title: "Equal rights" },
     { id: "en-h17", subjectId: "engels", title: "False friends" },
     { id: "en-h18", subjectId: "engels", title: "Signal words" },
-    { id: "en-h19", subjectId: "engels", title: "Frequently used exam words" },
-    { id: "en-h20", subjectId: "engels", title: "Language functions" }
+    { id: "en-h19", subjectId: "engels", title: "Frequently used exam words" }
   ],
 
   datasets: {
@@ -6255,6 +6254,2048 @@ export const engelsMavo4Course = {
   answer: "wet",
   keywords: ["wet"]
 },
+{
+  id: "en15-020",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "lawyer",
+  answer: "advocaat",
+  keywords: ["advocaat"]
+},
+{
+  id: "en15-021",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "limit",
+  answer: "limiet, grens",
+  keywords: ["limiet", "grens"]
+},
+{
+  id: "en15-022",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to obtain",
+  answer: "(ver)krijgen",
+  keywords: ["krijgen", "verkrijgen"]
+},
+{
+  id: "en15-023",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "offence",
+  answer: "overtreding, misdrijf",
+  keywords: ["overtreding", "misdrijf"]
+},
+{
+  id: "en15-024",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "penalty",
+  answer: "straf",
+  keywords: ["straf"]
+},
+{
+  id: "en15-025",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "pickpocket",
+  answer: "zakkenroller",
+  keywords: ["zakkenroller"]
+},
+{
+  id: "en15-026",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "prosecutor",
+  answer: "officier van justitie",
+  keywords: ["officier van justitie"]
+},
+{
+  id: "en15-027",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "residential",
+  answer: "woon-",
+  keywords: ["woon"]
+},
+{
+  id: "en15-028",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "revenge",
+  answer: "wraak",
+  keywords: ["wraak"]
+},
+{
+  id: "en15-029",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "riot",
+  answer: "rel",
+  keywords: ["rel"]
+},
+{
+  id: "en15-030",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "robbery",
+  answer: "overval",
+  keywords: ["overval"]
+},
+{
+  id: "en15-031",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "secure",
+  answer: "veilig",
+  keywords: ["veilig"]
+},
+{
+  id: "en15-032",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "sentence",
+  answer: "straf, vonnis",
+  keywords: ["straf", "vonnis"]
+},
+{
+  id: "en15-033",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to sue",
+  answer: "aanklagen",
+  keywords: ["aanklagen"]
+},
+{
+  id: "en15-034",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "testimony",
+  answer: "getuigenverklaring",
+  keywords: ["getuigenverklaring"]
+},
+{
+  id: "en15-035",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "theft",
+  answer: "diefstal",
+  keywords: ["diefstal"]
+},
+{
+  id: "en15-036",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "thoroughly",
+  answer: "grondig",
+  keywords: ["grondig"]
+},
+{
+  id: "en15-037",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "threat",
+  answer: "bedreiging",
+  keywords: ["bedreiging"]
+},
+{
+  id: "en15-038",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "urban",
+  answer: "stedelijk",
+  keywords: ["stedelijk"]
+},
+{
+  id: "en15-039",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "valuable",
+  answer: "waardevol",
+  keywords: ["waardevol"]
+},
+{
+  id: "en15-040",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "verdict",
+  answer: "uitspraak",
+  keywords: ["uitspraak"]
+},
+{
+  id: "en15-041",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "security",
+  answer: "beveiliging",
+  keywords: ["beveiliging"]
+},
+{
+  id: "en15-042",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to guard",
+  answer: "bewaken",
+  keywords: ["bewaken"]
+},
+{
+  id: "en15-043",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "witness",
+  answer: "getuige",
+  keywords: ["getuige"]
+},
+{
+  id: "en15-044",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "prison",
+  answer: "gevangenis",
+  keywords: ["gevangenis"]
+},
+{
+  id: "en15-045",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "violence",
+  answer: "geweld",
+  keywords: ["geweld"]
+},
+{
+  id: "en15-046",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to commit a crime",
+  answer: "een misdaad plegen",
+  keywords: ["misdaad plegen"]
+},
+{
+  id: "en15-047",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to report",
+  answer: "melden",
+  keywords: ["melden"]
+},
+{
+  id: "en15-048",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "innocent",
+  answer: "onschuldig",
+  keywords: ["onschuldig"]
+},
+{
+  id: "en15-049",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "judge",
+  answer: "rechter",
+  keywords: ["rechter"]
+},
+{
+  id: "en15-050",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "trial",
+  answer: "rechtszaak",
+  keywords: ["rechtszaak"]
+},
+{
+  id: "en15-051",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "victim",
+  answer: "slachtoffer",
+  keywords: ["slachtoffer"]
+},
+{
+  id: "en15-052",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "punishment",
+  answer: "straf",
+  keywords: ["straf"]
+},
+{
+  id: "en15-053",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "suspect",
+  answer: "verdachte",
+  keywords: ["verdachte"]
+},
+{
+  id: "en15-054",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to defend",
+  answer: "verdedigen",
+  keywords: ["verdedigen"]
+},
+{
+  id: "en15-055",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "warning",
+  answer: "waarschuwing",
+  keywords: ["waarschuwing"]
+},
+{
+  id: "en16-001",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "abuse",
+  answer: "misbruik",
+  keywords: ["misbruik"]
+},
+{
+  id: "en16-002",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "awareness",
+  answer: "bewustzijn",
+  keywords: ["bewustzijn"]
+},
+{
+  id: "en16-003",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "balanced",
+  answer: "evenwichtig, afgewogen",
+  keywords: ["evenwichtig", "afgewogen"]
+},
+{
+  id: "en16-004",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "to ban",
+  answer: "verbieden",
+  keywords: ["verbieden"]
+},
+{
+  id: "en16-005",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "bill",
+  answer: "wetsvoorstel",
+  keywords: ["wetsvoorstel"]
+},
+{
+  id: "en16-006",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "citizen",
+  answer: "burger",
+  keywords: ["burger"]
+},
+{
+  id: "en16-007",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "civil",
+  answer: "burger-, civiel",
+  keywords: ["burger", "civiel"]
+},
+{
+  id: "en16-008",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "civilisation",
+  answer: "beschaving",
+  keywords: ["beschaving"]
+},
+{
+  id: "en16-009",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "compulsory",
+  answer: "verplicht",
+  keywords: ["verplicht"]
+},
+{
+  id: "en16-010",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "conscience",
+  answer: "geweten",
+  keywords: ["geweten"]
+},
+{
+  id: "en16-011",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "to consent",
+  answer: "instemmen, toestemmen",
+  keywords: ["instemmen", "toestemmen"]
+},
+{
+  id: "en16-012",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "dignity",
+  answer: "waardigheid",
+  keywords: ["waardigheid"]
+},
+{
+  id: "en16-013",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "to diminish",
+  answer: "verminderen",
+  keywords: ["verminderen"]
+},
+{
+  id: "en16-014",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "disability",
+  answer: "handicap",
+  keywords: ["handicap"]
+},
+{
+  id: "en16-015",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "duty",
+  answer: "plicht",
+  keywords: ["plicht"]
+},
+{
+  id: "en16-016",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "to empower",
+  answer: "sterker maken",
+  keywords: ["sterker maken"]
+},
+{
+  id: "en16-017",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "equality",
+  answer: "gelijkheid",
+  keywords: ["gelijkheid"]
+},
+{
+  id: "en16-018",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "to facilitate",
+  answer: "makkelijker maken",
+  keywords: ["makkelijker maken"]
+},
+{
+  id: "en16-019",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "free speech",
+  answer: "vrijheid van meningsuiting",
+  keywords: ["vrijheid van meningsuiting"]
+},
+{
+  id: "en16-020",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "gap",
+  answer: "kloof",
+  keywords: ["kloof"]
+},
+{
+  id: "en16-021",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "gender",
+  answer: "gender, geslacht",
+  keywords: ["gender", "geslacht"]
+},
+{
+  id: "en16-022",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "genuine",
+  answer: "oprecht",
+  keywords: ["oprecht"]
+},
+{
+  id: "en16-023",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "impartial",
+  answer: "onpartijdig",
+  keywords: ["onpartijdig"]
+},
+{
+  id: "en16-024",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "legislation",
+  answer: "wetgeving",
+  keywords: ["wetgeving"]
+},
+{
+  id: "en16-025",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "liberty",
+  answer: "vrijheid",
+  keywords: ["vrijheid"]
+},
+{
+  id: "en16-026",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "majority",
+  answer: "meerderheid",
+  keywords: ["meerderheid"]
+},
+{
+  id: "en16-027",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "minority",
+  answer: "minderheid",
+  keywords: ["minderheid"]
+},
+{
+  id: "en16-028",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "numerous",
+  answer: "talloos, veel",
+  keywords: ["talloos", "veel"]
+},
+{
+  id: "en16-029",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "oppression",
+  answer: "onderdrukking",
+  keywords: ["onderdrukking"]
+},
+{
+  id: "en16-030",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "policy",
+  answer: "beleid",
+  keywords: ["beleid"]
+},
+{
+  id: "en16-031",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "prejudice",
+  answer: "vooroordeel",
+  keywords: ["vooroordeel"]
+},
+{
+  id: "en16-032",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "progressive",
+  answer: "vooruitstrevend",
+  keywords: ["vooruitstrevend"]
+},
+{
+  id: "en16-033",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "prohibition",
+  answer: "verbod",
+  keywords: ["verbod"]
+},
+{
+  id: "en16-034",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "rarely",
+  answer: "zelden",
+  keywords: ["zelden"]
+},
+{
+  id: "en16-035",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "recognition",
+  answer: "erkenning",
+  keywords: ["erkenning"]
+},
+{
+  id: "en16-036",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "sexual harassment",
+  answer: "seksuele intimidatie",
+  keywords: ["seksuele intimidatie"]
+},
+{
+  id: "en16-037",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "to stand up to",
+  answer: "je verzetten tegen, staan voor",
+  keywords: ["verzetten tegen", "staan voor"]
+},
+{
+  id: "en16-038",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "to suppress",
+  answer: "onderdrukken",
+  keywords: ["onderdrukken"]
+},
+{
+  id: "en16-039",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "tolerance",
+  answer: "tolerantie, verdraagzaamheid",
+  keywords: ["tolerantie", "verdraagzaamheid"]
+},
+{
+  id: "en16-040",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "(trade) union",
+  answer: "vakbond",
+  keywords: ["vakbond"]
+},
+{
+  id: "en16-041",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "asylum seeker",
+  answer: "asielzoeker",
+  keywords: ["asielzoeker"]
+},
+{
+  id: "en16-042",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "to protest",
+  answer: "demonstreren",
+  keywords: ["demonstreren"]
+},
+{
+  id: "en16-043",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "fair",
+  answer: "eerlijk",
+  keywords: ["eerlijk"]
+},
+{
+  id: "en16-044",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "century",
+  answer: "eeuw",
+  keywords: ["eeuw"]
+},
+{
+  id: "en16-045",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "equal",
+  answer: "gelijk",
+  keywords: ["gelijk"]
+},
+{
+  id: "en16-046",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "individual",
+  answer: "individu",
+  keywords: ["individu"]
+},
+{
+  id: "en16-047",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "human rights",
+  answer: "mensenrechten",
+  keywords: ["mensenrechten"]
+},
+{
+  id: "en16-048",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "nationality",
+  answer: "nationaliteit",
+  keywords: ["nationaliteit"]
+},
+{
+  id: "en16-049",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "politician",
+  answer: "politicus",
+  keywords: ["politicus"]
+},
+{
+  id: "en16-050",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "government",
+  answer: "regering",
+  keywords: ["regering"]
+},
+{
+  id: "en16-051",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "society",
+  answer: "samenleving",
+  keywords: ["samenleving"]
+},
+{
+  id: "en16-052",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "to vote for",
+  answer: "stemmen op",
+  keywords: ["stemmen op"]
+},
+{
+  id: "en16-053",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "refugee",
+  answer: "vluchteling",
+  keywords: ["vluchteling"]
+},
+{
+  id: "en16-054",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "freedom",
+  answer: "vrijheid",
+  keywords: ["vrijheid"]
+},
+{
+  id: "en16-055",
+  chapterId: "en-h16",
+  type: "begrip",
+  prompt: "cruel",
+  answer: "wreed",
+  keywords: ["wreed"]
+},
+{
+  id: "en17-001",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "actual",
+  answer: "werkelijk",
+  keywords: ["werkelijk"]
+},
+{
+  id: "en17-002",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "current",
+  answer: "actueel",
+  keywords: ["actueel"]
+},
+{
+  id: "en17-003",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "eventually",
+  answer: "uiteindelijk",
+  keywords: ["uiteindelijk"]
+},
+{
+  id: "en17-004",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "possibly",
+  answer: "eventueel",
+  keywords: ["eventueel"]
+},
+{
+  id: "en17-005",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "fabric",
+  answer: "stof",
+  keywords: ["stof"]
+},
+{
+  id: "en17-006",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "factory",
+  answer: "fabriek",
+  keywords: ["fabriek"]
+},
+{
+  id: "en17-007",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "trap",
+  answer: "val",
+  keywords: ["val"]
+},
+{
+  id: "en17-008",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "stairs",
+  answer: "trap",
+  keywords: ["trap"]
+},
+{
+  id: "en17-009",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "damp",
+  answer: "vochtig",
+  keywords: ["vochtig"]
+},
+{
+  id: "en17-010",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "vapour",
+  answer: "damp",
+  keywords: ["damp"]
+},
+{
+  id: "en17-001",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "actual",
+  answer: "werkelijk",
+  keywords: ["werkelijk"]
+},
+{
+  id: "en17-002",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "current",
+  answer: "actueel",
+  keywords: ["actueel"]
+},
+{
+  id: "en17-003",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "eventually",
+  answer: "uiteindelijk",
+  keywords: ["uiteindelijk"]
+},
+{
+  id: "en17-004",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "possibly",
+  answer: "eventueel",
+  keywords: ["eventueel"]
+},
+{
+  id: "en17-005",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "fabric",
+  answer: "stof",
+  keywords: ["stof"]
+},
+{
+  id: "en17-006",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "factory",
+  answer: "fabriek",
+  keywords: ["fabriek"]
+},
+{
+  id: "en17-007",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "trap",
+  answer: "val",
+  keywords: ["val"]
+},
+{
+  id: "en17-008",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "stairs",
+  answer: "trap",
+  keywords: ["trap"]
+},
+{
+  id: "en17-009",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "damp",
+  answer: "vochtig",
+  keywords: ["vochtig"]
+},
+{
+  id: "en17-010",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "vapour",
+  answer: "damp",
+  keywords: ["damp"]
+},
+{
+  id: "en17-011",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "gang",
+  answer: "bende",
+  keywords: ["bende"]
+},
+{
+  id: "en17-012",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "hallway",
+  answer: "gang",
+  keywords: ["gang"]
+},
+{
+  id: "en17-013",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "to overcome",
+  answer: "overwinnen",
+  keywords: ["overwinnen"]
+},
+{
+  id: "en17-014",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "to happen to",
+  answer: "overkomen",
+  keywords: ["overkomen"]
+},
+{
+  id: "en17-015",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "billion",
+  answer: "miljard",
+  keywords: ["miljard"]
+},
+{
+  id: "en17-016",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "trillion",
+  answer: "biljoen",
+  keywords: ["biljoen"]
+},
+{
+  id: "en17-017",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "concurrent",
+  answer: "gelijktijdig",
+  keywords: ["gelijktijdig"]
+},
+{
+  id: "en17-018",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "competitor",
+  answer: "concurrent",
+  keywords: ["concurrent"]
+},
+{
+  id: "en17-019",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "brand",
+  answer: "merk",
+  keywords: ["merk"]
+},
+{
+  id: "en17-020",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "fire",
+  answer: "brand",
+  keywords: ["brand"]
+},
+{
+  id: "en17-021",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "hoe",
+  answer: "schoffel",
+  keywords: ["schoffel"]
+},
+{
+  id: "en17-022",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "how",
+  answer: "hoe",
+  keywords: ["hoe"]
+},
+{
+  id: "en17-023",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "dozen",
+  answer: "dozijn",
+  keywords: ["dozijn"]
+},
+{
+  id: "en17-024",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "boxes",
+  answer: "dozen",
+  keywords: ["dozen"]
+},
+{
+  id: "en17-025",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "gist",
+  answer: "kern",
+  keywords: ["kern", "essentie"]
+},
+{
+  id: "en17-026",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "yeast",
+  answer: "gist",
+  keywords: ["gist"]
+},
+{
+  id: "en17-027",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "helm",
+  answer: "roer",
+  keywords: ["roer"]
+},
+{
+  id: "en17-028",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "helmet",
+  answer: "helm",
+  keywords: ["helm"]
+},
+{
+  id: "en17-029",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "kale",
+  answer: "boerenkool",
+  keywords: ["boerenkool"]
+},
+{
+  id: "en17-030",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "bald",
+  answer: "kaal",
+  keywords: ["kaal"]
+},
+{
+  id: "en17-031",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "kin",
+  answer: "familie",
+  keywords: ["familie"]
+},
+{
+  id: "en17-032",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "chin",
+  answer: "kin",
+  keywords: ["kin"]
+},
+{
+  id: "en17-033",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "worst",
+  answer: "ergste",
+  keywords: ["ergste"]
+},
+{
+  id: "en17-034",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "sausage",
+  answer: "worst",
+  keywords: ["worst"]
+},
+{
+  id: "en17-035",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "hard",
+  answer: "moeilijk",
+  keywords: ["moeilijk"]
+},
+{
+  id: "en17-036",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "loud",
+  answer: "hard",
+  keywords: ["hard"]
+},
+{
+  id: "en17-037",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "mop",
+  answer: "zwabber",
+  keywords: ["zwabber"]
+},
+{
+  id: "en17-038",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "joke",
+  answer: "mop",
+  keywords: ["mop"]
+},
+{
+  id: "en17-039",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "stout",
+  answer: "stevig",
+  keywords: ["stevig"]
+},
+{
+  id: "en17-040",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "naughty",
+  answer: "stout",
+  keywords: ["stout"]
+},
+{
+  id: "en17-041",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "friet, patat",
+  answer: "chips",
+  keywords: ["chips"]
+},
+{
+  id: "en17-042",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "chips",
+  answer: "crisps",
+  keywords: ["crisps"]
+},
+{
+  id: "en17-043",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "map",
+  answer: "folder",
+  keywords: ["folder"]
+},
+{
+  id: "en17-044",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "folder, brochure",
+  answer: "brochure",
+  keywords: ["brochure"]
+},
+{
+  id: "en17-045",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "openbaar",
+  answer: "public",
+  keywords: ["public"]
+},
+{
+  id: "en17-046",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "publiek",
+  answer: "audience",
+  keywords: ["audience"]
+},
+{
+  id: "en17-047",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "podium",
+  answer: "stage",
+  keywords: ["stage"]
+},
+{
+  id: "en17-048",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "stage",
+  answer: "internship",
+  keywords: ["internship"]
+},
+{
+  id: "en17-049",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "blij",
+  answer: "glad",
+  keywords: ["glad"]
+},
+{
+  id: "en17-050",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "glad",
+  answer: "slippery",
+  keywords: ["slippery"]
+},
+{
+  id: "en17-051",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "slank, klein",
+  answer: "slim",
+  keywords: ["slim"]
+},
+{
+  id: "en17-052",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "slim",
+  answer: "clever",
+  keywords: ["clever"]
+},
+{
+  id: "en17-053",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "beheersbaar houden",
+  answer: "to control",
+  keywords: ["control"]
+},
+{
+  id: "en17-054",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "controleren",
+  answer: "check",
+  keywords: ["check"]
+},
+{
+  id: "en17-055",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "zeldzaam",
+  answer: "rare",
+  keywords: ["rare"]
+},
+{
+  id: "en17-056",
+  chapterId: "en-h17",
+  type: "begrip",
+  prompt: "raar",
+  answer: "weird",
+  keywords: ["weird"]
+},
+{
+  id: "en18-001",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "besides",
+  answer: "naast",
+  keywords: ["naast", "bovendien"]
+},
+{
+  id: "en18-002",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "furthermore",
+  answer: "bovendien",
+  keywords: ["bovendien"]
+},
+{
+  id: "en18-003",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "in addition",
+  answer: "daarnaast",
+  keywords: ["daarnaast"]
+},
+{
+  id: "en18-004",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "moreover",
+  answer: "bovendien",
+  keywords: ["bovendien"]
+},
+{
+  id: "en18-005",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "on top of that",
+  answer: "daarbovenop",
+  keywords: ["daarbovenop"]
+},
+{
+  id: "en18-006",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "what’s more",
+  answer: "bovendien",
+  keywords: ["bovendien", "sterker nog"]
+},
+{
+  id: "en18-007",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "equally",
+  answer: "even",
+  keywords: ["even", "gelijk"]
+},
+{
+  id: "en18-008",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "just as",
+  answer: "zoals",
+  keywords: ["zoals", "net als"]
+},
+{
+  id: "en18-009",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "likewise",
+  answer: "eveneens",
+  keywords: ["eveneens", "evenzo"]
+},
+{
+  id: "en18-010",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "not only ... but also",
+  answer: "niet alleen ... maar ook",
+  keywords: ["niet alleen", "maar ook"]
+},
+{
+  id: "en18-011",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "similarly",
+  answer: "evenzo",
+  keywords: ["evenzo", "net zo"]
+},
+{
+  id: "en18-012",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "in particular",
+  answer: "in het bijzonder",
+  keywords: ["in het bijzonder", "met name"]
+},
+{
+  id: "en18-013",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "particularly",
+  answer: "vooral",
+  keywords: ["vooral", "met name"]
+},
+{
+  id: "en18-014",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "such as",
+  answer: "zoals",
+  keywords: ["zoals"]
+},
+{
+  id: "en18-015",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "that is (i.e.)",
+  answer: "dat wil zeggen",
+  keywords: ["dat wil zeggen"]
+},
+{
+  id: "en18-016",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "as a result (of)",
+  answer: "als gevolg van",
+  keywords: ["als gevolg van"]
+},
+{
+  id: "en18-017",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "as long as",
+  answer: "zolang",
+  keywords: ["zolang", "mits"]
+},
+{
+  id: "en18-018",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "because of",
+  answer: "vanwege",
+  keywords: ["vanwege"]
+},
+{
+  id: "en18-019",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "consequently",
+  answer: "als gevolg daarvan",
+  keywords: ["als gevolg daarvan", "daardoor"]
+},
+{
+  id: "en18-020",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "due to",
+  answer: "vanwege",
+  keywords: ["vanwege"]
+},
+{
+  id: "en18-021",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "hence",
+  answer: "vandaar",
+  keywords: ["vandaar"]
+},
+{
+  id: "en18-022",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "owing to",
+  answer: "vanwege",
+  keywords: ["vanwege"]
+},
+{
+  id: "en18-023",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "therefore",
+  answer: "daarom",
+  keywords: ["daarom"]
+},
+{
+  id: "en18-024",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "although",
+  answer: "hoewel",
+  keywords: ["hoewel"]
+},
+{
+  id: "en18-025",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "despite",
+  answer: "ondanks",
+  keywords: ["ondanks"]
+},
+{
+  id: "en18-026",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "however",
+  answer: "echter",
+  keywords: ["echter"]
+},
+{
+  id: "en18-027",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "in spite of",
+  answer: "ondanks",
+  keywords: ["ondanks"]
+},
+{
+  id: "en18-028",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "instead (of)",
+  answer: "in plaats van",
+  keywords: ["in plaats van"]
+},
+{
+  id: "en18-029",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "nevertheless",
+  answer: "toch",
+  keywords: ["toch", "niettemin"]
+},
+{
+  id: "en18-030",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "on the contrary",
+  answer: "integendeel",
+  keywords: ["integendeel"]
+},
+{
+  id: "en18-031",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "yet",
+  answer: "maar",
+  keywords: ["maar"]
+},
+{
+  id: "en18-032",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "initially",
+  answer: "aanvankelijk",
+  keywords: ["aanvankelijk"]
+},
+{
+  id: "en18-033",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "meanwhile",
+  answer: "ondertussen",
+  keywords: ["ondertussen"]
+},
+{
+  id: "en18-034",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "next",
+  answer: "vervolgens",
+  keywords: ["vervolgens", "daarna"]
+},
+{
+  id: "en18-035",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "previously",
+  answer: "eerder",
+  keywords: ["eerder"]
+},
+{
+  id: "en18-036",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "prior to",
+  answer: "voorafgaand aan",
+  keywords: ["voorafgaand aan"]
+},
+{
+  id: "en18-037",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "all things considered",
+  answer: "alles in aanmerking genomen",
+  keywords: ["alles in aanmerking genomen"]
+},
+{
+  id: "en18-038",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "in a nutshell",
+  answer: "in een notendop",
+  keywords: ["in een notendop", "kortom"]
+},
+{
+  id: "en18-039",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "in short",
+  answer: "kortom",
+  keywords: ["kortom"]
+},
+{
+  id: "en18-040",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "like",
+  answer: "alsof",
+  keywords: ["alsof"]
+},
+{
+  id: "en18-041",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "on the one hand, on the other hand",
+  answer: "enerzijds, anderzijds",
+  keywords: ["enerzijds", "anderzijds"]
+},
+{
+  id: "en18-042",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "as ... as",
+  answer: "zo ... als",
+  keywords: ["zo als"]
+},
+{
+  id: "en18-043",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "as well as",
+  answer: "zowel ... als",
+  keywords: ["zowel als"]
+},
+{
+  id: "en18-044",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "both ... and",
+  answer: "zowel ... als",
+  keywords: ["zowel als"]
+},
+{
+  id: "en18-045",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "for example (e.g.)",
+  answer: "bijvoorbeeld",
+  keywords: ["bijvoorbeeld"]
+},
+{
+  id: "en18-046",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "for instance",
+  answer: "bijvoorbeeld",
+  keywords: ["bijvoorbeeld"]
+},
+{
+  id: "en18-047",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "that's why",
+  answer: "daarom",
+  keywords: ["daarom"]
+},
+{
+  id: "en18-048",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "because",
+  answer: "omdat",
+  keywords: ["omdat"]
+},
+{
+  id: "en18-049",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "since",
+  answer: "aangezien",
+  keywords: ["aangezien", "omdat"]
+},
+{
+  id: "en18-050",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "finally",
+  answer: "eindelijk",
+  keywords: ["eindelijk"]
+},
+{
+  id: "en18-051",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "until",
+  answer: "tot",
+  keywords: ["tot"]
+},
+{
+  id: "en18-052",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "before",
+  answer: "voordat",
+  keywords: ["voordat"]
+},
+{
+  id: "en18-053",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "in conclusion",
+  answer: "concluderend",
+  keywords: ["concluderend", "samengevat"]
+},
+{
+  id: "en18-054",
+  chapterId: "en-h18",
+  type: "begrip",
+  prompt: "in the end",
+  answer: "uiteindelijk",
+  keywords: ["uiteindelijk"]
+},
+{
+  id: "en19-001",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "according to",
+  answer: "volgens",
+  keywords: ["volgens"]
+},
+{
+  id: "en19-002",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to add",
+  answer: "toevoegen",
+  keywords: ["toevoegen"]
+},
+{
+  id: "en19-003",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "aim",
+  answer: "doel",
+  keywords: ["doel"]
+},
+{
+  id: "en19-004",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to analyse",
+  answer: "analyseren",
+  keywords: ["analyseren"]
+},
+{
+  id: "en19-005",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "as a whole",
+  answer: "als geheel",
+  keywords: ["als geheel"]
+},
+{
+  id: "en19-006",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "based on",
+  answer: "gebaseerd op",
+  keywords: ["gebaseerd op"]
+},
+{
+  id: "en19-007",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to become clear",
+  answer: "duidelijk worden",
+  keywords: ["duidelijk worden"]
+},
+{
+  id: "en19-008",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to be in line with",
+  answer: "in overeenstemming zijn met",
+  keywords: ["in overeenstemming zijn met", "aansluiten bij"]
+},
+{
+  id: "en19-009",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to characterise",
+  answer: "kenmerken",
+  keywords: ["kenmerken"]
+},
+{
+  id: "en19-010",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "claim",
+  answer: "beweren",
+  keywords: ["beweren"]
+},
+{
+  id: "en19-011",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to conclude",
+  answer: "concluderen",
+  keywords: ["concluderen"]
+},
+{
+  id: "en19-012",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to confirm",
+  answer: "bevestigen",
+  keywords: ["bevestigen"]
+},
+{
+  id: "en19-013",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to connect to",
+  answer: "aansluiten bij",
+  keywords: ["aansluiten bij"]
+},
+{
+  id: "en19-014",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to contradict",
+  answer: "tegenspreken",
+  keywords: ["tegenspreken"]
+},
+{
+  id: "en19-015",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to describe",
+  answer: "beschrijven",
+  keywords: ["beschrijven"]
+},
+{
+  id: "en19-016",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to emphasise",
+  answer: "benadrukken",
+  keywords: ["benadrukken"]
+},
+{
+  id: "en19-017",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "example",
+  answer: "voorbeeld",
+  keywords: ["voorbeeld"]
+},
+{
+  id: "en19-018",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "final",
+  answer: "laatste",
+  keywords: ["laatste"]
+},
+{
+  id: "en19-019",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to fit",
+  answer: "passen",
+  keywords: ["passen"]
+},
+{
+  id: "en19-020",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "following",
+  answer: "volgende",
+  keywords: ["volgende"]
+},
+{
+  id: "en19-021",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "function",
+  answer: "functie",
+  keywords: ["functie"]
+},
+{
+  id: "en19-022",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "goal",
+  answer: "doel",
+  keywords: ["doel"]
+},
+{
+  id: "en19-023",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to illustrate",
+  answer: "laten zien",
+  keywords: ["laten zien", "verduidelijken"]
+},
+{
+  id: "en19-024",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "in what way",
+  answer: "op welke manier",
+  keywords: ["op welke manier"]
+},
+{
+  id: "en19-025",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to introduce",
+  answer: "introduceren",
+  keywords: ["introduceren"]
+},
+{
+  id: "en19-026",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "later on",
+  answer: "later",
+  keywords: ["later"]
+},
+{
+  id: "en19-027",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to link",
+  answer: "verbinden",
+  keywords: ["verbinden"]
+},
+{
+  id: "en19-028",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "main",
+  answer: "belangrijkste",
+  keywords: ["belangrijkste"]
+},
+{
+  id: "en19-029",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to make clear",
+  answer: "duidelijk maken",
+  keywords: ["duidelijk maken"]
+},
+{
+  id: "en19-030",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to mention",
+  answer: "noemen",
+  keywords: ["noemen"]
+},
+{
+  id: "en19-031",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to mock",
+  answer: "bespotten",
+  keywords: ["bespotten"]
+},
+{
+  id: "en19-032",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "paragraph",
+  answer: "alinea",
+  keywords: ["alinea"]
+},
+{
+  id: "en19-033",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "point",
+  answer: "punt",
+  keywords: ["punt"]
+},
+{
+  id: "en19-034",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to point out",
+  answer: "wijzen op",
+  keywords: ["wijzen op"]
+},
+{
+  id: "en19-035",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "purpose",
+  answer: "doel",
+  keywords: ["doel"]
+},
+{
+  id: "en19-036",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to question",
+  answer: "ter discussie stellen",
+  keywords: ["ter discussie stellen", "in twijfel trekken"]
+},
+{
+  id: "en19-037",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to relate to",
+  answer: "zich verhouden tot",
+  keywords: ["zich verhouden tot", "betrekking hebben op"]
+},
+{
+  id: "en19-038",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "remark",
+  answer: "opmerking",
+  keywords: ["opmerking"]
+},
+{
+  id: "en19-039",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "sentence",
+  answer: "zin",
+  keywords: ["zin"]
+},
+{
+  id: "en19-040",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "statement",
+  answer: "uitspraak",
+  keywords: ["uitspraak"]
+},
+{
+  id: "en19-041",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to stress",
+  answer: "benadrukken",
+  keywords: ["benadrukken"]
+},
+{
+  id: "en19-042",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "(sub)title",
+  answer: "(onder)titel",
+  keywords: ["titel", "ondertitel"]
+},
+{
+  id: "en19-043",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to suggest",
+  answer: "suggereren",
+  keywords: ["suggereren"]
+},
+{
+  id: "en19-044",
+  chapterId: "en-h19",
+  type: "begrip",
+  prompt: "to summarise",
+  answer: "samenvatten",
+  keywords: ["samenvatten"]
+}
+
+
 
     ]
   },
