@@ -5734,7 +5734,527 @@ export const engelsMavo4Course = {
   prompt: "chemistry",
   answer: "scheikunde",
   keywords: ["scheikunde"]
-}
+},
+{
+  id: "en14-010",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "clearly",
+  answer: "duidelijk",
+  keywords: ["duidelijk"]
+},
+{
+  id: "en14-011",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to compare",
+  answer: "vergelijken",
+  keywords: ["vergelijken"]
+},
+{
+  id: "en14-012",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to contain",
+  answer: "bevatten",
+  keywords: ["bevatten"]
+},
+{
+  id: "en14-013",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "contemporary",
+  answer: "hedendaags",
+  keywords: ["hedendaags"]
+},
+{
+  id: "en14-014",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "depth",
+  answer: "diepte",
+  keywords: ["diepte"]
+},
+{
+  id: "en14-015",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to detect",
+  answer: "opsoren",
+  keywords: ["opsoren"]
+},
+{
+  id: "en14-016",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to dilute",
+  answer: "verdunnen",
+  keywords: ["verdunnen"]
+},
+{
+  id: "en14-017",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to discover",
+  answer: "ontdekken",
+  keywords: ["ontdekken"]
+},
+{
+  id: "en14-018",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "economical",
+  answer: "zuinig",
+  keywords: ["zuinig"]
+},
+{
+  id: "en14-019",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "equipment",
+  answer: "apparatuur",
+  keywords: ["apparatuur"]
+},
+{
+  id: "en14-020",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to expand",
+  answer: "uitbreiden",
+  keywords: ["uitbreiden"]
+},
+{
+  id: "en14-021",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "friction",
+  answer: "wrijving",
+  keywords: ["wrijving"]
+},
+{
+  id: "en14-022",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "gear",
+  answer: "uitrusting",
+  keywords: ["uitrusting"]
+},
+{
+  id: "en14-023",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to generate",
+  answer: "opwekken",
+  keywords: ["opwekken"]
+},
+{
+  id: "en14-024",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "geography",
+  answer: "aardrijkskunde",
+  keywords: ["aardrijkskunde"]
+},
+{
+  id: "en14-025",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "gravity",
+  answer: "zwaartekracht",
+  keywords: ["zwaartekracht"]
+},
+{
+  id: "en14-026",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "liquid",
+  answer: "vloeistof",
+  keywords: ["vloeistof"]
+},
+{
+  id: "en14-027",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "live wire",
+  answer: "stroomdraad",
+  keywords: ["stroomdraad"]
+},
+{
+  id: "en14-028",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "manually",
+  answer: "handmatig",
+  keywords: ["handmatig"]
+},
+{
+  id: "en14-029",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "measure",
+  answer: "maatregel",
+  keywords: ["maatregel"]
+},
+{
+  id: "en14-030",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to measure",
+  answer: "meten",
+  keywords: ["meten"]
+},
+{
+  id: "en14-031",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "multiple",
+  answer: "meerdere",
+  keywords: ["meerdere"]
+},
+{
+  id: "en14-032",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "nuclear energy",
+  answer: "kernenergie",
+  keywords: ["kernenergie"]
+},
+{
+  id: "en14-033",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "physicist",
+  answer: "natuurkundige",
+  keywords: ["natuurkundige"]
+},
+{
+  id: "en14-034",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "portable",
+  answer: "draagbaar",
+  keywords: ["draagbaar"]
+},
+{
+  id: "en14-035",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to predict",
+  answer: "voorspellen",
+  keywords: ["voorspellen"]
+},
+{
+  id: "en14-036",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "proof",
+  answer: "bewijs",
+  keywords: ["bewijs"]
+},
+{
+  id: "en14-037",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to prove",
+  answer: "bewijzen",
+  keywords: ["bewijzen"]
+},
+{
+  id: "en14-038",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "solar",
+  answer: "zonne-",
+  keywords: ["zonne"]
+},
+{
+  id: "en14-039",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "trial and error",
+  answer: "vallen en opstaan",
+  keywords: ["vallen en opstaan"]
+},
+{
+  id: "en14-040",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "wire",
+  answer: "draad",
+  keywords: ["draad"]
+},
+{
+  id: "en14-041",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "evidence",
+  answer: "bewijs",
+  keywords: ["bewijs"]
+},
+{
+  id: "en14-042",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "pressure",
+  answer: "druk",
+  keywords: ["druk"]
+},
+{
+  id: "en14-043",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "weight",
+  answer: "gewicht",
+  keywords: ["gewicht"]
+},
+{
+  id: "en14-044",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "height",
+  answer: "hoogte",
+  keywords: ["hoogte"]
+},
+{
+  id: "en14-045",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "knowledge",
+  answer: "kennis",
+  keywords: ["kennis"]
+},
+{
+  id: "en14-046",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "force",
+  answer: "kracht",
+  keywords: ["kracht"]
+},
+{
+  id: "en14-047",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "laboratory",
+  answer: "laboratorium",
+  keywords: ["laboratorium"]
+},
+{
+  id: "en14-048",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "engine",
+  answer: "motor",
+  keywords: ["motor"]
+},
+{
+  id: "en14-049",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "research",
+  answer: "onderzoek",
+  keywords: ["onderzoek"]
+},
+{
+  id: "en14-050",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to design",
+  answer: "ontwerpen",
+  keywords: ["ontwerpen"]
+},
+{
+  id: "en14-051",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to develop",
+  answer: "ontwikkelen",
+  keywords: ["ontwikkelen"]
+},
+{
+  id: "en14-052",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "nail",
+  answer: "spijker",
+  keywords: ["spijker"]
+},
+{
+  id: "en14-053",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "screw",
+  answer: "schroef",
+  keywords: ["schroef"]
+},
+{
+  id: "en14-054",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "invention",
+  answer: "uitvinding",
+  keywords: ["uitvinding"]
+},
+{
+  id: "en14-055",
+  chapterId: "en-h14",
+  type: "begrip",
+  prompt: "to explore",
+  answer: "verkennen",
+  keywords: ["verkennen"]
+},
+{
+  id: "en15-001",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "against",
+  answer: "tegen",
+  keywords: ["tegen"]
+},
+{
+  id: "en15-002",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "aggressive",
+  answer: "agressief",
+  keywords: ["agressief"]
+},
+{
+  id: "en15-003",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to allow",
+  answer: "toestaan",
+  keywords: ["toestaan"]
+},
+{
+  id: "en15-004",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "bail",
+  answer: "borgtocht",
+  keywords: ["borgtocht"]
+},
+{
+  id: "en15-005",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "breathalyser",
+  answer: "alcoholtester",
+  keywords: ["alcoholtester"]
+},
+{
+  id: "en15-006",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to be convicted of",
+  answer: "veroordeeld worden voor",
+  keywords: ["veroordeeld"]
+},
+{
+  id: "en15-007",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "burglary",
+  answer: "inbraak",
+  keywords: ["inbraak"]
+},
+{
+  id: "en15-008",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "caution",
+  answer: "waarschuwing",
+  keywords: ["waarschuwing"]
+},
+{
+  id: "en15-009",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "community service",
+  answer: "taakstraf",
+  keywords: ["taakstraf"]
+},
+{
+  id: "en15-010",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to confess",
+  answer: "bekennen",
+  keywords: ["bekennen"]
+},
+{
+  id: "en15-011",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to deceive",
+  answer: "bedriegen",
+  keywords: ["bedriegen"]
+},
+{
+  id: "en15-012",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to exceed",
+  answer: "overschrijden",
+  keywords: ["overschrijden"]
+},
+{
+  id: "en15-013",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "hazard",
+  answer: "gevaar",
+  keywords: ["gevaar"]
+},
+{
+  id: "en15-014",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "hostage",
+  answer: "gijzelaar",
+  keywords: ["gijzelaar"]
+},
+{
+  id: "en15-015",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to interrogate",
+  answer: "ondervragen, verhoren",
+  keywords: ["ondervragen", "verhoren"]
+},
+{
+  id: "en15-016",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "to investigate",
+  answer: "onderzoeken",
+  keywords: ["onderzoeken"]
+},
+{
+  id: "en15-017",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "justice",
+  answer: "gerechtigheid, rechtvaardigheid",
+  keywords: ["gerechtigheid", "rechtvaardigheid"]
+},
+{
+  id: "en15-018",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "juvenile",
+  answer: "minderjarig, jeugdig",
+  keywords: ["minderjarig", "jeugdig"]
+},
+{
+  id: "en15-019",
+  chapterId: "en-h15",
+  type: "begrip",
+  prompt: "law",
+  answer: "wet",
+  keywords: ["wet"]
+},
 
     ]
   },
