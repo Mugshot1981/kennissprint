@@ -8300,13 +8300,24 @@ export const engelsMavo4Course = {
     ]
   },
 
-  modes: [
+   modes: [
     {
-      id: "terms",
-      title: "Begrippen",
+      id: "term-to-answer",
+      label: "Engels → Nederlands",
       dataset: "terms",
+      questionLabel: "Engels",
+      sessionModeLabel: "Engels → Nederlands",
       questionField: "prompt",
       answerField: "answer"
+    },
+    {
+      id: "answer-to-term",
+      label: "Nederlands → Engels",
+      dataset: "terms",
+      questionLabel: "Engels",
+      sessionModeLabel: "Nederlands → Engels",
+      questionField: "answer",
+      answerField: "prompt"
     }
   ]
 };
