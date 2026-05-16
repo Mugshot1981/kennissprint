@@ -7,7 +7,8 @@ export const fransMavo5Course = {
   title: "Frans 5 mavo",
 
   chapters: [
-    { id: "fr5m-h3", subjectId: "frans", title: "Hoofdstuk 3" }
+    { id: "fr5m-h3", subjectId: "frans", title: "Hoofdstuk 3" },
+    { id: "fr5m-h5", subjectId: "frans", title: "Hoofdstuk 5" }
   ],
 
   datasets: {
