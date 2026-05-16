@@ -959,6 +959,590 @@ export const fransMavo5Course = {
   prompt: "Je peux essayer ce jean?",
   answer: "Mag ik deze spijkerbroek passen?",
   keywords: ["passen"]
+},
+      {
+  id: "fr5m-h5-001",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "la maison",
+  answer: "het huis",
+  keywords: ["huis"]
+},
+{
+  id: "fr5m-h5-002",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "le lit",
+  answer: "het bed",
+  keywords: ["bed"]
+},
+{
+  id: "fr5m-h5-003",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "la chambre",
+  answer: "de slaapkamer",
+  keywords: ["slaapkamer"]
+},
+{
+  id: "fr5m-h5-004",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "l’ordinateur",
+  answer: "de computer",
+  keywords: ["computer"]
+},
+{
+  id: "fr5m-h5-005",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "le bisou",
+  answer: "de kus",
+  keywords: ["kus"]
+},
+{
+  id: "fr5m-h5-006",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "la fièvre",
+  answer: "de koorts",
+  keywords: ["koorts"]
+},
+{
+  id: "fr5m-h5-007",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "fatigué(e)",
+  answer: "moe",
+  keywords: ["moe"]
+},
+{
+  id: "fr5m-h5-008",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "malade",
+  answer: "ziek",
+  keywords: ["ziek"]
+},
+{
+  id: "fr5m-h5-009",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "repose-toi",
+  answer: "rust uit",
+  keywords: ["rust"]
+},
+{
+  id: "fr5m-h5-010",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "mieux",
+  answer: "beter",
+  keywords: ["beter"]
+},
+{
+  id: "fr5m-h5-011",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "entrer",
+  answer: "binnenkomen",
+  keywords: ["binnenkomen"]
+},
+{
+  id: "fr5m-h5-012",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "rester",
+  answer: "blijven",
+  keywords: ["blijven"]
+},
+{
+  id: "fr5m-h5-013",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "penser",
+  answer: "denken",
+  keywords: ["denken"]
+},
+{
+  id: "fr5m-h5-014",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "avoir besoin de",
+  answer: "nodig hebben",
+  keywords: ["nodig"]
+},
+{
+  id: "fr5m-h5-015",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "partir",
+  answer: "vertrekken",
+  keywords: ["vertrekken"]
+},
+{
+  id: "fr5m-h5-016",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "ce matin",
+  answer: "vanochtend",
+  keywords: ["vanochtend"]
+},
+{
+  id: "fr5m-h5-017",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "cet après-midi",
+  answer: "vanmiddag",
+  keywords: ["vanmiddag"]
+},
+{
+  id: "fr5m-h5-018",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "à ce soir",
+  answer: "tot vanavond",
+  keywords: ["vanavond"]
+},
+{
+  id: "fr5m-h5-019",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "en fait",
+  answer: "eigenlijk",
+  keywords: ["eigenlijk"]
+},
+{
+  id: "fr5m-h5-020",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "toujours",
+  answer: "nog steeds, altijd",
+  keywords: ["altijd"]
+},
+
+// ===== HOOFDSTUK 5 A ZINNEN =====
+
+{
+  id: "fr5m-h5-021",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Qu’est-ce que tu as?",
+  answer: "Wat heb jij?",
+  keywords: ["heb"]
+},
+{
+  id: "fr5m-h5-022",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Je ne suis pas en forme.",
+  answer: "Ik ben niet in vorm.",
+  keywords: ["vorm"]
+},
+{
+  id: "fr5m-h5-023",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "J’ai 39 de fièvre.",
+  answer: "Ik heb 39 graden koorts.",
+  keywords: ["koorts"]
+},
+{
+  id: "fr5m-h5-024",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Tu vas voir le docteur?",
+  answer: "Ga je naar de arts?",
+  keywords: ["arts"]
+},
+{
+  id: "fr5m-h5-025",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Oui, j’ai rendez-vous demain.",
+  answer: "Ja, ik heb morgen een afspraak.",
+  keywords: ["afspraak"]
+},
+{
+  id: "fr5m-h5-026",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Non, je reste au lit.",
+  answer: "Nee, ik blijf in bed.",
+  keywords: ["bed"]
+},
+
+// ===== HOOFDSTUK 5 B =====
+
+{
+  id: "fr5m-h5-027",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "interdit(e)",
+  answer: "verboden",
+  keywords: ["verboden"]
+},
+{
+  id: "fr5m-h5-028",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "mauvais(e)",
+  answer: "slecht",
+  keywords: ["slecht"]
+},
+{
+  id: "fr5m-h5-029",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "accro",
+  answer: "verslaafd",
+  keywords: ["verslaafd"]
+},
+{
+  id: "fr5m-h5-030",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "la chose",
+  answer: "het ding",
+  keywords: ["ding"]
+},
+{
+  id: "fr5m-h5-031",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "l’accident",
+  answer: "het ongeluk",
+  keywords: ["ongeluk"]
+},
+{
+  id: "fr5m-h5-032",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "sans",
+  answer: "zonder",
+  keywords: ["zonder"]
+},
+{
+  id: "fr5m-h5-033",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "si",
+  answer: "als",
+  keywords: ["als"]
+},
+{
+  id: "fr5m-h5-034",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "car",
+  answer: "want",
+  keywords: ["want"]
+},
+{
+  id: "fr5m-h5-035",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "au début",
+  answer: "aan het begin",
+  keywords: ["begin"]
+},
+{
+  id: "fr5m-h5-036",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "sans doute",
+  answer: "waarschijnlijk",
+  keywords: ["waarschijnlijk"]
+},
+// ===== HOOFDSTUK 5 E =====
+
+{
+  id: "fr5m-h5-037",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "l’endroit",
+  answer: "de plek",
+  keywords: ["plek"]
+},
+{
+  id: "fr5m-h5-038",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "le meilleur ami",
+  answer: "de beste vriend",
+  keywords: ["vriend"]
+},
+{
+  id: "fr5m-h5-039",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "bonsoir",
+  answer: "goedenavond",
+  keywords: ["goedenavond"]
+},
+{
+  id: "fr5m-h5-040",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "dommage",
+  answer: "jammer",
+  keywords: ["jammer"]
+},
+{
+  id: "fr5m-h5-041",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "à cause de",
+  answer: "vanwege",
+  keywords: ["vanwege"]
+},
+{
+  id: "fr5m-h5-042",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "comme ça",
+  answer: "op die manier",
+  keywords: ["manier"]
+},
+{
+  id: "fr5m-h5-043",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "gagner",
+  answer: "winnen",
+  keywords: ["winnen"]
+},
+{
+  id: "fr5m-h5-044",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "rentrer",
+  answer: "naar huis gaan",
+  keywords: ["huis"]
+},
+{
+  id: "fr5m-h5-045",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "il vient",
+  answer: "hij komt",
+  keywords: ["komt"]
+},
+{
+  id: "fr5m-h5-046",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "avoir raison",
+  answer: "gelijk hebben",
+  keywords: ["gelijk"]
+},
+
+// ===== SPORTEN =====
+
+{
+  id: "fr5m-h5-047",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire du football",
+  answer: "voetballen",
+  keywords: ["voetballen"]
+},
+{
+  id: "fr5m-h5-048",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire du ski",
+  answer: "skiën",
+  keywords: ["skiën"]
+},
+{
+  id: "fr5m-h5-049",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire du tennis",
+  answer: "tennissen",
+  keywords: ["tennissen"]
+},
+{
+  id: "fr5m-h5-050",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire du hockey",
+  answer: "hockeyen",
+  keywords: ["hockeyen"]
+},
+{
+  id: "fr5m-h5-051",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire du vélo",
+  answer: "fietsen",
+  keywords: ["fietsen"]
+},
+{
+  id: "fr5m-h5-052",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire du cheval",
+  answer: "paardrijden",
+  keywords: ["paardrijden"]
+},
+{
+  id: "fr5m-h5-053",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire du patinage",
+  answer: "schaatsen",
+  keywords: ["schaatsen"]
+},
+{
+  id: "fr5m-h5-054",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire de la danse",
+  answer: "dansen",
+  keywords: ["dansen"]
+},
+{
+  id: "fr5m-h5-055",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire de la natation",
+  answer: "zwemmen",
+  keywords: ["zwemmen"]
+},
+{
+  id: "fr5m-h5-056",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "faire de la gymnastique",
+  answer: "turnen",
+  keywords: ["turnen"]
+},
+
+// ===== HOOFDSTUK 5 E ZINNEN =====
+
+{
+  id: "fr5m-h5-057",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Tu fais du sport?",
+  answer: "Sport jij?",
+  keywords: ["sport"]
+},
+{
+  id: "fr5m-h5-058",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Non, je ne fais pas de sport.",
+  answer: "Nee, ik sport niet.",
+  keywords: ["sport"]
+},
+{
+  id: "fr5m-h5-059",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Qu’est-ce que tu fais comme sport?",
+  answer: "Wat doe je voor sport?",
+  keywords: ["sport"]
+},
+{
+  id: "fr5m-h5-060",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Je fais du foot.",
+  answer: "Ik voetbal.",
+  keywords: ["voetbal"]
+},
+{
+  id: "fr5m-h5-061",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Je m’entraîne trois fois par semaine.",
+  answer: "Ik train drie keer per week.",
+  keywords: ["train"]
+},
+// ===== PHRASES CLÉS =====
+
+{
+  id: "fr5m-h5-062",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Ça va?",
+  answer: "Gaat het?",
+  keywords: ["gaat"]
+},
+{
+  id: "fr5m-h5-063",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Non, je ne suis pas en forme.",
+  answer: "Nee, ik ben niet in vorm.",
+  keywords: ["vorm"]
+},
+{
+  id: "fr5m-h5-064",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Je pense que je suis malade.",
+  answer: "Ik denk dat ik ziek ben.",
+  keywords: ["ziek"]
+},
+{
+  id: "fr5m-h5-065",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Qu’est-ce que tu as?",
+  answer: "Wat heb jij?",
+  keywords: ["heb"]
+},
+{
+  id: "fr5m-h5-066",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "J’ai mal à la tête.",
+  answer: "Ik heb hoofdpijn.",
+  keywords: ["hoofdpijn"]
+},
+{
+  id: "fr5m-h5-067",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "J’ai 39 de fièvre.",
+  answer: "Ik heb 39 graden koorts.",
+  keywords: ["koorts"]
+},
+{
+  id: "fr5m-h5-068",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Je ne peux rien manger.",
+  answer: "Ik kan niets eten.",
+  keywords: ["eten"]
+},
+{
+  id: "fr5m-h5-069",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Tu vas voir le docteur?",
+  answer: "Ga je naar de arts?",
+  keywords: ["arts"]
+},
+{
+  id: "fr5m-h5-070",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Oui, j’ai rendez-vous demain.",
+  answer: "Ja, ik heb morgen een afspraak.",
+  keywords: ["afspraak"]
+},
+{
+  id: "fr5m-h5-071",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Non, je reste au lit.",
+  answer: "Nee, ik blijf in bed.",
+  keywords: ["bed"]
 }
 
     ]
