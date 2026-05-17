@@ -304,8 +304,12 @@ function getItemLevel(item) {
 function isTypedRecallCandidate(item) {
   const cardId = getItemCardId(item);
   const level = progressMap[cardId] || 0;
+  const typedPhase =
+    progressDetailMap[cardId]?.typed_phase || 0;
 
-  return level >= 4;
+  // Alleen paarse kaarten trainen.
+  // Oranje kaarten zijn voorlopig klaar en komen niet steeds terug.
+  return level === 4 && typedPhase < 1;
 }
 
 function getLearningBucket(item) {
