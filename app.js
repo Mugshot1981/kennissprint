@@ -890,8 +890,9 @@ async function saveTypedProgress(cardId, isCorrect) {
     }
 
 if (currentTypedPhase === 0) {
-  nextLevel = 5;
   nextTypedPhase = 1;
+} else if (currentTypedPhase === 1) {
+  nextTypedPhase = 2;
 } else {
   nextLevel = 5;
   nextTypedPhase = 2;
