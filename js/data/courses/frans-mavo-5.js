@@ -1543,6 +1543,118 @@ export const fransMavo5Course = {
   prompt: "Non, je reste au lit.",
   answer: "Nee, ik blijf in bed.",
   keywords: ["bed"]
+},
+{
+  id: "fr5m-h5-071a",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "être en train de",
+  answer: "bezig zijn met",
+  keywords: ["bezig"]
+},
+{
+  id: "fr5m-h5-071b",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "améliorer",
+  answer: "verbeteren",
+  keywords: ["verbeteren"]
+},
+{
+  id: "fr5m-h5-071c",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "discuter",
+  answer: "kletsen",
+  keywords: ["kletsen"]
+},
+{
+  id: "fr5m-h5-071d",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "la gorge",
+  answer: "de keel",
+  keywords: ["keel"]
+},
+{
+  id: "fr5m-h5-071e",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "le ventre",
+  answer: "de buik",
+  keywords: ["buik"]
+},
+{
+  id: "fr5m-h5-071f",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "le dos",
+  answer: "de rug",
+  keywords: ["rug"]
+},
+{
+  id: "fr5m-h5-071g",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "le bras",
+  answer: "de arm",
+  keywords: ["arm"]
+},
+{
+  id: "fr5m-h5-071h",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "la main",
+  answer: "de hand",
+  keywords: ["hand"]
+},
+{
+  id: "fr5m-h5-071i",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "la jambe",
+  answer: "het been",
+  keywords: ["been"]
+},
+{
+  id: "fr5m-h5-071j",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "le pied",
+  answer: "de voet",
+  keywords: ["voet"]
+},
+{
+  id: "fr5m-h5-071k",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Ça va?",
+  answer: "Gaat het?",
+  keywords: ["gaat"]
+},
+{
+  id: "fr5m-h5-071l",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Je pense que je suis malade.",
+  answer: "Ik denk dat ik ziek ben.",
+  keywords: ["ziek"]
+},
+{
+  id: "fr5m-h5-071m",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "J’ai mal à la tête.",
+  answer: "Ik heb hoofdpijn.",
+  keywords: ["hoofdpijn"]
+},
+{
+  id: "fr5m-h5-071n",
+  chapterId: "fr5m-h5",
+  type: "begrip",
+  prompt: "Je ne peux rien manger.",
+  answer: "Ik kan niets eten.",
+  keywords: ["eten"]
 }
 
     ]
