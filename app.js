@@ -891,14 +891,13 @@ async function saveTypedProgress(cardId, isCorrect) {
       return { level: currentLevel, typed_phase: currentTypedPhase };
     }
 
-    if (currentTypedPhase === 0) {
-      nextTypedPhase = 1;
-    } else if (currentTypedPhase === 1) {
-      nextTypedPhase = 2;
-    } else {
-      nextLevel = 5;
-      nextTypedPhase = 2;
-    }
+if (currentTypedPhase === 0) {
+  nextLevel = 5;
+  nextTypedPhase = 1;
+} else {
+  nextLevel = 5;
+  nextTypedPhase = 2;
+}
   } else {
     nextTypedPhase = Math.max(0, currentTypedPhase - 1);
   }
