@@ -35,6 +35,17 @@ const chapters = [
     id: "his-h5",
     subjectId: "geschiedenis",
     title: "De wereld na 1945"
+  },
+  {
+    id: "his-h6",
+    subjectId: "geschiedenis",
+    title: "Nederland en Indonesië",
+    paragraphs: [
+      { id: "his-h6-p1", title: "Van vorstendommen tot kolonie" },
+      { id: "his-h6-p2", title: "Een winstgevende kolonie" },
+      { id: "his-h6-p3", title: "Nationalisme" },
+      { id: "his-h6-p4", title: "De dekolonisatie van Indonesië" }
+    ]
   }
 ];
 const items = [
@@ -1767,6 +1778,268 @@ const items = [
   answer: "Samenleving die bestaat uit groepen mensen met verschillende culturen.",
   keywords: ["verschillende culturen", "groepen mensen"]
 },
+
+// Hoofdstuk 6 – Nederland en Indonesië (§1 t/m §4)
+{
+        id: "his-h6-001",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        type: "begrip",
+        prompt: "contractarbeider",
+        answer: "Arbeider die een contract had getekend waardoor hij gedwongen was om te werken op een plantage.",
+        keywords: ["arbeider", "contract", "plantage"]
+      },
+{
+        id: "his-h6-002",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        type: "begrip",
+        prompt: "cultuurstelsel",
+        answer: "Economisch systeem waarbij boeren op Java landbouwproducten moesten verbouwen voor de Nederlandse staat.",
+        keywords: ["economisch systeem", "boeren", "java", "landbouwproducten", "nederlandse staat"]
+      },
+{
+        id: "his-h6-003",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        type: "begrip",
+        prompt: "ethische politiek",
+        answer: "Nederlandse politiek die moest zorgen voor de ontwikkeling van Nederlands-Indië.",
+        keywords: ["nederlandse politiek", "ontwikkeling", "nederlands-indië"]
+      },
+{
+        id: "his-h6-004",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p1",
+        type: "begrip",
+        prompt: "gouverneur-generaal",
+        answer: "De hoogste bestuurder van Nederlands-Indië.",
+        keywords: ["hoogste bestuurder", "nederlands-indië"]
+      },
+{
+        id: "his-h6-005",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p1",
+        type: "begrip",
+        prompt: "handelsmonopolie",
+        answer: "Het recht om als enige in bepaalde producten of op een bepaalde plek te handelen.",
+        keywords: ["recht", "als enige handelen", "producten", "plek"]
+      },
+{
+        id: "his-h6-006",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p1",
+        type: "begrip",
+        prompt: "indirect bestuur",
+        answer: "Manier om een kolonie te besturen waarbij inheemse bestuurders op hun plaats bleven en voortaan werden aangestuurd door Nederlanders.",
+        keywords: ["kolonie besturen", "inheemse bestuurders", "nederlanders"]
+      },
+{
+        id: "his-h6-007",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        type: "begrip",
+        prompt: "indo",
+        answer: "Kind van een Nederlander en iemand uit de inheemse bevolking.",
+        keywords: ["kind", "nederlander", "inheemse bevolking"]
+      },
+{
+        id: "his-h6-008",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p3",
+        type: "begrip",
+        prompt: "interneren",
+        answer: "Het opsluiten van een bepaalde groep mensen in een kamp om ze buiten de samenleving te houden.",
+        keywords: ["opsluiten", "groep mensen", "kamp"]
+      },
+{
+        id: "his-h6-009",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        type: "begrip",
+        prompt: "koelie",
+        answer: "Naam die Nederlanders gebruikten voor een contractarbeider.",
+        keywords: ["naam", "nederlanders", "contractarbeider"]
+      },
+{
+        id: "his-h6-010",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p1",
+        type: "begrip",
+        prompt: "Koninklijk Nederlands-Indisch Leger (KNIL)",
+        answer: "Leger in Nederlands-Indië waarvan de meeste soldaten uit Nederlands-Indië kwamen. De officieren waren Nederlands.",
+        keywords: ["leger", "nederlands-indië", "soldaten", "officieren"]
+      },
+{
+        id: "his-h6-011",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        type: "begrip",
+        prompt: "liberalisme",
+        answer: "Politieke stroming die opkomt voor zoveel mogelijk vrijheid voor burgers en bedrijven.",
+        keywords: ["politieke stroming", "vrijheid", "burgers", "bedrijven"]
+      },
+{
+        id: "his-h6-012",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p1",
+        type: "begrip",
+        prompt: "modern imperialisme",
+        answer: "Het idee bij Europese landen in de 19e eeuw dat zij zoveel mogelijk land moesten veroveren om zo een groot rijk op te bouwen.",
+        keywords: ["europese landen", "19e eeuw", "land veroveren", "groot rijk"]
+      },
+{
+        id: "his-h6-013",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p3",
+        type: "begrip",
+        prompt: "nationalisme",
+        answer: "Een gevoel van trots voor de taal, cultuur en geschiedenis van het eigen volk.",
+        keywords: ["trots", "taal", "cultuur", "geschiedenis", "eigen volk"]
+      },
+{
+        id: "his-h6-014",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p1",
+        type: "begrip",
+        prompt: "pacificatie",
+        answer: "De naam die Nederlanders gebruikten voor het veroveren van gebieden in Indonesië.",
+        keywords: ["naam", "nederlanders", "veroveren", "gebieden", "indonesië"]
+      },
+{
+        id: "his-h6-015",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p3",
+        type: "begrip",
+        prompt: "Partai Nasional Indonesia (PNI)",
+        answer: "Politieke partij die streed voor een onafhankelijk Indonesië. Letterlijk: nationale partij van Indonesië.",
+        keywords: ["politieke partij", "onafhankelijk indonesië", "nationale partij"]
+      },
+{
+        id: "his-h6-016",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        type: "begrip",
+        prompt: "racisme",
+        answer: "Het onjuiste idee dat er verschillende mensenrassen bestaan en dat het ene ras beter is dan het andere.",
+        keywords: ["onjuiste idee", "mensenrassen", "beter dan het andere"]
+      },
+{
+        id: "his-h6-017",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p1",
+        type: "begrip",
+        prompt: "Verenigde Oost-Indische Compagnie (VOC)",
+        answer: "Nederlands handelsbedrijf, opgericht in 1602, dat handeldreef en oorlog voerde in Azië.",
+        keywords: ["nederlands handelsbedrijf", "1602", "handel", "oorlog", "azië"]
+      },
+{
+        id: "his-h6-018",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p3",
+        type: "begrip",
+        prompt: "Volksraad",
+        answer: "Raad waarin Nederlanders en leden uit de inheemse bevolking zaten en die advies gaf aan het bestuur van de kolonie.",
+        keywords: ["raad", "nederlanders", "inheemse bevolking", "advies", "kolonie"]
+      },
+{
+        id: "his-h6-019",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        type: "begrip",
+        prompt: "vrije arbeid",
+        answer: "Economisch systeem waarbij Nederlandse ondernemers zelf bedrijven mochten oprichten en mensen in loondienst mochten nemen.",
+        keywords: ["economisch systeem", "ondernemers", "bedrijven", "loondienst"]
+      },
+{
+        id: "his-h6-020",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p4",
+        type: "begrip",
+        prompt: "dekolonisatie",
+        answer: "Het onafhankelijk worden van koloniën.",
+        keywords: ["onafhankelijk worden", "koloniën"]
+      },
+{
+        id: "his-h6-021",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p4",
+        type: "begrip",
+        prompt: "guerrilla",
+        answer: "Vorm van oorlogvoering waarbij kleine groepen strijders een korte aanval doen en zich dan snel terugtrekken.",
+        keywords: ["oorlogvoering", "kleine groepen", "korte aanval", "terugtrekken"]
+      },
+{
+        id: "his-h6-022",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p4",
+        type: "begrip",
+        prompt: "oorlogsmisdaad",
+        answer: "Misdaad die ook tijdens oorlogen niet gepleegd mag worden, zoals martelingen of het doden van onschuldige burgers.",
+        keywords: ["misdaad", "oorlog", "martelingen", "onschuldige burgers"]
+      },
+{
+        id: "his-h6-023",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p4",
+        type: "begrip",
+        prompt: "pemoeda’s",
+        answer: "Jonge, Indonesische nationalisten die door de Japanners militair waren getraind en die streden voor de onafhankelijkheid.",
+        keywords: ["jonge nationalisten", "japanners", "militair getraind", "onafhankelijkheid"]
+      },
+{
+        id: "his-h6-024",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p4",
+        type: "begrip",
+        prompt: "politionele acties",
+        answer: "De naam die de Nederlandse overheid gebruikte voor twee grootschalige militaire acties, om Indonesië als kolonie te behouden.",
+        keywords: ["nederlandse overheid", "militaire acties", "kolonie behouden"]
+      },
+{
+        id: "his-h6-025",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p4",
+        type: "begrip",
+        prompt: "soevereiniteit",
+        answer: "Het recht van een staat om zichzelf te besturen, zonder bemoeienis van andere staten.",
+        keywords: ["recht", "staat", "zichzelf besturen", "zonder bemoeienis"]
+      },
+{
+        id: "his-h6-026",
+        subjectId: "geschiedenis",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p4",
+        type: "begrip",
+        prompt: "Verenigde Naties (VN)",
+        answer: "Een internationale organisatie waarvan bijna alle landen lid zijn en die als doel heeft te zorgen voor vrede en veiligheid in de wereld.",
+        keywords: ["internationale organisatie", "vrede", "veiligheid", "wereld"]
+      }
 ];
 
 // =========================
@@ -2155,7 +2428,73 @@ const historyYears = [
   year: "2002",
   event: "Invoering van de euro",
   keywords: ["euro", "europese munt", "2002"]
-}
+},
+
+// Hoofdstuk 6 – Nederland en Indonesië (§1 t/m §4)
+{
+        id: "his-h6-y-1602",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p1",
+        year: "1602",
+        event: "Oprichting VOC",
+        keywords: ["voc", "oprichting", "1602"]
+      },
+{
+        id: "his-h6-y-1798",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p1",
+        year: "1798",
+        event: "VOC failliet; Oost-Indië wordt kolonie",
+        keywords: ["voc failliet", "oost-indië", "kolonie", "1798"]
+      },
+{
+        id: "his-h6-y-1901",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        year: "1901",
+        event: "Begin ethische politiek",
+        keywords: ["ethische politiek", "1901"]
+      },
+{
+        id: "his-h6-y-1927",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p3",
+        year: "1927",
+        event: "Oprichting PNI",
+        keywords: ["pni", "oprichting", "1927"]
+      },
+{
+        id: "his-h6-y-1942",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p3",
+        year: "1942",
+        event: "Japan bezet Nederlands-Indië",
+        keywords: ["japan", "bezet", "nederlands-indië", "1942"]
+      },
+{
+        id: "his-h6-y-1963",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p4",
+        year: "1963",
+        event: "Overdracht Nieuw-Guinea aan Indonesië",
+        keywords: ["nieuw-guinea", "overdracht", "indonesië", "1963"]
+      },
+{
+        id: "his-h6-y-1830-1870",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p2",
+        year: "1830-1870",
+        event: "Cultuurstelsel",
+        keywords: ["cultuurstelsel", "1830", "1870"]
+      },
+{
+        id: "his-h6-y-1945-1949",
+        chapterId: "his-h6",
+        paragraphId: "his-h6-p4",
+        year: "1945-1949",
+        event: "Koloniale oorlog",
+        keywords: ["koloniale oorlog", "1945", "1949"]
+      }
 ];
   // =========================
 // COURSES
@@ -2410,5 +2749,4 @@ export const historyMavo4Course = {
   }
 ]
 };
-
 
