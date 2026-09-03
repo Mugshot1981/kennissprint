@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KennisSprint</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <div class="card">
+
+<div class="top-links">
+
+  <div>
+    <a href="index.html" class="back-link" style="display:flex;align-items:center;gap:6px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+      Andere cursus
+    </a>
+  </div>
+<div style="display:flex;gap:12px;align-items:center;">
+  <a
+    href="index.html"
+    style="
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      border:1px solid #cbd5e1;
+      border-radius:16px;
+      background:#ffffff;
+      color:#0f172a;
+      text-decoration:none;
+      font-weight:600;
+    "
+  >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="3" width="7" height="7"></rect>
+      <rect x="14" y="3" width="7" height="7"></rect>
+      <rect x="14" y="14" width="7" height="7"></rect>
+      <rect x="3" y="14" width="7" height="7"></rect>
+    </svg>
+    <span>Dashboard</span>
+  </a>
+
+  <a
+    href="profile.html"
+    style="
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      border:1px solid #cbd5e1;
+      border-radius:16px;
+      background:#ffffff;
+      color:#0f172a;
+      text-decoration:none;
+      font-weight:600;
+    "
+  >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M20 21a8 8 0 0 0-16 0"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </svg>
+    <span>Profiel</span>
+  </a>
+</div>
+</div>
+
+<h1 id="pageHeading">Cursus</h1>
+<p id="userGreeting" class="intro" hidden></p>
+
+<p id="pageIntro" class="intro">
+  Oefen per hoofdstuk de belangrijkste begrippen met multiple choice.
+</p>
+      <div class="controls">
+
+        <div class="form-row chapter-row">
+          <label for="chapterSelect"><strong>Kies hoofdstukken:</strong></label>
+
+   <div class="chapter-tiles-wrap">
+  <select id="chapterSelect" multiple hidden></select>
+  <div id="chapterTileGrid" class="chapter-tile-grid"></div>
+</div>
+
+<div id="chapterSelectionSummary" class="chapter-selection-summary">
+  Nog geen hoofdstukken geselecteerd.
+</div>
+
+<div id="paragraphSelection" class="paragraph-selection hidden">
+  <label><strong>Kies paragrafen:</strong></label>
+  <div id="paragraphTileGrid" class="paragraph-tile-grid"></div>
+  <div id="paragraphSelectionSummary" class="chapter-selection-summary">
+    Nog geen paragrafen geselecteerd.
+  </div>
+</div>
+
+<div class="chapter-legend" aria-label="Legenda voortgang hoofdstukken">
+  <span class="chapter-legend-title">Voortgang:</span>
+
+  <span class="chapter-legend-item">
+    <span class="chapter-legend-dot is-gray"></span>
+    <span>nieuw</span>
+  </span>
+
+  <span class="chapter-legend-item">
+    <span class="chapter-legend-dot is-green"></span>
+    <span>trainen</span>
+  </span>
+
+  <span class="chapter-legend-item">
+    <span class="chapter-legend-dot is-blue"></span>
+    <span>bijna beheerst</span>
+  </span>
+
+  <span class="chapter-legend-item">
+    <span class="chapter-legend-dot is-purple"></span>
+    <span>beheerst</span>
+  </span>
+
+  <span class="chapter-legend-item">
+    <span class="chapter-legend-dot is-orange"></span>
+    <span>perfect</span>
+  </span>
+</div>
+        </div>
+
+     <div class="form-row-bottom mode-wrap">
+  <label for="modeSelect"><strong>Oefenvorm:</strong></label>
+  <select id="modeSelect"></select>
+</div>
+
+<div class="form-row-button">
+  <label></label>
+  <div class="start-session-block">
+<button id="startButton" class="button button-primary" type="button">
+Start aanbevolen sessie
+</button>
+    <div class="start-session-hint">
+      10 vragen op basis van jouw voortgang
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div id="quizArea" class="hidden">
+
+        <div class="quiz-topbar">
+          <div class="quiz-session-info">
+            <div id="quizSessionTitle" class="quiz-session-title"></div>
+            <div id="quizSessionMode" class="quiz-session-mode"></div>
+          </div>
+
+          <button id="stopButton">Stoppen</button>
+        </div>
+
+        <div class="scoreboard">
+          <div>
+            Goed: <strong id="scoreCorrect">0</strong>
+            Totaal: <strong id="scoreTotal">0</strong>
+          </div>
+
+          <div>
+            Vraag <strong id="questionNumber">0</strong> /
+            <strong id="questionTotal">0</strong>
+          </div>
+
+          <div class="progressbar">
+            <div id="progressFill"></div>
+          </div>
+
+          <div class="stars">
+            <span class="stars-base">★★★★★</span>
+            <span id="starsFill" class="stars-fill">★★★★★</span>
+          </div>
+        </div>
+        
+<div class="prompt-box mastery-gray">
+  <div id="questionLabel" class="question-label">BEGRIP</div>
+<div id="masterySegments" class="mastery-segments">
+  <div class="mastery-segment"></div>
+  <div class="mastery-segment"></div>
+  <div class="mastery-segment"></div>
+  <div class="mastery-segment"></div>
+  <div class="mastery-segment"></div>
+  <div class="mastery-segment"></div>
+</div>
+  <div id="termDisplay"></div>
+</div>
+  <div id="answers" class="answers"></div>
+
+  <div id="typedRecallArea" class="typed-recall-area hidden">
+    <div class="typed-recall-label">Typvraag</div>
+    <div id="typedRecallIntro" class="typed-recall-intro hidden">
+      <div class="typed-recall-intro-label">Bekijk kort het antwoord</div>
+      <div id="typedRecallAnswerPreview" class="typed-recall-answer-preview"></div>
+    </div>
+    <div id="typedRecallForm" class="typed-recall-form hidden">
+      <label for="typedRecallInput" class="typed-recall-input-label">Typ je antwoord</label>
+      <input id="typedRecallInput" class="typed-recall-input" type="text" autocomplete="off" />
+      <button id="typedRecallSubmit" type="button" class="typed-recall-submit">Controleer</button>
+    </div>
+  </div>
+
+  <div id="feedback" class="feedback"></div>
+  <button id="nextButton" class="hidden">Volgende</button>
+</div>
+
+      </div>
+<div id="endScreen" class="hidden">
+  <h2>Set afgerond</h2>
+  <p id="finalScoreText"></p>
+  <p id="finalStars"></p>
+  <p id="wrongCountText"></p>
+
+  <div id="sessionResultsList" class="session-results-list"></div>
+
+   <div class="endscreen-actions">
+<button id="restartButton">Volgende set</button>
+    <button id="retryWrongButton">Fouten herstellen</button>
+    <button id="backToCourseButton" type="button">Terug naar cursus</button>
+  </div>
+</div>
+
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script>
+    const supabaseClient = window.supabaseClient;
+
+    supabaseClient.auth.onAuthStateChange((event, session) => {
+      const isSignedOut = event === "SIGNED_OUT";
+      const noSession = !session;
+
+      if (isSignedOut || noSession) {
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
